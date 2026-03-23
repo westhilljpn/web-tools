@@ -1,0 +1,25 @@
+# Next.js
+.next/
+out/
+
+# 依存関係
+node_modules/
+
+# 環境変数（実値）
+.env
+.env.local
+.env.*.local
+
+# TypeScript ビルド出力
+next-env.d.ts
+
+# OS
+.DS_Store
+Thumbs.db
+
+# エディタ
+.vscode/
+.idea/
+
+# Claude Code
+.claude/
