@@ -1,11 +1,12 @@
-import Link from "next/link";
-import type { Tool } from "@/lib/toolsRegistry";
+import { Link } from "@/i18n/routing";
+import type { LocalizedTool } from "@/lib/toolsRegistry";
 
 interface ToolCardProps {
-  tool: Tool;
+  tool: LocalizedTool;
+  locale: string;
 }
 
-export default function ToolCard({ tool }: ToolCardProps) {
+export default function ToolCard({ tool, locale: _locale }: ToolCardProps) {
   return (
     <Link href={`/${tool.slug}`} className="block group">
       <article className="tool-card h-full hover:shadow-md hover:border-blue-200 transition-all duration-200">
@@ -20,7 +21,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
             </h2>
             {/* カテゴリバッジ */}
             <span className="inline-block mt-1 px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary">
-              {tool.category}
+              {tool.categoryLabel}
             </span>
           </div>
         </div>

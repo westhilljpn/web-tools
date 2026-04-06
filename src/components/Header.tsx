@@ -1,15 +1,18 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { Link } from "@/i18n/routing";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 interface HeaderProps {
   onSearch?: (query: string) => void;
 }
 
 export default function Header({ onSearch }: HeaderProps) {
+  const t = useTranslations("header");
+  const tSite = useTranslations("site");
   const [query, setQuery] = useState("");
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME ?? "便利ツール集";
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setQuery(e.target.value);
@@ -24,13 +27,13 @@ export default function Header({ onSearch }: HeaderProps) {
           href="/"
           className="text-xl font-bold text-primary whitespace-nowrap shrink-0"
         >
-          {siteName}
+          {tSite("name")}
         </Link>
 
         {/* 検索バー */}
         <div className="flex-1 max-w-md">
           <label htmlFor="tool-search" className="sr-only">
-            ツールを検索
+            {t("searchLabel")}
           </label>
           <div className="relative">
             <span className="absolute inset-y-0 left-3 flex items-center text-gray-400">
@@ -54,12 +57,15 @@ export default function Header({ onSearch }: HeaderProps) {
               type="search"
               value={query}
               onChange={handleChange}
-              placeholder="ツールを検索..."
+              placeholder={t("searchPlaceholder")}
               className="w-full pl-9 pr-4 py-2 text-sm border border-gray-300 rounded-lg
                          focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
             />
           </div>
         </div>
+
+        {/* 言語切替 */}
+        <LanguageSwitcher />
       </div>
     </header>
   );

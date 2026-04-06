@@ -1,0 +1,71 @@
+{
+  "title": "Age Calculator",
+  "description": "Calculate your exact age in years, months, and days from your date of birth. Also shows total days, weeks, and months lived, plus days until your next birthday. Free online tool.",
+  "keywords": [
+    "age calculator",
+    "birthday calculator",
+    "how old am i",
+    "age in days",
+    "date of birth calculator",
+    "age calculator online"
+  ],
+  "birthLabel": "Date of Birth",
+  "baseDateLabel": "As of Date",
+  "hint": "Enter your date of birth to calculate your age.",
+  "buttons": {
+    "today": "Today"
+  },
+  "error": {
+    "invalid": "The date of birth must be earlier than the reference date."
+  },
+  "results": {
+    "age": "Age",
+    "yearsUnit": "years old",
+    "detail": "{months} months {days} days",
+    "totalDays": "Total Days",
+    "daysUnit": "days",
+    "totalWeeks": "Total Weeks",
+    "weeksUnit": "weeks",
+    "totalMonths": "Total Months",
+    "monthsUnit": "months",
+    "nextBirthday": "Next Birthday",
+    "nextBirthdayDetail": "in {months} months {days} days",
+    "today": "Today is your birthday! 🎉"
+  },
+  "howToUse": [
+    {
+      "label": "Enter your date of birth",
+      "description": "Click the Date of Birth field and select or type your birthday."
+    },
+    {
+      "label": "Check or change the reference date",
+      "description": "The \"As of Date\" defaults to today. You can change it to calculate your age at any past or future date. Click Today to reset it."
+    },
+    {
+      "label": "Read your results",
+      "description": "Your exact age in years, months, and days appears immediately, along with the total number of days, weeks, and months you have lived."
+    },
+    {
+      "label": "See your next birthday countdown",
+      "description": "The panel at the bottom shows how many months and days remain until your next birthday."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How is the age calculated?",
+      "answer": "Age is calculated by subtracting the date of birth from the reference date. The result accounts for varying month lengths and leap years, so you always get the exact number of complete years, months, and days."
+    },
+    {
+      "question": "Can I calculate age for a past or future date?",
+      "answer": "Yes. Change the \"As of Date\" field to any date you like. For example, you can calculate how old you will be on your next milestone birthday, or how old someone was on a specific historical date."
+    },
+    {
+      "question": "What does \"total days\" mean?",
+      "answer": "Total days is the number of calendar days between your date of birth and the reference date. For example, if you are 30 years old, you have lived approximately 10,950 days (accounting for leap years)."
+    },
+    {
+      "question": "Is my data sent to a server?",
+      "answer": "No. All calculations are performed entirely in your browser using JavaScript's Date object. No personal data is collected or transmitted."
+    }
+  ]
+}

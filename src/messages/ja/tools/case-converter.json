@@ -1,0 +1,72 @@
+{
+  "title": "大文字・小文字変換ツール",
+  "description": "テキストをUPPER CASE・lower case・camelCase・snake_caseなど8種類のケースに一括変換できる無料オンラインツール。プログラマーの命名規則変換に便利。",
+  "keywords": [
+    "ケース変換",
+    "大文字変換",
+    "小文字変換",
+    "キャメルケース",
+    "スネークケース",
+    "ケバブケース",
+    "パスカルケース",
+    "文字変換"
+  ],
+  "inputLabel": "入力テキスト",
+  "placeholder": "変換するテキストを入力... (例: hello world, helloWorld, hello_world)",
+  "cases": {
+    "upper": "UPPER CASE（大文字）",
+    "lower": "lower case（小文字）",
+    "title": "Title Case（タイトル）",
+    "camel": "camelCase（キャメル）",
+    "pascal": "PascalCase（パスカル）",
+    "snake": "snake_case（スネーク）",
+    "kebab": "kebab-case（ケバブ）",
+    "constant": "CONSTANT_CASE（定数）"
+  },
+  "buttons": {
+    "paste": "📋 ペースト",
+    "copy": "コピー",
+    "clear": "クリア"
+  },
+  "toast": {
+    "copied": "コピーしました",
+    "pasted": "クリップボードから貼り付けました",
+    "pasteError": "クリップボードへのアクセスが許可されていません"
+  },
+  "howToUse": [
+    {
+      "label": "テキストを入力する",
+      "description": "入力欄にテキストを入力またはペーストします。スペース・アンダースコア・ハイフン・キャメルケースの単語境界が自動検出されます。"
+    },
+    {
+      "label": "変換結果を確認する",
+      "description": "入力と同時に8種類すべてのケース変換結果が一覧表示されます。"
+    },
+    {
+      "label": "必要なフォーマットをコピーする",
+      "description": "各変換結果の横にある「コピー」ボタンをクリックすると、そのフォーマットの結果がクリップボードにコピーされます。"
+    },
+    {
+      "label": "クリアして最初からやり直す",
+      "description": "「クリア」ボタンをクリックすると入力と全変換結果がリセットされます。"
+    }
+  ],
+  "faq": [
+    {
+      "question": "単語の区切りはどのように検出されますか？",
+      "answer": "スペース・アンダースコア（_）・ハイフン（-）・キャメルケース/パスカルケースの大文字境界で自動的に単語を分割します。例えば「helloWorld」「hello_world」「hello-world」「Hello World」はすべて「hello」と「world」の2単語として認識されます。"
+    },
+    {
+      "question": "camelCaseとPascalCaseの違いは何ですか？",
+      "answer": "camelCaseは最初の単語が小文字で始まり、以降の単語の先頭が大文字になります（例：helloWorld）。PascalCaseはすべての単語の先頭が大文字になります（例：HelloWorld）。PascalCaseはUpperCamelCaseとも呼ばれます。"
+    },
+    {
+      "question": "CONSTANT_CASEとは何ですか？",
+      "answer": "CONSTANT_CASE（SCREAMING_SNAKE_CASEとも呼ばれる）はすべて大文字でアンダースコアを単語区切りとして使用する形式です（例：HELLO_WORLD）。PythonやJava、JavaScriptなどで定数の命名規則としてよく使われます。"
+    },
+    {
+      "question": "日本語テキストは変換できますか？",
+      "answer": "日本語は単語間にスペースがないため、ケース変換（大文字・小文字化）は英語テキストを対象とした機能です。日本語と英語が混在したテキストでも、スペースで区切られた英語部分は変換されます。"
+    }
+  ]
+}

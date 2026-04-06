@@ -1,95 +1,135 @@
 // ツール一覧の単一ソース。新規ツール追加・削除はこのファイルだけ編集する。
+// 翻訳可能な文字列（title, description, faq, howToUse 等）は
+// src/messages/[locale]/tools/[slug].json で管理する。
 
-export interface ToolFAQ {
-  question: string;
-  answer: string;
-}
+/** カテゴリキー（翻訳キーとして categories.[key] で参照） */
+export type ToolCategory =
+  | "text"
+  | "convert"
+  | "image"
+  | "calculate"
+  | "lifestyle"
+  | "dev";
 
-export interface ToolStep {
-  label: string;
-  description: string;
-}
-
+/** ツールの非ローカライズ情報（toolsRegistry 管理分） */
 export interface Tool {
   slug: string;
-  title: string;
-  /** メタディスクリプション（120文字以内） */
-  description: string;
-  keywords: string[];
-  category: "テキスト" | "変換" | "画像" | "計算" | "生活" | "開発";
+  /** カテゴリキー — 翻訳は categories.[category] を参照 */
+  category: ToolCategory;
   icon: string;
   /** src/tools/ 内のコンポーネントファイル名（拡張子なし） */
   component: string;
-  faq: ToolFAQ[];
-  howToUse: ToolStep[];
   /** ISO 8601 形式（サイトマップ用） */
   updatedAt: string;
+}
+
+/** ローカライズ済みツール（pages / コンポーネントで使用） */
+export interface LocalizedTool extends Tool {
+  title: string;
+  description: string;
+  categoryLabel: string;
+}
+
+/** ツール別メッセージファイルの型 */
+export interface ToolMessages {
+  title: string;
+  description: string;
+  keywords: string[];
+  label: string;
+  placeholder: string;
+  buttons: Record<string, string>;
+  results: Record<string, string>;
+  limitCheck: { title: string; unit: string; over: string };
+  toast: Record<string, string>;
+  howToUse: Array<{ label: string; description: string }>;
+  faq: Array<{ question: string; answer: string }>;
 }
 
 // ツール一覧
 const tools: Tool[] = [
   {
     slug: "text-counter",
-    title: "文字数カウンター",
-    description:
-      "テキストの文字数・単語数・行数をリアルタイムでカウント。スペースの有無や全角半角も判別できる無料オンラインツール。",
-    keywords: [
-      "文字数カウント",
-      "文字数",
-      "単語数",
-      "行数",
-      "テキスト",
-      "カウンター",
-      "文字数チェック",
-    ],
-    category: "テキスト",
+    category: "text",
     icon: "📝",
     component: "TextCounter",
-    howToUse: [
-      {
-        label: "テキストを入力する",
-        description:
-          "テキストエリアに文章を入力、または「ペースト」ボタンでクリップボードから貼り付けます。",
-      },
-      {
-        label: "リアルタイムで結果を確認する",
-        description:
-          "入力と同時に文字数・単語数・行数などが自動更新されます。",
-      },
-      {
-        label: "文字数制限チェックを活用する",
-        description:
-          "Twitter・Instagram・note の文字数制限に対してどのくらい使用しているかをプログレスバーで確認できます。",
-      },
-      {
-        label: "必要に応じてコピー・クリアする",
-        description:
-          "「コピー」ボタンでテキストをクリップボードに保存、「クリア」ボタンで入力内容を消去します。",
-      },
-    ],
-    faq: [
-      {
-        question: "全角と半角はどのようにカウントされますか？",
-        answer:
-          "全角文字（日本語・全角英数など）と半角文字（半角英数・半角カナ）をそれぞれ別にカウントします。文字数の合計は全角・半角を区別せず1文字として数えます。",
-      },
-      {
-        question: "入力したテキストはサーバーに送信されますか？",
-        answer:
-          "いいえ。すべての処理はお使いのブラウザ内で完結しており、テキストが外部に送信されることは一切ありません。",
-      },
-      {
-        question: "最大何文字まで入力できますか？",
-        answer:
-          "技術的な上限はありませんが、10万文字程度までは快適に動作するよう設計しています。それ以上の場合でも動作しますが、処理に若干の遅延が生じる場合があります。",
-      },
-      {
-        question: "単語数はどのように計算されますか？",
-        answer:
-          "スペース・改行などで区切られたトークンを単語として数えます。日本語のような分かち書きをしない言語では、スペースで区切られた文節を1単語としてカウントします。",
-      },
-    ],
     updatedAt: "2026-03-24",
+  },
+  {
+    slug: "json-formatter",
+    category: "text",
+    icon: "📄",
+    component: "JsonFormatter",
+    updatedAt: "2026-04-05",
+  },
+  {
+    slug: "base64",
+    category: "text",
+    icon: "🔐",
+    component: "Base64Tool",
+    updatedAt: "2026-04-05",
+  },
+  {
+    slug: "url-encode",
+    category: "text",
+    icon: "🔗",
+    component: "UrlEncode",
+    updatedAt: "2026-04-05",
+  },
+  {
+    slug: "case-converter",
+    category: "text",
+    icon: "🔡",
+    component: "CaseConverter",
+    updatedAt: "2026-04-05",
+  },
+  {
+    slug: "qr-generator",
+    category: "image",
+    icon: "📷",
+    component: "QrGenerator",
+    updatedAt: "2026-04-05",
+  },
+  {
+    slug: "color-converter",
+    category: "convert",
+    icon: "🎨",
+    component: "ColorConverter",
+    updatedAt: "2026-04-05",
+  },
+  {
+    slug: "password-generator",
+    category: "lifestyle",
+    icon: "🔑",
+    component: "PasswordGenerator",
+    updatedAt: "2026-04-05",
+  },
+  {
+    slug: "timestamp-converter",
+    category: "convert",
+    icon: "⏱️",
+    component: "TimestampConverter",
+    updatedAt: "2026-04-06",
+  },
+  {
+    slug: "unit-converter",
+    category: "convert",
+    icon: "📐",
+    component: "UnitConverter",
+    updatedAt: "2026-04-06",
+  },
+  {
+    slug: "regex-tester",
+    category: "dev",
+    icon: "🔍",
+    component: "RegexTester",
+    updatedAt: "2026-04-06",
+  },
+  {
+    slug: "age-calculator",
+    category: "calculate",
+    icon: "🎂",
+    component: "AgeCalculator",
+    updatedAt: "2026-04-06",
   },
 ];
 
@@ -101,7 +141,7 @@ export function getToolBySlug(slug: string): Tool | undefined {
 }
 
 /** カテゴリでフィルタリングする */
-export function getToolsByCategory(category: Tool["category"]): Tool[] {
+export function getToolsByCategory(category: ToolCategory): Tool[] {
   return tools.filter((tool) => tool.category === category);
 }
 

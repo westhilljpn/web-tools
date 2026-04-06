@@ -1,0 +1,71 @@
+{
+  "title": "URL Encoder / Decoder",
+  "description": "Encode text to percent-encoded URL format or decode URL-encoded strings. Handles Unicode and Japanese characters. Free online tool.",
+  "keywords": [
+    "URL encode",
+    "URL decode",
+    "percent encoding",
+    "URL encoding",
+    "encodeURIComponent",
+    "URL converter"
+  ],
+  "inputLabel": "Input",
+  "outputLabel": "Output",
+  "placeholder": {
+    "encode": "Enter text to URL-encode...",
+    "decode": "Enter URL-encoded string to decode..."
+  },
+  "outputPlaceholder": "Result will appear here...",
+  "modes": {
+    "encode": "Encode",
+    "decode": "Decode"
+  },
+  "buttons": {
+    "paste": "📋 Paste",
+    "copy": "Copy",
+    "clear": "Clear",
+    "swap": "Swap ⇅"
+  },
+  "error": "Invalid URL-encoded input. Please check for incomplete % sequences.",
+  "toast": {
+    "copied": "Copied!",
+    "pasted": "Pasted from clipboard",
+    "pasteError": "Clipboard access denied"
+  },
+  "howToUse": [
+    {
+      "label": "Choose a mode",
+      "description": "Select Encode to convert text to URL-encoded format, or Decode to convert percent-encoded text back to readable text."
+    },
+    {
+      "label": "Enter your text",
+      "description": "Type or paste the input. Japanese and other Unicode characters are encoded as UTF-8 bytes (e.g., %E3%81%82 for あ)."
+    },
+    {
+      "label": "View the result",
+      "description": "The encoded or decoded result appears instantly in the output area."
+    },
+    {
+      "label": "Copy or swap",
+      "description": "Click Copy to save the result. Use Swap to move the output to input and flip the mode for round-trip testing."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is URL encoding (percent encoding)?",
+      "answer": "URL encoding converts characters that are not allowed or have special meaning in URLs into a % sign followed by two hexadecimal digits. For example, a space becomes %20, and あ becomes %E3%81%82 (its UTF-8 bytes in percent notation)."
+    },
+    {
+      "question": "What is the difference between encodeURIComponent and encodeURI?",
+      "answer": "encodeURIComponent (used by this tool) encodes almost all special characters, including /, ?, #, and &. encodeURI is less aggressive and is designed to encode a complete URI while leaving its structural characters intact."
+    },
+    {
+      "question": "Is URL encoding the same as percent encoding?",
+      "answer": "Yes. URL encoding and percent encoding refer to the same mechanism defined in RFC 3986. The term 'percent encoding' is more formal; 'URL encoding' is widely used in everyday conversation."
+    },
+    {
+      "question": "Does it handle Japanese and other Unicode text?",
+      "answer": "Yes. Non-ASCII characters including Japanese are first converted to UTF-8 bytes, then each byte is percent-encoded. For example, 日 is encoded as %E6%97%A5."
+    }
+  ]
+}

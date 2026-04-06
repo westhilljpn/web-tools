@@ -1,0 +1,60 @@
+{
+  "title": "QR Code Generator",
+  "description": "Free online QR code generator. Create QR codes from URLs, text, Wi-Fi credentials and more. Download as PNG instantly.",
+  "keywords": ["QR code", "QR generator", "QR code maker", "free QR code", "URL to QR"],
+  "label": "Text or URL",
+  "placeholder": "Enter a URL or text to generate a QR code…",
+  "buttons": {
+    "generate": "Generate",
+    "download": "Download PNG",
+    "clear": "Clear",
+    "copy": "Copy Image"
+  },
+  "results": {
+    "ready": "QR code ready",
+    "empty": "Enter text above to generate"
+  },
+  "settings": {
+    "size": "Size",
+    "errorLevel": "Error Correction",
+    "errorLevels": {
+      "L": "L (7%)",
+      "M": "M (15%)",
+      "Q": "Q (25%)",
+      "H": "H (30%)"
+    }
+  },
+  "toast": {
+    "downloaded": "Downloaded!",
+    "copied": "Copied!",
+    "error": "Failed to generate QR code"
+  },
+  "howToUse": [
+    { "label": "Enter content", "description": "Type or paste a URL, text, phone number, or Wi-Fi credentials into the input field." },
+    { "label": "Adjust settings", "description": "Choose the size and error correction level. Higher correction makes codes more robust." },
+    { "label": "Preview", "description": "The QR code is generated in real time as you type." },
+    { "label": "Download", "description": "Click \"Download PNG\" to save the QR code image to your device." }
+  ],
+  "faq": [
+    {
+      "question": "What data can I encode in a QR code?",
+      "answer": "You can encode URLs, plain text, email addresses, phone numbers, SMS messages, Wi-Fi credentials (format: WIFI:S:<SSID>;T:WPA;P:<password>;;), and more."
+    },
+    {
+      "question": "What is error correction level?",
+      "answer": "Error correction allows the QR code to be read even when partially damaged. Level L handles 7% damage, M handles 15%, Q handles 25%, and H handles 30%. Use H for printed codes that may get dirty."
+    },
+    {
+      "question": "How large can the input text be?",
+      "answer": "QR codes can hold up to about 4,296 alphanumeric characters. For URLs, shorter is better. Very long text may produce a dense code that is harder to scan."
+    },
+    {
+      "question": "Is this tool free to use?",
+      "answer": "Yes, completely free. QR codes are generated in your browser — no data is sent to any server."
+    },
+    {
+      "question": "Can I use the downloaded QR code commercially?",
+      "answer": "Yes. The generated image is yours to use freely, including in commercial contexts."
+    }
+  ]
+}

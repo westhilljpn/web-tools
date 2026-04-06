@@ -1,0 +1,72 @@
+{
+  "title": "Case Converter",
+  "description": "Convert text to UPPER CASE, lower case, Title Case, camelCase, PascalCase, snake_case, kebab-case, and CONSTANT_CASE instantly. Free online tool.",
+  "keywords": [
+    "case converter",
+    "camelCase",
+    "snake_case",
+    "kebab-case",
+    "PascalCase",
+    "uppercase",
+    "lowercase",
+    "text case"
+  ],
+  "inputLabel": "Input Text",
+  "placeholder": "Enter text to convert... (e.g. hello world, helloWorld, hello_world)",
+  "cases": {
+    "upper": "UPPER CASE",
+    "lower": "lower case",
+    "title": "Title Case",
+    "camel": "camelCase",
+    "pascal": "PascalCase",
+    "snake": "snake_case",
+    "kebab": "kebab-case",
+    "constant": "CONSTANT_CASE"
+  },
+  "buttons": {
+    "paste": "📋 Paste",
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "toast": {
+    "copied": "Copied!",
+    "pasted": "Pasted from clipboard",
+    "pasteError": "Clipboard access denied"
+  },
+  "howToUse": [
+    {
+      "label": "Enter your text",
+      "description": "Type or paste text into the input field. Spaces, underscores, hyphens, and camelCase word boundaries are all detected automatically."
+    },
+    {
+      "label": "View all conversions",
+      "description": "All 8 case formats are displayed instantly in the grid below the input."
+    },
+    {
+      "label": "Copy the result you need",
+      "description": "Click the Copy button next to any format to copy that specific result to your clipboard."
+    },
+    {
+      "label": "Clear and start over",
+      "description": "Click Clear to reset the input and all results."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How are word boundaries detected?",
+      "answer": "Words are split by spaces, underscores (-), hyphens (-), and camelCase/PascalCase boundaries. For example, \"helloWorld\", \"hello_world\", \"hello-world\", and \"Hello World\" are all recognized as two words: \"hello\" and \"world\"."
+    },
+    {
+      "question": "What is the difference between camelCase and PascalCase?",
+      "answer": "camelCase starts with a lowercase letter and capitalizes each subsequent word (e.g., helloWorld). PascalCase capitalizes every word including the first (e.g., HelloWorld). PascalCase is also called UpperCamelCase."
+    },
+    {
+      "question": "What is CONSTANT_CASE?",
+      "answer": "CONSTANT_CASE (also called SCREAMING_SNAKE_CASE) uses all uppercase letters with underscores as word separators (e.g., HELLO_WORLD). It is commonly used for constants in programming languages like Python, Java, and JavaScript."
+    },
+    {
+      "question": "Does it work with Japanese text?",
+      "answer": "Japanese text does not use traditional word separators, so case conversion is not meaningful for pure Japanese text. The tool works best with ASCII / Latin text. Mixed inputs (e.g., Japanese with English words separated by spaces) can still be partially processed."
+    }
+  ]
+}

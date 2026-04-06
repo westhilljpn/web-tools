@@ -1,0 +1,76 @@
+{
+  "title": "Character Counter",
+  "description": "Count characters, words, and lines in real-time. Supports full-width / half-width distinction. Free online tool.",
+  "keywords": [
+    "character count",
+    "word count",
+    "line count",
+    "text",
+    "counter",
+    "char counter",
+    "character checker"
+  ],
+  "label": "Input Text",
+  "placeholder": "Enter or paste text here...",
+  "buttons": {
+    "paste": "📋 Paste",
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "results": {
+    "totalChars": "Characters (with spaces)",
+    "charsNoSpaces": "Characters (no spaces)",
+    "words": "Words",
+    "lines": "Lines",
+    "paragraphs": "Paragraphs",
+    "fullWidthChars": "Full-width chars",
+    "halfWidthChars": "Half-width chars",
+    "bytes": "Bytes (UTF-8)"
+  },
+  "limitCheck": {
+    "title": "Character Limit Check",
+    "unit": "chars",
+    "over": "{count} chars over"
+  },
+  "toast": {
+    "copied": "Copied!",
+    "pasted": "Pasted from clipboard",
+    "pasteError": "Clipboard access denied"
+  },
+  "howToUse": [
+    {
+      "label": "Enter text",
+      "description": "Type in the text area or click the Paste button to paste from clipboard."
+    },
+    {
+      "label": "View real-time results",
+      "description": "Character count, word count, and line count update automatically as you type."
+    },
+    {
+      "label": "Check character limits",
+      "description": "Use the progress bars to see how much of each platform's character limit you have used."
+    },
+    {
+      "label": "Copy or clear",
+      "description": "Use Copy to save your text to the clipboard, or Clear to reset the input."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How are full-width and half-width characters counted?",
+      "answer": "Full-width characters (Japanese, full-width alphanumerics) and half-width characters (ASCII, half-width katakana) are counted separately. The total character count treats both as 1 character each."
+    },
+    {
+      "question": "Is my text sent to a server?",
+      "answer": "No. All processing happens entirely in your browser. Your text is never sent to any external server."
+    },
+    {
+      "question": "What is the maximum input length?",
+      "answer": "There is no hard limit, but the tool is optimized to handle up to 100,000 characters smoothly. Larger inputs may cause a slight delay."
+    },
+    {
+      "question": "How is word count calculated?",
+      "answer": "Words are counted as tokens separated by spaces and newlines. For languages like Japanese that do not use spaces, space-separated chunks each count as one word."
+    }
+  ]
+}

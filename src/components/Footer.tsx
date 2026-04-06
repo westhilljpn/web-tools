@@ -1,7 +1,11 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function Footer() {
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME ?? "便利ツール集";
+  const t = useTranslations("footer");
+  const tSite = useTranslations("site");
   const year = new Date().getFullYear();
 
   return (
@@ -9,20 +13,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500">
-            © {year} {siteName}
+            © {year} {tSite("name")}
           </p>
           <nav className="flex items-center gap-6 text-sm text-gray-500">
             <Link href="/privacy" className="hover:text-primary transition-colors">
-              プライバシーポリシー
+              {t("privacy")}
             </Link>
             <Link href="/terms" className="hover:text-primary transition-colors">
-              利用規約
+              {t("terms")}
             </Link>
             <a
               href="mailto:contact@example.com"
               className="hover:text-primary transition-colors"
             >
-              お問い合わせ
+              {t("contact")}
             </a>
           </nav>
         </div>

@@ -1,0 +1,56 @@
+{
+  "title": "カラーコード変換ツール",
+  "description": "無料オンラインカラーコードコンバーター。HEX・RGB・HSL・HSB/HSVを瞬時に相互変換。カラーピッカー付き。",
+  "keywords": ["カラーコード変換", "HEX RGB変換", "カラーピッカー", "色コード", "HSL変換"],
+  "label": "カラーコード入力",
+  "placeholder": "#1a2b3c",
+  "buttons": {
+    "copy": "コピー",
+    "clear": "クリア"
+  },
+  "results": {
+    "hex": "HEX",
+    "rgb": "RGB",
+    "hsl": "HSL",
+    "hsb": "HSB / HSV"
+  },
+  "formats": {
+    "hex": "HEX",
+    "rgb": "RGB",
+    "hsl": "HSL",
+    "hsb": "HSB"
+  },
+  "preview": "カラープレビュー",
+  "inputHint": "HEX（#fff または #ffffff）、RGB（rgb(255,255,255)）、HSL（hsl(0,100%,50%)）形式で入力",
+  "toast": {
+    "copied": "コピーしました",
+    "invalidColor": "無効なカラー値です"
+  },
+  "howToUse": [
+    { "label": "色を入力", "description": "HEXコード（#fff / #ffffff）、RGB値（rgb(255,0,0)）を入力するか、カラーピッカーで色を選択します。" },
+    { "label": "変換結果を確認", "description": "HEX・RGB・HSL・HSBの全形式がリアルタイムで自動計算・表示されます。" },
+    { "label": "値をコピー", "description": "各形式の横にあるコピーボタンをクリックするとクリップボードにコピーされます。" }
+  ],
+  "faq": [
+    {
+      "question": "対応している色の形式は何ですか？",
+      "answer": "HEX（3桁・6桁）、RGB、HSL、HSB/HSVに対応しています。いずれかの形式で入力すると、全形式に一括変換されます。"
+    },
+    {
+      "question": "HSLとHSBの違いは何ですか？",
+      "answer": "HSL（色相・彩度・輝度）は輝度50%が純色、100%が白です。HSB/HSV（色相・彩度・明度）は明度100%が純色、0%が黒になります。どちらも色相の定義は同じです。"
+    },
+    {
+      "question": "「red」「blue」のようなCSSカラー名は使えますか？",
+      "answer": "はい、ブラウザのカラー解析エンジンを利用しているため、標準的なCSSカラー名（red、blue、coralなど）も入力できます。"
+    },
+    {
+      "question": "透明度（アルファ値）は対応していますか？",
+      "answer": "現バージョンは不透明色（アルファチャンネルなし）に対応しています。RGBAおよびHSLAは今後のアップデートで対応予定です。"
+    },
+    {
+      "question": "HEXはどうやってRGBに変換されますか？",
+      "answer": "6桁のHEXカラーを2桁ずつ3組に分割し、それぞれを16進数から10進数（0〜255）に変換したものが赤・緑・青の各成分になります。"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Base64 Encoder / Decoder",
+  "description": "Encode text to Base64 or decode Base64 strings back to text. Supports Unicode and URL-safe encoding. Free online tool.",
+  "keywords": [
+    "base64",
+    "base64 encode",
+    "base64 decode",
+    "base64 converter",
+    "binary encoding",
+    "URL-safe base64"
+  ],
+  "inputLabel": "Input",
+  "outputLabel": "Output",
+  "placeholder": {
+    "encode": "Enter text to encode...",
+    "decode": "Enter Base64 string to decode..."
+  },
+  "outputPlaceholder": "Result will appear here...",
+  "modes": {
+    "encode": "Encode",
+    "decode": "Decode"
+  },
+  "urlSafe": "URL-safe (RFC 4648 §5)",
+  "buttons": {
+    "paste": "📋 Paste",
+    "copy": "Copy",
+    "clear": "Clear",
+    "swap": "Swap ⇅"
+  },
+  "error": "Invalid Base64 input. Please check the string and try again.",
+  "toast": {
+    "copied": "Copied!",
+    "pasted": "Pasted from clipboard",
+    "pasteError": "Clipboard access denied"
+  },
+  "howToUse": [
+    {
+      "label": "Choose a mode",
+      "description": "Select Encode to convert text to Base64, or Decode to convert Base64 back to text."
+    },
+    {
+      "label": "Enter your text",
+      "description": "Type or paste the input in the text area. Japanese and other Unicode characters are fully supported."
+    },
+    {
+      "label": "View the result",
+      "description": "The encoded or decoded result appears instantly in the output area."
+    },
+    {
+      "label": "Copy or swap",
+      "description": "Click Copy to save the result to your clipboard. Use Swap to move the output back to input and flip the mode."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Base64 encoding?",
+      "answer": "Base64 is a binary-to-text encoding scheme that represents binary data using 64 printable ASCII characters (A–Z, a–z, 0–9, +, /). It is commonly used to embed binary data in text-based formats such as emails (MIME), JSON, and data URIs."
+    },
+    {
+      "question": "What is URL-safe Base64?",
+      "answer": "URL-safe Base64 (RFC 4648 §5) replaces + with - and / with _ to make the encoded string safe for use in URLs and filenames without percent-encoding. Padding characters (=) are also removed."
+    },
+    {
+      "question": "Can I encode Japanese or other Unicode text?",
+      "answer": "Yes. The tool encodes text as UTF-8 bytes before applying Base64, so any Unicode character — including Japanese, Chinese, Arabic, and emoji — is fully supported."
+    },
+    {
+      "question": "How much does Base64 increase the data size?",
+      "answer": "Base64 encoding increases the data size by approximately 33%. Every 3 bytes of input become 4 Base64 characters. For example, 1 KB of data becomes about 1.37 KB after encoding."
+    }
+  ]
+}

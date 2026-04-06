@@ -1,0 +1,82 @@
+{
+  "title": "JSON Formatter / Validator",
+  "description": "Format, prettify, and validate JSON online. Supports 2-space, 4-space, and tab indentation. Minify JSON to a single line. Free online tool.",
+  "keywords": [
+    "JSON formatter",
+    "JSON prettify",
+    "JSON validator",
+    "JSON minify",
+    "JSON beautifier",
+    "JSON lint"
+  ],
+  "inputLabel": "Input JSON",
+  "outputLabel": "Output",
+  "placeholder": "Paste or type your JSON here...",
+  "outputPlaceholder": "Formatted JSON will appear here...",
+  "modes": {
+    "format": "Format",
+    "minify": "Minify"
+  },
+  "indent": {
+    "label": "Indent",
+    "2": "2 spaces",
+    "4": "4 spaces",
+    "tab": "Tab"
+  },
+  "status": {
+    "valid": "Valid JSON",
+    "invalid": "Invalid JSON"
+  },
+  "stats": {
+    "lines": "{count} lines",
+    "bytes": "{size} bytes"
+  },
+  "buttons": {
+    "paste": "📋 Paste",
+    "copy": "Copy",
+    "clear": "Clear",
+    "sample": "Sample"
+  },
+  "toast": {
+    "copied": "Copied!",
+    "pasted": "Pasted from clipboard",
+    "pasteError": "Clipboard access denied",
+    "sampleLoaded": "Sample JSON loaded"
+  },
+  "howToUse": [
+    {
+      "label": "Paste your JSON",
+      "description": "Click Paste to paste from clipboard, or type JSON directly in the input area. A sample is available to try the tool immediately."
+    },
+    {
+      "label": "Choose a mode",
+      "description": "Select Format to prettify the JSON with readable indentation, or Minify to compress it into a single line."
+    },
+    {
+      "label": "Adjust indentation",
+      "description": "In Format mode, choose 2 spaces, 4 spaces, or Tab as the indentation style."
+    },
+    {
+      "label": "Check validation and copy",
+      "description": "A green indicator confirms valid JSON. If the JSON is invalid, the error message shows what went wrong. Copy the output with the Copy button."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is JSON formatting (prettifying)?",
+      "answer": "JSON formatting adds line breaks and indentation to make compact or minified JSON human-readable. For example, {\"a\":1} becomes a multi-line structure with proper spacing."
+    },
+    {
+      "question": "What does JSON validation check?",
+      "answer": "The validator checks that the input is syntactically valid JSON. Common issues include trailing commas, single-quoted strings, unquoted keys, or missing brackets — all of which are invalid in standard JSON (RFC 8259)."
+    },
+    {
+      "question": "What is JSON minification?",
+      "answer": "Minification removes all unnecessary whitespace (spaces, newlines, indentation) to produce the most compact JSON string. This reduces file size and is useful for APIs and data transmission."
+    },
+    {
+      "question": "Is my JSON data sent to a server?",
+      "answer": "No. All processing is done entirely in your browser using the built-in JSON.parse and JSON.stringify functions. Your data never leaves your device."
+    }
+  ]
+}

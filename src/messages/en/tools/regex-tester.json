@@ -1,0 +1,76 @@
+{
+  "title": "Regex Tester",
+  "description": "Test and debug regular expressions online with real-time match highlighting, match count, and group capture details. Free online tool — runs entirely in your browser.",
+  "keywords": [
+    "regex tester",
+    "regular expression tester",
+    "regex debugger",
+    "regex match",
+    "regex online",
+    "javascript regex",
+    "regexp"
+  ],
+  "patternLabel": "Regular Expression",
+  "patternPlaceholder": "e.g. \\d+",
+  "textLabel": "Test String",
+  "textPlaceholder": "Enter text to test the regex against...",
+  "highlightLabel": "Highlighted Matches",
+  "matchListLabel": "Match Details",
+  "flags": {
+    "g": "global",
+    "i": "ignore case",
+    "m": "multiline",
+    "s": "dot all"
+  },
+  "status": {
+    "matched": "{count} match(es) found",
+    "noMatch": "No matches"
+  },
+  "matchMeta": "index: {index}, length: {length}",
+  "groups": "groups",
+  "error": {
+    "invalid": "Invalid regex"
+  },
+  "buttons": {
+    "copy": "Copy"
+  },
+  "toast": {
+    "copied": "Copied!"
+  },
+  "howToUse": [
+    {
+      "label": "Enter a regular expression",
+      "description": "Type your regex pattern in the pattern field. The surrounding slashes (/ /) are displayed for readability but are not part of the pattern."
+    },
+    {
+      "label": "Toggle flags as needed",
+      "description": "Use the flag buttons below the pattern field: g (global — find all matches), i (case-insensitive), m (multiline — ^ and $ match line boundaries), s (dotAll — dot matches newline)."
+    },
+    {
+      "label": "Enter the test string",
+      "description": "Type or paste the text you want to test in the Test String field. Matches are highlighted in real time."
+    },
+    {
+      "label": "Review match details",
+      "description": "The match count appears in the status bar. Scroll the Match Details list to see each match's value, position, length, and any captured groups."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What regex engine does this tool use?",
+      "answer": "This tool uses the JavaScript built-in RegExp engine (ECMAScript regex). It supports character classes (\\d, \\w, \\s), quantifiers (*, +, ?, {n,m}), anchors (^, $), lookahead/lookbehind, named groups, and more."
+    },
+    {
+      "question": "What does the 'g' (global) flag do?",
+      "answer": "Without the g flag, the regex engine stops after the first match. With g, it finds every non-overlapping match in the entire text. This tool always finds all matches for display purposes, but the flag also affects the regex literal representation shown in the pattern bar."
+    },
+    {
+      "question": "What are capture groups?",
+      "answer": "Capture groups are parts of a regex enclosed in parentheses, e.g. (\\d+). They let you extract sub-parts of a match. For example, the pattern (\\d{4})-(\\d{2})-(\\d{2}) applied to \"2024-01-15\" produces groups [\"2024\", \"01\", \"15\"]."
+    },
+    {
+      "question": "Why is there a match limit of 1000?",
+      "answer": "To prevent the browser from freezing on patterns that produce thousands of matches in very long texts, the tool caps displayed matches at 1000. The match count shown may read \"1000\" if the actual count exceeds this limit."
+    }
+  ]
+}

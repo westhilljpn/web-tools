@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { useDebounce } from "@/lib/hooks/useDebounce";
 import { useClipboard } from "@/lib/hooks/useClipboard";
 import Toast from "@/components/Toast";
 
-// 各サービスの文字数上限
+// 各サービスの文字数上限（サービス名はブランド名のためローカライズ不要）
 const LIMITS = [
   { label: "Twitter / X", max: 140, color: "bg-sky-500" },
   { label: "Instagram", max: 2200, color: "bg-pink-500" },
@@ -63,6 +64,7 @@ function calcStats(text: string): Stats {
 }
 
 export default function TextCounter() {
+  const t = useTranslations("text-counter");
   const [input, setInput] = useState("");
   const [toastMessage, setToastMessage] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
@@ -82,15 +84,15 @@ export default function TextCounter() {
     try {
       const text = await navigator.clipboard.readText();
       setInput(text);
-      showToast("クリップボードから貼り付けました");
+      showToast(t("toast.pasted"));
     } catch {
-      showToast("クリップボードへのアクセスが許可されていません");
+      showToast(t("toast.pasteError"));
     }
   }
 
   async function handleCopy() {
     await copy(input);
-    showToast("コピーしました");
+    showToast(t("toast.copied"));
   }
 
   return (
@@ -99,7 +101,7 @@ export default function TextCounter() {
       <div>
         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
           <label htmlFor="text-counter-input" className="text-sm font-medium text-gray-700">
-            テキストを入力
+            {t("label")}
           </label>
           <div className="flex gap-2">
             <button
@@ -107,7 +109,7 @@ export default function TextCounter() {
               onClick={handlePaste}
               className="btn-secondary text-xs px-3 py-1.5"
             >
-              📋 ペースト
+              {t("buttons.paste")}
             </button>
             <button
               type="button"
@@ -115,7 +117,7 @@ export default function TextCounter() {
               disabled={input === ""}
               className="btn-secondary text-xs px-3 py-1.5"
             >
-              コピー
+              {t("buttons.copy")}
             </button>
             <button
               type="button"
@@ -123,7 +125,7 @@ export default function TextCounter() {
               disabled={input === ""}
               className="btn-secondary text-xs px-3 py-1.5"
             >
-              クリア
+              {t("buttons.clear")}
             </button>
           </div>
         </div>
@@ -131,7 +133,7 @@ export default function TextCounter() {
           id="text-counter-input"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="ここにテキストを入力またはペーストしてください..."
+          placeholder={t("placeholder")}
           rows={10}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm
                      focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary
@@ -141,32 +143,36 @@ export default function TextCounter() {
 
       {/* 統計グリッド */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <StatCard label="文字数（スペースあり）" value={stats.totalChars} highlight />
-        <StatCard label="文字数（スペースなし）" value={stats.charsNoSpaces} />
-        <StatCard label="単語数" value={stats.words} />
-        <StatCard label="行数" value={stats.lines} />
-        <StatCard label="段落数" value={stats.paragraphs} />
-        <StatCard label="全角文字数" value={stats.fullWidthChars} />
-        <StatCard label="半角文字数" value={stats.halfWidthChars} />
-        <StatCard label="バイト数（UTF-8）" value={stats.bytes} />
+        <StatCard label={t("results.totalChars")} value={stats.totalChars} highlight />
+        <StatCard label={t("results.charsNoSpaces")} value={stats.charsNoSpaces} />
+        <StatCard label={t("results.words")} value={stats.words} />
+        <StatCard label={t("results.lines")} value={stats.lines} />
+        <StatCard label={t("results.paragraphs")} value={stats.paragraphs} />
+        <StatCard label={t("results.fullWidthChars")} value={stats.fullWidthChars} />
+        <StatCard label={t("results.halfWidthChars")} value={stats.halfWidthChars} />
+        <StatCard label={t("results.bytes")} value={stats.bytes} />
       </div>
 
       {/* 文字数制限プログレスバー */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-700 mb-3">文字数制限チェック</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mb-3">
+          {t("limitCheck.title")}
+        </h3>
         <div className="space-y-4">
           {LIMITS.map((limit) => {
             const pct = Math.min((stats.totalChars / limit.max) * 100, 100);
             const isOver = stats.totalChars > limit.max;
+            const overCount = stats.totalChars - limit.max;
             return (
               <div key={limit.label}>
                 <div className="flex justify-between items-baseline text-xs mb-1">
                   <span className="font-medium text-gray-700">{limit.label}</span>
                   <span className={isOver ? "text-red-500 font-semibold" : "text-gray-500"}>
-                    {stats.totalChars.toLocaleString()} / {limit.max.toLocaleString()} 字
+                    {stats.totalChars.toLocaleString()} / {limit.max.toLocaleString()}{" "}
+                    {t("limitCheck.unit")}
                     {isOver && (
                       <span className="ml-1">
-                        （{(stats.totalChars - limit.max).toLocaleString()} 字オーバー）
+                        （{t("limitCheck.over", { count: overCount.toLocaleString() })}）
                       </span>
                     )}
                   </span>

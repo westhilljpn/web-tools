@@ -2,13 +2,19 @@
 
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
-import type { ToolFAQ } from "@/lib/toolsRegistry";
 
-interface FAQSectionProps {
-  faqs: ToolFAQ[];
+interface FAQ {
+  question: string;
+  answer: string;
 }
 
-export default function FAQSection({ faqs }: FAQSectionProps) {
+interface FAQSectionProps {
+  faqs: FAQ[];
+  /** セクション見出し（親コンポーネントから渡す） */
+  title: string;
+}
+
+export default function FAQSection({ faqs, title }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // FAQPage 構造化データ
@@ -34,7 +40,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
   return (
     <section className="mt-12">
       <SEOHead jsonLd={faqSchema} />
-      <h2 className="text-xl font-bold text-gray-900 mb-4">よくある質問</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-4">{title}</h2>
       <dl className="space-y-2">
         {faqs.map((faq, index) => (
           <div key={index} className="tool-card">

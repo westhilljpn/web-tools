@@ -1,0 +1,79 @@
+{
+  "title": "Unix Timestamp Converter",
+  "description": "Convert Unix timestamps to human-readable dates and vice versa. Supports seconds and milliseconds. Free online tool — runs entirely in your browser.",
+  "keywords": [
+    "unix timestamp",
+    "timestamp converter",
+    "epoch time",
+    "epoch converter",
+    "unix time",
+    "date converter",
+    "milliseconds to date"
+  ],
+  "direction": {
+    "toDate": "Timestamp → Date",
+    "toTimestamp": "Date → Timestamp"
+  },
+  "unitLabel": "Unit",
+  "unit": {
+    "seconds": "Seconds",
+    "milliseconds": "Milliseconds"
+  },
+  "tsInputLabel": "Unix Timestamp",
+  "tsPlaceholder": "e.g. 1700000000",
+  "dtInputLabel": "Date & Time (local time)",
+  "buttons": {
+    "now": "Now",
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "results": {
+    "iso": "ISO 8601 (UTC)",
+    "utc": "UTC String",
+    "local": "Local Date/Time",
+    "seconds": "Unix Timestamp (seconds)",
+    "milliseconds": "Unix Timestamp (ms)"
+  },
+  "error": {
+    "invalidTs": "Please enter a valid number."
+  },
+  "toast": {
+    "copied": "Copied!"
+  },
+  "howToUse": [
+    {
+      "label": "Choose a conversion direction",
+      "description": "Select \"Timestamp → Date\" to convert a Unix timestamp to a human-readable date, or \"Date → Timestamp\" to go the other way."
+    },
+    {
+      "label": "Select the unit",
+      "description": "Choose \"Seconds\" for standard Unix timestamps (10 digits) or \"Milliseconds\" for JavaScript-style timestamps (13 digits)."
+    },
+    {
+      "label": "Enter the value or click Now",
+      "description": "Type the timestamp in the input field, or click the Now button to use the current time."
+    },
+    {
+      "label": "Copy the result",
+      "description": "The converted values appear immediately. Click Copy next to any format to copy it to your clipboard."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is a Unix timestamp?",
+      "answer": "A Unix timestamp (also called epoch time) is the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970 (the Unix epoch). It is widely used in programming and databases to represent points in time in a timezone-independent way."
+    },
+    {
+      "question": "What is the difference between seconds and milliseconds?",
+      "answer": "Most Unix timestamps are expressed in seconds (a 10-digit number, e.g. 1700000000). JavaScript's Date.now() and many APIs return milliseconds (a 13-digit number, e.g. 1700000000000). This tool supports both — just select the correct unit before converting."
+    },
+    {
+      "question": "Why is the date off by a few hours?",
+      "answer": "The UTC result always shows the correct UTC time. The \"Local Date/Time\" result is adjusted to your browser's local timezone. If you are in a timezone with a UTC offset (e.g. UTC+9 for Japan), the local time will differ from UTC accordingly."
+    },
+    {
+      "question": "Is there a maximum timestamp value?",
+      "answer": "JavaScript's Date object can handle timestamps up to approximately ±8,640,000,000,000,000 milliseconds from epoch (about ±275,760 years). In practice, any reasonable date in history or the near future will work fine."
+    }
+  ]
+}

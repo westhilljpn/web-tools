@@ -1,0 +1,47 @@
+{
+  "site": {
+    "name": "便利ツール集",
+    "tagline": "無料オンラインツール",
+    "description": "テキスト処理・変換・計算など20〜30種類の無料Webツールを提供するサイトです。すべてブラウザ上で動作し、データは一切サーバーに送信されません。"
+  },
+  "header": {
+    "searchLabel": "ツールを検索",
+    "searchPlaceholder": "ツールを検索..."
+  },
+  "footer": {
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "contact": "お問い合わせ"
+  },
+  "categories": {
+    "all": "すべて",
+    "text": "テキスト",
+    "convert": "変換",
+    "image": "画像",
+    "calculate": "計算",
+    "lifestyle": "生活",
+    "dev": "開発"
+  },
+  "home": {
+    "title": "無料で使えるWebツール集",
+    "subtitle": "すべてブラウザ上で動作します。データは一切サーバーに送信されません。",
+    "filterLabel": "ツールを絞り込む",
+    "filterPlaceholder": "ツール名・キーワードで絞り込む...",
+    "noTools": "該当するツールが見つかりませんでした。",
+    "comingSoon": "ツールは順次追加予定です。しばらくお待ちください。"
+  },
+  "toolPage": {
+    "comingSoon": "このツールは現在準備中です。",
+    "freeOnlineTool": "無料オンラインツール"
+  },
+  "sections": {
+    "howToUse": "使い方",
+    "faq": "よくある質問",
+    "relatedTools": "関連ツール"
+  },
+  "language": {
+    "label": "言語",
+    "en": "English",
+    "ja": "日本語"
+  }
+}

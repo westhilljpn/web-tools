@@ -1,0 +1,56 @@
+{
+  "title": "Color Code Converter",
+  "description": "Free online color converter. Convert between HEX, RGB, HSL, and HSB/HSV instantly. Color picker included.",
+  "keywords": ["color converter", "HEX to RGB", "RGB to HEX", "HSL converter", "color picker"],
+  "label": "Color Input",
+  "placeholder": "#1a2b3c",
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "results": {
+    "hex": "HEX",
+    "rgb": "RGB",
+    "hsl": "HSL",
+    "hsb": "HSB / HSV"
+  },
+  "formats": {
+    "hex": "HEX",
+    "rgb": "RGB",
+    "hsl": "HSL",
+    "hsb": "HSB"
+  },
+  "preview": "Color Preview",
+  "inputHint": "Enter HEX (#fff or #ffffff), RGB (rgb(255,255,255)), or HSL (hsl(0,100%,50%))",
+  "toast": {
+    "copied": "Copied!",
+    "invalidColor": "Invalid color value"
+  },
+  "howToUse": [
+    { "label": "Enter a color", "description": "Type a HEX code (#fff, #ffffff), RGB value (rgb(255,0,0)), or pick a color with the color picker." },
+    { "label": "View conversions", "description": "All formats (HEX, RGB, HSL, HSB) are calculated and displayed instantly." },
+    { "label": "Copy a value", "description": "Click the copy button next to any format to copy it to your clipboard." }
+  ],
+  "faq": [
+    {
+      "question": "What color formats does this tool support?",
+      "answer": "This tool supports HEX (3 or 6 digit), RGB, HSL, and HSB/HSV color formats. You can enter a color in any of these formats and it will be converted to all others."
+    },
+    {
+      "question": "What is the difference between HSL and HSB?",
+      "answer": "HSL (Hue, Saturation, Lightness) uses lightness where 50% is a pure color and 100% is white. HSB/HSV (Hue, Saturation, Brightness/Value) uses brightness where 100% is the pure color and 0% is black. Both share the same Hue scale."
+    },
+    {
+      "question": "Can I enter color names like 'red' or 'blue'?",
+      "answer": "Yes, standard CSS color names (red, blue, coral, etc.) are supported via the browser's color parsing engine."
+    },
+    {
+      "question": "Is alpha/transparency supported?",
+      "answer": "The current version handles opaque colors (no alpha channel). RGBA and HSLA support is planned for a future update."
+    },
+    {
+      "question": "How is HEX converted to RGB?",
+      "answer": "A 6-digit HEX color is split into three pairs of hexadecimal digits, each converted to a decimal number (0–255) representing the Red, Green, and Blue components."
+    }
+  ]
+}

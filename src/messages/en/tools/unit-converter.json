@@ -1,0 +1,122 @@
+{
+  "title": "Unit Converter",
+  "description": "Convert length, weight, temperature, area, volume, and speed units instantly. Supports metric and imperial units. Free online tool — runs entirely in your browser.",
+  "keywords": [
+    "unit converter",
+    "length converter",
+    "weight converter",
+    "temperature converter",
+    "metric to imperial",
+    "km to miles",
+    "kg to lbs",
+    "celsius to fahrenheit"
+  ],
+  "inputLabel": "Value",
+  "fromUnitLabel": "Unit",
+  "placeholder": "Enter a value...",
+  "hint": "Enter a value above to see all conversions.",
+  "category": {
+    "length": "Length",
+    "weight": "Weight",
+    "temperature": "Temperature",
+    "area": "Area",
+    "volume": "Volume",
+    "speed": "Speed"
+  },
+  "units": {
+    "length": {
+      "mm": "mm (millimeter)",
+      "cm": "cm (centimeter)",
+      "m": "m (meter)",
+      "km": "km (kilometer)",
+      "in": "in (inch)",
+      "ft": "ft (foot)",
+      "yd": "yd (yard)",
+      "mi": "mi (mile)"
+    },
+    "weight": {
+      "mg": "mg (milligram)",
+      "g": "g (gram)",
+      "kg": "kg (kilogram)",
+      "t": "t (metric ton)",
+      "oz": "oz (ounce)",
+      "lb": "lb (pound)"
+    },
+    "temperature": {
+      "c": "°C (Celsius)",
+      "f": "°F (Fahrenheit)",
+      "k": "K (Kelvin)"
+    },
+    "area": {
+      "mm2": "mm² (sq. millimeter)",
+      "cm2": "cm² (sq. centimeter)",
+      "m2": "m² (sq. meter)",
+      "km2": "km² (sq. kilometer)",
+      "ha": "ha (hectare)",
+      "ac": "ac (acre)",
+      "in2": "in² (sq. inch)",
+      "ft2": "ft² (sq. foot)"
+    },
+    "volume": {
+      "ml": "ml (milliliter)",
+      "cl": "cl (centiliter)",
+      "dl": "dl (deciliter)",
+      "l": "L (liter)",
+      "tsp": "tsp (teaspoon)",
+      "tbsp": "tbsp (tablespoon)",
+      "floz": "fl oz (fluid ounce)",
+      "cup": "cup",
+      "pt": "pt (pint)",
+      "qt": "qt (quart)",
+      "gal": "gal (gallon)"
+    },
+    "speed": {
+      "ms": "m/s (meter/second)",
+      "kmh": "km/h (kilometer/hour)",
+      "mph": "mph (mile/hour)",
+      "kn": "kn (knot)"
+    }
+  },
+  "buttons": {
+    "copy": "Copy"
+  },
+  "toast": {
+    "copied": "Copied!"
+  },
+  "howToUse": [
+    {
+      "label": "Select a category",
+      "description": "Choose from Length, Weight, Temperature, Area, Volume, or Speed using the category buttons at the top."
+    },
+    {
+      "label": "Enter a value and select the source unit",
+      "description": "Type the number you want to convert in the input field, then choose the source unit from the dropdown."
+    },
+    {
+      "label": "View all conversions at once",
+      "description": "All available units for the selected category are displayed simultaneously, so you can compare values across different systems at a glance."
+    },
+    {
+      "label": "Copy a result",
+      "description": "Click the Copy button next to any unit to copy that value to your clipboard."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What unit systems are supported?",
+      "answer": "This tool supports both the metric (SI) system and the imperial/US customary system. For example, for length you can convert between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles."
+    },
+    {
+      "question": "How accurate are the conversions?",
+      "answer": "All conversions use standard, widely accepted conversion factors (e.g. 1 inch = 0.0254 meters exactly). Results are displayed with up to 8 significant figures."
+    },
+    {
+      "question": "Why is temperature converted differently from other units?",
+      "answer": "Unlike most units, temperature scales (Celsius, Fahrenheit, Kelvin) use different zero points, so conversion requires both multiplication and addition rather than a simple ratio. For example, 0°C = 32°F = 273.15 K."
+    },
+    {
+      "question": "What are US gallons vs. imperial gallons?",
+      "answer": "This tool uses US gallons (approximately 3.785 liters). The imperial (UK) gallon is different (approximately 4.546 liters). Similarly, US fluid ounces, cups, pints, and quarts are US customary measurements."
+    }
+  ]
+}

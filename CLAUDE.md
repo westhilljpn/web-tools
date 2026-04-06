@@ -18,6 +18,7 @@ SEOによる自然流入を主な集客手段とする。
 | フレームワーク | Next.js 14（App Router） |
 | 言語 | TypeScript（strict mode） |
 | スタイリング | Tailwind CSS |
+| 国際化（i18n） | next-intl 4.x |
 | ホスティング | Vercel（無料枠） |
 | 外部API | **原則使用しない**（すべてクライアントサイドで完結） |
 
@@ -52,7 +53,7 @@ SEOによる自然流入を主な集客手段とする。
 
 ## ツール追加時の必須チェックリスト
 
-新しいツールを追加する際は、以下9項目をすべて満たすこと。
+新しいツールを追加する際は、以下12項目をすべて満たすこと。
 
 1. `src/tools/[ToolName].tsx` にコンポーネント作成
 2. `src/lib/toolsRegistry.ts` にツール情報を登録
@@ -63,6 +64,9 @@ SEOによる自然流入を主な集客手段とする。
 7. レスポンシブ対応確認（375px幅で崩れないこと）
 8. `npm run build` でエラーなし
 9. 入力例やプレースホルダーで初見でも使い方がわかること
+10. `src/messages/en/tools/[slug].json` を作成（英語翻訳）
+11. `src/messages/ja/tools/[slug].json` を作成（日本語翻訳）
+12. 両言語（/en/[slug] と /ja/[slug]）でページが正常に表示されること
 
 ---
 
@@ -71,15 +75,30 @@ SEOによる自然流入を主な集客手段とする。
 ```
 src/
 ├── app/
-│   ├── layout.tsx              # ルートレイアウト（AdSense制御含む）
-│   ├── page.tsx                # トップページ（ツール一覧）
-│   ├── [tool-slug]/
-│   │   └── page.tsx            # 各ツールページ
-│   ├── privacy/
-│   │   └── page.tsx            # プライバシーポリシー
-│   ├── terms/
-│   │   └── page.tsx            # 利用規約
-│   └── sitemap.ts              # サイトマップ自動生成
+│   ├── layout.tsx              # ルートレイアウト（children を返すだけ）
+│   ├── page.tsx                # / → /en にフォールバックリダイレクト
+│   ├── sitemap.ts              # サイトマップ自動生成（全ロケール含む）
+│   └── [locale]/               # 言語別ルーティング（en / ja）
+│       ├── layout.tsx          # ロケールレイアウト（html, NextIntlClientProvider）
+│       ├── page.tsx            # トップページ（ツール一覧）
+│       ├── [tool-slug]/
+│       │   └── page.tsx        # 各ツールページ
+│       ├── privacy/
+│       │   └── page.tsx        # プライバシーポリシー
+│       └── terms/
+│           └── page.tsx        # 利用規約
+├── i18n/
+│   ├── routing.ts              # next-intl ルーティング設定
+│   └── request.ts              # next-intl サーバーサイド設定
+├── messages/
+│   ├── en/
+│   │   ├── common.json         # 共通UI文字列（英語）
+│   │   └── tools/
+│   │       └── text-counter.json
+│   └── ja/
+│       ├── common.json         # 共通UI文字列（日本語）
+│       └── tools/
+│           └── text-counter.json
 ├── components/                 # 共通UIコンポーネント
 ├── tools/                      # 各ツール実装
 └── lib/
@@ -88,16 +107,35 @@ src/
 
 `src/lib/toolsRegistry.ts` がツール情報の**唯一の管理場所**。
 新規ツール追加・削除はここを起点にする。
+**翻訳文字列（title, description, faq 等）は `src/messages/[locale]/tools/[slug].json` で管理。**
 
 ---
 
 ## SEOルール
 
-- **titleフォーマット**: `[ツール名] - 無料オンラインツール | [サイト名]`
+- **titleフォーマット**: `[ツール名] - 無料オンラインツール | [サイト名]`（ja）/ `[Tool Name] - Free Online Tool | [Site]`（en）
 - **meta description**: 120文字以内
 - **H1**: ページ内に1つだけ
-- **canonical URL**: 全ページに設定
+- **canonical URL**: 全ページに設定（例: `https://example.com/ja/text-counter`）
+- **hreflang**: 全ページに en / ja / x-default を設定
 - **内部リンク**: 関連ツール同士で相互に張る
+
+---
+
+## 国際化（i18n）ルール
+
+- **ライブラリ**: next-intl 4.x
+- **対応言語**: 英語（en）・日本語（ja）、デフォルトは英語
+- **URL構造**: `/en/[slug]`（英語）、`/ja/[slug]`（日本語）。`/` はブラウザ言語でリダイレクト
+- **ハードコード禁止**: 日本語・英語問わずハードコードされた文字列は禁止。必ず翻訳ファイル経由で表示
+- **ツール別翻訳**: `src/messages/[locale]/tools/[slug].json` に配置（title, description, keywords, howToUse, faq 等）
+- **共通翻訳**: `src/messages/[locale]/common.json` に配置（header, footer, categories, ui 等）
+- **新ツール追加時**: 必ず en/ja 両方の翻訳ファイルを作成すること
+- **hreflang**: 全ページに `alternates.languages` で en / ja / x-default を設定
+- **ナビゲーション**: `Link`, `useRouter`, `usePathname` は `@/i18n/routing` からインポート（ロケール自動付与）
+- **翻訳の取得方法**:
+  - サーバーコンポーネント → `getTranslations({ locale, namespace })` from `'next-intl/server'`
+  - クライアントコンポーネント → `useTranslations(namespace)` from `'next-intl'`（NextIntlClientProvider が必要、layout.tsx で設定済み）
 
 ---
 

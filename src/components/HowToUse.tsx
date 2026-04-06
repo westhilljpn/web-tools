@@ -5,14 +5,16 @@ interface Step {
 
 interface HowToUseProps {
   steps: Step[];
+  /** セクション見出し（親コンポーネントから渡す） */
+  title: string;
 }
 
-export default function HowToUse({ steps }: HowToUseProps) {
+export default function HowToUse({ steps, title }: HowToUseProps) {
   if (steps.length === 0) return null;
 
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-bold text-gray-900 mb-4">使い方</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-4">{title}</h2>
       <ol className="space-y-3">
         {steps.map((step, index) => (
           <li key={index} className="flex gap-4 items-start">
