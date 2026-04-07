@@ -131,6 +131,20 @@ const tools: Tool[] = [
     component: "AgeCalculator",
     updatedAt: "2026-04-06",
   },
+  {
+    slug: "bmi-calculator",
+    category: "calculate",
+    icon: "⚖️",
+    component: "BmiCalculator",
+    updatedAt: "2026-04-08",
+  },
+  {
+    slug: "loan-calculator",
+    category: "calculate",
+    icon: "🏦",
+    component: "LoanCalculator",
+    updatedAt: "2026-04-08",
+  },
 ];
 
 export default tools;

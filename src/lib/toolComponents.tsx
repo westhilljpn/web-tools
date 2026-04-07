@@ -26,6 +26,8 @@ const toolComponentMap: Record<string, ComponentType> = {
   UnitConverter: dynamic(() => import("@/tools/UnitConverter"), { loading: Loading }),
   RegexTester: dynamic(() => import("@/tools/RegexTester"), { loading: Loading }),
   AgeCalculator: dynamic(() => import("@/tools/AgeCalculator"), { loading: Loading }),
+  BmiCalculator: dynamic(() => import("@/tools/BmiCalculator"), { loading: Loading }),
+  LoanCalculator: dynamic(() => import("@/tools/LoanCalculator"), { loading: Loading }),
 };
 
 export default toolComponentMap;

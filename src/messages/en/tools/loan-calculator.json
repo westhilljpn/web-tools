@@ -1,0 +1,68 @@
+{
+  "title": "Loan Repayment Calculator",
+  "description": "Calculate your monthly loan payment, total repayment, and total interest in seconds. Enter the loan amount, annual interest rate, and term to run a simulation. Works for mortgages, car loans, personal loans, and more.",
+  "keywords": [
+    "loan calculator",
+    "mortgage calculator",
+    "monthly payment calculator",
+    "loan repayment calculator",
+    "interest calculator",
+    "amortization calculator",
+    "loan simulator"
+  ],
+  "principalLabel": "Loan Amount",
+  "principalPlaceholder": "e.g. 300000",
+  "rateLabel": "Annual Interest Rate (%)",
+  "termLabel": "Loan Term",
+  "yearsUnit": "yr",
+  "monthsUnit": "mo",
+  "hint": "Enter the loan amount, annual rate, and term to calculate your monthly payment.",
+  "disclaimer": "* Calculated using a fixed equal-instalment (amortising) method. Actual repayments may differ depending on your lender and repayment plan.",
+  "results": {
+    "monthly": "Monthly Payment",
+    "perMonth": "(equal instalments)",
+    "currency": "$",
+    "principal": "Principal",
+    "totalInterest": "Total Interest",
+    "totalPayment": "Total Repayment",
+    "principalRatio": "Principal {pct}%",
+    "interestRatio": "Interest {pct}%",
+    "termSummary": "Number of payments: {months}"
+  },
+  "howToUse": [
+    {
+      "label": "Enter the loan amount",
+      "description": "Type the total amount you plan to borrow. For example, $300,000 for a mortgage."
+    },
+    {
+      "label": "Enter the annual interest rate",
+      "description": "Enter the annual interest rate (%) quoted by your lender. Use the current fixed or variable rate that applies to your loan."
+    },
+    {
+      "label": "Set the loan term",
+      "description": "Enter the repayment period in years and months. For example, a 30-year mortgage would be 30 years, 0 months."
+    },
+    {
+      "label": "Review your results",
+      "description": "Your monthly payment, total repayment, and total interest are displayed instantly. A bar chart shows the ratio of principal to interest."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Which repayment method does this calculator use?",
+      "answer": "The calculator uses the standard equal-instalment (amortising) method, where you pay the same amount each month and each payment gradually shifts from mostly interest to mostly principal."
+    },
+    {
+      "question": "Can I use this for a variable-rate loan?",
+      "answer": "The calculator assumes a fixed interest rate for the entire term. If your loan has a variable rate, the actual monthly payment will change when the rate changes. Use the result as a reference estimate only."
+    },
+    {
+      "question": "Does it support balloon payments or lump-sum repayments?",
+      "answer": "Not in the current version. The calculator assumes regular monthly payments with no additional lump-sum or balloon payments. If you plan an early repayment, recalculate with the remaining balance and term."
+    },
+    {
+      "question": "Is my data sent to a server?",
+      "answer": "No. All calculations run entirely in your browser using JavaScript. The loan amount and other details you enter are never sent to or stored on any server."
+    }
+  ]
+}

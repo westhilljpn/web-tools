@@ -1,17 +1,22 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
 import { useLocale } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function LanguageSwitcher() {
   const t = useTranslations("language");
   const locale = useLocale();
   const router = useRouter();
-  const pathname = usePathname();
+  // useParams でルートパラメータを直接取得（遷移中のロケールとパスのずれを回避）
+  const params = useParams();
+  const toolSlug = params["tool-slug"] as string | undefined;
 
   function switchLocale(nextLocale: string) {
-    router.push(pathname, { locale: nextLocale });
+    // ツールページなら /<slug>、トップページなら / を渡す
+    const path = toolSlug ? `/${toolSlug}` : "/";
+    router.push(path, { locale: nextLocale });
   }
 
   return (

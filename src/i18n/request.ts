@@ -10,7 +10,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   const typedLocale = locale as "en" | "ja";
 
-  // 各メッセージファイルをロケール別に読み込む
+  // 各メッセージファイルをロケール別に読み込む（全ツール分）
   const [
     common,
     textCounter,
@@ -21,6 +21,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
     qrGenerator,
     colorConverter,
     passwordGenerator,
+    timestampConverter,
+    unitConverter,
+    regexTester,
+    ageCalculator,
+    bmiCalculator,
+    loanCalculator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -33,6 +39,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/qr-generator.json"),
           import("../messages/ja/tools/color-converter.json"),
           import("../messages/ja/tools/password-generator.json"),
+          import("../messages/ja/tools/timestamp-converter.json"),
+          import("../messages/ja/tools/unit-converter.json"),
+          import("../messages/ja/tools/regex-tester.json"),
+          import("../messages/ja/tools/age-calculator.json"),
+          import("../messages/ja/tools/bmi-calculator.json"),
+          import("../messages/ja/tools/loan-calculator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -44,6 +56,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/qr-generator.json"),
           import("../messages/en/tools/color-converter.json"),
           import("../messages/en/tools/password-generator.json"),
+          import("../messages/en/tools/timestamp-converter.json"),
+          import("../messages/en/tools/unit-converter.json"),
+          import("../messages/en/tools/regex-tester.json"),
+          import("../messages/en/tools/age-calculator.json"),
+          import("../messages/en/tools/bmi-calculator.json"),
+          import("../messages/en/tools/loan-calculator.json"),
         ]);
 
   return {
@@ -58,6 +76,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "qr-generator": qrGenerator.default,
       "color-converter": colorConverter.default,
       "password-generator": passwordGenerator.default,
+      "timestamp-converter": timestampConverter.default,
+      "unit-converter": unitConverter.default,
+      "regex-tester": regexTester.default,
+      "age-calculator": ageCalculator.default,
+      "bmi-calculator": bmiCalculator.default,
+      "loan-calculator": loanCalculator.default,
     },
   };
 });

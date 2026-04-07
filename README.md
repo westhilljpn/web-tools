@@ -2,7 +2,7 @@
 
 SEOで集客する無料Webツール集サイト。Next.js 14 + TypeScript + Tailwind CSS で構築。
 
-**本番 URL**: https://example.com（デプロイ後に更新）
+**本番 URL**: https://web-tools-blond-five.vercel.app
 **現在のフェーズ**: 開発・公開フェーズ（収益化前）
 
 ---
@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（12件）
+## 登録済みツール（14件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -33,6 +33,8 @@ npm run dev                         # http://localhost:3000
 | 10 | `unit-converter` | 単位変換ツール | Unit Converter | convert |
 | 11 | `regex-tester` | 正規表現テスター | Regex Tester | dev |
 | 12 | `age-calculator` | 年齢計算ツール | Age Calculator | calculate |
+| 13 | `bmi-calculator` | BMI計算ツール | BMI Calculator | calculate |
+| 14 | `loan-calculator` | ローン返済シミュレーター | Loan Repayment Calculator | calculate |
 
 ---
 
@@ -57,8 +59,8 @@ npm run dev                         # http://localhost:3000
 ### バッチ3 — 生活・計算系ツール
 
 - [x] **B3-1** `age-calculator` — 年齢計算
-- [ ] **B3-2** `bmi-calculator` — BMI計算
-- [ ] **B3-3** `loan-calculator` — ローン返済シミュレーター
+- [x] **B3-2** `bmi-calculator` — BMI計算
+- [x] **B3-3** `loan-calculator` — ローン返済シミュレーター
 - [x] **B3-4** `qr-generator` — QRコード生成（qrcode パッケージ使用）
 - [x] **B3-5** `password-generator` — パスワード生成（crypto.getRandomValues）
 
@@ -83,12 +85,17 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | Vercel デプロイ + `NEXT_PUBLIC_SITE_URL` 本番URL設定 | サイトを公開しないとSEO効果ゼロ。手順は `deploy-guide.txt` 参照 |
-| 高 | B3-2 `bmi-calculator` の実装 | バッチ3 残り2件のうち優先度高 |
-| 高 | B3-3 `loan-calculator` の実装 | バッチ3 残り2件のうち優先度高 |
-| 中 | Google Analytics 連携 | `.env.local` の `NEXT_PUBLIC_GA_ID` に ID を設定するだけで動く状態にする |
+| 高 | Google Search Console 登録 + サイトマップ送信 | インデックス促進のため。/sitemap.xml を送信する |
+| 高 | カスタムドメイン取得・Vercel に設定 | 独自ドメインがないとSEO競争力が弱い |
+| 中 | B4-1 `hash-generator` の実装 | SHA-256等のハッシュ生成（開発者向け） |
+| 中 | B4-2 `markdown-preview` の実装 | Markdownプレビュー（開発者向け） |
+| 中 | Google Analytics 連携 | Vercel環境変数に `NEXT_PUBLIC_GA_ID` を追加するだけで動く |
 | 低 | `Header` の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している |
 | 低 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
+
+### ✅ 完了済み
+- [x] Vercel デプロイ（2026-04-08）
+- [x] `NEXT_PUBLIC_SITE_URL` 本番URL設定・再デプロイ（2026-04-08）
 
 ---
 

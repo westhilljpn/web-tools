@@ -1,0 +1,73 @@
+{
+  "title": "BMI Calculator",
+  "description": "Calculate your Body Mass Index (BMI) instantly from your height and weight. Get your weight category (underweight, normal, overweight, obese) and see how far you are from a healthy weight. Supports both metric and imperial units.",
+  "keywords": [
+    "BMI calculator",
+    "body mass index",
+    "BMI chart",
+    "healthy weight",
+    "overweight calculator",
+    "obesity calculator",
+    "BMI online"
+  ],
+  "heightLabel": "Height",
+  "weightLabel": "Weight",
+  "hint": "Enter your height and weight to calculate your BMI.",
+  "disclaimer": "* BMI is a general indicator of body size. It is not a substitute for medical advice.",
+  "units": {
+    "metric": "Metric (cm / kg)",
+    "imperial": "Imperial (ft / lbs)"
+  },
+  "categories": {
+    "underweight": "Underweight",
+    "normal": "Normal",
+    "overweight": "Overweight",
+    "obese": "Obese"
+  },
+  "results": {
+    "bmiLabel": "Your BMI",
+    "needGain": "You are {kg} kg below a normal weight (BMI 22)",
+    "needLoss": "Losing {kg} kg would bring you to a normal weight (BMI 22)",
+    "idealNote": "Based on WHO reference BMI of 22"
+  },
+  "table": {
+    "category": "Category",
+    "range": "BMI Range"
+  },
+  "howToUse": [
+    {
+      "label": "Choose your unit system",
+      "description": "Select Metric (cm / kg) or Imperial (ft / lbs) depending on the units you prefer."
+    },
+    {
+      "label": "Enter your height",
+      "description": "In metric mode, type your height in centimetres. In imperial mode, enter feet and inches separately."
+    },
+    {
+      "label": "Enter your weight",
+      "description": "Type your weight in kilograms (metric) or pounds (imperial)."
+    },
+    {
+      "label": "Read your results",
+      "description": "Your BMI value and weight category appear instantly. You can also see how much you would need to gain or lose to reach a BMI of 22, the standard reference weight."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is BMI?",
+      "answer": "BMI (Body Mass Index) is calculated by dividing your weight in kilograms by the square of your height in metres. It is an internationally recognised indicator of body size. A BMI below 18.5 is underweight, 18.5–24.9 is normal, 25–29.9 is overweight, and 30 or above is obese (WHO classification)."
+    },
+    {
+      "question": "Can BMI alone determine my health?",
+      "answer": "BMI is a useful screening tool but does not account for muscle mass, bone density, or fat distribution. Athletes and older adults in particular may get misleading results. Please consult a doctor or health professional for a complete assessment."
+    },
+    {
+      "question": "Why is BMI 22 used as the ideal weight reference?",
+      "answer": "BMI 22 is associated with the lowest disease risk according to several epidemiological studies and is widely used as a reference point for calculating an ideal body weight."
+    },
+    {
+      "question": "Is my data sent to a server?",
+      "answer": "No. All calculations are performed entirely in your browser. Your height, weight, and any other information you enter are never sent to or stored on any server."
+    }
+  ]
+}
