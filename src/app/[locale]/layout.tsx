@@ -43,7 +43,7 @@ export async function generateMetadata({
       follow: true,
     },
     verification: {
-      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "",
+      google: "lh6UVbKPCLG1BKifxlAdEclTVwoSO68f_q2HE8AvNSg",
     },
   };
 }
