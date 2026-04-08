@@ -28,6 +28,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   AgeCalculator: dynamic(() => import("@/tools/AgeCalculator"), { loading: Loading }),
   BmiCalculator: dynamic(() => import("@/tools/BmiCalculator"), { loading: Loading }),
   LoanCalculator: dynamic(() => import("@/tools/LoanCalculator"), { loading: Loading }),
+  PomodoroTimer: dynamic(() => import("@/tools/PomodoroTimer"), { loading: Loading }),
 };
 
 export default toolComponentMap;

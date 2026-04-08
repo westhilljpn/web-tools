@@ -145,6 +145,13 @@ const tools: Tool[] = [
     component: "LoanCalculator",
     updatedAt: "2026-04-08",
   },
+  {
+    slug: "pomodoro-timer",
+    category: "lifestyle",
+    icon: "🍅",
+    component: "PomodoroTimer",
+    updatedAt: "2026-04-09",
+  },
 ];
 
 export default tools;

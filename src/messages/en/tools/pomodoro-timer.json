@@ -1,0 +1,93 @@
+{
+  "title": "Pomodoro & Focus Timer",
+  "description": "Boost productivity with the Pomodoro Technique. Customizable 25-min work + 5-min break cycles. Tracks completed sessions and total focus time. Supports browser notifications and audio alerts. Free online timer.",
+  "keywords": [
+    "pomodoro timer",
+    "focus timer",
+    "pomodoro technique",
+    "25 minute timer",
+    "work timer online",
+    "productivity timer",
+    "concentration timer",
+    "free online timer"
+  ],
+  "taskPlaceholder": "What are you working on? (optional)",
+  "spaceHint": "Press Space to start / pause",
+  "phases": {
+    "work": "Focus",
+    "shortBreak": "Short Break",
+    "longBreak": "Long Break"
+  },
+  "buttons": {
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Reset",
+    "skip": "Skip"
+  },
+  "notification": {
+    "workDone": "Focus session complete!",
+    "timeToBreak": "Time for a break",
+    "breakDone": "Break over!",
+    "backToWork": "Ready for the next Pomodoro?"
+  },
+  "stats": {
+    "pomodoros": "Pomodoros done",
+    "focusTime": "Total focus time"
+  },
+  "settings": {
+    "title": "Timer Settings",
+    "work": "Focus duration",
+    "shortBreak": "Short break",
+    "longBreak": "Long break",
+    "cycles": "Sessions before long break",
+    "min": "min",
+    "times": "×",
+    "notify": "Browser notifications",
+    "notifyOn": "On",
+    "notifyOff": "Off"
+  },
+  "howToUse": [
+    {
+      "label": "Enter your task (optional)",
+      "description": "Type what you are working on. The task name will appear in browser notifications so you always know what to return to."
+    },
+    {
+      "label": "Press Start",
+      "description": "Click the Start button to begin the countdown. You can also press the Space key to start or pause at any time."
+    },
+    {
+      "label": "Focus on one task",
+      "description": "Work on a single task until the timer reaches zero. An audio alert plays and the timer automatically moves to a break phase."
+    },
+    {
+      "label": "Take your break",
+      "description": "A short break (default 5 min) follows each work session. After 4 sessions a longer break (default 15 min) is triggered. Watch the cycle dots to track progress."
+    },
+    {
+      "label": "Check your stats",
+      "description": "Completed Pomodoros and total focus time are recorded in real time. Open Timer Settings to customize durations to match your rhythm."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Pomodoro Technique?",
+      "answer": "The Pomodoro Technique is a time-management method developed by Francesco Cirillo in the late 1980s. It breaks work into 25-minute focused intervals (called Pomodoros) separated by 5-minute breaks. After four Pomodoros, a longer break of 15–30 minutes is taken. The regular breaks reduce mental fatigue and help sustain concentration over long work sessions."
+    },
+    {
+      "question": "Can I change the 25/5-minute defaults?",
+      "answer": "Yes. Open Timer Settings to customize the focus duration (1–90 min), short break (1–30 min), long break (5–60 min), and the number of sessions before a long break (2–8). Changes take effect immediately when the timer is paused or reset."
+    },
+    {
+      "question": "Does the timer keep running if I close the tab?",
+      "answer": "No. The timer runs entirely in your browser and stops when the tab is closed. Keep the tab open while you work. Enabling browser notifications lets you receive desktop alerts even while viewing other tabs."
+    },
+    {
+      "question": "How do I enable browser notifications?",
+      "answer": "Open Timer Settings and click the Off button next to Browser notifications. Your browser will ask for permission. Once granted, you will receive a desktop notification each time a session or break ends. If you entered a task name, it will appear in the notification."
+    },
+    {
+      "question": "Is my data sent to any server?",
+      "answer": "No. Your task name and session statistics exist only in the browser's memory and are cleared when you reload the page. Nothing is transmitted to external servers."
+    }
+  ]
+}
