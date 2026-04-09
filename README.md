@@ -2,8 +2,7 @@
 
 SEOで集客する無料Webツール集サイト。Next.js 14 + TypeScript + Tailwind CSS で構築。
 
-**本番 URL**: https://quicker-app.com（ドメイン設定作業中）  
-**旧URL**: https://web-tools-blond-five.vercel.app  
+**本番 URL**: https://quicker-app.com  
 **現在のフェーズ**: 開発・公開フェーズ（収益化前）
 
 ---
@@ -93,9 +92,6 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | Vercel にカスタムドメイン `quicker-app.com` を追加・DNS設定 | Cloudflare DNS → Vercel 接続。DNS確認後に Vercel 環境変数 `NEXT_PUBLIC_SITE_URL` を `https://quicker-app.com` に更新して再デプロイ |
-| 高 | Google Search Console に `quicker-app.com` の新プロパティ登録 | ドメイン型プロパティで作成。CloudflareにTXTレコード追加して認証後、`/sitemap.xml` を再送信 |
-| 高 | Google Analytics（GA4）連携 | analytics.google.com でプロパティ作成 → 測定ID（G-XXXXXXXXXX）取得 → Vercel環境変数 `NEXT_PUBLIC_GA_ID` に追加するだけで動く（GA実装済み） |
 | 高 | **B4-1** `hash-generator` — SHA-1 / SHA-256 / SHA-512 ハッシュ生成 | Web Crypto API で外部パッケージ不要。次回ツール追加の最優先 |
 | 中 | **B4-2** `markdown-preview` — Markdownプレビュー（左右ペイン） | react-markdown 等のパッケージ追加が必要。要検討 |
 | 中 | **B4-3** `diff-checker` — テキスト差分チェッカー（行単位） | diff ライブラリ追加が必要。要検討 |
@@ -103,6 +99,9 @@ npm run dev                         # http://localhost:3000
 | 低 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
 
 ### ✅ 完了済み（2026-04-10）
+- [x] Vercel カスタムドメイン `quicker-app.com` 接続・`NEXT_PUBLIC_SITE_URL` 更新
+- [x] Google Search Console: `quicker-app.com` ドメイン型プロパティ登録・認証・サイトマップ送信
+- [x] Google Analytics（GA4）: プロパティ作成・`NEXT_PUBLIC_GA_ID` を Vercel 環境変数に設定
 - [x] 言語切替が画面遷移のたびに英語にリセットされるバグを修正（`localeCookie: true` を routing.ts に追加）
 - [x] `NextIntlClientProvider` に `locale` を明示的に渡すよう修正（layout.tsx）
 - [x] `pomodoro-timer` の翻訳が `request.ts` に未登録だったバグを修正
