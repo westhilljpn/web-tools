@@ -42,6 +42,9 @@
     "cycles": "Sessions before long break",
     "min": "min",
     "times": "×",
+    "autoStart": "Auto-start next phase",
+    "autoStartOn": "On",
+    "autoStartOff": "Off",
     "notify": "Browser notifications",
     "notifyOn": "On",
     "notifyOff": "Off"

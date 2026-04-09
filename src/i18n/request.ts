@@ -27,6 +27,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ageCalculator,
     bmiCalculator,
     loanCalculator,
+    pomodoroTimer,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -45,6 +46,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/age-calculator.json"),
           import("../messages/ja/tools/bmi-calculator.json"),
           import("../messages/ja/tools/loan-calculator.json"),
+          import("../messages/ja/tools/pomodoro-timer.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -62,6 +64,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/age-calculator.json"),
           import("../messages/en/tools/bmi-calculator.json"),
           import("../messages/en/tools/loan-calculator.json"),
+          import("../messages/en/tools/pomodoro-timer.json"),
         ]);
 
   return {
@@ -82,6 +85,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "age-calculator": ageCalculator.default,
       "bmi-calculator": bmiCalculator.default,
       "loan-calculator": loanCalculator.default,
+      "pomodoro-timer": pomodoroTimer.default,
     },
   };
 });

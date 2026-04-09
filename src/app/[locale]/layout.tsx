@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
+import Script from "next/script";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -62,10 +63,27 @@ export default async function LocaleLayout({
   // クライアントコンポーネント向けにメッセージを渡す
   const messages = await getMessages();
 
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang={locale}>
       <body className="min-h-screen flex flex-col bg-gray-50">
-        <NextIntlClientProvider messages={messages}>
+        {/* Google Analytics（NEXT_PUBLIC_GA_ID が設定されている場合のみ読み込む） */}
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">{`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}');
+            `}</Script>
+          </>
+        )}
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
 
           {/* 広告配置予定: ヘッダー直下 */}

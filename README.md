@@ -93,14 +93,20 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | Vercel にカスタムドメイン `quicker-app.com` を追加・DNS設定 | Cloudflare DNS → Vercel 接続。`NEXT_PUBLIC_SITE_URL` を `https://quicker-app.com` に更新して再デプロイ |
+| 高 | Vercel にカスタムドメイン `quicker-app.com` を追加・DNS設定 | Cloudflare DNS → Vercel 接続。DNS確認後に Vercel 環境変数 `NEXT_PUBLIC_SITE_URL` を `https://quicker-app.com` に更新して再デプロイ |
 | 高 | Google Search Console に `quicker-app.com` の新プロパティ登録 | ドメイン型プロパティで作成。CloudflareにTXTレコード追加して認証後、`/sitemap.xml` を再送信 |
-| 高 | Google Analytics（GA4）連携 | analytics.google.com でプロパティ作成 → 測定ID（G-XXXXXXXXXX）取得 → Vercel環境変数 `NEXT_PUBLIC_GA_ID` に追加するだけで動く（実装済み） |
-| 高 | **B4-1** `hash-generator` の実装 | SHA-256等のハッシュ生成。Web Crypto API で外部パッケージ不要。次回最優先 |
-| 中 | **B4-2** `markdown-preview` の実装 | Markdownプレビュー。react-markdown 等のパッケージ追加が必要な点を要検討 |
-| 中 | **B4-3** `diff-checker` の実装 | テキスト差分チェッカー。diff ライブラリの追加が必要な点を要検討 |
+| 高 | Google Analytics（GA4）連携 | analytics.google.com でプロパティ作成 → 測定ID（G-XXXXXXXXXX）取得 → Vercel環境変数 `NEXT_PUBLIC_GA_ID` に追加するだけで動く（GA実装済み） |
+| 高 | **B4-1** `hash-generator` — SHA-1 / SHA-256 / SHA-512 ハッシュ生成 | Web Crypto API で外部パッケージ不要。次回ツール追加の最優先 |
+| 中 | **B4-2** `markdown-preview` — Markdownプレビュー（左右ペイン） | react-markdown 等のパッケージ追加が必要。要検討 |
+| 中 | **B4-3** `diff-checker` — テキスト差分チェッカー（行単位） | diff ライブラリ追加が必要。要検討 |
 | 低 | `Header` の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している |
 | 低 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
+
+### ✅ 完了済み（2026-04-10）
+- [x] 言語切替が画面遷移のたびに英語にリセットされるバグを修正（`localeCookie: true` を routing.ts に追加）
+- [x] `NextIntlClientProvider` に `locale` を明示的に渡すよう修正（layout.tsx）
+- [x] `pomodoro-timer` の翻訳が `request.ts` に未登録だったバグを修正
+- [x] `pomodoro-timer` UI 全面再設計（フェーズ別カラーカード・円形プレイボタン・+/−スピナー・トグルスイッチ）
 
 ### ✅ 完了済み（2026-04-09）
 - [x] `pomodoro-timer` 追加（円形タイマー・統計・ブラウザ通知・Web Audio API・スペースキー対応）

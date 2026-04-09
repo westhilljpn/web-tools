@@ -42,6 +42,9 @@
     "cycles": "長い休憩まで",
     "min": "分",
     "times": "回",
+    "autoStart": "自動スタート",
+    "autoStartOn": "オン",
+    "autoStartOff": "オフ",
     "notify": "ブラウザ通知",
     "notifyOn": "オン",
     "notifyOff": "オフ"
