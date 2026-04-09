@@ -2,7 +2,8 @@
 
 SEOで集客する無料Webツール集サイト。Next.js 14 + TypeScript + Tailwind CSS で構築。
 
-**本番 URL**: https://web-tools-blond-five.vercel.app
+**本番 URL**: https://quicker-app.com（ドメイン設定作業中）  
+**旧URL**: https://web-tools-blond-five.vercel.app  
 **現在のフェーズ**: 開発・公開フェーズ（収益化前）
 
 ---
@@ -92,17 +93,19 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | カスタムドメイン取得・Vercel に設定 | SEO競争力向上。手順書: `cloudflare-domain-setup.txt` 参照。取得後 `NEXT_PUBLIC_SITE_URL` を更新して再デプロイ |
+| 高 | Vercel にカスタムドメイン `quicker-app.com` を追加・DNS設定 | Cloudflare DNS → Vercel 接続。`NEXT_PUBLIC_SITE_URL` を `https://quicker-app.com` に更新して再デプロイ |
+| 高 | Google Search Console に `quicker-app.com` の新プロパティ登録 | ドメイン型プロパティで作成。CloudflareにTXTレコード追加して認証後、`/sitemap.xml` を再送信 |
+| 高 | Google Analytics（GA4）連携 | analytics.google.com でプロパティ作成 → 測定ID（G-XXXXXXXXXX）取得 → Vercel環境変数 `NEXT_PUBLIC_GA_ID` に追加するだけで動く（実装済み） |
 | 高 | **B4-1** `hash-generator` の実装 | SHA-256等のハッシュ生成。Web Crypto API で外部パッケージ不要。次回最優先 |
 | 中 | **B4-2** `markdown-preview` の実装 | Markdownプレビュー。react-markdown 等のパッケージ追加が必要な点を要検討 |
 | 中 | **B4-3** `diff-checker` の実装 | テキスト差分チェッカー。diff ライブラリの追加が必要な点を要検討 |
-| 中 | Google Analytics 連携 | Vercel環境変数に `NEXT_PUBLIC_GA_ID` を追加するだけで動く |
 | 低 | `Header` の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している |
 | 低 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
 
 ### ✅ 完了済み（2026-04-09）
 - [x] `pomodoro-timer` 追加（円形タイマー・統計・ブラウザ通知・Web Audio API・スペースキー対応）
 - [x] Cloudflare Registrar でのドメイン取得手順書を作成（`cloudflare-domain-setup.txt`）
+- [x] `quicker-app.com` を Cloudflare Registrar で購入
 
 ### ✅ 完了済み（2026-04-08）
 - [x] Vercel デプロイ・本番公開
