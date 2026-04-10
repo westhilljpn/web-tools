@@ -1,0 +1,55 @@
+{
+  "title": "Text Diff Checker",
+  "description": "Free online text diff tool. Paste two texts and instantly see added, removed, and unchanged lines highlighted side by side. Perfect for comparing code, documents, and configs.",
+  "keywords": ["diff checker", "text compare", "line diff", "code diff", "text difference", "compare text online"],
+  "label": "",
+  "placeholder": {
+    "original": "Paste original text here…",
+    "modified": "Paste modified text here…"
+  },
+  "labels": {
+    "original": "Original",
+    "modified": "Modified"
+  },
+  "buttons": {
+    "swap": "Swap ⇅",
+    "clear": "Clear",
+    "showChanges": "Show changes only",
+    "showAll": "Show all lines"
+  },
+  "results": {
+    "empty": "Paste text into both fields above to see the diff",
+    "identical": "The two texts are identical",
+    "added": "added",
+    "removed": "removed",
+    "unchanged": "unchanged"
+  },
+  "howToUse": [
+    { "label": "Paste original text", "description": "Enter the original (before) text in the left field." },
+    { "label": "Paste modified text", "description": "Enter the modified (after) text in the right field." },
+    { "label": "View the diff", "description": "The diff updates automatically. Green lines are additions, red lines are deletions, and white lines are unchanged." },
+    { "label": "Filter results", "description": "Click \"Show changes only\" to hide unchanged lines and focus on what actually changed." }
+  ],
+  "faq": [
+    {
+      "question": "How does the diff algorithm work?",
+      "answer": "This tool uses a Longest Common Subsequence (LCS) algorithm to compare lines of text and produce a minimal diff. It identifies which lines were added, removed, or kept the same."
+    },
+    {
+      "question": "Is there a line limit?",
+      "answer": "The diff engine processes up to 2,000 lines per side. For larger inputs, only the first 2,000 lines of each field are compared."
+    },
+    {
+      "question": "Can I compare code?",
+      "answer": "Yes. The comparison is line-based and works with any plain text, including source code, configuration files, JSON, CSV, and more."
+    },
+    {
+      "question": "What do the line numbers mean?",
+      "answer": "The left number is the line number in the original text; the right number is the line number in the modified text. Blank means the line does not exist in that version."
+    },
+    {
+      "question": "Is my text sent to a server?",
+      "answer": "No. All comparison happens in your browser. Your text never leaves your device."
+    }
+  ]
+}

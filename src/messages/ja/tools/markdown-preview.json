@@ -1,0 +1,51 @@
+{
+  "title": "Markdownプレビュー",
+  "description": "無料オンラインMarkdownエディタ＆リアルタイムプレビュー。左ペインにMarkdownを書くと右ペインに即座にHTMLレンダリングが表示されます。見出し・リスト・コードブロック・テーブルなど主要な構文に対応。",
+  "keywords": ["Markdownプレビュー", "Markdownエディタ", "リアルタイムプレビュー", "Markdown HTML変換", "オンラインMarkdown"],
+  "label": "Markdown",
+  "placeholder": "# ここにMarkdownを入力…",
+  "labels": {
+    "input": "Markdown",
+    "preview": "プレビュー"
+  },
+  "buttons": {
+    "copy": "Markdownをコピー",
+    "clear": "クリア",
+    "sample": "サンプルを読み込む"
+  },
+  "charCount": "文字",
+  "results": {
+    "empty": "左ペインにMarkdownを入力するとプレビューが表示されます…"
+  },
+  "toast": {
+    "copied": "コピーしました！"
+  },
+  "howToUse": [
+    { "label": "Markdownを入力", "description": "左ペインにMarkdownテキストを入力または貼り付けます。" },
+    { "label": "リアルタイムプレビュー", "description": "入力に合わせて右ペインにレンダリング結果がリアルタイムで表示されます。" },
+    { "label": "Markdownをコピー", "description": "「Markdownをコピー」ボタンで生のMarkdownソースをクリップボードにコピーできます。" },
+    { "label": "サンプルを試す", "description": "「サンプルを読み込む」をクリックするとよく使うMarkdown構文の例が表示されます。" }
+  ],
+  "faq": [
+    {
+      "question": "どのMarkdown構文に対応していますか？",
+      "answer": "markedライブラリを使用しており、見出し（#）・太字（**）・斜体（*）・インラインコード（`）・コードブロック（```）・引用（>）・リスト・テーブル・水平線・リンクなど標準的なMarkdownに対応しています。"
+    },
+    {
+      "question": "READMEファイルの確認に使えますか？",
+      "answer": "はい。標準的なCommonMark仕様に準拠しているため、GitHub READMEやドキュメントサイトなどMarkdownをレンダリングするプラットフォームと互換性があります。"
+    },
+    {
+      "question": "文字数制限はありますか？",
+      "answer": "特に上限はありません。プレビューのレンダリングは300msのデバウンス処理をしているため、大きなドキュメントでも動作が重くなりにくい設計です。"
+    },
+    {
+      "question": "テキストはサーバーに送信されますか？",
+      "answer": "いいえ。すべてのMarkdown変換はブラウザ内で処理されます。入力内容がデバイス外に送信されることは一切ありません。"
+    },
+    {
+      "question": "HTML出力をエクスポートできますか？",
+      "answer": "現在はMarkdownのコピーのみ対応しています。HTMLを取得するにはブラウザの開発者ツールを開き、プレビュー要素のinnerHTMLをコピーしてください。"
+    }
+  ]
+}

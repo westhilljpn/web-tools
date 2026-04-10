@@ -1,0 +1,51 @@
+{
+  "title": "Markdown Preview",
+  "description": "Free online Markdown editor and live preview. Write Markdown on the left and see the rendered HTML on the right in real time. Supports headings, lists, code blocks, tables, and more.",
+  "keywords": ["markdown preview", "markdown editor", "live preview", "markdown to HTML", "online markdown"],
+  "label": "Markdown",
+  "placeholder": "# Start writing Markdown here…",
+  "labels": {
+    "input": "Markdown",
+    "preview": "Preview"
+  },
+  "buttons": {
+    "copy": "Copy Markdown",
+    "clear": "Clear",
+    "sample": "Load Sample"
+  },
+  "charCount": "chars",
+  "results": {
+    "empty": "Start typing Markdown on the left to see the preview…"
+  },
+  "toast": {
+    "copied": "Copied!"
+  },
+  "howToUse": [
+    { "label": "Write Markdown", "description": "Type or paste your Markdown text into the left pane." },
+    { "label": "Live preview", "description": "The rendered output appears in the right pane in real time as you type." },
+    { "label": "Copy your Markdown", "description": "Use the Copy Markdown button to copy the raw source to your clipboard." },
+    { "label": "Load a sample", "description": "Click Load Sample to see an example covering common Markdown syntax." }
+  ],
+  "faq": [
+    {
+      "question": "What Markdown syntax is supported?",
+      "answer": "This tool uses the marked library which supports standard Markdown: headings (#), bold (**), italic (*), inline code (`), fenced code blocks (```), blockquotes (>), ordered and unordered lists, tables, horizontal rules, and links."
+    },
+    {
+      "question": "Can I use this for README files?",
+      "answer": "Yes. The Markdown rendered here follows standard CommonMark conventions, so it is compatible with GitHub READMEs, documentation sites, and most platforms that render Markdown."
+    },
+    {
+      "question": "Is there a character limit?",
+      "answer": "There is no hard limit. Preview rendering is debounced at 300 ms, so even very large documents stay smooth."
+    },
+    {
+      "question": "Is my text sent to a server?",
+      "answer": "No. All Markdown parsing happens in your browser. Your content never leaves your device."
+    },
+    {
+      "question": "Can I export the HTML output?",
+      "answer": "Currently only the Markdown source can be copied. To get the HTML, open your browser's developer tools, find the preview element, and copy its innerHTML."
+    }
+  ]
+}

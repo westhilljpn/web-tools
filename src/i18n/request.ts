@@ -30,6 +30,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     pomodoroTimer,
     imageConverter,
     imagesToPdf,
+    hashGenerator,
+    markdownPreview,
+    diffChecker,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -51,6 +54,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/pomodoro-timer.json"),
           import("../messages/ja/tools/image-converter.json"),
           import("../messages/ja/tools/images-to-pdf.json"),
+          import("../messages/ja/tools/hash-generator.json"),
+          import("../messages/ja/tools/markdown-preview.json"),
+          import("../messages/ja/tools/diff-checker.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -71,6 +77,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/pomodoro-timer.json"),
           import("../messages/en/tools/image-converter.json"),
           import("../messages/en/tools/images-to-pdf.json"),
+          import("../messages/en/tools/hash-generator.json"),
+          import("../messages/en/tools/markdown-preview.json"),
+          import("../messages/en/tools/diff-checker.json"),
         ]);
 
   return {
@@ -94,6 +103,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "pomodoro-timer": pomodoroTimer.default,
       "image-converter": imageConverter.default,
       "images-to-pdf": imagesToPdf.default,
+      "hash-generator": hashGenerator.default,
+      "markdown-preview": markdownPreview.default,
+      "diff-checker": diffChecker.default,
     },
   };
 });

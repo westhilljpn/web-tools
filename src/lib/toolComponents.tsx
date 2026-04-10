@@ -31,6 +31,9 @@ const toolComponentMap: Record<string, ComponentType> = {
   PomodoroTimer: dynamic(() => import("@/tools/PomodoroTimer"), { loading: Loading }),
   ImageConverter: dynamic(() => import("@/tools/ImageConverter"), { loading: Loading }),
   ImagesToPdf: dynamic(() => import("@/tools/ImagesToPdf"), { loading: Loading }),
+  HashGenerator: dynamic(() => import("@/tools/HashGenerator"), { loading: Loading }),
+  MarkdownPreview: dynamic(() => import("@/tools/MarkdownPreview"), { loading: Loading }),
+  DiffChecker: dynamic(() => import("@/tools/DiffChecker"), { loading: Loading }),
 };
 
 export default toolComponentMap;

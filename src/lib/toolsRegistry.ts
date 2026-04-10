@@ -166,6 +166,27 @@ const tools: Tool[] = [
     component: "ImagesToPdf",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "hash-generator",
+    category: "dev",
+    icon: "🔒",
+    component: "HashGenerator",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "markdown-preview",
+    category: "dev",
+    icon: "📝",
+    component: "MarkdownPreview",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "diff-checker",
+    category: "dev",
+    icon: "🔀",
+    component: "DiffChecker",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;

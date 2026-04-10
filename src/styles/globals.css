@@ -34,4 +34,30 @@
            hover:bg-gray-200 active:bg-gray-300
            transition-colors duration-150;
   }
+
+  /* Markdownプレビュー用スタイル */
+  .markdown-body { @apply text-sm text-gray-800 leading-relaxed; }
+  .markdown-body h1 { @apply text-2xl font-bold mt-2 mb-3; }
+  .markdown-body h2 { @apply text-xl font-semibold mt-5 mb-2; }
+  .markdown-body h3 { @apply text-lg font-semibold mt-4 mb-2; }
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 { @apply text-base font-semibold mt-3 mb-1; }
+  .markdown-body p { @apply mb-3; }
+  .markdown-body ul { @apply list-disc pl-6 mb-3; }
+  .markdown-body ol { @apply list-decimal pl-6 mb-3; }
+  .markdown-body li { @apply mb-1; }
+  .markdown-body code { @apply bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono; }
+  .markdown-body pre { @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 text-xs font-mono; }
+  .markdown-body pre code { @apply bg-transparent p-0 text-inherit; }
+  .markdown-body blockquote { @apply border-l-4 border-gray-300 pl-4 text-gray-500 italic mb-3; }
+  .markdown-body a { @apply text-primary underline hover:text-blue-700; }
+  .markdown-body strong { @apply font-bold; }
+  .markdown-body em { @apply italic; }
+  .markdown-body hr { @apply border-t border-gray-200 my-4; }
+  .markdown-body table { @apply w-full border-collapse text-xs mb-3; }
+  .markdown-body th,
+  .markdown-body td { @apply border border-gray-300 px-3 py-2; }
+  .markdown-body th { @apply bg-gray-50 font-semibold; }
+  .markdown-body img { @apply max-w-full; }
 }
