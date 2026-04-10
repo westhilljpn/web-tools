@@ -1,0 +1,67 @@
+{
+  "title": "画像フォーマット変換",
+  "description": "無料オンライン画像変換ツール。PNG・JPG・WebP・BMP・HEICファイルを相互変換。一括変換してZIPでまとめてダウンロード。すべてブラウザ内で処理するのでファイルは外部に送信されません。",
+  "keywords": ["画像変換", "PNG JPG変換", "HEIC変換", "WebP変換", "一括変換", "無料画像コンバーター"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "convertAll": "{count}件をすべて変換",
+    "converting": "変換中…",
+    "download": "ダウンロード",
+    "downloadFile": "ファイルをダウンロード",
+    "downloadZip": "ZIPでダウンロード（{count}件）",
+    "zipping": "ZIP作成中…",
+    "clearAll": "すべて削除",
+    "remove": "削除"
+  },
+  "results": {},
+  "toast": {
+    "converted": "変換完了！",
+    "downloaded": "ダウンロードしました！"
+  },
+  "settings": {
+    "formatLabel": "出力フォーマット"
+  },
+  "dropzone": {
+    "label": "ここに画像をドロップ",
+    "title": "ここに画像をドロップするかクリックして選択",
+    "hint": "複数ファイル対応",
+    "formats": "PNG · JPG · WebP · BMP · HEIC"
+  },
+  "privacy": "すべての処理はブラウザ内で完結します。画像ファイルが外部サーバーに送信されることは一切ありません。",
+  "fileList": {
+    "title": "{count}件のファイルを選択中",
+    "readyAs": "{name} として準備完了"
+  },
+  "errors": {
+    "conversionFailed": "変換に失敗しました"
+  },
+  "howToUse": [
+    { "label": "出力フォーマットを選択", "description": "変換後のフォーマット（JPEG・PNG・WebP）を選んでください。" },
+    { "label": "画像を追加", "description": "ドロップゾーンに画像をドラッグ&ドロップするか、クリックして選択します。PNG・JPG・WebP・BMP・HEICに対応。" },
+    { "label": "変換する", "description": "「変換」ボタンをクリックするとすべてのファイルをブラウザ内で変換します。" },
+    { "label": "ダウンロード", "description": "ファイルを個別にダウンロードするか、「ZIPでダウンロード」で一括取得できます。" }
+  ],
+  "faq": [
+    {
+      "question": "どのフォーマットに対応していますか？",
+      "answer": "入力はPNG・JPG/JPEG・WebP・BMP・HEIC・HEIFに対応しています。出力はJPEG・PNG・WebPから選択できます。"
+    },
+    {
+      "question": "iPhoneのHEICファイルも変換できますか？",
+      "answer": "はい。iPhoneや新しいAppleデバイスで使われるHEIC・HEIFファイルをJPEG・PNG・WebPにブラウザ内で変換できます。"
+    },
+    {
+      "question": "画像はサーバーに送信されますか？",
+      "answer": "いいえ。すべての変換処理はブラウザのCanvas APIを使いブラウザ内だけで完結します。ファイルが外部に送信されることは一切ありません。"
+    },
+    {
+      "question": "一度に何枚まで変換できますか？",
+      "answer": "特に上限はありませんが、パフォーマンスはデバイスの性能に依存します。快適に使うには20枚以内での変換を推奨します。"
+    },
+    {
+      "question": "JPEGに変換すると画質は下がりますか？",
+      "answer": "JPEGは非可逆圧縮のため変換時に若干の画質劣化があります。このツールは品質92%で変換するためファイルサイズと画質のバランスが取れた設定です。PNG・WebP変換では画質は劣化しません。"
+    }
+  ]
+}

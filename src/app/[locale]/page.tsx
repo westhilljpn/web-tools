@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import tools from "@/lib/toolsRegistry";
 import type { LocalizedTool, ToolMessages } from "@/lib/toolsRegistry";
 import HomepageClient from "@/components/HomepageClient";
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function HomePage({ params }: PageProps) {
   const { locale } = params;
+  setRequestLocale(locale);
   const tHome = await getTranslations({ locale, namespace: "home" });
   const tCat = await getTranslations({ locale, namespace: "categories" });
 

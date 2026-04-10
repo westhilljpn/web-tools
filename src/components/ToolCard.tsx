@@ -6,9 +6,9 @@ interface ToolCardProps {
   locale: string;
 }
 
-export default function ToolCard({ tool, locale: _locale }: ToolCardProps) {
+export default function ToolCard({ tool, locale }: ToolCardProps) {
   return (
-    <Link href={`/${tool.slug}`} className="block group">
+    <Link href={`/${tool.slug}`} locale={locale as "en" | "ja"} className="block group">
       <article className="tool-card h-full hover:shadow-md hover:border-blue-200 transition-all duration-200">
         {/* アイコン + タイトル */}
         <div className="flex items-start gap-3">

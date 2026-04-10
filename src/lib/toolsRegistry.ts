@@ -152,6 +152,20 @@ const tools: Tool[] = [
     component: "PomodoroTimer",
     updatedAt: "2026-04-09",
   },
+  {
+    slug: "image-converter",
+    category: "image",
+    icon: "🔄",
+    component: "ImageConverter",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "images-to-pdf",
+    category: "convert",
+    icon: "📑",
+    component: "ImagesToPdf",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;

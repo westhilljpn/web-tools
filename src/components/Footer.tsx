@@ -23,7 +23,7 @@ export default function Footer() {
               {t("terms")}
             </Link>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:westhilljpn@gmail.com"
               className="hover:text-primary transition-colors"
             >
               {t("contact")}

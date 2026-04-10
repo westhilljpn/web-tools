@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import tools, { getToolBySlug, getRelatedTools } from "@/lib/toolsRegistry";
 import type { LocalizedTool, ToolMessages } from "@/lib/toolsRegistry";
 import toolComponentMap from "@/lib/toolComponents";
@@ -65,6 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function ToolPage({ params }: PageProps) {
   const { locale } = params;
   const slug = params["tool-slug"];
+  setRequestLocale(locale);
   const tool = getToolBySlug(slug);
 
   if (!tool) notFound();

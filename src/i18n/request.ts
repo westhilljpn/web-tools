@@ -28,6 +28,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
     bmiCalculator,
     loanCalculator,
     pomodoroTimer,
+    imageConverter,
+    imagesToPdf,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -47,6 +49,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/bmi-calculator.json"),
           import("../messages/ja/tools/loan-calculator.json"),
           import("../messages/ja/tools/pomodoro-timer.json"),
+          import("../messages/ja/tools/image-converter.json"),
+          import("../messages/ja/tools/images-to-pdf.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -65,6 +69,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/bmi-calculator.json"),
           import("../messages/en/tools/loan-calculator.json"),
           import("../messages/en/tools/pomodoro-timer.json"),
+          import("../messages/en/tools/image-converter.json"),
+          import("../messages/en/tools/images-to-pdf.json"),
         ]);
 
   return {
@@ -86,6 +92,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "bmi-calculator": bmiCalculator.default,
       "loan-calculator": loanCalculator.default,
       "pomodoro-timer": pomodoroTimer.default,
+      "image-converter": imageConverter.default,
+      "images-to-pdf": imagesToPdf.default,
     },
   };
 });

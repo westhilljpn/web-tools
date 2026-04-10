@@ -11,7 +11,7 @@ interface RelatedToolsProps {
 export default function RelatedTools({
   tools,
   title,
-  locale: _locale,
+  locale,
 }: RelatedToolsProps) {
   if (tools.length === 0) return null;
 
@@ -23,6 +23,7 @@ export default function RelatedTools({
           <li key={tool.slug}>
             <Link
               href={`/${tool.slug}`}
+              locale={locale as "en" | "ja"}
               className="flex items-center gap-2 p-3 rounded-lg border border-gray-100
                          hover:border-blue-200 hover:bg-blue-50 transition-all duration-150 group"
             >

@@ -1,0 +1,67 @@
+{
+  "title": "Image Format Converter",
+  "description": "Free online image converter. Convert PNG, JPG, WebP, BMP, and HEIC files to any format. Batch convert with ZIP download. All processing happens in your browser — your files never leave your device.",
+  "keywords": ["image converter", "PNG to JPG", "JPG to WebP", "HEIC converter", "batch image convert", "free image converter"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "convertAll": "{count, plural, one {Convert {count} file} other {Convert all {count} files}}",
+    "converting": "Converting…",
+    "download": "Download",
+    "downloadFile": "Download File",
+    "downloadZip": "Download ZIP ({count} files)",
+    "zipping": "Creating ZIP…",
+    "clearAll": "Clear All",
+    "remove": "Remove"
+  },
+  "results": {},
+  "toast": {
+    "converted": "Conversion complete!",
+    "downloaded": "Downloaded!"
+  },
+  "settings": {
+    "formatLabel": "Output Format"
+  },
+  "dropzone": {
+    "label": "Drop images here",
+    "title": "Drop images here or click to select",
+    "hint": "Multiple files supported",
+    "formats": "PNG · JPG · WebP · BMP · HEIC"
+  },
+  "privacy": "All processing happens entirely in your browser. Your images are never uploaded to any server.",
+  "fileList": {
+    "title": "{count, plural, one {{count} file selected} other {{count} files selected}}",
+    "readyAs": "Ready as {name}"
+  },
+  "errors": {
+    "conversionFailed": "Conversion failed"
+  },
+  "howToUse": [
+    { "label": "Select output format", "description": "Choose the target format: JPEG, PNG, or WebP." },
+    { "label": "Add images", "description": "Drag and drop images onto the drop zone, or click to browse. Supports PNG, JPG, WebP, BMP, and HEIC." },
+    { "label": "Convert", "description": "Click the Convert button to process all files in your browser." },
+    { "label": "Download", "description": "Download each file individually, or click \"Download ZIP\" to get all converted images in a single archive." }
+  ],
+  "faq": [
+    {
+      "question": "What image formats are supported?",
+      "answer": "Input formats: PNG, JPG/JPEG, WebP, BMP, HEIC, and HEIF. Output formats: JPEG, PNG, and WebP."
+    },
+    {
+      "question": "Can I convert HEIC files from iPhone?",
+      "answer": "Yes. HEIC and HEIF files (used on iPhone and newer Apple devices) can be converted to JPEG, PNG, or WebP directly in your browser."
+    },
+    {
+      "question": "Are my images uploaded to a server?",
+      "answer": "No. All conversion happens entirely in your browser using the Canvas API. Your images never leave your device."
+    },
+    {
+      "question": "How many files can I convert at once?",
+      "answer": "There is no strict limit, but performance depends on your device. For best results, convert in batches of 20 files or fewer."
+    },
+    {
+      "question": "Does converting to JPEG reduce quality?",
+      "answer": "JPEG is a lossy format, so some quality loss occurs. This tool uses 92% quality, which provides a good balance between file size and visual fidelity. PNG and WebP conversions do not lose quality."
+    }
+  ]
+}

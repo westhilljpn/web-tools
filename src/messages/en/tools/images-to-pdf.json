@@ -1,0 +1,63 @@
+{
+  "title": "Images to PDF Converter",
+  "description": "Free online tool to combine images into a PDF. Add multiple photos, drag to reorder pages, choose A4/Letter/original page size, set margins, and generate a PDF — all in your browser.",
+  "keywords": ["images to PDF", "image to PDF", "JPG to PDF", "PNG to PDF", "combine images PDF", "free PDF converter"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "generate": "{count, plural, one {Generate PDF ({count} image)} other {Generate PDF ({count} images)}}",
+    "generating": "Generating PDF…",
+    "remove": "Remove"
+  },
+  "results": {},
+  "toast": {
+    "generated": "PDF generated!",
+    "error": "Failed to generate PDF"
+  },
+  "loading": "Loading images…",
+  "dropzone": {
+    "title": "Drop images here or click to select",
+    "hint": "PNG, JPG, WebP, BMP and more"
+  },
+  "imageList": {
+    "title": "{count, plural, one {{count} image added} other {{count} images added}}",
+    "dragHint": "Drag rows to reorder"
+  },
+  "settings": {
+    "pageSizeLabel": "Page Size",
+    "marginLabel": "Margin: {mm} mm",
+    "pageSizes": {
+      "a4": "A4",
+      "letter": "Letter",
+      "original": "Original"
+    }
+  },
+  "howToUse": [
+    { "label": "Add images", "description": "Drag and drop images onto the drop zone, or click to select files from your device." },
+    { "label": "Reorder pages", "description": "Drag the rows in the image list to change the page order in the final PDF." },
+    { "label": "Configure settings", "description": "Choose the page size (A4, Letter, or original image dimensions) and set the margin width." },
+    { "label": "Generate PDF", "description": "Click the Generate PDF button. The file is created entirely in your browser and downloaded automatically." }
+  ],
+  "faq": [
+    {
+      "question": "What image formats can I use?",
+      "answer": "Any image format your browser supports: PNG, JPG, WebP, BMP, GIF, and more."
+    },
+    {
+      "question": "What does \"Original\" page size mean?",
+      "answer": "Each page is sized to match the pixel dimensions of the corresponding image at 96 DPI, preserving the image at its natural scale."
+    },
+    {
+      "question": "Can I reorder the images?",
+      "answer": "Yes. Drag the rows in the image list to rearrange them. The PDF pages will follow the same order."
+    },
+    {
+      "question": "Are my images uploaded to a server?",
+      "answer": "No. The PDF is generated entirely in your browser using the jsPDF library. Your images never leave your device."
+    },
+    {
+      "question": "Is there a limit on the number of images?",
+      "answer": "There is no hard limit, but many large images may slow down your browser. Consider resizing very large photos before converting."
+    }
+  ]
+}

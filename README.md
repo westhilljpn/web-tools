@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（15件）
+## 登録済みツール（17件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -36,6 +36,8 @@ npm run dev                         # http://localhost:3000
 | 13 | `bmi-calculator` | BMI計算ツール | BMI Calculator | calculate |
 | 14 | `loan-calculator` | ローン返済シミュレーター | Loan Repayment Calculator | calculate |
 | 15 | `pomodoro-timer` | ポモドーロ・集中タイマー | Pomodoro & Focus Timer | lifestyle |
+| 16 | `image-converter` | 画像フォーマット変換 | Image Format Converter | image |
+| 17 | `images-to-pdf` | 画像→PDF変換 | Images to PDF Converter | convert |
 
 ---
 
@@ -64,18 +66,23 @@ npm run dev                         # http://localhost:3000
 - [x] **B3-5** `password-generator` — パスワード生成（crypto.getRandomValues）
 - [x] **B3-6** `pomodoro-timer` — ポモドーロ・集中タイマー（円形プログレス・統計・ブラウザ通知）
 
-### バッチ4 — 開発者向けツール（次フェーズ・最優先）
+### バッチ4 — ファイル変換ツール ✅ 完了
 
-- [ ] **B4-1** `hash-generator` — SHA-1 / SHA-256 / SHA-512 ハッシュ生成（Web Crypto API で外部ライブラリ不要）
-- [ ] **B4-2** `markdown-preview` — Markdownプレビュー（左右ペイン、リアルタイム）
-- [ ] **B4-3** `diff-checker` — テキスト差分チェッカー（行単位のdiff表示）
+- [x] **B4-1** `image-converter` — 画像フォーマット変換（PNG/JPG/WebP/BMP/HEIC、一括変換+ZIP）
+- [x] **B4-2** `images-to-pdf` — 画像→PDF変換（並び替え・ページサイズ・余白設定、jsPDF）
 
-### バッチ5 — 追加候補（B4 完了後に検討）
+### バッチ5 — 開発者向けツール（次フェーズ・最優先）
 
-- [ ] **B5-1** `uuid-generator` — UUID v4 生成（crypto.randomUUID）
-- [ ] **B5-2** `lorem-ipsum` — ダミーテキスト生成（日英対応）
-- [ ] **B5-3** `number-base-converter` — 2進数 / 8進数 / 10進数 / 16進数 変換
-- [ ] **B5-4** `image-resizer` — 画像リサイズ（Canvas API、クライアントサイド完結）
+- [ ] **B5-1** `hash-generator` — SHA-1 / SHA-256 / SHA-512 ハッシュ生成（Web Crypto API で外部ライブラリ不要）
+- [ ] **B5-2** `markdown-preview` — Markdownプレビュー（左右ペイン、リアルタイム）
+- [ ] **B5-3** `diff-checker` — テキスト差分チェッカー（行単位のdiff表示）
+
+### バッチ6 — 追加候補（B5 完了後に検討）
+
+- [ ] **B6-1** `uuid-generator` — UUID v4 生成（crypto.randomUUID）
+- [ ] **B6-2** `lorem-ipsum` — ダミーテキスト生成（日英対応）
+- [ ] **B6-3** `number-base-converter` — 2進数 / 8進数 / 10進数 / 16進数 変換
+- [ ] **B6-4** `image-resizer` — 画像リサイズ（Canvas API、クライアントサイド完結）
 
 ---
 
@@ -92,11 +99,17 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | **B4-1** `hash-generator` — SHA-1 / SHA-256 / SHA-512 ハッシュ生成 | Web Crypto API で外部パッケージ不要。次回ツール追加の最優先 |
-| 中 | **B4-2** `markdown-preview` — Markdownプレビュー（左右ペイン） | react-markdown 等のパッケージ追加が必要。要検討 |
-| 中 | **B4-3** `diff-checker` — テキスト差分チェッカー（行単位） | diff ライブラリ追加が必要。要検討 |
+| 高 | **B5-1** `hash-generator` — SHA-1 / SHA-256 / SHA-512 ハッシュ生成 | Web Crypto API で外部パッケージ不要。次回ツール追加の最優先 |
+| 中 | **B5-2** `markdown-preview` — Markdownプレビュー（左右ペイン） | react-markdown 等のパッケージ追加が必要。要検討 |
+| 中 | **B5-3** `diff-checker` — テキスト差分チェッカー（行単位） | diff ライブラリ追加が必要。要検討 |
 | 低 | `Header` の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している |
 | 低 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
+
+### ✅ 完了済み（2026-04-11）
+- [x] お問い合わせ先を `westhilljpn@gmail.com` に変更（Footer・プライバシーポリシー・利用規約）
+- [x] 関連ツールリンクの言語バグ修正（`/ja/` ページから `/en/` に飛ばされる問題）— `setRequestLocale` 追加 + `Link` コンポーネントに `locale` 明示
+- [x] `image-converter` 追加（PNG/JPG/WebP/BMP/HEIC 相互変換・一括変換・ZIP DL・heic2any）
+- [x] `images-to-pdf` 追加（複数画像→PDF・並び替え・A4/レター/元サイズ・余白設定・jsPDF）
 
 ### ✅ 完了済み（2026-04-10）
 - [x] Vercel カスタムドメイン `quicker-app.com` 接続・`NEXT_PUBLIC_SITE_URL` 更新

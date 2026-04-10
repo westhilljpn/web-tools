@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import Script from "next/script";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
@@ -59,6 +59,9 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as "en" | "ja")) {
     notFound();
   }
+
+  // 静的レンダリング時にロケールコンテキストを設定
+  setRequestLocale(locale);
 
   // クライアントコンポーネント向けにメッセージを渡す
   const messages = await getMessages();

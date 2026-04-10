@@ -113,8 +113,8 @@ function JaTermsContent({ siteName }: { siteName: string }) {
           <p>本規約に関するお問い合わせは、下記メールアドレスまでご連絡ください。</p>
           <p className="mt-2">
             メールアドレス:{" "}
-            <a href="mailto:contact@example.com" className="text-primary hover:underline">
-              contact@example.com
+            <a href="mailto:westhilljpn@gmail.com" className="text-primary hover:underline">
+              westhilljpn@gmail.com
             </a>
           </p>
         </section>
@@ -194,8 +194,8 @@ function EnTermsContent({ siteName }: { siteName: string }) {
           <p>For inquiries about these Terms, please contact us at the email address below.</p>
           <p className="mt-2">
             Email:{" "}
-            <a href="mailto:contact@example.com" className="text-primary hover:underline">
-              contact@example.com
+            <a href="mailto:westhilljpn@gmail.com" className="text-primary hover:underline">
+              westhilljpn@gmail.com
             </a>
           </p>
         </section>

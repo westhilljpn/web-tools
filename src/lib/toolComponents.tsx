@@ -29,6 +29,8 @@ const toolComponentMap: Record<string, ComponentType> = {
   BmiCalculator: dynamic(() => import("@/tools/BmiCalculator"), { loading: Loading }),
   LoanCalculator: dynamic(() => import("@/tools/LoanCalculator"), { loading: Loading }),
   PomodoroTimer: dynamic(() => import("@/tools/PomodoroTimer"), { loading: Loading }),
+  ImageConverter: dynamic(() => import("@/tools/ImageConverter"), { loading: Loading }),
+  ImagesToPdf: dynamic(() => import("@/tools/ImagesToPdf"), { loading: Loading }),
 };
 
 export default toolComponentMap;
