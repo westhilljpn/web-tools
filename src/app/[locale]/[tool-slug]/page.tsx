@@ -58,6 +58,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${tm.title} - ${tPage("freeOnlineTool")} | ${siteName}`,
       description: tm.description,
       url: `${siteUrl}/${locale}/${slug}`,
+      images: [
+        {
+          url: `/og?title=${encodeURIComponent(tm.title)}&icon=${encodeURIComponent(tool.icon)}`,
+          width: 1200,
+          height: 630,
+          alt: tm.title,
+        },
+      ],
     },
   };
 }

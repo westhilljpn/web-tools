@@ -1,22 +1,46 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { Link } from "@/i18n/routing";
+import { useState, useRef, useEffect } from "react";
+import { Link, useRouter, usePathname } from "@/i18n/routing";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-interface HeaderProps {
-  onSearch?: (query: string) => void;
-}
-
-export default function Header({ onSearch }: HeaderProps) {
+export default function Header() {
   const t = useTranslations("header");
   const tSite = useTranslations("site");
   const [query, setQuery] = useState("");
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // ホームページから離れたら入力値をクリア
+  useEffect(() => {
+    if (!isHome) setQuery("");
+  }, [isHome]);
+
+  function pushQuery(val: string) {
+    if (val.trim()) {
+      router.push(`/?q=${encodeURIComponent(val.trim())}`);
+    } else {
+      router.push("/");
+    }
+  }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setQuery(e.target.value);
-    onSearch?.(e.target.value);
+    const val = e.target.value;
+    setQuery(val);
+    // ホームページにいる場合のみリアルタイムでURLを更新（300ms debounce）
+    if (isHome) {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => pushQuery(val), 300);
+    }
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (timerRef.current) clearTimeout(timerRef.current);
+    pushQuery(query);
   }
 
   return (
@@ -30,8 +54,8 @@ export default function Header({ onSearch }: HeaderProps) {
           {tSite("name")}
         </Link>
 
-        {/* 検索バー */}
-        <div className="flex-1 max-w-md">
+        {/* 検索フォーム */}
+        <form onSubmit={handleSubmit} className="flex-1 max-w-md">
           <label htmlFor="tool-search" className="sr-only">
             {t("searchLabel")}
           </label>
@@ -62,7 +86,7 @@ export default function Header({ onSearch }: HeaderProps) {
                          focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
             />
           </div>
-        </div>
+        </form>
 
         {/* 言語切替 */}
         <LanguageSwitcher />

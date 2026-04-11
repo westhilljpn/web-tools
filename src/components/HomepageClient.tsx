@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import ToolCard from "@/components/ToolCard";
 import type { LocalizedTool } from "@/lib/toolsRegistry";
 
@@ -31,8 +32,14 @@ export default function HomepageClient({
   homeStrings,
   locale,
 }: HomepageClientProps) {
-  const [query, setQuery] = useState("");
+  const searchParams = useSearchParams();
+  const [query, setQuery] = useState(() => searchParams.get("q") ?? "");
   const [activeCategory, setActiveCategory] = useState("all");
+
+  // ヘッダー検索によるURLパラメーター変化を監視してフィルターに反映
+  useEffect(() => {
+    setQuery(searchParams.get("q") ?? "");
+  }, [searchParams]);
 
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {

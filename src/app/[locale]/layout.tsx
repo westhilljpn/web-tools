@@ -38,6 +38,14 @@ export async function generateMetadata({
       type: "website",
       siteName: t("name"),
       locale: locale === "ja" ? "ja_JP" : "en_US",
+      images: [
+        {
+          url: `/og`,
+          width: 1200,
+          height: 630,
+          alt: t("name"),
+        },
+      ],
     },
     robots: {
       index: true,

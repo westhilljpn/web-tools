@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import tools from "@/lib/toolsRegistry";
@@ -29,6 +30,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     openGraph: {
       url: `${siteUrl}/${locale}`,
+      images: [
+        {
+          url: `/og?title=${encodeURIComponent(tHome("title"))}&icon=%F0%9F%94%A7`,
+          width: 1200,
+          height: 630,
+          alt: tHome("title"),
+        },
+      ],
     },
   };
 }
@@ -71,11 +80,13 @@ export default async function HomePage({ params }: PageProps) {
   };
 
   return (
-    <HomepageClient
-      tools={localizedTools}
-      categories={categories}
-      homeStrings={homeStrings}
-      locale={locale}
-    />
+    <Suspense>
+      <HomepageClient
+        tools={localizedTools}
+        categories={categories}
+        homeStrings={homeStrings}
+        locale={locale}
+      />
+    </Suspense>
   );
 }
