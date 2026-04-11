@@ -176,18 +176,18 @@ export default async function ToolPage({ params }: PageProps) {
         <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
           {/* メインコンテンツ */}
           <div className="min-w-0">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-3">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-slate-100 flex items-center gap-3">
               <span aria-hidden="true">{tool.icon}</span>
               {tm.title}
             </h1>
-            <p className="mt-2 text-gray-500 text-sm">{tm.description}</p>
+            <p className="mt-2 text-gray-500 dark:text-slate-400 text-sm">{tm.description}</p>
 
             {/* ツール本体 */}
             <div className="mt-6 tool-card">
               {ToolComponent ? (
                 <ToolComponent />
               ) : (
-                <p className="text-sm text-gray-400 text-center py-8">
+                <p className="text-sm text-gray-400 dark:text-slate-500 text-center py-8">
                   {tPage("comingSoon")}
                 </p>
               )}

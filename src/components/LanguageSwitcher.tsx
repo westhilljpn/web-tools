@@ -21,7 +21,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="flex items-center gap-1 text-sm">
-      <span className="text-gray-400 text-xs hidden sm:inline">{t("label")}:</span>
+      <span className="text-gray-400 dark:text-slate-500 text-xs hidden sm:inline">{t("label")}:</span>
       {(["en", "ja"] as const).map((lang) => (
         <button
           key={lang}
@@ -31,7 +31,7 @@ export default function LanguageSwitcher() {
           className={`px-2 py-1 rounded text-xs font-medium transition-colors ${
             locale === lang
               ? "bg-primary text-white"
-              : "text-gray-500 hover:text-primary hover:bg-blue-50"
+              : "text-gray-500 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/50"
           }`}
         >
           {t(lang)}

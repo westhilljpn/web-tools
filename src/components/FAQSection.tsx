@@ -40,7 +40,7 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
   return (
     <section className="mt-12">
       <SEOHead jsonLd={faqSchema} />
-      <h2 className="text-xl font-bold text-gray-900 mb-4">{title}</h2>
+      <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-4">{title}</h2>
       <dl className="space-y-2">
         {faqs.map((faq, index) => (
           <div key={index} className="tool-card">
@@ -50,11 +50,11 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
                 onClick={() => toggle(index)}
                 aria-expanded={openIndex === index}
                 className="w-full flex justify-between items-center text-left gap-4
-                           font-medium text-gray-900 hover:text-primary transition-colors"
+                           font-medium text-gray-900 dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors"
               >
                 <span>{faq.question}</span>
                 <span
-                  className={`shrink-0 text-gray-400 transition-transform duration-200 ${
+                  className={`shrink-0 text-gray-400 dark:text-slate-500 transition-transform duration-200 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                   aria-hidden="true"
@@ -64,7 +64,7 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
               </button>
             </dt>
             {openIndex === index && (
-              <dd className="mt-3 text-sm text-gray-600 leading-relaxed">
+              <dd className="mt-3 text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
                 {faq.answer}
               </dd>
             )}

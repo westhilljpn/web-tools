@@ -77,8 +77,16 @@ export default async function LocaleLayout({
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
-    <html lang={locale}>
-      <body className="min-h-screen flex flex-col bg-gray-50">
+    <html lang={locale} suppressHydrationWarning>
+      {/* テーマ初期化スクリプト: ページ描画前に実行してFOIT（テーマちらつき）を防ぐ */}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");var p=window.matchMedia("(prefers-color-scheme: dark)").matches;if(t==="dark"||(t===null&&p)){document.documentElement.classList.add("dark")}}catch(e){}})()`,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900 transition-colors duration-200">
         {/* Google Analytics（NEXT_PUBLIC_GA_ID が設定されている場合のみ読み込む） */}
         {gaId && (
           <>

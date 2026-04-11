@@ -43,5 +43,9 @@
     "label": "言語",
     "en": "English",
     "ja": "日本語"
+  },
+  "theme": {
+    "toDarkMode": "ダークモードに切替",
+    "toLightMode": "ライトモードに切替"
   }
 }

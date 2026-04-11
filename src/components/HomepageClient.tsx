@@ -58,10 +58,10 @@ export default function HomepageClient({
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       {/* ページタイトル */}
       <div className="text-center mb-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100">
           {homeStrings.title}
         </h1>
-        <p className="mt-3 text-gray-500 text-sm sm:text-base">
+        <p className="mt-3 text-gray-500 dark:text-slate-400 text-sm sm:text-base">
           {homeStrings.subtitle}
         </p>
       </div>
@@ -78,7 +78,9 @@ export default function HomepageClient({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={homeStrings.filterPlaceholder}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm
+            className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 rounded-lg text-sm
+                       bg-white dark:bg-slate-700 text-gray-900 dark:text-slate-100
+                       placeholder-gray-400 dark:placeholder-slate-400
                        focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
           />
         </div>
@@ -93,7 +95,7 @@ export default function HomepageClient({
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === cat.key
                   ? "bg-primary text-white"
-                  : "bg-white text-gray-600 border border-gray-300 hover:border-primary hover:text-primary"
+                  : "bg-white dark:bg-slate-700 text-gray-600 dark:text-slate-300 border border-gray-300 dark:border-slate-600 hover:border-primary hover:text-primary dark:hover:border-blue-400 dark:hover:text-blue-400"
               }`}
             >
               {cat.label}
@@ -110,7 +112,7 @@ export default function HomepageClient({
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 text-gray-400">
+        <div className="text-center py-16 text-gray-400 dark:text-slate-500">
           <p className="text-4xl mb-3">🔍</p>
           <p className="text-sm">
             {tools.length === 0 ? homeStrings.comingSoon : homeStrings.noTools}
