@@ -91,12 +91,12 @@ npm run dev                         # http://localhost:3000
 - [x] **B6-3** `number-base-converter` — 2進数 / 8進数 / 10進数 / 16進数 変換
 - [x] **B6-4** `image-resizer` — 画像リサイズ（Canvas API、クライアントサイド完結）
 
-### バッチ7 — 追加候補（次フェーズ）
+### バッチ7 — 次回ツール追加候補
 
-- [ ] **B7-1** Header の検索バーをトップページと連携
-- [ ] **B7-2** OGP 画像（og:image）の追加
-- [ ] **B7-3** `text-to-slug` — テキスト→URLスラッグ変換
-- [ ] **B7-4** `jwt-decoder` — JWTトークンのデコード・検証
+- [ ] **B7-1** `text-to-slug` — テキスト→URLスラッグ変換（スペース/特殊文字除去・kebab-case化）
+- [ ] **B7-2** `jwt-decoder` — JWTトークンのデコード・ペイロード表示（Base64デコード、外部パッケージ不要）
+- [ ] **B7-3** `word-counter` — 英語ワードカウンター（単語/文/段落・読了時間推定）
+- [ ] **B7-4** `percentage-calculator` — パーセント計算ツール（割合・増減率・逆算）
 
 ---
 
@@ -113,25 +113,22 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 中 | `Header` の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している |
-| 中 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
-| 低 | **B7-3** `text-to-slug` — テキスト→URLスラッグ変換 | 外部パッケージ不要 |
-| 低 | **B7-4** `jwt-decoder` — JWTトークンのデコード・検証 | Base64デコードで実装可能 |
+| 高 | Header の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している。ヘッダーから検索できると UX 向上 |
+| 中 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ未設定。`/public/og-default.png` を作成して全ページに設定 |
+| 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 
-### ✅ 完了済み（2026-04-11 B6バッチ）
+### ✅ 完了済み（2026-04-11）
 - [x] `uuid-generator` 追加（UUID v4・件数一括生成・大文字/ハイフントグル・crypto.randomUUID）
 - [x] `lorem-ipsum` 追加（段落/文/単語・ラテン語/日本語・startWithLoremオプション）
 - [x] `number-base-converter` 追加（2/8/10/16進数リアルタイム変換・負数対応）
 - [x] `image-resizer` 追加（Canvas API・アスペクト比維持・PNG/JPG/WebP出力・品質調整）
-
-### ✅ 完了済み（2026-04-11）
-- [x] お問い合わせ先を `westhilljpn@gmail.com` に変更（Footer・プライバシーポリシー・利用規約）
-- [x] 関連ツールリンクの言語バグ修正（`/ja/` ページから `/en/` に飛ばされる問題）— `setRequestLocale` 追加 + `Link` コンポーネントに `locale` 明示
-- [x] `image-converter` 追加（PNG/JPG/WebP/BMP/HEIC 相互変換・一括変換・ZIP DL・heic2any）
-- [x] `images-to-pdf` 追加（複数画像→PDF・並び替え・A4/レター/元サイズ・余白設定・jsPDF）
 - [x] `hash-generator` 追加（SHA-1/SHA-256/SHA-512・Web Crypto API・大文字小文字切り替え）
 - [x] `markdown-preview` 追加（2ペインリアルタイムプレビュー・marked・グローバルCSSスタイル）
 - [x] `diff-checker` 追加（LCSアルゴリズム・行番号表示・変更行フィルター・入れ替えボタン）
+- [x] `image-converter` 追加（PNG/JPG/WebP/BMP/HEIC 相互変換・一括変換・ZIP DL・heic2any）
+- [x] `images-to-pdf` 追加（複数画像→PDF・並び替え・A4/レター/元サイズ・余白設定・jsPDF）
+- [x] お問い合わせ先を `westhilljpn@gmail.com` に変更（Footer・プライバシーポリシー・利用規約）
+- [x] 関連ツールリンクの言語バグ修正（`/ja/` ページから `/en/` に飛ばされる問題）— `setRequestLocale` 追加 + `Link` コンポーネントに `locale` 明示
 
 ### ✅ 完了済み（2026-04-10）
 - [x] Vercel カスタムドメイン `quicker-app.com` 接続・`NEXT_PUBLIC_SITE_URL` 更新
