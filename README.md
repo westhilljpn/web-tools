@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（24件）
+## 登録済みツール（28件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -45,6 +45,10 @@ npm run dev                         # http://localhost:3000
 | 22 | `lorem-ipsum` | ダミーテキスト生成 | Lorem Ipsum Generator | text |
 | 23 | `number-base-converter` | 進数変換ツール | Number Base Converter | convert |
 | 24 | `image-resizer` | 画像リサイズツール | Image Resizer | image |
+| 25 | `text-to-slug` | テキスト→スラッグ変換 | Text to Slug Converter | text |
+| 26 | `jwt-decoder` | JWTデコーダー | JWT Decoder | dev |
+| 27 | `word-counter` | ワードカウンター | Word Counter | text |
+| 28 | `percentage-calculator` | パーセント計算ツール | Percentage Calculator | calculate |
 
 ---
 
@@ -91,12 +95,19 @@ npm run dev                         # http://localhost:3000
 - [x] **B6-3** `number-base-converter` — 2進数 / 8進数 / 10進数 / 16進数 変換
 - [x] **B6-4** `image-resizer` — 画像リサイズ（Canvas API、クライアントサイド完結）
 
-### バッチ7 — 次回ツール追加候補
+### バッチ7 — 追加候補 ✅ 完了
 
-- [ ] **B7-1** `text-to-slug` — テキスト→URLスラッグ変換（スペース/特殊文字除去・kebab-case化）
-- [ ] **B7-2** `jwt-decoder` — JWTトークンのデコード・ペイロード表示（Base64デコード、外部パッケージ不要）
-- [ ] **B7-3** `word-counter` — 英語ワードカウンター（単語/文/段落・読了時間推定）
-- [ ] **B7-4** `percentage-calculator` — パーセント計算ツール（割合・増減率・逆算）
+- [x] **B7-1** `text-to-slug` — テキスト→URLスラッグ変換（スペース/特殊文字除去・kebab-case化）
+- [x] **B7-2** `jwt-decoder` — JWTトークンのデコード・ペイロード表示（Base64デコード、外部パッケージ不要）
+- [x] **B7-3** `word-counter` — 英語ワードカウンター（単語/文/段落・読了時間推定）
+- [x] **B7-4** `percentage-calculator` — パーセント計算ツール（割合・増減率・逆算）
+
+### バッチ8 — 次回ツール追加候補
+
+- [ ] **B8-1** `color-palette` — カラーパレット生成（補色・類似色・シェード）
+- [ ] **B8-2** `cron-parser` — cron式パーサー（次回実行時刻・わかりやすい説明）
+- [ ] **B8-3** `aspect-ratio` — アスペクト比計算（画像サイズ変換・黄金比）
+- [ ] **B8-4** `html-encoder` — HTML エンティティエンコード/デコード
 
 ---
 
@@ -116,6 +127,10 @@ npm run dev                         # http://localhost:3000
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 
 ### ✅ 完了済み（2026-04-11）
+- [x] `text-to-slug` 追加（テキスト→URLスラッグ・ハイフン/アンダースコア・アクセント文字変換）
+- [x] `jwt-decoder` 追加（Base64url デコード・ヘッダー/ペイロード/署名・有効期限ステータス色分け）
+- [x] `word-counter` 追加（単語/文字/文/段落・読了時間・スピーチ時間・頻出単語 TOP5）
+- [x] `percentage-calculator` 追加（基本%・何%か・増減率・逆算の4モード）
 - [x] Header 検索バーをトップページと連携（ホームページでは debounce リアルタイム更新・他ページは Enter で遷移）
 - [x] OGP 画像（og:image）追加（`/og` Edge Route・ツール名＋絵文字アイコンで 1200×630px 動的生成）
 - [x] `uuid-generator` 追加（UUID v4・件数一括生成・大文字/ハイフントグル・crypto.randomUUID）
