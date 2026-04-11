@@ -3,7 +3,7 @@
 SEOで集客する無料Webツール集サイト。Next.js 14 + TypeScript + Tailwind CSS で構築。
 
 **本番 URL**: https://quicker-app.com  
-**現在のフェーズ**: 開発・公開フェーズ（収益化前）
+**現在のフェーズ**: 成長フェーズ（集客強化中） — ツール追加 / 既存改善 / マーケティングを並行
 
 ---
 
@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（35件）
+## 登録済みツール（36件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -56,6 +56,7 @@ npm run dev                         # http://localhost:3000
 | 33 | `css-gradient-generator` | CSSグラデーション生成ツール | CSS Gradient Generator | image |
 | 34 | `json-csv-converter` | JSON ↔ CSV 変換ツール | JSON ↔ CSV Converter | convert |
 | 35 | `sql-formatter` | SQL整形ツール | SQL Formatter | dev |
+| 36 | `unicode-font-generator` | Unicodeフォントジェネレーター | Unicode Font Generator | text |
 
 ---
 
@@ -118,23 +119,31 @@ npm run dev                         # http://localhost:3000
 
 ### サイト改善 — ダークモード ✅ 完了
 
-- [x] **DM** ダークモード実装（Tailwind `class` モード・ThemeToggle・FOIT防止・globals.css上書きで全32ツール対応）
+- [x] **DM** ダークモード実装（Tailwind `class` モード・ThemeToggle・FOIT防止・globals.css上書きで全36ツール対応）
 
-### バッチ9 — 追加候補 ✅ 完了（一部）
+### バッチ9 ✅ 完了
 
 - [x] **B9-1** `css-gradient-generator` — linear/radial/conic・カラーストップUI・プレビュー・CSSコードコピー・プリセット6種
 - [x] **B9-2** `json-csv-converter` — JSON↔CSV 2カラムUI・スワップ機能・RFC 4180準拠CSV解析
 - [x] **B9-3** `sql-formatter` — 外部パッケージなし・トークナイザー実装・キーワード大文字化・インデントオプション
 - [x] **修正** `cron-parser` — `buildDescription()` が英語固定だったのを `useLocale()` で i18n 対応
+- [x] **B9-4** `unicode-font-generator` — Bold/Italic/Script/Fraktur/Double-Struck 等 12スタイル・Unicodeコードポイント演算
 
 ### バッチ10 — 次回ツール追加候補（優先度順）
 
 - [ ] **B10-1** `text-repeater` — テキスト繰り返し生成（繰り返し回数・区切り文字設定）
-- [ ] **B10-2** `ip-info` — IPアドレス情報（ローカルIP取得のみ・外部API不要）
-- [ ] **B10-3** `markdown-table-generator` — Markdownテーブル生成（行列入力・コピー）
-- [ ] **B10-4** `code-minifier` — JS/CSS/HTMLミニファイア（外部パッケージなし・正規表現ベース）
+- [ ] **B10-2** `markdown-table-generator` — Markdownテーブル生成（行列入力・コピー）
+- [ ] **B10-3** `code-minifier` — JS/CSS/HTMLミニファイア（外部パッケージなし・正規表現ベース）
+- [ ] **B10-4** `ip-info` — ローカルIPアドレス表示（外部API不要・WebRTC or navigator）
 
-> ⚠️ `ip-lookup` は外部API必須のため除外（CLAUDE.md：外部API呼び出し禁止）
+> ⚠️ `ip-lookup`（外部IP検索）は外部API必須のため除外（CLAUDE.md：外部API呼び出し禁止）
+
+### マーケティング施策 — 次のアクション
+
+- [ ] **M1** Google Search Console でCTR確認 — 表示回数↑クリック↓のページを洗い出し、titleとmeta descriptionを改善
+- [ ] **M2** Zenn/Qiita への記事投稿 — 「自作した理由」「使えるツール紹介」系でサイトへ自然にリンク
+- [ ] **M3** X（Twitter）での新ツール告知を習慣化 — ツール追加のたびに1投稿
+- [ ] **M4** 既存ツールのFAQ改善 — 検索クエリ起点で「よくある質問」を見直す（`text-counter`・`json-formatter` を優先）
 
 ---
 
@@ -151,14 +160,9 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| ~~中~~ | ~~`cron-parser` の説明文を日本語対応~~ | ✅ 解決済み（`useLocale()` で対応） |
+| 高 | GSCでCTR低ページのtitle/description改善 | CLAUDE.md マーケティング方針に追加。月1サイクルで実施 |
+| 中 | `text-counter`・`json-formatter` のFAQ書き直し | 流入上位ツールのコンテンツ質が集客に直結 |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
-
-### ✅ 完了済み（2026-04-11 追記2）
-- [x] `css-gradient-generator` 追加（linear/radial/conic・カラーストップUI・プレビュー・プリセット6種）
-- [x] `json-csv-converter` 追加（JSON↔CSV・2カラムUI・スワップ・RFC 4180準拠）
-- [x] `sql-formatter` 追加（外部パッケージなし・独自トークナイザー・キーワード大文字化・インデントオプション）
-- [x] `cron-parser` i18n 修正（`buildDescription()` を `useLocale()` で多言語対応）
 
 ### ✅ 完了済み（2026-04-11 追記）
 - [x] ダークモード実装（`tailwind.config.ts` `darkMode: class`・`ThemeToggle.tsx`・FOIT防止インラインスクリプト・globals.css一括上書きで全32ツール対応）
