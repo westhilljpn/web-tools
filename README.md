@@ -113,11 +113,11 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | Header の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している。ヘッダーから検索できると UX 向上 |
-| 中 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ未設定。`/public/og-default.png` を作成して全ページに設定 |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 
 ### ✅ 完了済み（2026-04-11）
+- [x] Header 検索バーをトップページと連携（ホームページでは debounce リアルタイム更新・他ページは Enter で遷移）
+- [x] OGP 画像（og:image）追加（`/og` Edge Route・ツール名＋絵文字アイコンで 1200×630px 動的生成）
 - [x] `uuid-generator` 追加（UUID v4・件数一括生成・大文字/ハイフントグル・crypto.randomUUID）
 - [x] `lorem-ipsum` 追加（段落/文/単語・ラテン語/日本語・startWithLoremオプション）
 - [x] `number-base-converter` 追加（2/8/10/16進数リアルタイム変換・負数対応）
