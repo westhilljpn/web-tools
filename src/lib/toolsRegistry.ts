@@ -292,6 +292,13 @@ const tools: Tool[] = [
     component: "SqlFormatter",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "unicode-font-generator",
+    category: "text",
+    icon: "🔤",
+    component: "UnicodeFontGenerator",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;

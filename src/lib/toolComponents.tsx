@@ -49,6 +49,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   CssGradientGenerator: dynamic(() => import("@/tools/CssGradientGenerator"), { loading: Loading }),
   JsonCsvConverter: dynamic(() => import("@/tools/JsonCsvConverter"), { loading: Loading }),
   SqlFormatter: dynamic(() => import("@/tools/SqlFormatter"), { loading: Loading }),
+  UnicodeFontGenerator: dynamic(() => import("@/tools/UnicodeFontGenerator"), { loading: Loading }),
 };
 
 export default toolComponentMap;

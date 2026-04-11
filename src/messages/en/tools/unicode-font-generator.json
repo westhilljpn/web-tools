@@ -1,0 +1,56 @@
+{
+  "title": "Unicode Font Generator",
+  "description": "Convert text into fancy Unicode styles — bold, italic, script, fraktur, double-struck, monospace, and more. Works on any platform.",
+  "keywords": ["font generator", "fancy text", "unicode font", "bold text generator", "instagram fonts", "text styles", "unicode text"],
+  "placeholder": "Type text to convert...",
+  "note": "Latin letters (A–Z) and digits (0–9) are converted. Other characters are passed through unchanged.",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "empty": "Type something above to see all font styles.",
+  "styles": {
+    "bold":         "Bold",
+    "italic":       "Italic",
+    "bold_italic":  "Bold Italic",
+    "script":       "Script",
+    "fraktur":      "Fraktur / Gothic",
+    "double_struck":"Double-Struck",
+    "sans":         "Sans-Serif",
+    "sans_bold":    "Sans-Serif Bold",
+    "monospace":    "Monospace",
+    "fullwidth":    "Full Width",
+    "small_caps":   "Small Caps",
+    "circled":      "Circled"
+  },
+  "howToUse": [
+    {
+      "label": "Enter your text",
+      "description": "Type or paste text into the input field. Latin letters and digits are converted in real time."
+    },
+    {
+      "label": "Browse the styles",
+      "description": "Scroll through 12 different Unicode font styles displayed instantly below the input."
+    },
+    {
+      "label": "Copy and paste",
+      "description": "Click \"Copy\" on any style you like, then paste it into social media bios, posts, documents, or chats."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why do these font styles work everywhere?",
+      "answer": "They are not actual fonts — they use special Unicode characters that visually resemble styled letters (e.g., Mathematical Bold, Script, Double-Struck). Because they are real characters in the text, any app or website renders them the same way without needing font files."
+    },
+    {
+      "question": "Can I use these on Instagram, X (Twitter), or Discord?",
+      "answer": "Yes. Unicode characters work in social media bios, usernames, posts, and chat messages. They are a popular way to add visual flair without relying on platform-specific formatting."
+    },
+    {
+      "question": "Why aren't Japanese or emoji characters converted?",
+      "answer": "The Unicode mathematical letter blocks only define styled versions of Latin A–Z and digits 0–9. Characters outside that range — including CJK, emoji, and symbols — are passed through as-is."
+    },
+    {
+      "question": "Are there any accessibility concerns?",
+      "answer": "Yes. Screen readers may pronounce these as 'mathematical bold capital A' rather than just 'A'. Avoid using them in important documents, headings, or any content that needs to be accessible."
+    }
+  ]
+}
