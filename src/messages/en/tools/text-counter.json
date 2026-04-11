@@ -57,20 +57,20 @@
   ],
   "faq": [
     {
+      "question": "Can I check character limits for Twitter/X, Instagram, or other platforms?",
+      "answer": "Yes. The tool includes real-time progress bars for common platform limits (Twitter/X: 280, Instagram caption: 2,200, and more). The bar turns red when you exceed a limit, making it easy to trim your text before posting."
+    },
+    {
+      "question": "What is the difference between characters and bytes?",
+      "answer": "A character is what you see — one letter, space, or emoji counts as 1. Bytes depend on the encoding: ASCII characters are 1 byte in UTF-8, Japanese characters are 3 bytes, and most emoji are 4 bytes. If a database or API enforces a byte limit rather than a character limit, check the Bytes (UTF-8) counter."
+    },
+    {
       "question": "How are full-width and half-width characters counted?",
-      "answer": "Full-width characters (Japanese, full-width alphanumerics) and half-width characters (ASCII, half-width katakana) are counted separately. The total character count treats both as 1 character each."
+      "answer": "Full-width characters (Japanese kana/kanji, full-width alphanumerics) and half-width characters (ASCII, half-width katakana) are counted separately in their own fields. The main character count treats both as 1 character each."
     },
     {
       "question": "Is my text sent to a server?",
       "answer": "No. All processing happens entirely in your browser. Your text is never sent to any external server."
-    },
-    {
-      "question": "What is the maximum input length?",
-      "answer": "There is no hard limit, but the tool is optimized to handle up to 100,000 characters smoothly. Larger inputs may cause a slight delay."
-    },
-    {
-      "question": "How is word count calculated?",
-      "answer": "Words are counted as tokens separated by spaces and newlines. For languages like Japanese that do not use spaces, space-separated chunks each count as one word."
     }
   ]
 }
