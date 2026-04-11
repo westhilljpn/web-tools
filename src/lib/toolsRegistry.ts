@@ -271,6 +271,27 @@ const tools: Tool[] = [
     component: "HtmlEncoder",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "css-gradient-generator",
+    category: "image",
+    icon: "🌈",
+    component: "CssGradientGenerator",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "json-csv-converter",
+    category: "convert",
+    icon: "↔️",
+    component: "JsonCsvConverter",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "sql-formatter",
+    category: "dev",
+    icon: "🗄️",
+    component: "SqlFormatter",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;

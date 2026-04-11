@@ -1,0 +1,41 @@
+{
+  "title": "SQL整形ツール",
+  "description": "無料のオンラインSQL整形ツール。SELECT・INSERT・UPDATE・DELETE等のSQLを自動整形。キーワードの大文字化・インデント・句ごとの改行をブラウザ上で即座に実行。",
+  "keywords": ["sql 整形", "sql フォーマット", "sql 整形ツール", "sql 可読化", "sql インデント"],
+  "label": "",
+  "placeholder": "SELECT u.id, u.name FROM users u JOIN orders o ON u.id = o.user_id WHERE u.active = 1 AND o.status = 'pending' ORDER BY u.name ASC",
+  "buttons": { "copy": "コピー", "clear": "クリア" },
+  "results": { "empty": "", "copied": "コピーしました！" },
+  "limitCheck": { "title": "", "unit": "", "over": "" },
+  "toast": { "copied": "コピーしました！" },
+  "indentSize": "インデント",
+  "uppercaseKeywords": "キーワードを大文字に",
+  "input": "SQL入力",
+  "output": "整形結果",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "empty": "上にSQLを貼り付けると整形されます。",
+  "howToUse": [
+    { "label": "SQLを貼り付ける", "description": "入力欄に整形したいSQLを貼り付けます。入力と同時に整形結果が自動で表示されます。" },
+    { "label": "オプションを調整", "description": "インデントサイズ（2または4スペース）と、SELECTやFROMなどのキーワードを大文字にするかを選択できます。" },
+    { "label": "整形結果をコピー", "description": "「コピー」ボタンで整形済みSQLをクリップボードにコピーし、エディタやドキュメントに貼り付けて使用します。" }
+  ],
+  "faq": [
+    {
+      "question": "どのSQLダイアレクトに対応していますか？",
+      "answer": "標準SQL（SELECT・INSERT・UPDATE・DELETE・CREATE・ALTER・DROP）およびMySQL・PostgreSQL・SQLite・SQL Serverで広く使われる構文に対応しています。ダイアレクト固有の構文はそのまま出力されます。"
+    },
+    {
+      "question": "サブクエリやJOINは整形されますか？",
+      "answer": "はい。JOIN句は別行に、AND/OR条件はインデント付きで表示されます。括弧内のサブクエリはインラインのまま保持します（トップレベルの句構造に焦点を当てた設計です）。"
+    },
+    {
+      "question": "文字列リテラルやコメントは保持されますか？",
+      "answer": "はい。シングルクォート・ダブルクォート・バッククォートで囲まれた内容は一切変更されません。SQLコメント（-- および /* */）もそのまま出力されます。"
+    },
+    {
+      "question": "データはサーバーに送信されますか？",
+      "answer": "いいえ。すべての処理はブラウザ上で完結します。入力したSQLが外部に送信されることは一切ありません。"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 // ---- cron パーサーロジック ----
 
@@ -247,6 +247,7 @@ const PRESETS = [
 
 export default function CronParser() {
   const t = useTranslations("cron-parser");
+  const locale = useLocale();
   const [expr, setExpr] = useState("*/5 * * * *");
   const [toast, setToast] = useState(false);
 
@@ -255,9 +256,9 @@ export default function CronParser() {
     if (!parsed) return null;
     return {
       nextRuns: getNextRuns(parsed, 10),
-      description: buildDescription(expr, "en"), // 常に英語で説明（多言語対応版はprops必要）
+      description: buildDescription(expr, locale),
     };
-  }, [expr]);
+  }, [expr, locale]);
 
   const handleCopy = async (text: string) => {
     await navigator.clipboard.writeText(text);

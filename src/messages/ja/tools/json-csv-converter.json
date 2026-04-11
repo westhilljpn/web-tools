@@ -1,0 +1,44 @@
+{
+  "title": "JSON ↔ CSV 変換ツール",
+  "description": "無料のオンライン JSON↔CSV 変換ツール。JSONをCSVに、CSVをJSONに即座に変換。アップロード不要でブラウザ上で完結します。",
+  "keywords": ["json csv 変換", "json to csv", "csv to json", "json 変換", "csv 変換"],
+  "label": "",
+  "placeholder": "",
+  "buttons": { "copy": "コピー", "clear": "クリア" },
+  "results": { "empty": "", "copied": "コピーしました！" },
+  "limitCheck": { "title": "", "unit": "", "over": "" },
+  "toast": { "copied": "コピーしました！" },
+  "json2csv": "JSON → CSV",
+  "csv2json": "CSV → JSON",
+  "input": "入力",
+  "output": "出力",
+  "swap": "反転",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "empty": "上にJSONまたはCSVを貼り付けると変換されます。",
+  "placeholderJson": "[\n  { \"id\": 1, \"name\": \"山田太郎\" },\n  { \"id\": 2, \"name\": \"鈴木花子\" }\n]",
+  "placeholderCsv": "id,name\n1,山田太郎\n2,鈴木花子",
+  "howToUse": [
+    { "label": "変換方向を選択", "description": "JSON → CSV でJSONをCSVに、CSV → JSON でCSVをJSONに変換します。" },
+    { "label": "データを貼り付け", "description": "左パネルにJSONまたはCSVを貼り付けると、自動的に変換されます。" },
+    { "label": "結果をコピー", "description": "出力パネルの「コピー」ボタンで結果をクリップボードにコピーします。「⇄ 反転」で出力を入力にスワップして逆方向変換もできます。" }
+  ],
+  "faq": [
+    {
+      "question": "対応しているJSONの形式は？",
+      "answer": "入力はオブジェクトの配列（例: [{\"a\":1},{\"a\":2}]）である必要があります。最初のオブジェクトのキーがCSVのヘッダー行になります。配列でない単一オブジェクトも受け付けます。"
+    },
+    {
+      "question": "カンマを含むCSVフィールドは扱えますか？",
+      "answer": "はい。RFC 4180準拠のCSV解析に対応しており、カンマ・ダブルクォート・改行を含むフィールドはダブルクォートで囲まれます。クォート内の\"\"（エスケープ）も正しく処理します。"
+    },
+    {
+      "question": "ネストされたJSONオブジェクトはどうなりますか？",
+      "answer": "ネストされたオブジェクトや配列は文字列表現（例: [object Object]）に変換されます。ネストされたデータは事前にフラット化してから変換してください。"
+    },
+    {
+      "question": "データはサーバーに送信されますか？",
+      "answer": "いいえ。すべての変換はブラウザ上のJavaScriptで完結します。データが外部に送信されることは一切ありません。"
+    }
+  ]
+}

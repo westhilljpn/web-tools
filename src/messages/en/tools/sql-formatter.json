@@ -1,0 +1,41 @@
+{
+  "title": "SQL Formatter",
+  "description": "Free online SQL formatter and beautifier. Formats SELECT, INSERT, UPDATE, DELETE, and more. Uppercases keywords, adds proper indentation, and puts each clause on its own line — all in your browser.",
+  "keywords": ["sql formatter", "sql beautifier", "format sql", "sql indentation", "sql pretty print"],
+  "label": "",
+  "placeholder": "SELECT u.id, u.name FROM users u JOIN orders o ON u.id = o.user_id WHERE u.active = 1 AND o.status = 'pending' ORDER BY u.name ASC",
+  "buttons": { "copy": "Copy", "clear": "Clear" },
+  "results": { "empty": "", "copied": "Copied!" },
+  "limitCheck": { "title": "", "unit": "", "over": "" },
+  "toast": { "copied": "Copied!" },
+  "indentSize": "Indent",
+  "uppercaseKeywords": "Uppercase keywords",
+  "input": "SQL Input",
+  "output": "Formatted SQL",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "empty": "Paste SQL above to format it.",
+  "howToUse": [
+    { "label": "Paste your SQL", "description": "Paste any raw or minified SQL query into the input box. Formatting is applied automatically as you type." },
+    { "label": "Adjust options", "description": "Set the indent size (2 or 4 spaces) and choose whether to uppercase SQL keywords like SELECT, FROM, WHERE." },
+    { "label": "Copy the result", "description": "Click Copy to copy the formatted SQL. Paste it into your editor, query tool, or documentation." }
+  ],
+  "faq": [
+    {
+      "question": "Which SQL dialects are supported?",
+      "answer": "The formatter handles standard SQL (SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP) and common extensions used in MySQL, PostgreSQL, SQLite, and SQL Server. Dialect-specific syntax is passed through unchanged."
+    },
+    {
+      "question": "Does it handle subqueries and JOINs?",
+      "answer": "Yes. JOINs are placed on separate lines and AND/OR conditions are indented. Subqueries inside parentheses are kept inline for readability — the formatter focuses on top-level clause structure."
+    },
+    {
+      "question": "Are string literals and comments preserved?",
+      "answer": "Yes. Content inside single quotes, double quotes, and backtick identifiers is treated as opaque and is never modified. SQL comments (-- and /* */) are also passed through unchanged."
+    },
+    {
+      "question": "Is this tool free to use?",
+      "answer": "Yes, completely free. All formatting runs in your browser with no server involved — your SQL is never sent anywhere."
+    }
+  ]
+}

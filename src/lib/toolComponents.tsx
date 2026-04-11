@@ -46,6 +46,9 @@ const toolComponentMap: Record<string, ComponentType> = {
   CronParser: dynamic(() => import("@/tools/CronParser"), { loading: Loading }),
   AspectRatio: dynamic(() => import("@/tools/AspectRatio"), { loading: Loading }),
   HtmlEncoder: dynamic(() => import("@/tools/HtmlEncoder"), { loading: Loading }),
+  CssGradientGenerator: dynamic(() => import("@/tools/CssGradientGenerator"), { loading: Loading }),
+  JsonCsvConverter: dynamic(() => import("@/tools/JsonCsvConverter"), { loading: Loading }),
+  SqlFormatter: dynamic(() => import("@/tools/SqlFormatter"), { loading: Loading }),
 };
 
 export default toolComponentMap;

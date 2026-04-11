@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（32件）
+## 登録済みツール（35件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -53,6 +53,9 @@ npm run dev                         # http://localhost:3000
 | 30 | `cron-parser` | cron式パーサー | Cron Expression Parser | dev |
 | 31 | `aspect-ratio` | アスペクト比計算ツール | Aspect Ratio Calculator | calculate |
 | 32 | `html-encoder` | HTMLエンティティ エンコード/デコード | HTML Entity Encoder / Decoder | dev |
+| 33 | `css-gradient-generator` | CSSグラデーション生成ツール | CSS Gradient Generator | image |
+| 34 | `json-csv-converter` | JSON ↔ CSV 変換ツール | JSON ↔ CSV Converter | convert |
+| 35 | `sql-formatter` | SQL整形ツール | SQL Formatter | dev |
 
 ---
 
@@ -113,12 +116,23 @@ npm run dev                         # http://localhost:3000
 - [x] **B8-3** `aspect-ratio` — アスペクト比計算（比率算出・サイズ計算・黄金比参考）
 - [x] **B8-4** `html-encoder` — HTML エンティティエンコード/デコード（特殊文字/全文字2モード）
 
-### バッチ9 — 次回ツール追加候補（優先度順）
+### サイト改善 — ダークモード ✅ 完了
 
-- [ ] **B9-1** `css-gradient-generator` — CSSグラデーション生成（linear/radial・カラーストップ・プレビュー・コードコピー）
-- [ ] **B9-2** `json-csv-converter` — JSON↔CSV変換（ヘッダー行・ネスト展開・クライアントサイド完結）
-- [ ] **B9-3** `sql-formatter` — SQL整形ツール（キーワード大文字化・インデント・クラウスごとに改行）
-- [ ] **B9-4** `text-repeater` — テキスト繰り返し生成（繰り返し回数・区切り文字設定）
+- [x] **DM** ダークモード実装（Tailwind `class` モード・ThemeToggle・FOIT防止・globals.css上書きで全32ツール対応）
+
+### バッチ9 — 追加候補 ✅ 完了（一部）
+
+- [x] **B9-1** `css-gradient-generator` — linear/radial/conic・カラーストップUI・プレビュー・CSSコードコピー・プリセット6種
+- [x] **B9-2** `json-csv-converter` — JSON↔CSV 2カラムUI・スワップ機能・RFC 4180準拠CSV解析
+- [x] **B9-3** `sql-formatter` — 外部パッケージなし・トークナイザー実装・キーワード大文字化・インデントオプション
+- [x] **修正** `cron-parser` — `buildDescription()` が英語固定だったのを `useLocale()` で i18n 対応
+
+### バッチ10 — 次回ツール追加候補（優先度順）
+
+- [ ] **B10-1** `text-repeater` — テキスト繰り返し生成（繰り返し回数・区切り文字設定）
+- [ ] **B10-2** `ip-info` — IPアドレス情報（ローカルIP取得のみ・外部API不要）
+- [ ] **B10-3** `markdown-table-generator` — Markdownテーブル生成（行列入力・コピー）
+- [ ] **B10-4** `code-minifier` — JS/CSS/HTMLミニファイア（外部パッケージなし・正規表現ベース）
 
 > ⚠️ `ip-lookup` は外部API必須のため除外（CLAUDE.md：外部API呼び出し禁止）
 
@@ -137,8 +151,17 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 中 | `cron-parser` の説明文を日本語対応 | `buildDescription()` が常に英語出力（`"en"` ハードコード）。クライアントコンポーネントでロケール取得が必要 |
+| ~~中~~ | ~~`cron-parser` の説明文を日本語対応~~ | ✅ 解決済み（`useLocale()` で対応） |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
+
+### ✅ 完了済み（2026-04-11 追記2）
+- [x] `css-gradient-generator` 追加（linear/radial/conic・カラーストップUI・プレビュー・プリセット6種）
+- [x] `json-csv-converter` 追加（JSON↔CSV・2カラムUI・スワップ・RFC 4180準拠）
+- [x] `sql-formatter` 追加（外部パッケージなし・独自トークナイザー・キーワード大文字化・インデントオプション）
+- [x] `cron-parser` i18n 修正（`buildDescription()` を `useLocale()` で多言語対応）
+
+### ✅ 完了済み（2026-04-11 追記）
+- [x] ダークモード実装（`tailwind.config.ts` `darkMode: class`・`ThemeToggle.tsx`・FOIT防止インラインスクリプト・globals.css一括上書きで全32ツール対応）
 
 ### ✅ 完了済み（2026-04-11）
 - [x] `color-palette` 追加（HEX入力・カラーピッカー・補色/類似色/三色/分裂補色・ティント/シェード4段階・HEX/RGB/HSLコピー）

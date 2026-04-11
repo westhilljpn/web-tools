@@ -1,0 +1,44 @@
+{
+  "title": "JSON ↔ CSV Converter",
+  "description": "Free online JSON to CSV and CSV to JSON converter. Paste your data, convert instantly in the browser with no upload required. Supports quoted fields and nested values.",
+  "keywords": ["json to csv", "csv to json", "json csv converter", "convert json", "convert csv"],
+  "label": "",
+  "placeholder": "",
+  "buttons": { "copy": "Copy", "clear": "Clear" },
+  "results": { "empty": "", "copied": "Copied!" },
+  "limitCheck": { "title": "", "unit": "", "over": "" },
+  "toast": { "copied": "Copied!" },
+  "json2csv": "JSON → CSV",
+  "csv2json": "CSV → JSON",
+  "input": "Input",
+  "output": "Output",
+  "swap": "Swap",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "empty": "Paste JSON or CSV above to convert.",
+  "placeholderJson": "[\n  { \"id\": 1, \"name\": \"Alice\" },\n  { \"id\": 2, \"name\": \"Bob\" }\n]",
+  "placeholderCsv": "id,name\n1,Alice\n2,Bob",
+  "howToUse": [
+    { "label": "Select direction", "description": "Choose JSON → CSV to convert a JSON array to CSV, or CSV → JSON to parse a CSV file into a JSON array." },
+    { "label": "Paste your data", "description": "Paste your JSON array or CSV text into the left panel. Conversion happens automatically as you type." },
+    { "label": "Copy the result", "description": "Click the Copy button above the output to copy the result to your clipboard. Use ⇄ Swap to flip the direction using the current output as new input." }
+  ],
+  "faq": [
+    {
+      "question": "What JSON format is supported?",
+      "answer": "The input must be a JSON array of objects (e.g. [{\"a\":1},{\"a\":2}]). The keys of the first object are used as CSV column headers. A single object (not wrapped in an array) is also accepted."
+    },
+    {
+      "question": "Are quoted CSV fields with commas supported?",
+      "answer": "Yes. The CSV parser handles RFC 4180 quoting: fields that contain commas, quotes, or newlines are wrapped in double-quotes. Escaped double-quotes (\"\") inside quoted fields are handled correctly."
+    },
+    {
+      "question": "What happens with nested JSON objects?",
+      "answer": "Nested objects and arrays are converted to their string representation (e.g. [object Object]). For nested data, flatten your JSON before converting."
+    },
+    {
+      "question": "Is my data sent to a server?",
+      "answer": "No. All conversion happens entirely in your browser using JavaScript. Your data never leaves your device."
+    }
+  ]
+}

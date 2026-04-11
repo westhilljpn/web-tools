@@ -45,6 +45,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     cronParser,
     aspectRatio,
     htmlEncoder,
+    cssGradientGenerator,
+    jsonCsvConverter,
+    sqlFormatter,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -81,6 +84,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/cron-parser.json"),
           import("../messages/ja/tools/aspect-ratio.json"),
           import("../messages/ja/tools/html-encoder.json"),
+          import("../messages/ja/tools/css-gradient-generator.json"),
+          import("../messages/ja/tools/json-csv-converter.json"),
+          import("../messages/ja/tools/sql-formatter.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -116,6 +122,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/cron-parser.json"),
           import("../messages/en/tools/aspect-ratio.json"),
           import("../messages/en/tools/html-encoder.json"),
+          import("../messages/en/tools/css-gradient-generator.json"),
+          import("../messages/en/tools/json-csv-converter.json"),
+          import("../messages/en/tools/sql-formatter.json"),
         ]);
 
   return {
@@ -154,6 +163,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "cron-parser": cronParser.default,
       "aspect-ratio": aspectRatio.default,
       "html-encoder": htmlEncoder.default,
+      "css-gradient-generator": cssGradientGenerator.default,
+      "json-csv-converter": jsonCsvConverter.default,
+      "sql-formatter": sqlFormatter.default,
     },
   };
 });

@@ -1,0 +1,52 @@
+{
+  "title": "CSS Gradient Generator",
+  "description": "Free online CSS gradient generator. Create beautiful linear, radial, and conic gradients with a live preview. Customize color stops and copy the CSS code instantly.",
+  "keywords": ["css gradient", "gradient generator", "linear gradient", "radial gradient", "css background"],
+  "label": "",
+  "placeholder": "",
+  "buttons": { "copy": "Copy CSS", "clear": "" },
+  "results": { "empty": "", "copied": "Copied!" },
+  "limitCheck": { "title": "", "unit": "", "over": "" },
+  "toast": { "copied": "Copied!" },
+  "type": "Gradient Type",
+  "linear": "Linear",
+  "radial": "Radial",
+  "conic": "Conic",
+  "angle": "Angle",
+  "colorStops": "Color Stops",
+  "addStop": "Add Stop",
+  "removeStop": "Remove stop",
+  "cssCode": "CSS Code",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "presets": "Presets",
+  "p_sunset": "Sunset",
+  "p_ocean": "Ocean",
+  "p_aurora": "Aurora",
+  "p_fire": "Fire",
+  "p_sky": "Sky",
+  "p_neon": "Neon",
+  "howToUse": [
+    { "label": "Choose a gradient type", "description": "Select Linear, Radial, or Conic. For linear and conic gradients, adjust the angle with the slider." },
+    { "label": "Customize color stops", "description": "Pick colors with the color picker or enter HEX codes. Drag the sliders to set each stop's position (0–100%)." },
+    { "label": "Copy the CSS", "description": "Click the Copy button to copy the generated CSS background property and paste it directly into your stylesheet." }
+  ],
+  "faq": [
+    {
+      "question": "What is a CSS gradient?",
+      "answer": "A CSS gradient is a smooth transition between two or more colors defined entirely in CSS — no image file needed. Gradients are set using the background or background-image property with linear-gradient(), radial-gradient(), or conic-gradient()."
+    },
+    {
+      "question": "What is the difference between linear, radial, and conic gradients?",
+      "answer": "A linear gradient transitions colors along a straight line (by angle). A radial gradient radiates outward from a center point. A conic gradient sweeps colors around a center point like a color wheel."
+    },
+    {
+      "question": "How do I add more color stops?",
+      "answer": "Click the '+ Add Stop' button. A new stop is inserted at the midpoint of the largest gap between existing stops. You can then adjust its color and position."
+    },
+    {
+      "question": "Can I copy the CSS and use it directly?",
+      "answer": "Yes. The generated CSS uses the standard background shorthand (e.g., background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);) which works in all modern browsers."
+    }
+  ]
+}

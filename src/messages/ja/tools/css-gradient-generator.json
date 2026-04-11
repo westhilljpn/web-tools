@@ -1,0 +1,52 @@
+{
+  "title": "CSSグラデーション生成ツール",
+  "description": "無料のオンラインCSSグラデーション生成ツール。linear・radial・conicグラデーションをリアルタイムプレビューで作成し、CSSコードをワンクリックでコピー。",
+  "keywords": ["css グラデーション", "グラデーション 生成", "linear-gradient", "radial-gradient", "css 背景"],
+  "label": "",
+  "placeholder": "",
+  "buttons": { "copy": "CSSコピー", "clear": "" },
+  "results": { "empty": "", "copied": "コピーしました！" },
+  "limitCheck": { "title": "", "unit": "", "over": "" },
+  "toast": { "copied": "コピーしました！" },
+  "type": "グラデーションタイプ",
+  "linear": "線形",
+  "radial": "放射",
+  "conic": "円錐",
+  "angle": "角度",
+  "colorStops": "カラーストップ",
+  "addStop": "追加",
+  "removeStop": "削除",
+  "cssCode": "CSSコード",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "presets": "プリセット",
+  "p_sunset": "サンセット",
+  "p_ocean": "オーシャン",
+  "p_aurora": "オーロラ",
+  "p_fire": "ファイア",
+  "p_sky": "スカイ",
+  "p_neon": "ネオン",
+  "howToUse": [
+    { "label": "グラデーションタイプを選択", "description": "Linear（線形）・Radial（放射）・Conic（円錐）から選びます。LinearとConicは角度スライダーで方向を調整できます。" },
+    { "label": "カラーストップをカスタマイズ", "description": "カラーピッカーで色を選ぶか、HEXコードを直接入力します。スライダーで各ストップの位置（0〜100%）を調整してください。" },
+    { "label": "CSSをコピー", "description": "「コピー」ボタンをクリックしてCSSのbackgroundプロパティをコピーし、スタイルシートに直接貼り付けて使用できます。" }
+  ],
+  "faq": [
+    {
+      "question": "CSSグラデーションとは何ですか？",
+      "answer": "CSSグラデーションは、2色以上の間を滑らかに変化させる効果をCSSだけで実現するものです。画像ファイルは不要で、background や background-image プロパティに linear-gradient()・radial-gradient()・conic-gradient() を指定します。"
+    },
+    {
+      "question": "Linear・Radial・Conicの違いは何ですか？",
+      "answer": "Linear（線形）は直線方向に色が変化します。Radial（放射）は中心点から外側に広がります。Conic（円錐）は中心点を軸に色が回転するカラーホイール状のグラデーションです。"
+    },
+    {
+      "question": "カラーストップをもっと追加できますか？",
+      "answer": "「+ 追加」ボタンをクリックすると、既存ストップ間の最も広い間隔の中点に新しいストップが挿入されます。色と位置は後から自由に変更できます。"
+    },
+    {
+      "question": "生成したCSSはそのまま使えますか？",
+      "answer": "はい。生成されるCSSはすべてのモダンブラウザで動作する標準的な記法です（例: background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);）。"
+    }
+  ]
+}
