@@ -113,12 +113,14 @@ npm run dev                         # http://localhost:3000
 - [x] **B8-3** `aspect-ratio` — アスペクト比計算（比率算出・サイズ計算・黄金比参考）
 - [x] **B8-4** `html-encoder` — HTML エンティティエンコード/デコード（特殊文字/全文字2モード）
 
-### バッチ9 — 次回ツール追加候補
+### バッチ9 — 次回ツール追加候補（優先度順）
 
-- [ ] **B9-1** `ip-lookup` — IPアドレス情報取得
-- [ ] **B9-2** `text-diff` — テキスト比較（単語レベル差分）
-- [ ] **B9-3** `css-minifier` — CSS圧縮ツール
-- [ ] **B9-4** `svg-optimizer` — SVG最適化ツール
+- [ ] **B9-1** `css-gradient-generator` — CSSグラデーション生成（linear/radial・カラーストップ・プレビュー・コードコピー）
+- [ ] **B9-2** `json-csv-converter` — JSON↔CSV変換（ヘッダー行・ネスト展開・クライアントサイド完結）
+- [ ] **B9-3** `sql-formatter` — SQL整形ツール（キーワード大文字化・インデント・クラウスごとに改行）
+- [ ] **B9-4** `text-repeater` — テキスト繰り返し生成（繰り返し回数・区切り文字設定）
+
+> ⚠️ `ip-lookup` は外部API必須のため除外（CLAUDE.md：外部API呼び出し禁止）
 
 ---
 
@@ -135,6 +137,7 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
+| 中 | `cron-parser` の説明文を日本語対応 | `buildDescription()` が常に英語出力（`"en"` ハードコード）。クライアントコンポーネントでロケール取得が必要 |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 
 ### ✅ 完了済み（2026-04-11）
