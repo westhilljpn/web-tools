@@ -243,6 +243,34 @@ const tools: Tool[] = [
     component: "PercentageCalculator",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "color-palette",
+    category: "image",
+    icon: "🎨",
+    component: "ColorPalette",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "cron-parser",
+    category: "dev",
+    icon: "⏰",
+    component: "CronParser",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "aspect-ratio",
+    category: "calculate",
+    icon: "📐",
+    component: "AspectRatio",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "html-encoder",
+    category: "dev",
+    icon: "🏷️",
+    component: "HtmlEncoder",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;

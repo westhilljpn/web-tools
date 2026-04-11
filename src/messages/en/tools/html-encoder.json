@@ -1,0 +1,40 @@
+{
+  "title": "HTML Encoder / Decoder",
+  "description": "Free online HTML entity encoder and decoder. Instantly encode special characters to HTML entities (&amp;, &lt;, &gt;, &quot;) or decode them back. Supports named and numeric entities.",
+  "keywords": ["HTML encoder", "HTML decoder", "HTML entities", "HTML escape", "encode HTML", "decode HTML entities", "&amp; &lt; &gt;"],
+  "label": "",
+  "placeholder": "",
+  "buttons": { "copy": "Copy", "clear": "Clear", "swap": "Swap ⇅" },
+  "results": { "empty": "Enter text to encode or decode", "copied": "Copied!" },
+  "options": {
+    "mode": "Mode",
+    "encode": "Encode",
+    "decode": "Decode",
+    "encodeAll": "Encode all characters (numeric)",
+    "encodeSpecial": "Encode special characters only"
+  },
+  "labels": { "input": "Input", "output": "Output" },
+  "howToUse": [
+    { "label": "Choose mode", "description": "Select \"Encode\" to convert special characters to HTML entities, or \"Decode\" to convert entities back to plain text." },
+    { "label": "Paste text", "description": "Enter your text in the input field. The result updates automatically." },
+    { "label": "Copy the result", "description": "Click \"Copy\" to copy the output, or \"Swap\" to reverse the input and output." }
+  ],
+  "faq": [
+    {
+      "question": "What are HTML entities?",
+      "answer": "HTML entities are special character sequences used to represent characters that have special meaning in HTML (such as < and >) or that are not easily typed. For example, & becomes &amp;, < becomes &lt;, and > becomes &gt;."
+    },
+    {
+      "question": "When do I need to encode HTML?",
+      "answer": "You need to encode HTML when displaying user-generated content, inserting text into HTML attributes, or preventing XSS (cross-site scripting) vulnerabilities. Always encode untrusted input before inserting it into HTML."
+    },
+    {
+      "question": "What is the difference between named and numeric entities?",
+      "answer": "Named entities use a readable name (e.g., &amp;amp;, &amp;lt;). Numeric entities use the Unicode code point (e.g., &amp;#38;, &amp;#60;). Both are valid HTML. Named entities are more readable; numeric entities work for any character."
+    },
+    {
+      "question": "Does this tool prevent XSS attacks?",
+      "answer": "This tool correctly encodes characters that can cause XSS (& < > \" '). However, proper XSS prevention also depends on context (HTML attributes, JavaScript, CSS) and should be handled by your server-side framework."
+    }
+  ]
+}

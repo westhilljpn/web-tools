@@ -1,0 +1,44 @@
+{
+  "title": "Color Palette Generator",
+  "description": "Free online color palette generator. Enter a base color and instantly generate complementary, analogous, triadic, and split-complementary harmonies, plus tints and shades. Copy any color as HEX, RGB, or HSL.",
+  "keywords": ["color palette generator", "color harmony", "complementary colors", "color scheme", "color wheel", "color theory"],
+  "label": "",
+  "placeholder": "#3b82f6",
+  "buttons": { "copy": "Copy", "copied": "Copied!" },
+  "results": { "empty": "Enter a hex color to generate a palette" },
+  "labels": {
+    "baseColor": "Base color",
+    "complementary": "Complementary",
+    "analogous": "Analogous",
+    "triadic": "Triadic",
+    "splitComplementary": "Split-complementary",
+    "tints": "Tints",
+    "shades": "Shades",
+    "copyHex": "Copy HEX",
+    "copyRgb": "Copy RGB",
+    "copyHsl": "Copy HSL"
+  },
+  "howToUse": [
+    { "label": "Enter a base color", "description": "Type a HEX color code (e.g. #3b82f6) or click the color picker." },
+    { "label": "Explore harmonies", "description": "The tool generates complementary, analogous, triadic, and split-complementary color schemes automatically." },
+    { "label": "Copy any color", "description": "Click any swatch to copy it as HEX, RGB, or HSL." }
+  ],
+  "faq": [
+    {
+      "question": "What is color harmony?",
+      "answer": "Color harmony refers to combinations of colors that are visually pleasing. Common harmonies are based on the color wheel: complementary (opposite), analogous (adjacent), triadic (equally spaced), and split-complementary (one color + two adjacent to its complement)."
+    },
+    {
+      "question": "What is the difference between tints and shades?",
+      "answer": "A tint is a color mixed with white (lighter). A shade is a color mixed with black (darker). Both preserve the hue and saturation while changing the lightness."
+    },
+    {
+      "question": "What are complementary colors?",
+      "answer": "Complementary colors sit opposite each other on the color wheel (hue difference of 180°). They create high contrast and vibrant pairings. For example, blue and orange, or red and green are complementary."
+    },
+    {
+      "question": "What are analogous colors?",
+      "answer": "Analogous colors are adjacent on the color wheel (hue difference of ±30°). They create harmonious, low-contrast palettes that feel natural — like the colors of a sunset."
+    }
+  ]
+}

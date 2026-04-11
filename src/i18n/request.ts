@@ -41,6 +41,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
     jwtDecoder,
     wordCounter,
     percentageCalculator,
+    colorPalette,
+    cronParser,
+    aspectRatio,
+    htmlEncoder,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -73,6 +77,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/jwt-decoder.json"),
           import("../messages/ja/tools/word-counter.json"),
           import("../messages/ja/tools/percentage-calculator.json"),
+          import("../messages/ja/tools/color-palette.json"),
+          import("../messages/ja/tools/cron-parser.json"),
+          import("../messages/ja/tools/aspect-ratio.json"),
+          import("../messages/ja/tools/html-encoder.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -104,6 +112,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/jwt-decoder.json"),
           import("../messages/en/tools/word-counter.json"),
           import("../messages/en/tools/percentage-calculator.json"),
+          import("../messages/en/tools/color-palette.json"),
+          import("../messages/en/tools/cron-parser.json"),
+          import("../messages/en/tools/aspect-ratio.json"),
+          import("../messages/en/tools/html-encoder.json"),
         ]);
 
   return {
@@ -138,6 +150,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "jwt-decoder": jwtDecoder.default,
       "word-counter": wordCounter.default,
       "percentage-calculator": percentageCalculator.default,
+      "color-palette": colorPalette.default,
+      "cron-parser": cronParser.default,
+      "aspect-ratio": aspectRatio.default,
+      "html-encoder": htmlEncoder.default,
     },
   };
 });

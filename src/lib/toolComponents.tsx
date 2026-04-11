@@ -42,6 +42,10 @@ const toolComponentMap: Record<string, ComponentType> = {
   JwtDecoder: dynamic(() => import("@/tools/JwtDecoder"), { loading: Loading }),
   WordCounter: dynamic(() => import("@/tools/WordCounter"), { loading: Loading }),
   PercentageCalculator: dynamic(() => import("@/tools/PercentageCalculator"), { loading: Loading }),
+  ColorPalette: dynamic(() => import("@/tools/ColorPalette"), { loading: Loading }),
+  CronParser: dynamic(() => import("@/tools/CronParser"), { loading: Loading }),
+  AspectRatio: dynamic(() => import("@/tools/AspectRatio"), { loading: Loading }),
+  HtmlEncoder: dynamic(() => import("@/tools/HtmlEncoder"), { loading: Loading }),
 };
 
 export default toolComponentMap;

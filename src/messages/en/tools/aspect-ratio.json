@@ -1,0 +1,46 @@
+{
+  "title": "Aspect Ratio Calculator",
+  "description": "Free online aspect ratio calculator. Calculate aspect ratios, find missing dimensions, and convert between sizes while maintaining proportions. Perfect for video, photo, and web design.",
+  "keywords": ["aspect ratio calculator", "image ratio", "video resolution", "16:9 calculator", "resize proportionally", "screen ratio"],
+  "label": "",
+  "placeholder": "",
+  "buttons": { "copy": "Copy", "clear": "Clear", "calculate": "Calculate" },
+  "results": { "empty": "Enter dimensions to calculate the aspect ratio", "copied": "Copied!" },
+  "labels": {
+    "width": "Width",
+    "height": "Height",
+    "ratio": "Ratio",
+    "simplifiedRatio": "Simplified ratio",
+    "decimalRatio": "Decimal ratio",
+    "commonRatios": "Common ratios",
+    "findDimension": "Find missing dimension",
+    "px": "px"
+  },
+  "modes": {
+    "fromDimensions": "From dimensions",
+    "fromRatio": "From ratio + one side"
+  },
+  "howToUse": [
+    { "label": "Enter dimensions", "description": "Type a width and height in pixels (or any unit). The aspect ratio is calculated instantly." },
+    { "label": "Find a missing dimension", "description": "Switch to the second mode, enter the ratio and one dimension to calculate the other proportionally." },
+    { "label": "Compare to common ratios", "description": "The tool shows the nearest common aspect ratios (16:9, 4:3, 1:1, etc.) for reference." }
+  ],
+  "faq": [
+    {
+      "question": "What is an aspect ratio?",
+      "answer": "An aspect ratio describes the proportional relationship between an image's width and height. It is written as W:H (e.g., 16:9) or as a decimal (e.g., 1.78). The same aspect ratio can apply to any resolution, from 1280×720 to 3840×2160 — both are 16:9."
+    },
+    {
+      "question": "What are common aspect ratios?",
+      "answer": "16:9 — widescreen HD/4K video and monitors. 4:3 — older TVs and displays. 1:1 — square (Instagram). 21:9 — ultrawide monitors. 9:16 — vertical video (Reels, TikTok). 3:2 — DSLR / mirrorless camera sensors."
+    },
+    {
+      "question": "How do I resize an image while keeping the aspect ratio?",
+      "answer": "Enter your original dimensions to find the ratio, then switch to \"From ratio + one side\" mode and enter the new width or height. The tool calculates the other dimension automatically."
+    },
+    {
+      "question": "What is the golden ratio?",
+      "answer": "The golden ratio is approximately 1.618:1 (or 1:0.618). It is considered aesthetically pleasing and appears frequently in art, architecture, and nature. The ratio is φ (phi) ≈ 1.6180339887."
+    }
+  ]
+}
