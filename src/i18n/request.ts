@@ -33,6 +33,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
     hashGenerator,
     markdownPreview,
     diffChecker,
+    uuidGenerator,
+    loremIpsum,
+    numberBaseConverter,
+    imageResizer,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -57,6 +61,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/hash-generator.json"),
           import("../messages/ja/tools/markdown-preview.json"),
           import("../messages/ja/tools/diff-checker.json"),
+          import("../messages/ja/tools/uuid-generator.json"),
+          import("../messages/ja/tools/lorem-ipsum.json"),
+          import("../messages/ja/tools/number-base-converter.json"),
+          import("../messages/ja/tools/image-resizer.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -80,6 +88,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/hash-generator.json"),
           import("../messages/en/tools/markdown-preview.json"),
           import("../messages/en/tools/diff-checker.json"),
+          import("../messages/en/tools/uuid-generator.json"),
+          import("../messages/en/tools/lorem-ipsum.json"),
+          import("../messages/en/tools/number-base-converter.json"),
+          import("../messages/en/tools/image-resizer.json"),
         ]);
 
   return {
@@ -106,6 +118,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "hash-generator": hashGenerator.default,
       "markdown-preview": markdownPreview.default,
       "diff-checker": diffChecker.default,
+      "uuid-generator": uuidGenerator.default,
+      "lorem-ipsum": loremIpsum.default,
+      "number-base-converter": numberBaseConverter.default,
+      "image-resizer": imageResizer.default,
     },
   };
 });

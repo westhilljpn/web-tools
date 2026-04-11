@@ -1,0 +1,51 @@
+{
+  "title": "Lorem Ipsum Generator",
+  "description": "Free online Lorem Ipsum generator. Generate placeholder text by paragraphs, sentences, or words. Supports both classic Latin Lorem Ipsum and Japanese dummy text.",
+  "keywords": ["lorem ipsum generator", "placeholder text", "dummy text", "filler text", "ダミーテキスト"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "generate": "Generate",
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "results": {
+    "empty": "Click \"Generate\" to create placeholder text",
+    "copied": "Copied!"
+  },
+  "options": {
+    "type": "Unit",
+    "count": "Count",
+    "language": "Language",
+    "paragraphs": "Paragraphs",
+    "sentences": "Sentences",
+    "words": "Words",
+    "latin": "Latin",
+    "japanese": "Japanese",
+    "startWithLorem": "Start with \"Lorem ipsum\""
+  },
+  "howToUse": [
+    { "label": "Choose unit", "description": "Select whether to generate by paragraphs, sentences, or words." },
+    { "label": "Set count", "description": "Enter how many units to generate." },
+    { "label": "Select language", "description": "Choose between classic Latin Lorem Ipsum or Japanese dummy text." },
+    { "label": "Generate and copy", "description": "Click \"Generate\", then \"Copy\" to paste the text into your project." }
+  ],
+  "faq": [
+    {
+      "question": "What is Lorem Ipsum?",
+      "answer": "Lorem Ipsum is standard placeholder text used in design and publishing since the 1500s. It resembles natural Latin text, making it useful for previewing layouts without distracting readers with meaningful content."
+    },
+    {
+      "question": "Where does Lorem Ipsum come from?",
+      "answer": "It is derived from Cicero's \"de Finibus Bonorum et Malorum\" (45 BC). The standard Lorem Ipsum passage beginning with \"Lorem ipsum dolor sit amet\" has been the industry standard dummy text since the 1960s."
+    },
+    {
+      "question": "Why use placeholder text?",
+      "answer": "Placeholder text lets designers and developers focus on layout, typography, and spacing without needing real content. It prevents premature fixation on wording before the design is finalized."
+    },
+    {
+      "question": "What is the Japanese dummy text?",
+      "answer": "The Japanese placeholder text is a common dummy text (\"吾輩は猫である\" style passages) used in Japanese publishing and design to test Japanese character rendering and line breaks."
+    }
+  ]
+}

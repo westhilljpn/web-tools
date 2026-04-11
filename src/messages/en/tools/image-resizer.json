@@ -1,0 +1,56 @@
+{
+  "title": "Image Resizer",
+  "description": "Free online image resizer. Resize PNG, JPG, WebP, and GIF images in your browser — no upload required. Set exact dimensions, maintain aspect ratio, and download the resized image instantly.",
+  "keywords": ["image resizer", "resize image online", "image resize tool", "photo resizer", "resize PNG", "resize JPG"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "download": "Download",
+    "reset": "Reset",
+    "clear": "Clear"
+  },
+  "results": {
+    "empty": "Drop an image or click to upload",
+    "processing": "Processing...",
+    "ready": "Ready to download"
+  },
+  "labels": {
+    "width": "Width (px)",
+    "height": "Height (px)",
+    "lockAspectRatio": "Lock aspect ratio",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "original": "Original",
+    "resized": "Resized",
+    "fileSize": "File size",
+    "dimensions": "Dimensions"
+  },
+  "howToUse": [
+    { "label": "Upload an image", "description": "Click the upload area or drag and drop a PNG, JPG, WebP, or GIF file." },
+    { "label": "Set dimensions", "description": "Enter the desired width and/or height in pixels. Enable \"Lock aspect ratio\" to resize proportionally." },
+    { "label": "Choose format and quality", "description": "Select the output format (PNG, JPG, WebP) and adjust quality if needed." },
+    { "label": "Download", "description": "Click \"Download\" to save the resized image to your device." }
+  ],
+  "faq": [
+    {
+      "question": "Is my image uploaded to a server?",
+      "answer": "No. All resizing is done in your browser using the Canvas API. Your image never leaves your device."
+    },
+    {
+      "question": "What image formats are supported?",
+      "answer": "You can upload PNG, JPG, WebP, and GIF files. Output formats are PNG, JPG, and WebP."
+    },
+    {
+      "question": "What does 'Lock aspect ratio' do?",
+      "answer": "When enabled, changing either width or height automatically adjusts the other dimension to preserve the original proportions. This prevents distortion."
+    },
+    {
+      "question": "What does the quality slider affect?",
+      "answer": "Quality applies to lossy formats (JPG and WebP). Higher quality produces larger files with better detail; lower quality produces smaller files with some compression artifacts. PNG is lossless and unaffected by the quality setting."
+    },
+    {
+      "question": "Is there a maximum file size?",
+      "answer": "There is no hard limit, but very large images (over 20 megapixels) may be slow to process in the browser. For best performance, use images under 10 MB."
+    }
+  ]
+}

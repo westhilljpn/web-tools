@@ -1,0 +1,50 @@
+{
+  "title": "UUID Generator",
+  "description": "Free online UUID v4 generator. Instantly create one or multiple unique identifiers. No libraries required — generated entirely in your browser using the Web Crypto API.",
+  "keywords": ["UUID generator", "UUID v4", "GUID generator", "unique ID", "random UUID", "crypto.randomUUID"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "generate": "Generate",
+    "copyAll": "Copy All",
+    "clear": "Clear"
+  },
+  "results": {
+    "empty": "Click \"Generate\" to create UUIDs",
+    "copied": "Copied!",
+    "copiedAll": "All UUIDs copied!"
+  },
+  "options": {
+    "count": "Count",
+    "uppercase": "Uppercase",
+    "hyphens": "Include hyphens"
+  },
+  "howToUse": [
+    { "label": "Set count", "description": "Choose how many UUIDs to generate (1–100)." },
+    { "label": "Configure format", "description": "Toggle uppercase and hyphen options to match your needs." },
+    { "label": "Generate", "description": "Click \"Generate\" to create fresh UUID v4 values." },
+    { "label": "Copy", "description": "Click any UUID to copy it, or use \"Copy All\" to copy the full list." }
+  ],
+  "faq": [
+    {
+      "question": "What is a UUID v4?",
+      "answer": "UUID v4 (Universally Unique Identifier version 4) is a 128-bit random identifier formatted as 32 hexadecimal digits separated by hyphens: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx. Version 4 means the values are randomly generated."
+    },
+    {
+      "question": "Are these UUIDs truly unique?",
+      "answer": "UUID v4 uses 122 random bits, giving approximately 5.3 × 10^36 possible values. The probability of a collision is astronomically small and negligible for practical purposes."
+    },
+    {
+      "question": "Is this tool safe to use?",
+      "answer": "Yes. UUIDs are generated using the browser's built-in crypto.randomUUID() API (Web Crypto API). No data is sent to any server — everything happens locally in your browser."
+    },
+    {
+      "question": "What's the difference between UUID and GUID?",
+      "answer": "GUID (Globally Unique Identifier) is Microsoft's term for the same concept. They are structurally identical and interchangeable in most contexts."
+    },
+    {
+      "question": "When should I use a UUID?",
+      "answer": "UUIDs are ideal as primary keys in databases, session tokens, correlation IDs for logging, file names for uploaded assets, and any situation where you need a collision-resistant unique identifier without a central coordinator."
+    }
+  ]
+}

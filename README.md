@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（20件）
+## 登録済みツール（24件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -41,6 +41,10 @@ npm run dev                         # http://localhost:3000
 | 18 | `hash-generator` | ハッシュ生成ツール | Hash Generator | dev |
 | 19 | `markdown-preview` | Markdownプレビュー | Markdown Preview | dev |
 | 20 | `diff-checker` | テキスト差分チェッカー | Text Diff Checker | dev |
+| 21 | `uuid-generator` | UUID生成ツール | UUID Generator | dev |
+| 22 | `lorem-ipsum` | ダミーテキスト生成 | Lorem Ipsum Generator | text |
+| 23 | `number-base-converter` | 進数変換ツール | Number Base Converter | convert |
+| 24 | `image-resizer` | 画像リサイズツール | Image Resizer | image |
 
 ---
 
@@ -80,12 +84,19 @@ npm run dev                         # http://localhost:3000
 - [x] **B5-2** `markdown-preview` — Markdownプレビュー（左右ペイン・リアルタイム・marked）
 - [x] **B5-3** `diff-checker` — テキスト差分チェッカー（LCSアルゴリズム・行番号・変更行フィルター）
 
-### バッチ6 — 追加候補（次フェーズ）
+### バッチ6 — 追加候補 ✅ 完了
 
-- [ ] **B6-1** `uuid-generator` — UUID v4 生成（crypto.randomUUID）
-- [ ] **B6-2** `lorem-ipsum` — ダミーテキスト生成（日英対応）
-- [ ] **B6-3** `number-base-converter` — 2進数 / 8進数 / 10進数 / 16進数 変換
-- [ ] **B6-4** `image-resizer` — 画像リサイズ（Canvas API、クライアントサイド完結）
+- [x] **B6-1** `uuid-generator` — UUID v4 生成（crypto.randomUUID）
+- [x] **B6-2** `lorem-ipsum` — ダミーテキスト生成（日英対応）
+- [x] **B6-3** `number-base-converter` — 2進数 / 8進数 / 10進数 / 16進数 変換
+- [x] **B6-4** `image-resizer` — 画像リサイズ（Canvas API、クライアントサイド完結）
+
+### バッチ7 — 追加候補（次フェーズ）
+
+- [ ] **B7-1** Header の検索バーをトップページと連携
+- [ ] **B7-2** OGP 画像（og:image）の追加
+- [ ] **B7-3** `text-to-slug` — テキスト→URLスラッグ変換
+- [ ] **B7-4** `jwt-decoder` — JWTトークンのデコード・検証
 
 ---
 
@@ -102,12 +113,16 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | **B6-1** `uuid-generator` — UUID v4 生成（crypto.randomUUID、外部パッケージ不要） | 次回ツール追加の最優先候補 |
-| 中 | **B6-2** `lorem-ipsum` — ダミーテキスト生成（日英対応） | 外部パッケージ不要で実装可能 |
-| 中 | **B6-3** `number-base-converter` — 2/8/10/16進数変換 | 外部パッケージ不要で実装可能 |
-| 中 | **B6-4** `image-resizer` — 画像リサイズ（Canvas API） | 外部パッケージ不要 |
-| 低 | `Header` の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している |
-| 低 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
+| 中 | `Header` の検索バーをトップページと連携 | 現状はトップページのみフィルター機能が動作している |
+| 中 | OGP 画像（og:image）の追加 | SNS シェア時のサムネ改善 |
+| 低 | **B7-3** `text-to-slug` — テキスト→URLスラッグ変換 | 外部パッケージ不要 |
+| 低 | **B7-4** `jwt-decoder` — JWTトークンのデコード・検証 | Base64デコードで実装可能 |
+
+### ✅ 完了済み（2026-04-11 B6バッチ）
+- [x] `uuid-generator` 追加（UUID v4・件数一括生成・大文字/ハイフントグル・crypto.randomUUID）
+- [x] `lorem-ipsum` 追加（段落/文/単語・ラテン語/日本語・startWithLoremオプション）
+- [x] `number-base-converter` 追加（2/8/10/16進数リアルタイム変換・負数対応）
+- [x] `image-resizer` 追加（Canvas API・アスペクト比維持・PNG/JPG/WebP出力・品質調整）
 
 ### ✅ 完了済み（2026-04-11）
 - [x] お問い合わせ先を `westhilljpn@gmail.com` に変更（Footer・プライバシーポリシー・利用規約）

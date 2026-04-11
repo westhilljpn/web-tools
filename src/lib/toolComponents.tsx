@@ -34,6 +34,10 @@ const toolComponentMap: Record<string, ComponentType> = {
   HashGenerator: dynamic(() => import("@/tools/HashGenerator"), { loading: Loading }),
   MarkdownPreview: dynamic(() => import("@/tools/MarkdownPreview"), { loading: Loading }),
   DiffChecker: dynamic(() => import("@/tools/DiffChecker"), { loading: Loading }),
+  UuidGenerator: dynamic(() => import("@/tools/UuidGenerator"), { loading: Loading }),
+  LoremIpsum: dynamic(() => import("@/tools/LoremIpsum"), { loading: Loading }),
+  NumberBaseConverter: dynamic(() => import("@/tools/NumberBaseConverter"), { loading: Loading }),
+  ImageResizer: dynamic(() => import("@/tools/ImageResizer"), { loading: Loading }),
 };
 
 export default toolComponentMap;

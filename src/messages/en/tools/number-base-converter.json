@@ -1,0 +1,57 @@
+{
+  "title": "Number Base Converter",
+  "description": "Free online number base converter. Convert between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) instantly. Supports negative numbers and custom bases.",
+  "keywords": ["number base converter", "binary converter", "hex converter", "octal converter", "decimal to binary", "binary to hex"],
+  "label": "",
+  "placeholder": "Enter a number...",
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear",
+    "swap": "Swap"
+  },
+  "results": {
+    "empty": "Enter a number to convert",
+    "copied": "Copied!",
+    "invalid": "Invalid input for this base"
+  },
+  "labels": {
+    "binary": "Binary",
+    "octal": "Octal",
+    "decimal": "Decimal",
+    "hex": "Hexadecimal",
+    "base2": "Base 2",
+    "base8": "Base 8",
+    "base10": "Base 10",
+    "base16": "Base 16",
+    "inputBase": "Input base",
+    "customBase": "Custom base"
+  },
+  "howToUse": [
+    { "label": "Enter a number", "description": "Type any integer in the input field. You can enter binary, octal, decimal, or hexadecimal values." },
+    { "label": "Select the input base", "description": "Choose the base of the number you entered (2, 8, 10, or 16)." },
+    { "label": "See all conversions", "description": "The equivalent values in all other bases appear instantly below." },
+    { "label": "Copy a result", "description": "Click the copy button next to any result to copy it to your clipboard." }
+  ],
+  "faq": [
+    {
+      "question": "What is a number base?",
+      "answer": "A number base (or radix) defines how many unique digits are used to represent numbers. Base 10 (decimal) uses 0–9; base 2 (binary) uses 0–1; base 16 (hexadecimal) uses 0–9 and A–F."
+    },
+    {
+      "question": "Why do programmers use binary and hexadecimal?",
+      "answer": "Computers process data in binary (base 2) at the hardware level. Hexadecimal (base 16) is a compact shorthand — each hex digit represents exactly 4 binary bits, making it easy to read memory addresses, color codes, and byte values."
+    },
+    {
+      "question": "What is octal (base 8) used for?",
+      "answer": "Octal is common in Unix/Linux file permission notation (e.g., chmod 755) and older computing systems. Each octal digit represents exactly 3 binary bits."
+    },
+    {
+      "question": "Are negative numbers supported?",
+      "answer": "Yes. Prefix your number with a minus sign (−) and it will be converted correctly across all bases."
+    },
+    {
+      "question": "What are the valid characters for hexadecimal?",
+      "answer": "Hexadecimal uses digits 0–9 and letters A–F (case-insensitive). For example, the decimal value 255 is FF in hexadecimal."
+    }
+  ]
+}

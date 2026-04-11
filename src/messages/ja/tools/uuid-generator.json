@@ -1,0 +1,50 @@
+{
+  "title": "UUID生成ツール",
+  "description": "無料のオンラインUUID v4ジェネレーター。ブラウザ内のWeb Crypto APIを使用して、外部パッケージ不要でUUIDを即座に生成します。1〜100件まとめて生成可能。",
+  "keywords": ["UUID生成", "UUID v4", "GUID生成", "ユニークID", "ランダムUUID"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "generate": "生成",
+    "copyAll": "全てコピー",
+    "clear": "クリア"
+  },
+  "results": {
+    "empty": "「生成」ボタンをクリックしてUUIDを作成します",
+    "copied": "コピーしました！",
+    "copiedAll": "全てのUUIDをコピーしました！"
+  },
+  "options": {
+    "count": "生成件数",
+    "uppercase": "大文字",
+    "hyphens": "ハイフンあり"
+  },
+  "howToUse": [
+    { "label": "件数を設定", "description": "生成するUUIDの件数を1〜100の範囲で選択します。" },
+    { "label": "フォーマットを設定", "description": "大文字・ハイフンの有無を切り替えます。" },
+    { "label": "生成", "description": "「生成」ボタンをクリックしてUUID v4を作成します。" },
+    { "label": "コピー", "description": "各UUIDをクリックで個別コピー、または「全てコピー」でリスト全体をコピーします。" }
+  ],
+  "faq": [
+    {
+      "question": "UUID v4とは何ですか？",
+      "answer": "UUID v4（バージョン4の汎用一意識別子）は128ビットのランダムな識別子で、xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxxの形式で表されます。バージョン4はランダムに生成されることを意味します。"
+    },
+    {
+      "question": "本当に一意なUUIDが生成されますか？",
+      "answer": "UUID v4は122ビットのランダム値を使用し、約5.3 × 10^36通りの値が存在します。衝突が発生する確率は実用上無視できるほど小さいです。"
+    },
+    {
+      "question": "安全に使えますか？",
+      "answer": "はい。ブラウザ内蔵のcrypto.randomUUID()（Web Crypto API）を使用して生成します。データは一切サーバーに送信されず、すべてブラウザ内で完結します。"
+    },
+    {
+      "question": "UUIDとGUIDの違いは何ですか？",
+      "answer": "GUIDはMicrosoftが同じ概念に使う用語です。構造的には同一で、ほとんどの場合互換性があります。"
+    },
+    {
+      "question": "UUIDはどんな時に使いますか？",
+      "answer": "データベースの主キー、セッショントークン、ログの相関ID、アップロードファイルの命名など、中央管理なしに衝突しない一意な識別子が必要な場面で活用されます。"
+    }
+  ]
+}

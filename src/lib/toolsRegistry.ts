@@ -187,6 +187,34 @@ const tools: Tool[] = [
     component: "DiffChecker",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "uuid-generator",
+    category: "dev",
+    icon: "🪪",
+    component: "UuidGenerator",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "lorem-ipsum",
+    category: "text",
+    icon: "📖",
+    component: "LoremIpsum",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "number-base-converter",
+    category: "convert",
+    icon: "🔢",
+    component: "NumberBaseConverter",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "image-resizer",
+    category: "image",
+    icon: "📐",
+    component: "ImageResizer",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;
