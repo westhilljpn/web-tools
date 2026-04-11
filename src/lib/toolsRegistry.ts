@@ -190,7 +190,7 @@ const tools: Tool[] = [
   {
     slug: "uuid-generator",
     category: "dev",
-    icon: "🪪",
+    icon: "🆔",
     component: "UuidGenerator",
     updatedAt: "2026-04-11",
   },
