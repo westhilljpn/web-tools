@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（28件）
+## 登録済みツール（32件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -49,6 +49,10 @@ npm run dev                         # http://localhost:3000
 | 26 | `jwt-decoder` | JWTデコーダー | JWT Decoder | dev |
 | 27 | `word-counter` | ワードカウンター | Word Counter | text |
 | 28 | `percentage-calculator` | パーセント計算ツール | Percentage Calculator | calculate |
+| 29 | `color-palette` | カラーパレット生成ツール | Color Palette Generator | image |
+| 30 | `cron-parser` | cron式パーサー | Cron Expression Parser | dev |
+| 31 | `aspect-ratio` | アスペクト比計算ツール | Aspect Ratio Calculator | calculate |
+| 32 | `html-encoder` | HTMLエンティティ エンコード/デコード | HTML Entity Encoder / Decoder | dev |
 
 ---
 
@@ -102,12 +106,19 @@ npm run dev                         # http://localhost:3000
 - [x] **B7-3** `word-counter` — 英語ワードカウンター（単語/文/段落・読了時間推定）
 - [x] **B7-4** `percentage-calculator` — パーセント計算ツール（割合・増減率・逆算）
 
-### バッチ8 — 次回ツール追加候補
+### バッチ8 — 追加候補 ✅ 完了
 
-- [ ] **B8-1** `color-palette` — カラーパレット生成（補色・類似色・シェード）
-- [ ] **B8-2** `cron-parser` — cron式パーサー（次回実行時刻・わかりやすい説明）
-- [ ] **B8-3** `aspect-ratio` — アスペクト比計算（画像サイズ変換・黄金比）
-- [ ] **B8-4** `html-encoder` — HTML エンティティエンコード/デコード
+- [x] **B8-1** `color-palette` — カラーパレット生成（補色・類似色・三色・分裂補色・ティント/シェード）
+- [x] **B8-2** `cron-parser` — cron式パーサー（次回実行時刻10件・人間向け説明・プリセット8種）
+- [x] **B8-3** `aspect-ratio` — アスペクト比計算（比率算出・サイズ計算・黄金比参考）
+- [x] **B8-4** `html-encoder` — HTML エンティティエンコード/デコード（特殊文字/全文字2モード）
+
+### バッチ9 — 次回ツール追加候補
+
+- [ ] **B9-1** `ip-lookup` — IPアドレス情報取得
+- [ ] **B9-2** `text-diff` — テキスト比較（単語レベル差分）
+- [ ] **B9-3** `css-minifier` — CSS圧縮ツール
+- [ ] **B9-4** `svg-optimizer` — SVG最適化ツール
 
 ---
 
@@ -127,6 +138,10 @@ npm run dev                         # http://localhost:3000
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 
 ### ✅ 完了済み（2026-04-11）
+- [x] `color-palette` 追加（HEX入力・カラーピッカー・補色/類似色/三色/分裂補色・ティント/シェード4段階・HEX/RGB/HSLコピー）
+- [x] `cron-parser` 追加（5フィールドパース・次回実行10件・人間向け説明・DOM/DOW OR条件・プリセット8種）
+- [x] `aspect-ratio` 追加（寸法→比率モード・比率+片辺→寸法モード・黄金比参考）
+- [x] `html-encoder` 追加（特殊文字エンコード/全文字エンコード/デコード・swap機能）
 - [x] `text-to-slug` 追加（テキスト→URLスラッグ・ハイフン/アンダースコア・アクセント文字変換）
 - [x] `jwt-decoder` 追加（Base64url デコード・ヘッダー/ペイロード/署名・有効期限ステータス色分け）
 - [x] `word-counter` 追加（単語/文字/文/段落・読了時間・スピーチ時間・頻出単語 TOP5）
