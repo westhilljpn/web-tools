@@ -1,0 +1,53 @@
+{
+  "title": "Code Minifier",
+  "description": "Minify JavaScript, CSS, and HTML online for free. Removes comments and collapses whitespace to reduce file size — no external packages, runs entirely in your browser.",
+  "keywords": ["code minifier", "js minifier", "css minifier", "html minifier", "minify javascript", "minify css", "compress code"],
+  "input": "Input",
+  "output": "Minified Output",
+  "clear": "Clear",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "empty": "No output — check if your input is valid.",
+  "placeholder": {
+    "js":   "Paste your JavaScript or TypeScript code here...",
+    "css":  "Paste your CSS code here...",
+    "html": "Paste your HTML code here..."
+  },
+  "note": {
+    "js":   "Light minification: comments removed, whitespace collapsed. Variable renaming and dead-code elimination are not performed.",
+    "css":  "Comments removed, whitespace collapsed. url() values and custom properties are preserved.",
+    "html": "Comments removed, whitespace between tags collapsed. Content inside <pre>, <script>, and <style> tags is not handled specially."
+  },
+  "howToUse": [
+    {
+      "label": "Select the language",
+      "description": "Click JS, CSS, or HTML to choose the type of code you want to minify."
+    },
+    {
+      "label": "Paste your code",
+      "description": "Paste the source code into the input area. The minified output appears automatically below."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Click \"Copy\" to copy the minified code. The reduction percentage shows how much smaller the output is."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What does this minifier do?",
+      "answer": "It removes comments (// and /* */ for JS, /* */ for CSS, <!-- --> for HTML) and collapses multiple whitespace characters into a single space. It does not rename variables, tree-shake, or perform advanced optimizations."
+    },
+    {
+      "question": "Is it safe to use on production code?",
+      "answer": "For CSS and HTML, yes — the transformations are safe. For JavaScript, the light minification is generally safe, but avoid using it as a replacement for a full bundler (Webpack, Vite, etc.) in production. Template literals with complex nested expressions may not be handled correctly."
+    },
+    {
+      "question": "Why is the reduction percentage low?",
+      "answer": "If your code has few comments and is already compactly written, the reduction will be small. This tool only removes whitespace and comments — it cannot rename variables or apply advanced compression."
+    },
+    {
+      "question": "Does minified code run the same as the original?",
+      "answer": "In almost all cases, yes. The exceptions are JavaScript relying on comment-based annotations (e.g., some Angular/legacy build tools) or HTML where whitespace inside <pre> is significant."
+    }
+  ]
+}

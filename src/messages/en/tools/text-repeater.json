@@ -1,0 +1,56 @@
+{
+  "title": "Text Repeater",
+  "description": "Repeat any text a specified number of times with a custom separator. Perfect for generating test data, dummy content, or repeated patterns.",
+  "keywords": ["text repeater", "repeat text", "duplicate text", "text generator", "string repeat"],
+  "placeholder": "Enter text to repeat...",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "empty": "Enter text and set the count above to generate output.",
+  "charCount": "{n} chars",
+  "labels": {
+    "text": "Text",
+    "count": "Repeat Count",
+    "separator": "Separator",
+    "customSep": "Custom Separator",
+    "output": "Output"
+  },
+  "separators": {
+    "none":    "None",
+    "newline": "New Line",
+    "space":   "Space",
+    "comma":   "Comma + Space",
+    "custom":  "Custom..."
+  },
+  "howToUse": [
+    {
+      "label": "Enter your text",
+      "description": "Type or paste the text you want to repeat into the input area."
+    },
+    {
+      "label": "Set the repeat count",
+      "description": "Enter how many times the text should repeat (1–1000)."
+    },
+    {
+      "label": "Choose a separator",
+      "description": "Select a separator between repetitions: none, newline, space, comma, or a custom string. Then copy the output."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the maximum repeat count?",
+      "answer": "The maximum is 1000 repetitions. This prevents accidentally generating extremely large outputs that could freeze your browser."
+    },
+    {
+      "question": "Can I use a custom separator like a tab or special character?",
+      "answer": "Yes — select \"Custom...\" from the separator dropdown and type anything you want, including spaces, symbols, or even multiple characters."
+    },
+    {
+      "question": "What can I use this for?",
+      "answer": "Common uses include: generating placeholder/dummy text for UI testing, creating repeated patterns for data files, building test strings for regex or encoding tools, or repeating CSS selectors."
+    },
+    {
+      "question": "Is my text sent to a server?",
+      "answer": "No. All processing happens entirely in your browser. Your text is never sent anywhere."
+    }
+  ]
+}

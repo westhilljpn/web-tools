@@ -49,6 +49,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
     jsonCsvConverter,
     sqlFormatter,
     unicodeFontGenerator,
+    textRepeater,
+    markdownTableGenerator,
+    codeMinifier,
+    ipInfo,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -89,6 +93,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/json-csv-converter.json"),
           import("../messages/ja/tools/sql-formatter.json"),
           import("../messages/ja/tools/unicode-font-generator.json"),
+          import("../messages/ja/tools/text-repeater.json"),
+          import("../messages/ja/tools/markdown-table-generator.json"),
+          import("../messages/ja/tools/code-minifier.json"),
+          import("../messages/ja/tools/ip-info.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -128,6 +136,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/json-csv-converter.json"),
           import("../messages/en/tools/sql-formatter.json"),
           import("../messages/en/tools/unicode-font-generator.json"),
+          import("../messages/en/tools/text-repeater.json"),
+          import("../messages/en/tools/markdown-table-generator.json"),
+          import("../messages/en/tools/code-minifier.json"),
+          import("../messages/en/tools/ip-info.json"),
         ]);
 
   return {
@@ -170,6 +182,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "json-csv-converter": jsonCsvConverter.default,
       "sql-formatter": sqlFormatter.default,
       "unicode-font-generator": unicodeFontGenerator.default,
+      "text-repeater": textRepeater.default,
+      "markdown-table-generator": markdownTableGenerator.default,
+      "code-minifier": codeMinifier.default,
+      "ip-info": ipInfo.default,
     },
   };
 });

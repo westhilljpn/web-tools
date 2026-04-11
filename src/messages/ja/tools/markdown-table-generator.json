@@ -1,0 +1,49 @@
+{
+  "title": "Markdownテーブル生成ツール",
+  "description": "Markdownのテーブルをビジュアルに作成できる無料ツール。セル編集・行列の追加削除・列の整列設定に対応。README作成に最適です。",
+  "keywords": ["Markdownテーブル", "Markdownテーブル生成", "テーブル生成", "GitHub README テーブル", "Markdown記法"],
+  "addRow": "行を追加",
+  "removeRow": "行を削除",
+  "addCol": "列を追加",
+  "removeCol": "列を削除",
+  "output": "Markdownコード",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "align": {
+    "left":   "左揃え",
+    "center": "中央揃え",
+    "right":  "右揃え"
+  },
+  "howToUse": [
+    {
+      "label": "セルを編集する",
+      "description": "各セルをクリックして内容を入力します。1行目がヘッダー行になります。"
+    },
+    {
+      "label": "構造と整列を調整する",
+      "description": "ツールバーで行・列の追加・削除が可能です。ヘッダーセル下の「L/C/R」ボタンをクリックすると、その列の整列（左・中央・右）を切り替えられます。"
+    },
+    {
+      "label": "Markdownコードをコピー",
+      "description": "「コピー」ボタンをクリックして生成されたMarkdownテーブルコードをコピーし、READMEやドキュメント、Markdownエディターに貼り付けます。"
+    }
+  ],
+  "faq": [
+    {
+      "question": "どこでMarkdownテーブルを使えますか？",
+      "answer": "GitHubのREADME・GitLab・Notion・Obsidian・Docusaurus・MkDocsなど、多くのドキュメントツールやMarkdownエディターでサポートされています。"
+    },
+    {
+      "question": "L / C / R の整列ボタンは何をしますか？",
+      "answer": "区切り行の整列マーカーを制御します。L は `:---`（左揃え）、C は `:---:`（中央揃え）、R は `---:`（右揃え）を生成します。多くのMarkdownレンダラーはこの整列指定を尊重します。"
+    },
+    {
+      "question": "行数・列数に制限はありますか？",
+      "answer": "ハードな制限はありませんが、列が多すぎると狭い画面では表示が崩れることがあります。可読性のために6〜8列以内が推奨です。"
+    },
+    {
+      "question": "既存のデータを貼り付けて使えますか？",
+      "answer": "各セルに自由にテキストを入力できます。構造化データをMarkdownに変換したい場合は、先にJSON→CSV変換ツールでデータを整形してから使うと便利です。"
+    }
+  ]
+}

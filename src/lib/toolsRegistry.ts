@@ -299,6 +299,34 @@ const tools: Tool[] = [
     component: "UnicodeFontGenerator",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "text-repeater",
+    category: "text",
+    icon: "🔁",
+    component: "TextRepeater",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "markdown-table-generator",
+    category: "dev",
+    icon: "📋",
+    component: "MarkdownTableGenerator",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "code-minifier",
+    category: "dev",
+    icon: "🗜️",
+    component: "CodeMinifier",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "ip-info",
+    category: "dev",
+    icon: "🌐",
+    component: "IpInfo",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;

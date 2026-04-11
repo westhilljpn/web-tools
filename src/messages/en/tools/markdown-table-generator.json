@@ -1,0 +1,49 @@
+{
+  "title": "Markdown Table Generator",
+  "description": "Create Markdown tables visually. Edit cells, add or remove rows and columns, set column alignment, and copy the result instantly.",
+  "keywords": ["markdown table", "markdown table generator", "table generator", "github markdown table", "markdown syntax"],
+  "addRow": "Add Row",
+  "removeRow": "Remove Row",
+  "addCol": "Add Column",
+  "removeCol": "Remove Column",
+  "output": "Markdown Output",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "align": {
+    "left":   "Left",
+    "center": "Center",
+    "right":  "Right"
+  },
+  "howToUse": [
+    {
+      "label": "Edit the table",
+      "description": "Click any cell and type your content. The first row is the header row."
+    },
+    {
+      "label": "Adjust structure and alignment",
+      "description": "Use the toolbar to add or remove rows and columns. Click the alignment indicator (L/C/R) under each column header to cycle through left, center, and right alignment."
+    },
+    {
+      "label": "Copy the Markdown",
+      "description": "Click \"Copy\" to copy the generated Markdown table code and paste it into your README, documentation, or any Markdown editor."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Where can I use this Markdown table?",
+      "answer": "Markdown tables are supported in GitHub README files, GitLab, Notion, Obsidian, many documentation tools (Docusaurus, MkDocs), and most modern Markdown editors."
+    },
+    {
+      "question": "What does the L / C / R alignment toggle do?",
+      "answer": "It controls the alignment marker in the separator row. L adds `:---` (left), C adds `:---:` (center), R adds `---:` (right). Most Markdown renderers respect these alignment hints."
+    },
+    {
+      "question": "Is there a limit on rows or columns?",
+      "answer": "There is no hard limit, but very wide tables may not display well in narrow viewports. Markdown tables are best kept under 6–8 columns for readability."
+    },
+    {
+      "question": "Can I paste existing table data into the cells?",
+      "answer": "Each cell accepts free-form text input. For converting structured data to Markdown, consider using the JSON→CSV converter to prepare your data first."
+    }
+  ]
+}

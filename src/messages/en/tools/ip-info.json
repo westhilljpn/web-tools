@@ -1,0 +1,57 @@
+{
+  "title": "Browser & IP Info",
+  "description": "View your browser, OS, screen, timezone, language, and local IP address at a glance. All information is read directly from your browser — nothing is sent to any server.",
+  "keywords": ["browser info", "my browser", "what is my browser", "local ip address", "system information", "browser details"],
+  "loading":      "Loading...",
+  "checking":     "Checking...",
+  "notAvailable": "Not available",
+  "yes":          "Yes",
+  "no":           "No",
+  "copyAll":      "Copy All",
+  "copied":       "Copied!",
+  "note":         "Local IP detection uses WebRTC. Modern browsers (especially Chrome) may block this for privacy reasons — \"Not available\" is normal.",
+  "fields": {
+    "browser":   "Browser",
+    "os":        "OS",
+    "language":  "Language",
+    "timezone":  "Timezone",
+    "screen":    "Screen",
+    "viewport":  "Viewport",
+    "cookies":   "Cookies",
+    "online":    "Online",
+    "localIP":   "Local IP",
+    "userAgent": "User Agent"
+  },
+  "howToUse": [
+    {
+      "label": "Open the page",
+      "description": "Your browser information is detected automatically the moment the page loads — no input needed."
+    },
+    {
+      "label": "Check local IP",
+      "description": "The tool attempts to detect your local (LAN) IP address via WebRTC. This may not work in Chrome due to privacy restrictions."
+    },
+    {
+      "label": "Copy all info",
+      "description": "Click \"Copy All\" to copy every field as plain text. Useful for bug reports or support tickets."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why does it show \"Not available\" for Local IP?",
+      "answer": "Chrome (version 91+) obfuscates local IP addresses in WebRTC ICE candidates to protect user privacy. Firefox may still reveal the local IP depending on your settings. This is expected behavior."
+    },
+    {
+      "question": "Does this show my public IP address?",
+      "answer": "No. Detecting your public IP requires contacting an external server, which this tool intentionally avoids. For your public IP, use a dedicated IP lookup service."
+    },
+    {
+      "question": "Is any of this information sent to a server?",
+      "answer": "No. All information is read directly from your browser's JavaScript APIs (navigator, screen, Intl, RTCPeerConnection). Nothing is transmitted anywhere."
+    },
+    {
+      "question": "Why does the browser version sometimes look incorrect?",
+      "answer": "Browser detection relies on parsing the User Agent string, which can be misleading. Many browsers include other browser names in their UA for compatibility (e.g., Chrome includes 'Safari'). The User Agent field at the bottom shows the raw string."
+    }
+  ]
+}

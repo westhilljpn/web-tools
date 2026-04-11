@@ -50,6 +50,10 @@ const toolComponentMap: Record<string, ComponentType> = {
   JsonCsvConverter: dynamic(() => import("@/tools/JsonCsvConverter"), { loading: Loading }),
   SqlFormatter: dynamic(() => import("@/tools/SqlFormatter"), { loading: Loading }),
   UnicodeFontGenerator: dynamic(() => import("@/tools/UnicodeFontGenerator"), { loading: Loading }),
+  TextRepeater: dynamic(() => import("@/tools/TextRepeater"), { loading: Loading }),
+  MarkdownTableGenerator: dynamic(() => import("@/tools/MarkdownTableGenerator"), { loading: Loading }),
+  CodeMinifier: dynamic(() => import("@/tools/CodeMinifier"), { loading: Loading }),
+  IpInfo: dynamic(() => import("@/tools/IpInfo"), { loading: Loading }),
 };
 
 export default toolComponentMap;
