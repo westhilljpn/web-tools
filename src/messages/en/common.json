@@ -47,5 +47,14 @@
   "theme": {
     "toDarkMode": "Switch to dark mode",
     "toLightMode": "Switch to light mode"
+  },
+  "share": {
+    "label": "Share",
+    "tweetText": "{title} — Free Online Tool",
+    "twitter": "Share on X",
+    "line": "Share on LINE",
+    "hatena": "Add to Hatena Bookmark",
+    "copy": "Copy URL",
+    "copied": "Copied!"
   }
 }

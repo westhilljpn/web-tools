@@ -47,5 +47,14 @@
   "theme": {
     "toDarkMode": "ダークモードに切替",
     "toLightMode": "ライトモードに切替"
+  },
+  "share": {
+    "label": "共有",
+    "tweetText": "「{title}」— 無料オンラインツール",
+    "twitter": "X（Twitter）でシェア",
+    "line": "LINEで送る",
+    "hatena": "はてなブックマークに追加",
+    "copy": "URLをコピー",
+    "copied": "コピーしました！"
   }
 }

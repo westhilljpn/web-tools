@@ -9,6 +9,7 @@ import HowToUse from "@/components/HowToUse";
 import RelatedTools from "@/components/RelatedTools";
 import AdBanner from "@/components/AdBanner";
 import SEOHead from "@/components/SEOHead";
+import ShareButtons from "@/components/ShareButtons";
 
 interface PageProps {
   params: { locale: string; "tool-slug": string };
@@ -192,6 +193,8 @@ export default async function ToolPage({ params }: PageProps) {
                 </p>
               )}
             </div>
+
+            <ShareButtons title={tm.title} url={`${siteUrl}/${locale}/${slug}`} />
 
             <AdBanner slot="tool-result-below" className="mt-6" />
 
