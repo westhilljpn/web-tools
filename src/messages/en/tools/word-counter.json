@@ -1,0 +1,56 @@
+{
+  "title": "Word Counter",
+  "description": "Free online word counter. Count words, characters, sentences, and paragraphs instantly. Estimates reading time and speaking time. Perfect for essays, articles, and social media posts.",
+  "keywords": ["word counter", "character counter", "word count tool", "reading time calculator", "text analyzer", "character count"],
+  "label": "",
+  "placeholder": "Paste or type your text here…",
+  "buttons": {
+    "clear": "Clear",
+    "copy": "Copy"
+  },
+  "results": {
+    "empty": "Start typing to see word and character counts"
+  },
+  "labels": {
+    "words": "Words",
+    "characters": "Characters",
+    "charactersNoSpaces": "Characters (no spaces)",
+    "sentences": "Sentences",
+    "paragraphs": "Paragraphs",
+    "readingTime": "Reading time",
+    "speakingTime": "Speaking time",
+    "minutes": "min",
+    "seconds": "sec",
+    "uniqueWords": "Unique words",
+    "avgWordLength": "Avg word length",
+    "longestWord": "Longest word",
+    "topWords": "Top words"
+  },
+  "howToUse": [
+    { "label": "Paste your text", "description": "Type or paste any text into the field above." },
+    { "label": "View stats instantly", "description": "Word count, character count, sentences, paragraphs, and reading time update in real time." },
+    { "label": "Check reading time", "description": "Reading time is estimated at 200 words per minute (average adult reading speed). Speaking time is estimated at 130 words per minute." }
+  ],
+  "faq": [
+    {
+      "question": "How are words counted?",
+      "answer": "Words are counted by splitting the text on whitespace and filtering out empty strings. Hyphenated words (e.g., \"well-known\") are counted as one word."
+    },
+    {
+      "question": "How is reading time calculated?",
+      "answer": "Reading time is estimated at 200 words per minute, which is the average silent reading speed for an adult. Speaking time uses 130 words per minute."
+    },
+    {
+      "question": "How are sentences counted?",
+      "answer": "Sentences are counted by splitting on terminal punctuation (. ! ?). Abbreviations and decimal numbers may occasionally cause slight overcounting."
+    },
+    {
+      "question": "What counts as a paragraph?",
+      "answer": "A paragraph is a block of text separated by one or more blank lines."
+    },
+    {
+      "question": "Is there a character limit?",
+      "answer": "There is no enforced limit. The tool runs entirely in your browser and handles large documents well."
+    }
+  ]
+}

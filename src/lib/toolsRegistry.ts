@@ -215,6 +215,34 @@ const tools: Tool[] = [
     component: "ImageResizer",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "text-to-slug",
+    category: "text",
+    icon: "🔗",
+    component: "TextToSlug",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "jwt-decoder",
+    category: "dev",
+    icon: "🔐",
+    component: "JwtDecoder",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "word-counter",
+    category: "text",
+    icon: "📊",
+    component: "WordCounter",
+    updatedAt: "2026-04-11",
+  },
+  {
+    slug: "percentage-calculator",
+    category: "calculate",
+    icon: "💯",
+    component: "PercentageCalculator",
+    updatedAt: "2026-04-11",
+  },
 ];
 
 export default tools;

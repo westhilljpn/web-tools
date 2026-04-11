@@ -38,6 +38,10 @@ const toolComponentMap: Record<string, ComponentType> = {
   LoremIpsum: dynamic(() => import("@/tools/LoremIpsum"), { loading: Loading }),
   NumberBaseConverter: dynamic(() => import("@/tools/NumberBaseConverter"), { loading: Loading }),
   ImageResizer: dynamic(() => import("@/tools/ImageResizer"), { loading: Loading }),
+  TextToSlug: dynamic(() => import("@/tools/TextToSlug"), { loading: Loading }),
+  JwtDecoder: dynamic(() => import("@/tools/JwtDecoder"), { loading: Loading }),
+  WordCounter: dynamic(() => import("@/tools/WordCounter"), { loading: Loading }),
+  PercentageCalculator: dynamic(() => import("@/tools/PercentageCalculator"), { loading: Loading }),
 };
 
 export default toolComponentMap;

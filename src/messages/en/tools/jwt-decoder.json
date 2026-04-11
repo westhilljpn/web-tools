@@ -1,0 +1,59 @@
+{
+  "title": "JWT Decoder",
+  "description": "Free online JWT decoder. Paste any JSON Web Token to instantly decode and inspect the header, payload, and claims. Shows expiry status and human-readable timestamps. No data sent to servers.",
+  "keywords": ["JWT decoder", "JSON Web Token", "JWT parser", "decode JWT", "JWT inspector", "JWT claims"],
+  "label": "",
+  "placeholder": "Paste your JWT here…\ne.g. eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear",
+    "copyPayload": "Copy payload"
+  },
+  "results": {
+    "empty": "Paste a JWT token above to decode it",
+    "copied": "Copied!",
+    "invalid": "Invalid JWT — must be three Base64url parts separated by dots",
+    "expired": "Expired",
+    "valid": "Valid",
+    "noExpiry": "No expiry"
+  },
+  "labels": {
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signature",
+    "algorithm": "Algorithm",
+    "type": "Type",
+    "issuedAt": "Issued at",
+    "expiresAt": "Expires at",
+    "notBefore": "Not before",
+    "status": "Status"
+  },
+  "howToUse": [
+    { "label": "Paste your JWT", "description": "Copy your JWT token and paste it into the input field." },
+    { "label": "Inspect the header", "description": "The header shows the algorithm (alg) and token type (typ)." },
+    { "label": "Read the payload", "description": "The payload contains the claims — user data, permissions, and timestamps like iat (issued at) and exp (expiry)." },
+    { "label": "Check expiry", "description": "The status badge instantly shows whether the token is still valid or has expired." }
+  ],
+  "faq": [
+    {
+      "question": "What is a JWT?",
+      "answer": "A JSON Web Token (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as a JSON object. It consists of three Base64url-encoded parts: header, payload, and signature."
+    },
+    {
+      "question": "Is this tool safe to use with real tokens?",
+      "answer": "Yes. All decoding happens in your browser using JavaScript's atob() function. No data is sent to any server. That said, treat JWTs like passwords — avoid pasting production tokens with sensitive claims into any online tool."
+    },
+    {
+      "question": "Does this tool verify the JWT signature?",
+      "answer": "No. Signature verification requires the secret key or public key used when the JWT was signed. This tool only decodes (Base64url decodes) the visible parts — it does not validate whether the token is authentic."
+    },
+    {
+      "question": "What is the difference between iat, exp, and nbf?",
+      "answer": "\"iat\" (issued at) is the Unix timestamp when the token was created. \"exp\" (expiry) is when the token becomes invalid. \"nbf\" (not before) is the earliest time the token can be used."
+    },
+    {
+      "question": "What is Base64url encoding?",
+      "answer": "Base64url is a variant of Base64 that uses - and _ instead of + and / and omits padding (=). It is URL-safe, which is why it is used in JWTs."
+    }
+  ]
+}

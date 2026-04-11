@@ -37,6 +37,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
     loremIpsum,
     numberBaseConverter,
     imageResizer,
+    textToSlug,
+    jwtDecoder,
+    wordCounter,
+    percentageCalculator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -65,6 +69,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/lorem-ipsum.json"),
           import("../messages/ja/tools/number-base-converter.json"),
           import("../messages/ja/tools/image-resizer.json"),
+          import("../messages/ja/tools/text-to-slug.json"),
+          import("../messages/ja/tools/jwt-decoder.json"),
+          import("../messages/ja/tools/word-counter.json"),
+          import("../messages/ja/tools/percentage-calculator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -92,6 +100,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/lorem-ipsum.json"),
           import("../messages/en/tools/number-base-converter.json"),
           import("../messages/en/tools/image-resizer.json"),
+          import("../messages/en/tools/text-to-slug.json"),
+          import("../messages/en/tools/jwt-decoder.json"),
+          import("../messages/en/tools/word-counter.json"),
+          import("../messages/en/tools/percentage-calculator.json"),
         ]);
 
   return {
@@ -122,6 +134,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "lorem-ipsum": loremIpsum.default,
       "number-base-converter": numberBaseConverter.default,
       "image-resizer": imageResizer.default,
+      "text-to-slug": textToSlug.default,
+      "jwt-decoder": jwtDecoder.default,
+      "word-counter": wordCounter.default,
+      "percentage-calculator": percentageCalculator.default,
     },
   };
 });

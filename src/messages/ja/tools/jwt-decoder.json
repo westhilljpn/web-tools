@@ -1,0 +1,59 @@
+{
+  "title": "JWTデコーダー",
+  "description": "無料のオンラインJWTデコーダー。JWTトークンを貼り付けるだけでヘッダー・ペイロード・クレームを即座に解析。有効期限の確認もリアルタイムで表示。データはサーバーに送信されません。",
+  "keywords": ["JWT デコード", "JWT解析", "JSON Web Token", "JWTパーサー", "トークン解析"],
+  "label": "",
+  "placeholder": "JWTトークンをここに貼り付けてください…\n例: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "buttons": {
+    "copy": "コピー",
+    "clear": "クリア",
+    "copyPayload": "ペイロードをコピー"
+  },
+  "results": {
+    "empty": "JWTトークンを上に貼り付けるとデコード結果が表示されます",
+    "copied": "コピーしました！",
+    "invalid": "無効なJWT — ドットで区切られた3つのBase64url部分が必要です",
+    "expired": "期限切れ",
+    "valid": "有効",
+    "noExpiry": "期限なし"
+  },
+  "labels": {
+    "header": "ヘッダー",
+    "payload": "ペイロード",
+    "signature": "署名",
+    "algorithm": "アルゴリズム",
+    "type": "タイプ",
+    "issuedAt": "発行日時",
+    "expiresAt": "有効期限",
+    "notBefore": "有効開始",
+    "status": "ステータス"
+  },
+  "howToUse": [
+    { "label": "JWTを貼り付け", "description": "JWTトークンをコピーして入力欄に貼り付けます。" },
+    { "label": "ヘッダーを確認", "description": "ヘッダーにはアルゴリズム（alg）とトークンタイプ（typ）が表示されます。" },
+    { "label": "ペイロードを確認", "description": "ペイロードにはクレーム（ユーザー情報・権限）と発行日時（iat）・有効期限（exp）が含まれます。" },
+    { "label": "有効期限を確認", "description": "ステータスバッジでトークンが有効か期限切れかを即座に確認できます。" }
+  ],
+  "faq": [
+    {
+      "question": "JWTとは何ですか？",
+      "answer": "JSON Web Token（JWT）は、当事者間で情報を安全に送受信するためのオープン標準（RFC 7519）です。ヘッダー・ペイロード・署名の3つのBase64urlエンコードされた部分で構成されます。"
+    },
+    {
+      "question": "本物のトークンを使っても安全ですか？",
+      "answer": "はい。すべてのデコード処理はブラウザ内のJavaScript（atob()関数）で行われます。データは一切サーバーに送信されません。ただし、JWTはパスワードと同様に扱い、本番環境の機密情報を含むトークンはオンラインツールに貼り付けることを避けることをお勧めします。"
+    },
+    {
+      "question": "このツールはJWTの署名を検証しますか？",
+      "answer": "いいえ。署名の検証にはJWT署名時に使用した秘密鍵または公開鍵が必要です。このツールはBase64urlデコードのみを行い、トークンの正当性を検証する機能はありません。"
+    },
+    {
+      "question": "iat・exp・nbfの違いは何ですか？",
+      "answer": "「iat」（issued at）はトークンが発行されたUnixタイムスタンプです。「exp」（expiry）はトークンが無効になる時刻です。「nbf」（not before）はトークンが有効になる最も早い時刻です。"
+    },
+    {
+      "question": "Base64urlエンコードとは何ですか？",
+      "answer": "Base64urlはBase64の変種で、+と/の代わりに-と_を使用し、パディング（=）を省略します。URLセーフなためJWTに使用されています。"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Text to Slug Converter",
+  "description": "Free online text-to-slug converter. Instantly turn any title or phrase into a clean URL slug. Supports hyphen and underscore separators, and handles accented characters.",
+  "keywords": ["text to slug", "slug generator", "URL slug", "kebab case", "URL friendly", "permalink generator"],
+  "label": "",
+  "placeholder": "Enter text to convert, e.g. Hello World & Friends!",
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "results": {
+    "empty": "Enter text above to generate a slug",
+    "copied": "Copied!"
+  },
+  "options": {
+    "separator": "Separator",
+    "hyphen": "Hyphen  ( - )",
+    "underscore": "Underscore  ( _ )",
+    "lowercase": "Lowercase",
+    "removeNumbers": "Remove numbers"
+  },
+  "labels": {
+    "input": "Input text",
+    "output": "Slug"
+  },
+  "howToUse": [
+    { "label": "Enter text", "description": "Type or paste the title, phrase, or heading you want to convert." },
+    { "label": "Choose options", "description": "Select your preferred separator (hyphen or underscore) and other formatting options." },
+    { "label": "Copy the slug", "description": "The slug updates in real time. Click \"Copy\" to copy it to your clipboard." }
+  ],
+  "faq": [
+    {
+      "question": "What is a URL slug?",
+      "answer": "A URL slug is the human-readable part of a URL that identifies a specific page. For example, in https://example.com/blog/hello-world, the slug is \"hello-world\". Good slugs are short, descriptive, and lowercase."
+    },
+    {
+      "question": "What characters are removed?",
+      "answer": "Special characters (punctuation, symbols), leading/trailing hyphens, and consecutive hyphens are removed or collapsed. Accented characters (é, ü, ñ, etc.) are converted to their ASCII equivalents."
+    },
+    {
+      "question": "Hyphen vs underscore — which should I use?",
+      "answer": "Google recommends hyphens for URL slugs, treating them as word separators. Underscores join words together in Google's view. For SEO, hyphens are the safe default."
+    },
+    {
+      "question": "Does this tool handle Japanese or other non-Latin text?",
+      "answer": "Non-Latin characters that cannot be mapped to ASCII are removed from the slug. For multilingual URLs, consider URL-encoding the original text instead."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Percentage Calculator",
+  "description": "Free online percentage calculator. Calculate percentages, find what percent X is of Y, compute percentage increase or decrease, and reverse-calculate the original value. Fast and accurate.",
+  "keywords": ["percentage calculator", "percent calculator", "percentage increase", "percentage decrease", "what percent of", "percentage change"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "copy": "Copy"
+  },
+  "results": {
+    "empty": "Fill in the fields to calculate",
+    "copied": "Copied!"
+  },
+  "modes": {
+    "basic": "X% of Y",
+    "whatPercent": "X is what % of Y",
+    "change": "% change",
+    "reverse": "Reverse %"
+  },
+  "labels": {
+    "percentage": "Percentage (%)",
+    "value": "Value",
+    "of": "of",
+    "from": "From",
+    "to": "To",
+    "result": "Result",
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "original": "Original value",
+    "after": "Value after applying %"
+  },
+  "placeholders": {
+    "percent": "e.g. 20",
+    "value": "e.g. 150",
+    "from": "e.g. 80",
+    "to": "e.g. 100"
+  },
+  "howToUse": [
+    { "label": "Choose a calculation type", "description": "Select one of the four modes: basic percentage, \"what percent\", percentage change, or reverse percentage." },
+    { "label": "Fill in the values", "description": "Enter the numbers in the provided fields. The result updates automatically." },
+    { "label": "Copy the result", "description": "Click the copy icon next to any result to copy it." }
+  ],
+  "faq": [
+    {
+      "question": "How do I calculate X% of Y?",
+      "answer": "Multiply Y by X and divide by 100. For example, 20% of 150 = 150 × 20 ÷ 100 = 30."
+    },
+    {
+      "question": "How do I find what percentage X is of Y?",
+      "answer": "Divide X by Y and multiply by 100. For example, 30 is what percent of 150? → 30 ÷ 150 × 100 = 20%."
+    },
+    {
+      "question": "How is percentage change calculated?",
+      "answer": "Percentage change = ((New Value − Old Value) ÷ Old Value) × 100. A positive result means an increase; a negative result means a decrease."
+    },
+    {
+      "question": "What is reverse percentage?",
+      "answer": "Reverse percentage finds the original value before a percentage was applied. For example, if a price after a 20% increase is 120, the original price was 120 ÷ 1.20 = 100."
+    },
+    {
+      "question": "How precise are the results?",
+      "answer": "Results are shown to up to 6 significant figures and rounded for readability. For financial calculations requiring exact precision, verify with a dedicated tool."
+    }
+  ]
+}
