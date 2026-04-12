@@ -179,12 +179,19 @@ npm run dev                         # http://localhost:3000
 - [x] `text-counter` FAQ書き直し — 検索クエリ起点（X/Twitter・Word違い・履歴書・バイト数・SEO meta description）
 - [x] `json-formatter` FAQ書き直し — 検索クエリ起点（1行展開・エラー修正・APIレスポンス・JSONとは・JSONC/JSON5）
 
+### バッチ13 — 次回ツール追加候補（優先度順）
+
+- [ ] **B13-1** `morse-code` — モールス信号変換（テキスト↔モールス・音声再生）
+- [ ] **B13-2** `color-mixer` — カラーミキサー（2色の混合・割合スライダー・中間色生成）
+- [ ] **B13-3** `tax-calculator` — 税込・税抜計算ツール（消費税8%/10%対応・逆算）
+- [ ] **B13-4** `reading-time` — 読了時間計算ツール（文字数・単語数・WPM設定）
+
 ### マーケティング施策 — 次のアクション
 
 - [ ] **M1** Google Search Console でCTR確認 — 表示回数↑クリック↓のページを洗い出し、titleとmeta descriptionを改善
 - [ ] **M2** Zenn/Qiita への記事投稿 — 「自作した理由」「使えるツール紹介」系でサイトへ自然にリンク
 - [ ] **M3** X（Twitter）での新ツール告知を習慣化 — ツール追加のたびに1投稿
-- [ ] **M4** 既存ツールのFAQ改善 — 検索クエリ起点で「よくある質問」を見直す（`text-counter`・`json-formatter` を優先）
+- [x] **M4** 既存ツールのFAQ改善 — `text-counter`・`json-formatter` 完了（検索クエリ起点で5問に刷新）
 
 ---
 
@@ -207,6 +214,8 @@ npm run dev                         # http://localhost:3000
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 
 ### ✅ 完了済み（2026-04-12）
+- [x] B12完了: `text-sorter`・`roman-numerals`・`html-to-markdown`・`image-compressor`
+- [x] `text-counter`・`json-formatter` FAQ書き直し（検索クエリ起点・各5問）
 - [x] サイト名を **Quicker** に変更（en/ja common.json `site.name`）
 - [x] おすすめツール機能（`featured` フラグ・`getFeaturedTools()`・ホームページ横スクロールセクション）
 - [x] 最近使ったツール機能（`RecentTracker` コンポーネント・localStorage `quicker:recentTools`・最大8件）
