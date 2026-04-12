@@ -54,6 +54,8 @@ const toolComponentMap: Record<string, ComponentType> = {
   MarkdownTableGenerator: dynamic(() => import("@/tools/MarkdownTableGenerator"), { loading: Loading }),
   CodeMinifier: dynamic(() => import("@/tools/CodeMinifier"), { loading: Loading }),
   IpInfo: dynamic(() => import("@/tools/IpInfo"), { loading: Loading }),
+  PaperSize: dynamic(() => import("@/tools/PaperSize"), { loading: Loading }),
+  GachaCalculator: dynamic(() => import("@/tools/GachaCalculator"), { loading: Loading }),
 };
 
 export default toolComponentMap;

@@ -1,0 +1,81 @@
+{
+  "title": "Paper Size Reference",
+  "description": "Complete reference for standard paper sizes — ISO A, ISO B, JIS B (Japan), and US sizes. View dimensions in mm, cm, or inches. Includes ID photo and resume photo sizes.",
+  "keywords": [
+    "paper size",
+    "A4 size mm",
+    "A3 size",
+    "B5 paper",
+    "US letter size",
+    "ISO paper sizes",
+    "JIS B paper",
+    "ID photo size",
+    "passport photo size"
+  ],
+  "units": {
+    "mm": "mm",
+    "cm": "cm",
+    "inch": "in"
+  },
+  "tabs": {
+    "a": "A Series",
+    "isoB": "B Series (ISO)",
+    "jisB": "B Series (JIS)",
+    "us": "US Sizes",
+    "photo": "ID Photo"
+  },
+  "tableHeaders": {
+    "name": "Size",
+    "size": "Dimensions (W × H)",
+    "note": "Common Use"
+  },
+  "notes": {
+    "a3": "Posters, drawings, large prints",
+    "a4": "Office documents, printing (most common)",
+    "a5": "Notebooks, booklets, flyers",
+    "b4": "Newspapers, flyers (JIS, Japan)",
+    "b5": "Magazines, notebooks (JIS, Japan)",
+    "letter": "Standard US office paper",
+    "legal": "Legal documents, contracts",
+    "tabloid": "Tabloid newspapers, large prints"
+  },
+  "photoNotes": {
+    "standard": "Resume / CV standard (30×40mm)",
+    "large": "Some resume formats (33×48mm)",
+    "passport": "Passport / My Number card (35×45mm)",
+    "small": "Small ID documents (25×30mm)"
+  },
+  "jisNote": "JIS B series (Japan Industrial Standard) differs from ISO B series. JIS B is the standard used in Japan for office paper and printing.",
+  "howToUse": [
+    {
+      "label": "Select a unit",
+      "description": "Choose mm, cm, or inches. The table updates immediately."
+    },
+    {
+      "label": "Select a series",
+      "description": "Switch between A Series, ISO B, JIS B (Japan), US Sizes, or ID Photo to find the paper format you need."
+    },
+    {
+      "label": "Read the dimensions",
+      "description": "Check the width × height in your selected unit. The note column shows common use cases for each size."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is A4 size in mm and inches?",
+      "answer": "A4 is 210 × 297 mm (8.27 × 11.69 inches). It is the most widely used paper size for office documents, printing, and business letters worldwide, except in North America where Letter (216×279mm) is standard."
+    },
+    {
+      "question": "What is the difference between JIS B and ISO B series?",
+      "answer": "JIS B4 is 257×364mm while ISO B4 is 250×353mm — they have different dimensions. Japan uses JIS B series for standard office and printing paper. ISO B is used in Europe and most other countries. When buying B5 paper in Japan, expect JIS B5 (182×257mm)."
+    },
+    {
+      "question": "What size photo is needed for a Japanese resume (履歴書)?",
+      "answer": "The standard resume photo size in Japan is 30×40mm. Some formats specify 33×48mm. Passport and My Number card photos require 35×45mm. Always check the specific document's requirements before having photos taken."
+    },
+    {
+      "question": "How does A4 compare to US Letter?",
+      "answer": "A4 (210×297mm) is taller but slightly narrower than US Letter (216×279mm). When printing A4-formatted documents on Letter paper, content may be cut off at the bottom. Most modern printers and software can scale automatically."
+    }
+  ]
+}

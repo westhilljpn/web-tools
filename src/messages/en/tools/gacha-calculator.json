@@ -1,0 +1,57 @@
+{
+  "title": "Gacha / Loot Box Probability Calculator",
+  "description": "Calculate the probability of getting at least one win given a pull rate and number of attempts. Shows cumulative probabilities and pulls needed to reach 50%, 90%, and 99% targets.",
+  "keywords": [
+    "gacha probability",
+    "gacha calculator",
+    "loot box odds",
+    "pull rate calculator",
+    "cumulative probability",
+    "gacha odds",
+    "chance calculator"
+  ],
+  "labels": {
+    "rate": "Win rate per pull",
+    "pulls": "Number of pulls",
+    "times": " pulls",
+    "reach": " target",
+    "result": "Probability of at least 1 win",
+    "rateDesc": "{pulls} pulls at {rate}% win rate",
+    "targetTitle": "Pulls needed to reach target probability",
+    "tableTitle": "Cumulative probability by pull count",
+    "pullCount": "Pulls",
+    "cumProb": "Cumulative chance"
+  },
+  "howToUse": [
+    {
+      "label": "Enter the win rate",
+      "description": "Use the slider or type the per-pull win rate (%) shown in the game's drop rate table."
+    },
+    {
+      "label": "Set the number of pulls",
+      "description": "Enter how many pulls you plan to make. Use the slider (1–500) or type directly for larger numbers."
+    },
+    {
+      "label": "Read the results",
+      "description": "The large number shows the probability of winning at least once. The table on the right shows cumulative probabilities at common pull counts."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the probability of getting at least one 3% item in 10 pulls?",
+      "answer": "About 26.3%. The formula is 1-(1-0.03)^10 ≈ 0.263. There is still a 73.7% chance of getting nothing in 10 pulls."
+    },
+    {
+      "question": "How many pulls do I need for a 50% chance?",
+      "answer": "The formula is ceil(log(0.5) / log(1-p/100)). For a 3% rate, that is about 23 pulls. Use the 'pulls needed' panel to see the number for 50%, 80%, 90%, 95%, and 99%."
+    },
+    {
+      "question": "Does each pull have an independent probability?",
+      "answer": "Yes, this calculator assumes each pull is an independent event with the same fixed probability. Pity systems (guaranteed drops after N misses) are not modeled here — the actual probabilities for those are higher."
+    },
+    {
+      "question": "Why doesn't the chance reach 100% no matter how many pulls I make?",
+      "answer": "Mathematically, 1-(1-p)^n approaches 100% asymptotically but never reaches it. In practice, games implement pity mechanics (hard pity / soft pity) to guarantee a reward after a certain number of pulls. Check the game's official rules for pity details."
+    }
+  ]
+}

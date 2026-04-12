@@ -327,6 +327,20 @@ const tools: Tool[] = [
     component: "IpInfo",
     updatedAt: "2026-04-11",
   },
+  {
+    slug: "paper-size",
+    category: "calculate",
+    icon: "📄",
+    component: "PaperSize",
+    updatedAt: "2026-04-12",
+  },
+  {
+    slug: "gacha-calculator",
+    category: "calculate",
+    icon: "🎰",
+    component: "GachaCalculator",
+    updatedAt: "2026-04-12",
+  },
 ];
 
 export default tools;

@@ -55,8 +55,8 @@ export default function Header() {
           {tSite("name")}
         </Link>
 
-        {/* 検索フォーム */}
-        <form onSubmit={handleSubmit} className="flex-1 max-w-md">
+        {/* 検索フォーム（スマホでは非表示） */}
+        <form onSubmit={handleSubmit} className="hidden sm:block flex-1 max-w-md">
           <label htmlFor="tool-search" className="sr-only">
             {t("searchLabel")}
           </label>

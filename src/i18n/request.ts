@@ -53,6 +53,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
     markdownTableGenerator,
     codeMinifier,
     ipInfo,
+    paperSize,
+    gachaCalculator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -97,6 +99,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/markdown-table-generator.json"),
           import("../messages/ja/tools/code-minifier.json"),
           import("../messages/ja/tools/ip-info.json"),
+          import("../messages/ja/tools/paper-size.json"),
+          import("../messages/ja/tools/gacha-calculator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -140,6 +144,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/markdown-table-generator.json"),
           import("../messages/en/tools/code-minifier.json"),
           import("../messages/en/tools/ip-info.json"),
+          import("../messages/en/tools/paper-size.json"),
+          import("../messages/en/tools/gacha-calculator.json"),
         ]);
 
   return {
@@ -186,6 +192,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "markdown-table-generator": markdownTableGenerator.default,
       "code-minifier": codeMinifier.default,
       "ip-info": ipInfo.default,
+      "paper-size": paperSize.default,
+      "gacha-calculator": gachaCalculator.default,
     },
   };
 });
