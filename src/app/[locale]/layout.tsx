@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -13,6 +13,11 @@ interface LocaleLayoutProps {
   children: React.ReactNode;
   params: { locale: string };
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export async function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -78,12 +83,19 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      {/* テーマ初期化スクリプト: ページ描画前に実行してFOIT（テーマちらつき）を防ぐ */}
       <head>
+        {/* テーマ初期化スクリプト: ページ描画前に実行してFOIT（テーマちらつき）を防ぐ */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem("theme");var p=window.matchMedia("(prefers-color-scheme: dark)").matches;if(t==="dark"||(t===null&&p)){document.documentElement.classList.add("dark")}}catch(e){}})()`,
           }}
+        />
+        {/* Google Fonts: CSSの@importを避けて<link>で読み込む（render-blocking回避） */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
         />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900 transition-colors duration-200">
@@ -92,9 +104,9 @@ export default async function LocaleLayout({
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="gtag-init" strategy="afterInteractive">{`
+            <Script id="gtag-init" strategy="lazyOnload">{`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());

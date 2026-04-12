@@ -36,7 +36,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
 
   return (
     <div className="mt-3 flex items-center gap-1.5 flex-wrap">
-      <span className="text-xs text-gray-400 dark:text-slate-500 select-none">
+      <span className="text-xs text-gray-500 dark:text-slate-400 select-none">
         {t("label")}:
       </span>
 

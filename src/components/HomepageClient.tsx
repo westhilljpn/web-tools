@@ -92,6 +92,7 @@ export default function HomepageClient({
               key={cat.key}
               type="button"
               onClick={() => setActiveCategory(cat.key)}
+              aria-pressed={activeCategory === cat.key}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === cat.key
                   ? "bg-primary text-white"

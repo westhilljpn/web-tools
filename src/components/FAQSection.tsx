@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import SEOHead from "@/components/SEOHead";
 
 interface FAQ {
   question: string;
@@ -17,20 +16,6 @@ interface FAQSectionProps {
 export default function FAQSection({ faqs, title }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // FAQPage 構造化データ
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-
   function toggle(index: number) {
     setOpenIndex(openIndex === index ? null : index);
   }
@@ -39,7 +24,6 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
 
   return (
     <section className="mt-12">
-      <SEOHead jsonLd={faqSchema} />
       <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-4">{title}</h2>
       <dl className="space-y-2">
         {faqs.map((faq, index) => (
@@ -49,6 +33,7 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
                 type="button"
                 onClick={() => toggle(index)}
                 aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
                 className="w-full flex justify-between items-center text-left gap-4
                            font-medium text-gray-900 dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors"
               >
@@ -63,11 +48,13 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
                 </span>
               </button>
             </dt>
-            {openIndex === index && (
-              <dd className="mt-3 text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
-                {faq.answer}
-              </dd>
-            )}
+            <dd
+              id={`faq-answer-${index}`}
+              className="mt-3 text-sm text-gray-600 dark:text-slate-400 leading-relaxed"
+              hidden={openIndex !== index}
+            >
+              {faq.answer}
+            </dd>
           </div>
         ))}
       </dl>
