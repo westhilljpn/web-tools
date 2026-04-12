@@ -1,0 +1,54 @@
+{
+  "title": "Roman Numeral Converter",
+  "description": "Convert between Arabic numbers and Roman numerals instantly. Supports 1–3999 with a detailed symbol breakdown. Free online tool.",
+  "keywords": [
+    "roman numeral converter",
+    "number to roman numerals",
+    "roman numerals to number",
+    "roman numeral translator",
+    "XIV in arabic",
+    "MMXXIV meaning"
+  ],
+  "tabs": {
+    "toRoman": "Number → Roman",
+    "toNumber": "Roman → Number"
+  },
+  "numberLabel": "Number (1–3999)",
+  "romanLabel": "Roman numeral",
+  "errorRange": "Enter a number between 1 and 3999",
+  "errorInvalid": "Invalid Roman numeral (allowed characters: I V X L C D M)",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "howToUse": [
+    {
+      "label": "Choose a conversion direction",
+      "description": "Use 'Number → Roman' to convert an Arabic number to Roman numerals, or 'Roman → Number' to decode a Roman numeral."
+    },
+    {
+      "label": "Enter a value",
+      "description": "Type in the input field. Results update in real time. Arabic numbers must be between 1 and 3999."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Click Copy to copy the result to your clipboard. The symbol breakdown shows exactly which symbols were used."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do Roman numerals work?",
+      "answer": "Roman numerals use 7 symbols: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Symbols are written from largest to smallest and added together. When a smaller symbol appears before a larger one, it is subtracted (IV=4, IX=9, XL=40, XC=90, CD=400, CM=900)."
+    },
+    {
+      "question": "Can I convert numbers larger than 3999?",
+      "answer": "Standard Roman numerals go up to 3999 (MMMCMXCIX). Numbers above 3999 require a vinculum (overline) system that is rarely used today. This tool supports the standard 1–3999 range only."
+    },
+    {
+      "question": "Where are Roman numerals still used today?",
+      "answer": "Roman numerals appear on clock faces, movie copyright years (© MMXXIV), book chapter and preface page numbers, Olympic Games edition numbers (e.g. XXXIII Olympiad), royal names (Henry VIII), and music theory chord progressions (II-V-I)."
+    },
+    {
+      "question": "Is 'IIII' or 'IV' correct for the number 4?",
+      "answer": "Both have historical precedent, but 'IV' is the modern standard. 'IIII' was common in ancient Roman inscriptions and still appears on some clock faces for visual symmetry. This tool uses modern subtractive notation (IV, IX, XL, etc.)."
+    }
+  ]
+}

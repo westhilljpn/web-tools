@@ -1,0 +1,50 @@
+{
+  "title": "HTML to Markdown Converter",
+  "description": "Convert HTML to Markdown instantly in your browser. Supports headings, lists, links, code blocks, tables, and more. No upload — free online tool.",
+  "keywords": [
+    "HTML to Markdown",
+    "convert HTML to Markdown online",
+    "HTML Markdown converter free",
+    "HTML to MD",
+    "web page to Markdown"
+  ],
+  "inputLabel": "HTML",
+  "outputLabel": "Markdown",
+  "placeholder": "<h1>Title</h1>\n<p>A paragraph with <strong>bold</strong> text.</p>\n<ul>\n  <li>Item one</li>\n  <li>Item two</li>\n</ul>",
+  "clear": "Clear",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "supportedTags": "Supported: headings (h1–h6) / paragraphs (p) / lists (ul/ol) / links (a) / bold (strong/b) / italic (em/i) / strikethrough (del) / code (code/pre) / blockquote / images (img) / horizontal rule (hr) / tables",
+  "howToUse": [
+    {
+      "label": "Paste your HTML",
+      "description": "Paste HTML into the left textarea. HTML copied from a browser's DevTools ('Copy outerHTML') works directly."
+    },
+    {
+      "label": "Review the Markdown",
+      "description": "The converted Markdown appears instantly in the right panel as you type."
+    },
+    {
+      "label": "Copy and use",
+      "description": "Click Copy to copy the Markdown to your clipboard. Use it directly in GitHub READMEs, Notion, Zenn, or any Markdown editor."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Which HTML tags are supported?",
+      "answer": "Supported tags: headings (h1–h6), paragraphs (p), unordered/ordered lists (ul/ol/li), links (a), bold (strong/b), italic (em/i), strikethrough (del/s), inline code (code), code blocks (pre/code), blockquotes, images (img), horizontal rules (hr), and tables. Block elements like div, span, and section pass through their text content."
+    },
+    {
+      "question": "Can I convert a live webpage to Markdown?",
+      "answer": "Yes. Open DevTools (F12), go to the Elements tab, right-click the element you want, and choose 'Copy outerHTML'. Paste that here. CSS styles and JavaScript-generated content won't be preserved, but the text structure will."
+    },
+    {
+      "question": "Is the output compatible with GitHub README and other editors?",
+      "answer": "Yes. The output follows GitHub Flavored Markdown (GFM) syntax, which is compatible with GitHub, GitLab, Zenn, Qiita, Notion, and most Markdown editors."
+    },
+    {
+      "question": "Does it support tables?",
+      "answer": "Yes. HTML tables are converted to Markdown pipe-table syntax. Note that merged cells (colspan/rowspan) are not representable in standard Markdown, so they appear as regular cells."
+    }
+  ]
+}

@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（44件）
+## 登録済みツール（48件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -65,6 +65,10 @@ npm run dev                         # http://localhost:3000
 | 42 | `gacha-calculator` | ガチャ確率計算機 | Gacha Probability Calculator | calculate |
 | 43 | `investment-calculator` | 積立投資シミュレーター | Compound Investment Calculator | calculate |
 | 44 | `mojibake-fixer` | 文字化け修復ツール | Mojibake / Encoding Fixer | text |
+| 45 | `text-sorter` | テキスト行並び替えツール | Text Line Sorter | text |
+| 46 | `roman-numerals` | ローマ数字変換ツール | Roman Numeral Converter | convert |
+| 47 | `html-to-markdown` | HTML → Markdown変換ツール | HTML to Markdown Converter | text |
+| 48 | `image-compressor` | 画像圧縮ツール | Image Compressor | image |
 
 ---
 
@@ -163,12 +167,17 @@ npm run dev                         # http://localhost:3000
 - [x] Lighthouse 改善（Google Fonts @import → `<link>` タグ・GA lazyOnload・viewport export・FAQPage重複JSON-LD削除・ARIA属性）
 - [x] ヘッダー検索バーをスマホで非表示（`hidden sm:block`）
 
-### バッチ12 — 次回ツール追加候補（優先度順）
+### バッチ12 ✅ 完了
 
-- [ ] **B12-1** `text-sorter` — テキスト行並び替えツール（昇順/降順/ランダム・重複削除・空行削除）
-- [ ] **B12-2** `image-compressor` — 画像圧縮ツール（Canvas API・品質スライダー・圧縮率表示）
-- [ ] **B12-3** `html-to-markdown` — HTML→Markdown変換（クライアントサイド・正規表現ベース）
-- [ ] **B12-4** `roman-numerals` — ローマ数字変換（算用数字↔ローマ数字）
+- [x] **B12-1** `text-sorter` — テキスト行並び替えツール（昇順/降順/ランダム・重複削除・空行削除）
+- [x] **B12-2** `image-compressor` — 画像圧縮ツール（Canvas API・品質スライダー・圧縮率表示）
+- [x] **B12-3** `html-to-markdown` — HTML→Markdown変換（DOMParser・再帰ツリー変換・GFMテーブル対応）
+- [x] **B12-4** `roman-numerals` — ローマ数字変換（算用数字↔ローマ数字・内訳表示）
+
+### コンテンツ改善 ✅ 完了（2026-04-12）
+
+- [x] `text-counter` FAQ書き直し — 検索クエリ起点（X/Twitter・Word違い・履歴書・バイト数・SEO meta description）
+- [x] `json-formatter` FAQ書き直し — 検索クエリ起点（1行展開・エラー修正・APIレスポンス・JSONとは・JSONC/JSON5）
 
 ### マーケティング施策 — 次のアクション
 
@@ -193,7 +202,6 @@ npm run dev                         # http://localhost:3000
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
-| 中 | `text-counter`・`json-formatter` のFAQ書き直し | 流入上位ツールのコンテンツ質が集客に直結 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 低 | ポモドーロタイマーのUI改善 | 「おしゃれに」という要望あり。具体的な方向性が決まり次第着手 |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |

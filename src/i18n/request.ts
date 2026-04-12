@@ -57,6 +57,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
     gachaCalculator,
     investmentCalculator,
     mojibakeFixer,
+    textSorter,
+    romanNumerals,
+    htmlToMarkdown,
+    imageCompressor,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -105,6 +109,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/gacha-calculator.json"),
           import("../messages/ja/tools/investment-calculator.json"),
           import("../messages/ja/tools/mojibake-fixer.json"),
+          import("../messages/ja/tools/text-sorter.json"),
+          import("../messages/ja/tools/roman-numerals.json"),
+          import("../messages/ja/tools/html-to-markdown.json"),
+          import("../messages/ja/tools/image-compressor.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -152,6 +160,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/gacha-calculator.json"),
           import("../messages/en/tools/investment-calculator.json"),
           import("../messages/en/tools/mojibake-fixer.json"),
+          import("../messages/en/tools/text-sorter.json"),
+          import("../messages/en/tools/roman-numerals.json"),
+          import("../messages/en/tools/html-to-markdown.json"),
+          import("../messages/en/tools/image-compressor.json"),
         ]);
 
   return {
@@ -202,6 +214,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "gacha-calculator": gachaCalculator.default,
       "investment-calculator": investmentCalculator.default,
       "mojibake-fixer": mojibakeFixer.default,
+      "text-sorter": textSorter.default,
+      "roman-numerals": romanNumerals.default,
+      "html-to-markdown": htmlToMarkdown.default,
+      "image-compressor": imageCompressor.default,
     },
   };
 });

@@ -2,12 +2,13 @@
   "title": "JSON Formatter / Validator",
   "description": "Format, prettify, and validate JSON online. Supports 2-space, 4-space, and tab indentation. Minify JSON to a single line. Free online tool.",
   "keywords": [
-    "JSON formatter",
-    "JSON prettify",
+    "JSON formatter online",
+    "JSON prettify free",
     "JSON validator",
-    "JSON minify",
     "JSON beautifier",
-    "JSON lint"
+    "format JSON online",
+    "JSON error checker",
+    "JSON minify tool"
   ],
   "inputLabel": "Input JSON",
   "outputLabel": "Output",
@@ -63,20 +64,24 @@
   ],
   "faq": [
     {
+      "question": "How do I expand / prettify a single-line JSON?",
+      "answer": "Paste your JSON into the input area and click Format. The tool instantly expands it into a human-readable multi-line format. Choose 2 spaces, 4 spaces, or Tab indentation to match your style. This works great for API responses, curl output, or any minified JSON."
+    },
+    {
       "question": "My JSON shows an error. What are the most common causes?",
-      "answer": "The most common JSON errors are: (1) trailing commas after the last item in an array or object, (2) single-quoted strings instead of double quotes, (3) unquoted property keys, (4) missing or mismatched brackets/braces, and (5) using JavaScript-only values like undefined or NaN. The validator highlights the line and position of the error."
+      "answer": "The most common JSON errors are: (1) trailing commas after the last array/object item (e.g. ,] or ,}), (2) strings in single quotes instead of double quotes, (3) unquoted property keys, (4) mismatched or missing brackets/braces, and (5) JavaScript-only values like undefined or NaN. The validator shows the exact error message to help you fix it."
     },
     {
-      "question": "Can I paste an API response directly?",
-      "answer": "Yes. Paste the raw response body from any REST API, browser DevTools Network tab, curl output, or Postman and click Format. If the API returns a double-encoded JSON string (JSON wrapped inside another string), strip the outer quotes first."
+      "question": "Can I paste an API response or curl output directly?",
+      "answer": "Yes. Paste the raw response body from any REST API, browser DevTools Network tab, curl output, or Postman and click Format. If the API returns a double-encoded JSON string (a JSON string wrapped in extra quotes), strip the outer quotes first."
     },
     {
-      "question": "Does it support JSON5 or JSON with comments?",
-      "answer": "No. This tool validates standard JSON (RFC 8259) only. JSON5, JavaScript object literals, and JSONC (JSON with comments) are not supported. Remove any comments or trailing commas before pasting."
+      "question": "What is JSON and where is it used?",
+      "answer": "JSON (JavaScript Object Notation) is the most widely used data interchange format on the web. It represents data as key-value pairs (objects) and ordered lists (arrays). You'll find JSON everywhere: REST API responses, config files like package.json, browser localStorage, and more. Its simplicity and readability make it the de facto standard for data exchange between clients and servers."
     },
     {
-      "question": "Is my JSON data sent to a server?",
-      "answer": "No. All processing is done entirely in your browser using the built-in JSON.parse and JSON.stringify functions. Your data never leaves your device."
+      "question": "Does it support JSON with comments (JSONC) or JSON5?",
+      "answer": "No. This tool validates standard JSON (RFC 8259) only. Comments (// or /* */), trailing commas, and single-quoted strings used in JSON5 and JSONC will cause validation errors. If you need to format a file like VS Code's settings.json, remove the comments before pasting."
     }
   ]
 }

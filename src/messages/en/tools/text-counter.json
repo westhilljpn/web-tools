@@ -2,13 +2,13 @@
   "title": "Character Counter",
   "description": "Count characters, words, and lines in real-time. Supports full-width / half-width distinction. Free online tool.",
   "keywords": [
-    "character count",
-    "word count",
-    "line count",
-    "text",
-    "counter",
-    "char counter",
-    "character checker"
+    "character counter online",
+    "count characters free",
+    "tweet character count",
+    "character limit checker",
+    "word count tool",
+    "byte counter",
+    "text length checker"
   ],
   "label": "Input Text",
   "placeholder": "Enter or paste text here...",
@@ -57,20 +57,24 @@
   ],
   "faq": [
     {
-      "question": "Can I check character limits for Twitter/X, Instagram, or other platforms?",
-      "answer": "Yes. The tool includes real-time progress bars for common platform limits (Twitter/X: 280, Instagram caption: 2,200, and more). The bar turns red when you exceed a limit, making it easy to trim your text before posting."
+      "question": "How do I check my character count for Twitter/X or Instagram before posting?",
+      "answer": "Use the 'Character Limit Check' section below the counter. Real-time progress bars show how close you are to the limit for Twitter/X (280 characters), Instagram captions (2,200), and more. The bar turns red when you exceed the limit, making it easy to trim your post."
+    },
+    {
+      "question": "Why does my count differ from Microsoft Word or my text editor?",
+      "answer": "Different apps count characters in slightly different ways, especially around spaces, line breaks, and emoji. Microsoft Word shows two counts — with and without spaces — and so does this tool. Emoji encoded as surrogate pairs may be counted as 1 or 2 characters depending on the app, which can cause small differences."
+    },
+    {
+      "question": "Can I use this to check character limits for essays, job applications, or cover letters?",
+      "answer": "Yes. Paste your essay or application text and watch the count update in real-time. Use the Character Limit Check progress bar to stay within any specified limit. The tool shows both 'with spaces' and 'without spaces' counts, which is useful since different prompts specify different counting methods."
     },
     {
       "question": "What is the difference between characters and bytes?",
-      "answer": "A character is what you see — one letter, space, or emoji counts as 1. Bytes depend on the encoding: ASCII characters are 1 byte in UTF-8, Japanese characters are 3 bytes, and most emoji are 4 bytes. If a database or API enforces a byte limit rather than a character limit, check the Bytes (UTF-8) counter."
+      "answer": "A character is what you see — one letter, space, or emoji counts as 1. Bytes depend on the encoding: in UTF-8, ASCII characters are 1 byte, Japanese characters are 3 bytes, and most emoji are 4 bytes. If a database or API enforces a byte limit rather than a character limit, use the Bytes (UTF-8) counter."
     },
     {
-      "question": "How are full-width and half-width characters counted?",
-      "answer": "Full-width characters (Japanese kana/kanji, full-width alphanumerics) and half-width characters (ASCII, half-width katakana) are counted separately in their own fields. The main character count treats both as 1 character each."
-    },
-    {
-      "question": "Is my text sent to a server?",
-      "answer": "No. All processing happens entirely in your browser. Your text is never sent to any external server."
+      "question": "Can I check the character count for SEO meta descriptions?",
+      "answer": "Yes. Search engines typically show around 120–160 characters of a meta description (the exact cutoff depends on pixel width, not just character count). Use this tool to keep your meta descriptions and page titles within the recommended range — titles are usually best at 30–60 characters."
     }
   ]
 }

@@ -1,0 +1,51 @@
+{
+  "title": "Image Compressor",
+  "description": "Compress images in your browser — no server upload needed. Reduce file size with a quality slider. Supports WebP, JPEG, and PNG output. Free online tool.",
+  "keywords": [
+    "image compressor online",
+    "compress image free",
+    "reduce image file size",
+    "JPEG compressor",
+    "WebP converter",
+    "image size reducer online"
+  ],
+  "formatLabel": "Output format",
+  "qualityLabel": "Quality",
+  "dropZone": "Click or drag & drop images here",
+  "accepts": "JPEG, PNG, WebP, GIF, BMP — multiple files supported",
+  "processing": "Processing...",
+  "original": "Original",
+  "download": "Download",
+  "howToUse": [
+    {
+      "label": "Set format and quality",
+      "description": "Choose WebP, JPEG, or PNG as the output format. For WebP and JPEG, adjust the quality slider — around 80% gives a good balance of quality and file size."
+    },
+    {
+      "label": "Upload images",
+      "description": "Drag and drop your images onto the upload area, or click to select files. Multiple files can be processed at once."
+    },
+    {
+      "label": "Download compressed images",
+      "description": "The original size, compressed size, and reduction ratio are shown for each file. Click Download to save the result."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much can images be compressed?",
+      "answer": "At 80% quality, WebP and JPEG compression typically reduces file size by 50–80% compared to the original. PNG uses lossless compression, so Canvas-based conversion may not reduce the size much or may even increase it. For significant size reduction, choose WebP or JPEG."
+    },
+    {
+      "question": "Should I use WebP or JPEG?",
+      "answer": "For web publishing, WebP is recommended — it achieves 20–30% smaller file sizes than JPEG at equivalent quality, and all modern browsers support it. For email attachments, social media, or situations where broad compatibility matters, JPEG is the safer choice."
+    },
+    {
+      "question": "Are my images sent to a server?",
+      "answer": "No. All compression happens locally in your browser using the Canvas API. Your images are never sent to any external server."
+    },
+    {
+      "question": "Does compression change the image dimensions?",
+      "answer": "No. This tool only applies quality-based compression — pixel dimensions remain unchanged. If you need to resize an image, use the Image Resizer tool."
+    }
+  ]
+}

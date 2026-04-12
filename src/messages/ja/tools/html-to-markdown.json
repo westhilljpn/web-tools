@@ -1,0 +1,50 @@
+{
+  "title": "HTML → Markdown変換ツール",
+  "description": "HTMLをMarkdownに変換する無料オンラインツール。見出し・リスト・リンク・コードブロック・テーブルに対応。ブラウザ完結でデータは送信されません。",
+  "keywords": [
+    "HTML Markdown 変換",
+    "HTML to Markdown オンライン",
+    "HTML マークダウン 変換ツール",
+    "HTMLソース Markdown化",
+    "Webページ Markdown 変換 無料"
+  ],
+  "inputLabel": "HTML",
+  "outputLabel": "Markdown",
+  "placeholder": "<h1>タイトル</h1>\n<p>本文テキストの<strong>サンプル</strong>です。</p>\n<ul>\n  <li>項目1</li>\n  <li>項目2</li>\n</ul>",
+  "clear": "クリア",
+  "copy": "コピー",
+  "copied": "コピー済み",
+  "supportedTags": "対応タグ: 見出し(h1–h6) / 段落(p) / リスト(ul/ol) / リンク(a) / 太字(strong/b) / 斜体(em/i) / 打ち消し(del) / コード(code/pre) / 引用(blockquote) / 画像(img) / 区切り線(hr) / テーブル(table)",
+  "howToUse": [
+    {
+      "label": "HTMLを貼り付ける",
+      "description": "変換したいHTMLを左のテキストエリアに貼り付けます。ブラウザのDevToolsで「Copy outerHTML」したコードもそのまま使えます。"
+    },
+    {
+      "label": "Markdownを確認する",
+      "description": "リアルタイムで変換されたMarkdownが右側に表示されます。"
+    },
+    {
+      "label": "コピーして使う",
+      "description": "「コピー」ボタンでMarkdownをクリップボードに取得します。GithubのREADMEやZenn・Qiitaの記事にそのまま使えます。"
+    }
+  ],
+  "faq": [
+    {
+      "question": "どのHTMLタグに対応していますか？",
+      "answer": "見出し(h1〜h6)・段落(p)・箇条書き/番号付きリスト(ul/ol/li)・リンク(a)・太字(strong/b)・斜体(em/i)・打ち消し(del/s)・インラインコード(code)・コードブロック(pre/code)・引用(blockquote)・画像(img)・水平線(hr)・テーブル(table)に対応しています。div・span・sectionなどは内部テキストのみ出力します。"
+    },
+    {
+      "question": "WebページのHTMLをMarkdownに変換できますか？",
+      "answer": "はい。ブラウザのDevTools（F12）→「Elements」タブで対象の要素を右クリック→「Copy outerHTML」でコピーしたHTMLを貼り付けてください。CSSスタイルやJavaScript依存の動的コンテンツは変換されませんが、テキスト構造は保持されます。"
+    },
+    {
+      "question": "変換後のMarkdownはGitHub READMEやZennで使えますか？",
+      "answer": "はい。GitHub Flavored Markdown (GFM) に準拠した形式で出力するため、GitHub・GitLab・Zenn・Qiita・Notionなどのほとんどのサービスでそのまま使えます。"
+    },
+    {
+      "question": "テーブルの変換はできますか？",
+      "answer": "はい。HTMLの<table>タグをMarkdownのパイプ記法テーブルに変換します。ただし、セル結合（colspan/rowspan）はMarkdownにその概念がないため、通常のセルとして扱われます。"
+    }
+  ]
+}

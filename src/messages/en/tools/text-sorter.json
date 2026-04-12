@@ -1,0 +1,63 @@
+{
+  "title": "Text Line Sorter",
+  "description": "Sort lines of text alphabetically, by length, or randomly. Remove duplicate lines and empty lines in one click. Free online tool.",
+  "keywords": [
+    "sort lines online",
+    "alphabetical order sorter",
+    "text sorter tool",
+    "sort list alphabetically free",
+    "remove duplicate lines",
+    "line sorter online"
+  ],
+  "inputLabel": "Text to sort",
+  "outputLabel": "Result",
+  "placeholder": "Enter or paste text — one item per line...",
+  "clear": "Clear",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "lines": "lines",
+  "modes": {
+    "az": "A → Z",
+    "za": "Z → A",
+    "lengthAsc": "Length ↑",
+    "lengthDesc": "Length ↓",
+    "random": "Random"
+  },
+  "options": {
+    "caseSensitive": "Case-sensitive",
+    "removeDuplicates": "Remove duplicates",
+    "removeEmpty": "Remove empty lines"
+  },
+  "howToUse": [
+    {
+      "label": "Enter your text",
+      "description": "Paste or type your text into the left textarea — one item per line. Works great for name lists, URL collections, or word lists."
+    },
+    {
+      "label": "Choose a sort mode",
+      "description": "Select from A→Z, Z→A, length ascending, length descending, or random shuffle."
+    },
+    {
+      "label": "Apply options and copy",
+      "description": "Toggle case-sensitivity, duplicate removal, and empty-line removal. Copy the result from the right panel."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I sort a list alphabetically?",
+      "answer": "Paste your list (one item per line) into the input and click 'A → Z'. The result appears instantly in the right panel. Click 'Z → A' for reverse alphabetical order."
+    },
+    {
+      "question": "Can I remove duplicate lines?",
+      "answer": "Yes. Check 'Remove duplicates' to keep only the first occurrence of each line. With 'Case-sensitive' off, 'Apple', 'apple', and 'APPLE' are treated as the same value."
+    },
+    {
+      "question": "What can I use this for?",
+      "answer": "Common uses: sorting name lists, deduplicating URL collections, organizing code variable lists, and cleaning up glossaries. The 'Remove empty lines' option removes extra blank lines that sneak in from copy-pasting."
+    },
+    {
+      "question": "Is my text sent to a server?",
+      "answer": "No. All sorting happens entirely in your browser. Your text is never sent to any external server."
+    }
+  ]
+}

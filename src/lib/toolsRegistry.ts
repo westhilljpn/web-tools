@@ -365,6 +365,34 @@ const tools: Tool[] = [
     component: "MojibakeFixer",
     updatedAt: "2026-04-12",
   },
+  {
+    slug: "text-sorter",
+    category: "text",
+    icon: "🔃",
+    component: "TextSorter",
+    updatedAt: "2026-04-12",
+  },
+  {
+    slug: "roman-numerals",
+    category: "convert",
+    icon: "🔢",
+    component: "RomanNumerals",
+    updatedAt: "2026-04-12",
+  },
+  {
+    slug: "html-to-markdown",
+    category: "text",
+    icon: "⬇️",
+    component: "HtmlToMarkdown",
+    updatedAt: "2026-04-12",
+  },
+  {
+    slug: "image-compressor",
+    category: "image",
+    icon: "🗜️",
+    component: "ImageCompressor",
+    updatedAt: "2026-04-12",
+  },
 ];
 
 export default tools;
