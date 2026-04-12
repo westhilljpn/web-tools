@@ -10,6 +10,7 @@ export default function Header() {
   const t = useTranslations("header");
   const tSite = useTranslations("site");
   const [query, setQuery] = useState("");
+  const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -19,6 +20,15 @@ export default function Header() {
   useEffect(() => {
     if (!isHome) setQuery("");
   }, [isHome]);
+
+  // スクロール量を検知してシャドウを制御
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 0);
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   function pushQuery(val: string) {
     if (val.trim()) {
@@ -45,7 +55,11 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 sticky top-0 z-50 transition-colors duration-200">
+    <header
+      className={`bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 sticky top-0 z-50 transition-all duration-200 ${
+        scrolled ? "shadow-md" : ""
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* サイト名 */}
         <Link

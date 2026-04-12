@@ -14,7 +14,7 @@ export default function HowToUse({ steps, title }: HowToUseProps) {
 
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-4">{title}</h2>
+      <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-4 tracking-tight">{title}</h2>
       <ol className="space-y-3">
         {steps.map((step, index) => (
           <li key={index} className="flex gap-4 items-start">

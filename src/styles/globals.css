@@ -15,28 +15,68 @@
 @layer base {
   body {
     @apply bg-white text-gray-800 antialiased;
+    /* 日本語タイポグラフィ: awesome-design-md-jp 推奨値 */
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    word-break: auto-phrase;
+    overflow-wrap: break-word;
+    font-feature-settings: "palt" 1, "kern" 1;
+    hanging-punctuation: allow-end;
+  }
+
+  /* フォーカスリング統一: すべてのインタラクティブ要素に適用 */
+  :focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
 @layer components {
   /* ツール操作エリアの共通カードスタイル */
+  /* shadow-as-border + 多層シャドウ（Vercel/Notion DESIGN.md 準拠） */
   .tool-card {
-    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6;
+    @apply bg-white rounded-xl p-6;
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.08),
+      0 2px 4px rgba(0, 0, 0, 0.04),
+      0 8px 16px -8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+  .tool-card:hover {
+    box-shadow:
+      0 0 0 1px rgba(37, 99, 235, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.06),
+      0 12px 24px -8px rgba(0, 0, 0, 0.06);
   }
 
   /* プライマリボタン */
   .btn-primary {
-    @apply bg-primary text-white font-medium px-4 py-2 rounded-lg
+    @apply bg-primary text-white font-medium px-4 py-2.5 rounded-lg
+           min-h-[44px]
            hover:bg-blue-700 active:bg-blue-800
-           transition-colors duration-150
            disabled:opacity-50 disabled:cursor-not-allowed;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  .btn-primary:hover:not(:disabled) {
+    transform: scale(1.02);
+  }
+  .btn-primary:active:not(:disabled) {
+    transform: scale(0.97);
   }
 
   /* セカンダリボタン */
   .btn-secondary {
-    @apply bg-gray-100 text-gray-700 font-medium px-4 py-2 rounded-lg
-           hover:bg-gray-200 active:bg-gray-300
-           transition-colors duration-150;
+    @apply bg-gray-100 text-gray-700 font-medium px-4 py-2.5 rounded-lg
+           min-h-[44px]
+           hover:bg-gray-200 active:bg-gray-300;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  .btn-secondary:hover {
+    transform: scale(1.02);
+  }
+  .btn-secondary:active {
+    transform: scale(0.97);
   }
 
   /* Markdownプレビュー用スタイル */
@@ -87,17 +127,17 @@
 .dark .text-gray-500 { color: #64748b; } /* slate-500 */
 .dark .text-gray-400 { color: #94a3b8; } /* slate-400 */
 
-/* ボーダー */
-.dark .border-gray-100 { border-color: #334155; } /* slate-700 */
-.dark .border-gray-200 { border-color: #475569; } /* slate-600 */
-.dark .border-gray-300 { border-color: #475569; } /* slate-600 */
+/* ボーダー: 半透明ホワイト（Linear/Raycast DESIGN.md 準拠） */
+.dark .border-gray-100 { border-color: rgba(255, 255, 255, 0.08); }
+.dark .border-gray-200 { border-color: rgba(255, 255, 255, 0.10); }
+.dark .border-gray-300 { border-color: rgba(255, 255, 255, 0.12); }
 
 /* フォーム要素 */
 .dark input:not([type="color"]):not([type="range"]):not([type="checkbox"]):not([type="radio"]),
 .dark textarea,
 .dark select {
   background-color: #1e293b;
-  border-color: #475569;
+  border-color: rgba(255, 255, 255, 0.10);
   color: #e2e8f0;
 }
 .dark input:not([type="color"]):not([type="range"]):not([type="checkbox"]):not([type="radio"])::placeholder,
@@ -105,10 +145,19 @@
   color: #64748b;
 }
 
-/* ツールカード */
+/* ツールカード: ダークモードのシャドウ */
 .dark .tool-card {
   background-color: #1e293b;
-  border-color: #334155;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+.dark .tool-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.35),
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 12px 24px -8px rgba(0, 0, 0, 0.45);
 }
 
 /* セカンダリボタン */
@@ -120,6 +169,11 @@
   background-color: #475569;
 }
 
+/* フォーカスリング（ダークモード） */
+.dark :focus-visible {
+  outline-color: #60a5fa; /* blue-400 */
+}
+
 /* Markdownプレビュー */
 .dark .markdown-body            { color: #e2e8f0; }
 .dark .markdown-body h1,
@@ -129,9 +183,9 @@
 .dark .markdown-body h5,
 .dark .markdown-body h6         { color: #f1f5f9; }
 .dark .markdown-body code       { background-color: #334155; color: #e2e8f0; }
-.dark .markdown-body blockquote { border-color: #475569; color: #94a3b8; }
+.dark .markdown-body blockquote { border-color: rgba(255, 255, 255, 0.12); color: #94a3b8; }
 .dark .markdown-body a          { color: #60a5fa; }
-.dark .markdown-body hr         { border-color: #334155; }
+.dark .markdown-body hr         { border-color: rgba(255, 255, 255, 0.08); }
 .dark .markdown-body table th,
-.dark .markdown-body table td   { border-color: #475569; }
+.dark .markdown-body table td   { border-color: rgba(255, 255, 255, 0.10); }
 .dark .markdown-body th         { background-color: #334155; }

@@ -14,7 +14,16 @@ const config: Config = {
         primary: "#2563EB",
       },
       fontFamily: {
-        sans: ["Noto Sans JP", "sans-serif"],
+        sans: [
+          '"Noto Sans JP"',
+          '"Hiragino Kaku Gothic ProN"',
+          '"Hiragino Sans"',
+          '"BIZ UDPGothic"',
+          '"Yu Gothic UI"',
+          '"Yu Gothic"',
+          "Meiryo",
+          "sans-serif",
+        ],
       },
     },
   },

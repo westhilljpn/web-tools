@@ -179,7 +179,7 @@ export default async function ToolPage({ params }: PageProps) {
         <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
           {/* メインコンテンツ */}
           <div className="min-w-0">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-slate-100">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-slate-100 tracking-tight">
               <span aria-hidden="true" className="mr-2">{tool.icon}</span>{tm.title}
             </h1>
             <p className="mt-2 text-gray-500 dark:text-slate-400 text-sm">{tm.description}</p>

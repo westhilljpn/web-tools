@@ -179,6 +179,20 @@ npm run dev                         # http://localhost:3000
 - [x] `text-counter` FAQ書き直し — 検索クエリ起点（X/Twitter・Word違い・履歴書・バイト数・SEO meta description）
 - [x] `json-formatter` FAQ書き直し — 検索クエリ起点（1行展開・エラー修正・APIレスポンス・JSONとは・JSONC/JSON5）
 
+### サイト改善 — デザインリファクタリング ✅ 完了（2026-04-12）
+
+参考: [awesome-design-md-jp](https://github.com/kzhrknt/awesome-design-md-jp) / [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)（Notion・Linear・Vercel・Raycast の DESIGN.md）
+
+- [x] **D1** 日本語タイポグラフィ（awesome-design-md-jp 準拠）: フォントスタック拡充・`line-height: 1.8`・`letter-spacing: 0.04em`・`word-break: auto-phrase`・OpenType `palt/kern`
+- [x] **D2** カードのシャドウ as ボーダー + 3層シャドウスタック（Vercel/Notion 準拠）: `border` 廃止 → `box-shadow: 0 0 0 1px rgba(0,0,0,0.08), ...`
+- [x] **D3** ダークモードのボーダーを半透明ホワイトに統一（Linear/Raycast 準拠）: `rgba(255,255,255,0.08〜0.12)`
+- [x] **D4** FAQSection: `▼` テキスト → SVG シェブロン + `max-height` CSS トランジション
+- [x] **D5** ToolCard: 左ボーダーアクセント（`hover:border-l-primary`）+ 背景色ホバー演出
+- [x] **D6** Header: スクロール量を検知して `shadow-md` を動的付与
+- [x] **D7** ボタン: `min-h-[44px]`（WCAG AA タッチターゲット）+ `hover:scale(1.02)` / `active:scale(0.97)` アニメーション
+- [x] **D8** 見出しに `tracking-tight` 追加（`h1` text-2xl 以上・`h2` text-xl 以上）
+- [x] **D9** `:focus-visible` グローバル統一（2px primary outline・ダークモードは blue-400）
+
 ### バッチ13 — 次回ツール追加候補（優先度順）
 
 - [ ] **B13-1** `morse-code` — モールス信号変換（テキスト↔モールス・音声再生）
@@ -202,6 +216,11 @@ npm run dev                         # http://localhost:3000
 > バグを発見したらここに追記する:
 > - `[slug] 現象 / 再現手順 / 優先度（高/中/低）`
 
+**注意事項（デザインリファクタリング後）**
+
+- `word-break: auto-phrase` は Chrome 119+ / Safari 17+ のみ対応。旧ブラウザでは `normal` にフォールバックするが、表示崩れは起きない
+- ToolCard の `hover:border-l-primary` は `border-l-4` が常時 4px 幅を確保するため、ホバー前後でレイアウトシフトは発生しない
+
 ---
 
 ## 🔧 保留中の改善タスク
@@ -210,10 +229,12 @@ npm run dev                         # http://localhost:3000
 |--------|--------|-----------|
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
-| 低 | ポモドーロタイマーのUI改善 | 「おしゃれに」という要望あり。具体的な方向性が決まり次第着手 |
+| 中 | B13 ツール追加（morse-code / color-mixer / tax-calculator / reading-time） | 次のラインナップ拡充バッチ |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
+| 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
 
 ### ✅ 完了済み（2026-04-12）
+- [x] デザインリファクタリング完了（D1〜D9: 日本語タイポグラフィ・多層シャドウ・半透明ボーダー・FAQアニメーション・ToolCard左ボーダー・Headerシャドウ・ボタンスケール・tracking-tight・フォーカスリング）
 - [x] B12完了: `text-sorter`・`roman-numerals`・`html-to-markdown`・`image-compressor`
 - [x] `text-counter`・`json-formatter` FAQ書き直し（検索クエリ起点・各5問）
 - [x] サイト名を **Quicker** に変更（en/ja common.json `site.name`）
