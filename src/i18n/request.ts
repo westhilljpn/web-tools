@@ -55,6 +55,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ipInfo,
     paperSize,
     gachaCalculator,
+    investmentCalculator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -101,6 +102,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/ip-info.json"),
           import("../messages/ja/tools/paper-size.json"),
           import("../messages/ja/tools/gacha-calculator.json"),
+          import("../messages/ja/tools/investment-calculator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -146,6 +148,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/ip-info.json"),
           import("../messages/en/tools/paper-size.json"),
           import("../messages/en/tools/gacha-calculator.json"),
+          import("../messages/en/tools/investment-calculator.json"),
         ]);
 
   return {
@@ -194,6 +197,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "ip-info": ipInfo.default,
       "paper-size": paperSize.default,
       "gacha-calculator": gachaCalculator.default,
+      "investment-calculator": investmentCalculator.default,
     },
   };
 });

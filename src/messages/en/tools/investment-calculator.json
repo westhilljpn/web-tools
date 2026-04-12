@@ -1,0 +1,68 @@
+{
+  "title": "Compound Investment Calculator",
+  "description": "Calculate the future value of regular monthly investments with compound interest. Visualize the growth of your principal vs. returns over time. Free online calculator.",
+  "keywords": [
+    "compound interest calculator",
+    "investment calculator",
+    "monthly investment calculator",
+    "future value calculator",
+    "savings growth calculator",
+    "dollar cost averaging calculator",
+    "retirement savings calculator"
+  ],
+  "amount": "¥{value}",
+  "units": {
+    "yen": "¥",
+    "years": " years",
+    "year": "yr"
+  },
+  "labels": {
+    "monthly": "Monthly contribution",
+    "initial": "Initial lump sum",
+    "rate": "Annual return rate",
+    "years": "Investment period"
+  },
+  "summary": {
+    "finalValue": "Final portfolio value",
+    "contributions": "Total contributions",
+    "gain": "Investment gains"
+  },
+  "chartTitle": "Portfolio growth",
+  "legend": {
+    "contributions": "Principal",
+    "gain": "Returns"
+  },
+  "disclaimer": "* This calculator uses compound interest formulas for estimation only. Actual results may differ due to fees, taxes, and market fluctuations. This is not financial advice.",
+  "howToUse": [
+    {
+      "label": "Set your contribution amounts",
+      "description": "Enter your monthly contribution amount and any initial lump sum you plan to invest. Use the sliders or type directly."
+    },
+    {
+      "label": "Set the return rate and period",
+      "description": "Enter your expected annual return rate. A common benchmark for index funds is 5–7% per year. Set the number of years you plan to invest."
+    },
+    {
+      "label": "Read the results",
+      "description": "The summary cards show your final value, total contributions, and total gains. The bar chart shows year-by-year growth — blue is principal, green is returns."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What annual return rate should I use?",
+      "answer": "Long-term average annual returns for broad index funds (global equities, S&P 500) have historically been around 5–7% per year. Use 3–4% for conservative estimates, 7% for optimistic scenarios. Past performance does not guarantee future results."
+    },
+    {
+      "question": "What is compound interest?",
+      "answer": "Compound interest means you earn returns not just on your original principal, but also on all previously earned returns. For example, ¥1,000,000 at 5% annually becomes ¥1,050,000 after year 1, then ¥1,102,500 after year 2. The longer you invest, the more powerful this 'snowball' effect becomes."
+    },
+    {
+      "question": "Are taxes and fees included?",
+      "answer": "No. This calculator does not account for management fees (typically 0.1–1% per year for index funds) or capital gains taxes. In practice, subtract estimated fees from your expected return rate, and factor in applicable taxes on withdrawals."
+    },
+    {
+      "question": "What is the difference between a lump sum and monthly contributions?",
+      "answer": "A lump sum is invested all at once and grows immediately with compound interest. Monthly contributions (dollar-cost averaging) are added regularly over time, so earlier contributions grow longer. Combining both — a lump sum plus monthly contributions — generally produces the best results."
+    }
+  ]
+}

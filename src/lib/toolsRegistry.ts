@@ -341,6 +341,13 @@ const tools: Tool[] = [
     component: "GachaCalculator",
     updatedAt: "2026-04-12",
   },
+  {
+    slug: "investment-calculator",
+    category: "calculate",
+    icon: "📈",
+    component: "InvestmentCalculator",
+    updatedAt: "2026-04-12",
+  },
 ];
 
 export default tools;
