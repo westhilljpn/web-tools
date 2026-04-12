@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "Web Tools",
-    "tagline": "Free Online Web Tools",
-    "description": "Web Tools provides 20+ free online utilities for text processing, conversion, calculation, and more. Everything runs in your browser — no data is ever sent to a server."
+    "name": "Quicker",
+    "tagline": "Free Online Tools | Quicker",
+    "description": "Quicker provides 40+ free online utilities for text processing, conversion, calculation, image editing, and more. Everything runs in your browser — no data is ever sent to a server."
   },
   "header": {
     "searchLabel": "Search tools",
@@ -23,12 +23,14 @@
     "dev": "Dev"
   },
   "home": {
-    "title": "Free Online Web Tools",
+    "title": "Free Online Tools",
     "subtitle": "All tools run in your browser. No data is ever sent to a server.",
     "filterLabel": "Filter tools",
     "filterPlaceholder": "Filter by name or keyword...",
     "noTools": "No tools found.",
-    "comingSoon": "More tools are coming soon. Stay tuned!"
+    "comingSoon": "More tools are coming soon. Stay tuned!",
+    "featured": "Recommended",
+    "recentTools": "Recently Used"
   },
   "toolPage": {
     "comingSoon": "This tool is currently under development.",

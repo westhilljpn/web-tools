@@ -21,6 +21,8 @@ export interface Tool {
   component: string;
   /** ISO 8601 形式（サイトマップ用） */
   updatedAt: string;
+  /** おすすめツールとしてホームに表示する */
+  featured?: boolean;
 }
 
 /** ローカライズ済みツール（pages / コンポーネントで使用） */
@@ -60,6 +62,7 @@ const tools: Tool[] = [
     icon: "📄",
     component: "JsonFormatter",
     updatedAt: "2026-04-05",
+    featured: true,
   },
   {
     slug: "base64",
@@ -88,6 +91,7 @@ const tools: Tool[] = [
     icon: "📷",
     component: "QrGenerator",
     updatedAt: "2026-04-05",
+    featured: true,
   },
   {
     slug: "color-converter",
@@ -95,6 +99,7 @@ const tools: Tool[] = [
     icon: "🎨",
     component: "ColorConverter",
     updatedAt: "2026-04-05",
+    featured: true,
   },
   {
     slug: "password-generator",
@@ -102,6 +107,7 @@ const tools: Tool[] = [
     icon: "🔑",
     component: "PasswordGenerator",
     updatedAt: "2026-04-05",
+    featured: true,
   },
   {
     slug: "timestamp-converter",
@@ -158,6 +164,7 @@ const tools: Tool[] = [
     icon: "🔄",
     component: "ImageConverter",
     updatedAt: "2026-04-11",
+    featured: true,
   },
   {
     slug: "images-to-pdf",
@@ -179,6 +186,7 @@ const tools: Tool[] = [
     icon: "📝",
     component: "MarkdownPreview",
     updatedAt: "2026-04-11",
+    featured: true,
   },
   {
     slug: "diff-checker",
@@ -193,6 +201,7 @@ const tools: Tool[] = [
     icon: "🆔",
     component: "UuidGenerator",
     updatedAt: "2026-04-11",
+    featured: true,
   },
   {
     slug: "lorem-ipsum",
@@ -347,10 +356,23 @@ const tools: Tool[] = [
     icon: "📈",
     component: "InvestmentCalculator",
     updatedAt: "2026-04-12",
+    featured: true,
+  },
+  {
+    slug: "mojibake-fixer",
+    category: "text",
+    icon: "🔣",
+    component: "MojibakeFixer",
+    updatedAt: "2026-04-12",
   },
 ];
 
 export default tools;
+
+/** おすすめツールを取得する */
+export function getFeaturedTools(): Tool[] {
+  return tools.filter((tool) => tool.featured);
+}
 
 /** slug からツール情報を取得する */
 export function getToolBySlug(slug: string): Tool | undefined {

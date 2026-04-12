@@ -1,0 +1,61 @@
+{
+  "title": "Mojibake / Encoding Fixer",
+  "description": "Fix garbled Japanese text (mojibake) caused by encoding mismatches. Automatically reverses UTF-8, Shift_JIS, and EUC-JP encoding errors. Free online tool.",
+  "keywords": [
+    "mojibake fix",
+    "encoding fixer",
+    "garbled Japanese text",
+    "UTF-8 encoding fix",
+    "Shift_JIS converter",
+    "text encoding repair",
+    "Latin-1 UTF-8 convert"
+  ],
+  "inputLabel": "Garbled text (mojibake)",
+  "inputPlaceholder": "Paste your garbled / mojibake text here...",
+  "tryExample": "Try example",
+  "hint": "Example: æ—¥æœ¬èªž (UTF-8 Japanese text read with the wrong encoding)",
+  "clear": "Clear",
+  "resultsLabel": "Repair candidates",
+  "noResults": "No readable form found. The text may not be garbled, or it may use an unsupported encoding.",
+  "jpDetected": "Japanese detected",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "labels": {
+    "wUtf8": "Windows-1252 → UTF-8 (most common)",
+    "lUtf8": "ISO-8859-1 → UTF-8",
+    "lSjis": "ISO-8859-1 → Shift_JIS",
+    "lEucjp": "ISO-8859-1 → EUC-JP"
+  },
+  "howToUse": [
+    {
+      "label": "Paste your garbled text",
+      "description": "Copy the garbled text from your email, webpage, or file and paste it into the input box. Click 'Try example' to see a live demonstration."
+    },
+    {
+      "label": "Review the repair candidates",
+      "description": "The tool automatically tries 4 encoding combinations. Candidates marked 'Japanese detected' are the most likely correct decoding."
+    },
+    {
+      "label": "Copy the correct text",
+      "description": "Once you identify the correct result, click 'Copy' to copy it to your clipboard."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What causes mojibake (garbled Japanese text)?",
+      "answer": "Mojibake occurs when text encoded in one character encoding is read or displayed using a different encoding. For example, UTF-8 Japanese text read as Windows-1252 (Latin-1) shows as symbols like 'æ—¥æœ¬èªž' instead of '日本語'. Common causes include opening a UTF-8 file in old Windows software, or receiving emails with incorrect charset headers."
+    },
+    {
+      "question": "Can this tool fix all types of garbled text?",
+      "answer": "This tool reverses the 'wrong encoding misread' by re-encoding garbled characters back to their original bytes, then re-decoding with Japanese encodings. It works best for UTF-8 text misread as Latin-1/Windows-1252, which is the most common case. Doubly-garbled text (encoding errors applied multiple times) or binary data corruption may not be recoverable."
+    },
+    {
+      "question": "Does it support Shift_JIS and EUC-JP?",
+      "answer": "Yes. If the original text was Shift_JIS or EUC-JP bytes mistakenly read as Latin-1, the tool will show a candidate with the correct Japanese text. Look for the result marked 'Japanese detected'."
+    },
+    {
+      "question": "Why is encoding such a common problem between Windows and Mac?",
+      "answer": "Windows historically defaulted to Shift_JIS or Windows-1252, while macOS and Linux default to UTF-8. This mismatch causes mojibake when sharing files across platforms or opening old emails in modern software. Windows 11 is gradually migrating to UTF-8 as default, but legacy software compatibility issues remain."
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import RelatedTools from "@/components/RelatedTools";
 import AdBanner from "@/components/AdBanner";
 import SEOHead from "@/components/SEOHead";
 import ShareButtons from "@/components/ShareButtons";
+import RecentTracker from "@/components/RecentTracker";
 
 interface PageProps {
   params: { locale: string; "tool-slug": string };
@@ -172,6 +173,7 @@ export default async function ToolPage({ params }: PageProps) {
   return (
     <>
       <SEOHead jsonLd={schemas} />
+      <RecentTracker slug={slug} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">

@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（36件）
+## 登録済みツール（44件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -57,6 +57,14 @@ npm run dev                         # http://localhost:3000
 | 34 | `json-csv-converter` | JSON ↔ CSV 変換ツール | JSON ↔ CSV Converter | convert |
 | 35 | `sql-formatter` | SQL整形ツール | SQL Formatter | dev |
 | 36 | `unicode-font-generator` | Unicodeフォントジェネレーター | Unicode Font Generator | text |
+| 37 | `text-repeater` | テキスト繰り返し生成 | Text Repeater | text |
+| 38 | `markdown-table-generator` | Markdownテーブル生成 | Markdown Table Generator | dev |
+| 39 | `code-minifier` | コードミニファイア | Code Minifier | dev |
+| 40 | `ip-info` | IPアドレス確認ツール | IP Address Info | dev |
+| 41 | `paper-size` | 用紙サイズ一覧 | Paper Size Reference | calculate |
+| 42 | `gacha-calculator` | ガチャ確率計算機 | Gacha Probability Calculator | calculate |
+| 43 | `investment-calculator` | 積立投資シミュレーター | Compound Investment Calculator | calculate |
+| 44 | `mojibake-fixer` | 文字化け修復ツール | Mojibake / Encoding Fixer | text |
 
 ---
 
@@ -129,14 +137,38 @@ npm run dev                         # http://localhost:3000
 - [x] **修正** `cron-parser` — `buildDescription()` が英語固定だったのを `useLocale()` で i18n 対応
 - [x] **B9-4** `unicode-font-generator` — Bold/Italic/Script/Fraktur/Double-Struck 等 12スタイル・Unicodeコードポイント演算
 
-### バッチ10 — 次回ツール追加候補（優先度順）
+### バッチ10 ✅ 完了
 
-- [ ] **B10-1** `text-repeater` — テキスト繰り返し生成（繰り返し回数・区切り文字設定）
-- [ ] **B10-2** `markdown-table-generator` — Markdownテーブル生成（行列入力・コピー）
-- [ ] **B10-3** `code-minifier` — JS/CSS/HTMLミニファイア（外部パッケージなし・正規表現ベース）
-- [ ] **B10-4** `ip-info` — ローカルIPアドレス表示（外部API不要・WebRTC or navigator）
+- [x] **B10-1** `text-repeater` — テキスト繰り返し生成（繰り返し回数・区切り文字設定）
+- [x] **B10-2** `markdown-table-generator` — Markdownテーブル生成（行列入力・コピー）
+- [x] **B10-3** `code-minifier` — JS/CSS/HTMLミニファイア（外部パッケージなし・正規表現ベース）
+- [x] **B10-4** `ip-info` — ローカルIPアドレス表示（外部API不要・WebRTC or navigator）
 
 > ⚠️ `ip-lookup`（外部IP検索）は外部API必須のため除外（CLAUDE.md：外部API呼び出し禁止）
+
+### バッチ11 ✅ 完了
+
+- [x] **B11-1** `paper-size` — 用紙サイズ一覧（A/B/JIS-B/US/写真サイズ・mm/cm/inch切替）
+- [x] **B11-2** `gacha-calculator` — ガチャ確率計算機（確率テーブル・天井回数逆算）
+- [x] **B11-3** `investment-calculator` — 積立投資シミュレーター（複利計算・CSSバーチャート）
+- [x] **B11-4** `mojibake-fixer` — 文字化け修復ツール（Win1252/Latin-1→UTF-8/Shift_JIS/EUC-JP・TextDecoder API）
+
+### サイト改善 ✅ 完了（2026-04-12）
+
+- [x] サイト名を **Quicker** に変更（`site.name` en/ja common.json）
+- [x] **おすすめツール機能** — `featured?: boolean` フラグ・`getFeaturedTools()`・ホームに横スクロールセクション
+- [x] **最近使ったツール機能** — `RecentTracker` コンポーネント（localStorage）・ホームに横スクロールセクション
+- [x] `scrollbar-hide` ユーティリティを globals.css に追加
+- [x] ShareButtons 追加（X/LINE/はてブ/URLコピー・全ツールページに配置）
+- [x] Lighthouse 改善（Google Fonts @import → `<link>` タグ・GA lazyOnload・viewport export・FAQPage重複JSON-LD削除・ARIA属性）
+- [x] ヘッダー検索バーをスマホで非表示（`hidden sm:block`）
+
+### バッチ12 — 次回ツール追加候補（優先度順）
+
+- [ ] **B12-1** `text-sorter` — テキスト行並び替えツール（昇順/降順/ランダム・重複削除・空行削除）
+- [ ] **B12-2** `image-compressor` — 画像圧縮ツール（Canvas API・品質スライダー・圧縮率表示）
+- [ ] **B12-3** `html-to-markdown` — HTML→Markdown変換（クライアントサイド・正規表現ベース）
+- [ ] **B12-4** `roman-numerals` — ローマ数字変換（算用数字↔ローマ数字）
 
 ### マーケティング施策 — 次のアクション
 
@@ -160,9 +192,23 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | GSCでCTR低ページのtitle/description改善 | CLAUDE.md マーケティング方針に追加。月1サイクルで実施 |
+| 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
 | 中 | `text-counter`・`json-formatter` のFAQ書き直し | 流入上位ツールのコンテンツ質が集客に直結 |
+| 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
+| 低 | ポモドーロタイマーのUI改善 | 「おしゃれに」という要望あり。具体的な方向性が決まり次第着手 |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
+
+### ✅ 完了済み（2026-04-12）
+- [x] サイト名を **Quicker** に変更（en/ja common.json `site.name`）
+- [x] おすすめツール機能（`featured` フラグ・`getFeaturedTools()`・ホームページ横スクロールセクション）
+- [x] 最近使ったツール機能（`RecentTracker` コンポーネント・localStorage `quicker:recentTools`・最大8件）
+- [x] `mojibake-fixer` 追加（Win1252/Latin-1バイト逆変換→TextDecoder・4戦略・日本語自動検出）
+- [x] `paper-size` 追加（A/B/JIS-B/US/写真サイズ・mm/cm/inch単位切替）
+- [x] `gacha-calculator` 追加（累積確率テーブル・天井回数逆算）
+- [x] `investment-calculator` 追加（複利シミュレーター・CSSスタックバーチャート）
+- [x] ShareButtons 追加（X/LINE/はてブ/URLコピー・全ツールページに挿入）
+- [x] Lighthouse 改善（Fonts CDN @import排除・GA lazyOnload・viewport export・FAQPage重複JSON-LD修正・ARIA）
+- [x] B10完了: `text-repeater`・`markdown-table-generator`・`code-minifier`・`ip-info`
 
 ### ✅ 完了済み（2026-04-11 追記）
 - [x] ダークモード実装（`tailwind.config.ts` `darkMode: class`・`ThemeToggle.tsx`・FOIT防止インラインスクリプト・globals.css一括上書きで全32ツール対応）

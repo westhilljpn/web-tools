@@ -57,6 +57,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   PaperSize: dynamic(() => import("@/tools/PaperSize"), { loading: Loading }),
   GachaCalculator: dynamic(() => import("@/tools/GachaCalculator"), { loading: Loading }),
   InvestmentCalculator: dynamic(() => import("@/tools/InvestmentCalculator"), { loading: Loading }),
+  MojibakeFixer: dynamic(() => import("@/tools/MojibakeFixer"), { loading: Loading }),
 };
 
 export default toolComponentMap;

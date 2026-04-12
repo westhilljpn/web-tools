@@ -4,6 +4,9 @@ import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import ToolCard from "@/components/ToolCard";
 import type { LocalizedTool } from "@/lib/toolsRegistry";
+import { Link } from "@/i18n/routing";
+
+const STORAGE_KEY = "quicker:recentTools";
 
 interface CategoryItem {
   key: string;
@@ -17,17 +20,41 @@ interface HomeStrings {
   filterPlaceholder: string;
   noTools: string;
   comingSoon: string;
+  featured: string;
+  recentTools: string;
 }
 
 interface HomepageClientProps {
   tools: LocalizedTool[];
+  featuredTools: LocalizedTool[];
   categories: CategoryItem[];
   homeStrings: HomeStrings;
   locale: string;
 }
 
+// ツールのコンパクトな横スクロールカードを返す
+function CompactToolCard({ tool, locale }: { tool: LocalizedTool; locale: string }) {
+  return (
+    <Link
+      href={`/${tool.slug}`}
+      locale={locale as "en" | "ja"}
+      className="flex-shrink-0 flex items-center gap-3 w-48 sm:w-52
+                 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700
+                 rounded-xl px-4 py-3 hover:border-primary dark:hover:border-blue-400
+                 hover:shadow-md transition-all duration-150 group"
+    >
+      <span className="text-2xl" aria-hidden="true">{tool.icon}</span>
+      <span className="text-sm font-medium text-gray-800 dark:text-slate-200 truncate
+                       group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+        {tool.title}
+      </span>
+    </Link>
+  );
+}
+
 export default function HomepageClient({
   tools,
+  featuredTools,
   categories,
   homeStrings,
   locale,
@@ -35,11 +62,28 @@ export default function HomepageClient({
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(() => searchParams.get("q") ?? "");
   const [activeCategory, setActiveCategory] = useState("all");
+  const [recentTools, setRecentTools] = useState<LocalizedTool[]>([]);
 
   // ヘッダー検索によるURLパラメーター変化を監視してフィルターに反映
   useEffect(() => {
     setQuery(searchParams.get("q") ?? "");
   }, [searchParams]);
+
+  // localStorage から最近使ったツールを復元
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const slugs: string[] = JSON.parse(raw);
+      const toolMap = new Map(tools.map((t) => [t.slug, t]));
+      const recent = slugs
+        .map((s) => toolMap.get(s))
+        .filter((t): t is LocalizedTool => t !== undefined);
+      setRecentTools(recent);
+    } catch {
+      // 取得失敗時は何も表示しない
+    }
+  }, [tools]);
 
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
@@ -53,6 +97,9 @@ export default function HomepageClient({
       return matchesCategory && matchesQuery;
     });
   }, [query, activeCategory, tools]);
+
+  // 検索・フィルター未適用時のみおすすめ/最近セクションを表示
+  const showSections = query.trim() === "" && activeCategory === "all";
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -104,6 +151,39 @@ export default function HomepageClient({
           ))}
         </div>
       </div>
+
+      {/* おすすめ + 最近使ったセクション（検索・フィルター未適用時のみ） */}
+      {showSections && (
+        <div className="mb-10 space-y-6">
+          {/* おすすめツール */}
+          {featuredTools.length > 0 && (
+            <div>
+              <h2 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-3">
+                {homeStrings.featured}
+              </h2>
+              <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                {featuredTools.map((tool) => (
+                  <CompactToolCard key={tool.slug} tool={tool} locale={locale} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 最近使ったツール */}
+          {recentTools.length > 0 && (
+            <div>
+              <h2 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-3">
+                {homeStrings.recentTools}
+              </h2>
+              <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                {recentTools.map((tool) => (
+                  <CompactToolCard key={tool.slug} tool={tool} locale={locale} />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* ツール一覧グリッド */}
       {filteredTools.length > 0 ? (

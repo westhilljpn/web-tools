@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import tools from "@/lib/toolsRegistry";
+import tools, { getFeaturedTools } from "@/lib/toolsRegistry";
 import type { LocalizedTool, ToolMessages } from "@/lib/toolsRegistry";
 import HomepageClient from "@/components/HomepageClient";
 
@@ -70,6 +70,10 @@ export default async function HomePage({ params }: PageProps) {
     label: tCat(key),
   }));
 
+  // おすすめツールのローカライズ
+  const featuredSlugs = new Set(getFeaturedTools().map((t) => t.slug));
+  const featuredTools = localizedTools.filter((t) => featuredSlugs.has(t.slug));
+
   const homeStrings = {
     title: tHome("title"),
     subtitle: tHome("subtitle"),
@@ -77,12 +81,15 @@ export default async function HomePage({ params }: PageProps) {
     filterPlaceholder: tHome("filterPlaceholder"),
     noTools: tHome("noTools"),
     comingSoon: tHome("comingSoon"),
+    featured: tHome("featured"),
+    recentTools: tHome("recentTools"),
   };
 
   return (
     <Suspense>
       <HomepageClient
         tools={localizedTools}
+        featuredTools={featuredTools}
         categories={categories}
         homeStrings={homeStrings}
         locale={locale}
