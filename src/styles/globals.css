@@ -14,7 +14,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-800 antialiased;
+    @apply bg-surface text-gray-800 antialiased;
     /* 日本語タイポグラフィ: awesome-design-md-jp 推奨値 */
     line-height: 1.8;
     letter-spacing: 0.04em;
@@ -24,52 +24,53 @@
     hanging-punctuation: allow-end;
   }
 
-  /* フォーカスリング統一: すべてのインタラクティブ要素に適用 */
+  /* フォーカスリング統一 */
   :focus-visible {
-    outline: 2px solid #2563EB;
+    outline: 2px solid #1D3D5E;
     outline-offset: 2px;
     border-radius: 4px;
   }
 }
 
 @layer components {
-  /* ツール操作エリアの共通カードスタイル */
-  /* shadow-as-border + 多層シャドウ（Vercel/Notion DESIGN.md 準拠） */
+  /* ツールカード */
   .tool-card {
     @apply bg-white rounded-xl p-6;
     box-shadow:
-      0 0 0 1px rgba(0, 0, 0, 0.08),
-      0 2px 4px rgba(0, 0, 0, 0.04),
-      0 8px 16px -8px rgba(0, 0, 0, 0.04);
+      0 0 0 1px rgba(29, 61, 94, 0.07),
+      0 2px 4px rgba(29, 61, 94, 0.04),
+      0 8px 16px -8px rgba(29, 61, 94, 0.06);
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
   }
   .tool-card:hover {
     box-shadow:
-      0 0 0 1px rgba(37, 99, 235, 0.25),
-      0 4px 8px rgba(0, 0, 0, 0.06),
-      0 12px 24px -8px rgba(0, 0, 0, 0.06);
+      0 0 0 1px rgba(29, 61, 94, 0.20),
+      0 4px 8px rgba(29, 61, 94, 0.08),
+      0 12px 24px -8px rgba(29, 61, 94, 0.10);
   }
 
-  /* プライマリボタン */
+  /* プライマリボタン（ネイビー） */
   .btn-primary {
     @apply bg-primary text-white font-medium px-4 py-2.5 rounded-lg
            min-h-[44px]
-           hover:bg-blue-700 active:bg-blue-800
            disabled:opacity-50 disabled:cursor-not-allowed;
     transition: background-color 0.15s ease, transform 0.15s ease;
   }
   .btn-primary:hover:not(:disabled) {
+    background-color: #152c47;
     transform: scale(1.02);
   }
   .btn-primary:active:not(:disabled) {
+    background-color: #0f2035;
     transform: scale(0.97);
   }
 
   /* セカンダリボタン */
   .btn-secondary {
-    @apply bg-gray-100 text-gray-700 font-medium px-4 py-2.5 rounded-lg
+    @apply bg-surface text-primary font-medium px-4 py-2.5 rounded-lg
            min-h-[44px]
-           hover:bg-gray-200 active:bg-gray-300;
+           border border-sky-soft
+           hover:bg-sky/30 active:bg-sky/50;
     transition: background-color 0.15s ease, transform 0.15s ease;
   }
   .btn-secondary:hover {
@@ -91,90 +92,93 @@
   .markdown-body ul { @apply list-disc pl-6 mb-3; }
   .markdown-body ol { @apply list-decimal pl-6 mb-3; }
   .markdown-body li { @apply mb-1; }
-  .markdown-body code { @apply bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono; }
-  .markdown-body pre { @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 text-xs font-mono; }
+  .markdown-body code { @apply bg-sky/30 px-1.5 py-0.5 rounded text-xs font-mono; }
+  .markdown-body pre { @apply bg-primary text-sky p-4 rounded-lg overflow-x-auto mb-4 text-xs font-mono; }
   .markdown-body pre code { @apply bg-transparent p-0 text-inherit; }
-  .markdown-body blockquote { @apply border-l-4 border-gray-300 pl-4 text-gray-500 italic mb-3; }
-  .markdown-body a { @apply text-primary underline hover:text-blue-700; }
+  .markdown-body blockquote { @apply border-l-4 border-sky pl-4 text-steel italic mb-3; }
+  .markdown-body a { @apply text-accent underline hover:text-rose-700; }
   .markdown-body strong { @apply font-bold; }
   .markdown-body em { @apply italic; }
-  .markdown-body hr { @apply border-t border-gray-200 my-4; }
+  .markdown-body hr { @apply border-t border-sky-soft my-4; }
   .markdown-body table { @apply w-full border-collapse text-xs mb-3; }
   .markdown-body th,
-  .markdown-body td { @apply border border-gray-300 px-3 py-2; }
-  .markdown-body th { @apply bg-gray-50 font-semibold; }
+  .markdown-body td { @apply border border-sky-soft px-3 py-2; }
+  .markdown-body th { @apply bg-sky/20 font-semibold; }
   .markdown-body img { @apply max-w-full; }
 }
 
 /* ========================================
-   ダークモード: 共通上書きスタイル
-   Tailwindのグレースケールクラスを .dark 配下で上書き
-   → ツールコンポーネントを個別変更せずに全体対応
+   ダークモード
    ======================================== */
 
 /* 背景色 */
-.dark .bg-white     { background-color: #1e293b; } /* slate-800 */
-.dark .bg-gray-50   { background-color: #0f172a; } /* slate-900 */
-.dark .bg-gray-100  { background-color: #334155; } /* slate-700 */
-.dark .bg-gray-200  { background-color: #475569; } /* slate-600 */
-.dark .bg-blue-50   { background-color: #172554; } /* blue-950 */
+.dark body              { background-color: #0d1b2a; color: #e2e8f0; }
+.dark .bg-white         { background-color: #162236; }
+.dark .bg-surface,
+.dark .bg-gray-50       { background-color: #0d1b2a; }
+.dark .bg-gray-100      { background-color: #1e3048; }
+.dark .bg-gray-200      { background-color: #2a4060; }
+.dark .bg-blue-50       { background-color: #0f2035; }
 
 /* テキスト色 */
-.dark .text-gray-900 { color: #f1f5f9; } /* slate-100 */
-.dark .text-gray-800 { color: #e2e8f0; } /* slate-200 */
-.dark .text-gray-700 { color: #cbd5e1; } /* slate-300 */
-.dark .text-gray-600 { color: #94a3b8; } /* slate-400 */
-.dark .text-gray-500 { color: #64748b; } /* slate-500 */
-.dark .text-gray-400 { color: #94a3b8; } /* slate-400 */
+.dark .text-gray-900 { color: #f1f5f9; }
+.dark .text-gray-800 { color: #e2e8f0; }
+.dark .text-gray-700 { color: #cbd5e1; }
+.dark .text-gray-600 { color: #94a3b8; }
+.dark .text-gray-500 { color: #64748b; }
+.dark .text-gray-400 { color: #94a3b8; }
+.dark .text-steel    { color: #b8d0ed; }
 
-/* ボーダー: 半透明ホワイト（Linear/Raycast DESIGN.md 準拠） */
-.dark .border-gray-100 { border-color: rgba(255, 255, 255, 0.08); }
-.dark .border-gray-200 { border-color: rgba(255, 255, 255, 0.10); }
-.dark .border-gray-300 { border-color: rgba(255, 255, 255, 0.12); }
+/* ボーダー */
+.dark .border-gray-100   { border-color: rgba(182, 220, 239, 0.08); }
+.dark .border-gray-200   { border-color: rgba(182, 220, 239, 0.12); }
+.dark .border-gray-300   { border-color: rgba(182, 220, 239, 0.16); }
+.dark .border-sky-soft   { border-color: rgba(182, 220, 239, 0.16); }
 
 /* フォーム要素 */
 .dark input:not([type="color"]):not([type="range"]):not([type="checkbox"]):not([type="radio"]),
 .dark textarea,
 .dark select {
-  background-color: #1e293b;
-  border-color: rgba(255, 255, 255, 0.10);
+  background-color: #162236;
+  border-color: rgba(182, 220, 239, 0.16);
   color: #e2e8f0;
 }
 .dark input:not([type="color"]):not([type="range"]):not([type="checkbox"]):not([type="radio"])::placeholder,
 .dark textarea::placeholder {
-  color: #64748b;
+  color: #7B9098;
 }
 
-/* ツールカード: ダークモードのシャドウ */
+/* ツールカード: ダークモード */
 .dark .tool-card {
-  background-color: #1e293b;
+  background-color: #162236;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(182, 220, 239, 0.08),
     0 2px 4px rgba(0, 0, 0, 0.3),
     0 8px 16px -8px rgba(0, 0, 0, 0.4);
 }
 .dark .tool-card:hover {
   box-shadow:
-    0 0 0 1px rgba(96, 165, 250, 0.35),
+    0 0 0 1px rgba(182, 220, 239, 0.25),
     0 4px 8px rgba(0, 0, 0, 0.35),
     0 12px 24px -8px rgba(0, 0, 0, 0.45);
 }
 
-/* セカンダリボタン */
+/* セカンダリボタン（ダークモード） */
 .dark .btn-secondary {
-  background-color: #334155;
-  color: #cbd5e1;
+  background-color: #1e3048;
+  color: #b6dcef;
+  border-color: rgba(182, 220, 239, 0.20);
 }
 .dark .btn-secondary:hover {
-  background-color: #475569;
+  background-color: #253d5c;
 }
 
 /* フォーカスリング（ダークモード） */
 .dark :focus-visible {
-  outline-color: #60a5fa; /* blue-400 */
+  outline-color: #b6dcef;
 }
 
-/* Markdownプレビュー */
+/* Markdownプレビュー（ダークモード） */
 .dark .markdown-body            { color: #e2e8f0; }
 .dark .markdown-body h1,
 .dark .markdown-body h2,
@@ -182,10 +186,10 @@
 .dark .markdown-body h4,
 .dark .markdown-body h5,
 .dark .markdown-body h6         { color: #f1f5f9; }
-.dark .markdown-body code       { background-color: #334155; color: #e2e8f0; }
-.dark .markdown-body blockquote { border-color: rgba(255, 255, 255, 0.12); color: #94a3b8; }
-.dark .markdown-body a          { color: #60a5fa; }
-.dark .markdown-body hr         { border-color: rgba(255, 255, 255, 0.08); }
+.dark .markdown-body code       { background-color: #1e3048; color: #b6dcef; }
+.dark .markdown-body blockquote { border-color: rgba(182, 220, 239, 0.20); color: #7B9098; }
+.dark .markdown-body a          { color: #e94d71; }
+.dark .markdown-body hr         { border-color: rgba(182, 220, 239, 0.10); }
 .dark .markdown-body table th,
-.dark .markdown-body table td   { border-color: rgba(255, 255, 255, 0.10); }
-.dark .markdown-body th         { background-color: #334155; }
+.dark .markdown-body table td   { border-color: rgba(182, 220, 239, 0.12); }
+.dark .markdown-body th         { background-color: #1e3048; }

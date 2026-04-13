@@ -11,7 +11,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#2563EB",
+        primary: "#1D3D5E",    // Deep navy
+        accent:  "#e94d71",    // Rose pink — CTA / active state
+        sky:     "#b6dcef",    // Light sky blue
+        "sky-soft": "#cbe0eb", // Softer sky — borders / dividers
+        surface: "#f2f5fd",    // Near-white page background
+        steel:   "#7B9098",    // Muted slate — secondary text
+        gold:    "#9D8C56",    // Warm gold — featured marker
       },
       fontFamily: {
         sans: [

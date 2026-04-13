@@ -15,8 +15,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tSite = await getTranslations({ locale, namespace: "site" });
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
-  // hreflang 設定
-  const alternateLocale = locale === "ja" ? "en" : "ja";
   return {
     title: tHome("title"),
     description: tSite("description"),

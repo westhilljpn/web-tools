@@ -42,8 +42,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
   const siteName = tSite("name");
 
-  const alternateLocale = locale === "ja" ? "en" : "ja";
-
   return {
     title: `${tm.title} - ${tPage("freeOnlineTool")}`,
     description: tm.description,

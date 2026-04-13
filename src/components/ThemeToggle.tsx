@@ -24,8 +24,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={isDark ? t("toLightMode") : t("toDarkMode")}
-      className="p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100
-                 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-700
+      className="p-2 rounded-lg text-sky/70 hover:text-white hover:bg-white/10
                  transition-colors shrink-0"
     >
       {isDark ? (

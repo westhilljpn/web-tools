@@ -207,6 +207,13 @@ npm run dev                         # http://localhost:3000
 - [ ] **M3** X（Twitter）での新ツール告知を習慣化 — ツール追加のたびに1投稿
 - [x] **M4** 既存ツールのFAQ改善 — `text-counter`・`json-formatter` 完了（検索クエリ起点で5問に刷新）
 
+### SEO修正 — 次のアクション（GSCインデックス未登録対応）
+
+- [ ] **S1** Search Console → サイトマップを再送信（`/sitemap.xml`）
+- [ ] **S2** URL検査ツールで主要ツールページのインデックス登録をリクエスト（31件の「検出・インデックス未登録」を解消）
+  - 優先: `text-counter`・`json-formatter`・`password-generator`・`qr-generator`・`unit-converter`
+- [ ] **S3** 「クロール済み・インデックス未登録」1件 → 修正デプロイ後に URL検査で再確認
+
 ---
 
 ## 🐛 既知バグ・未解決の問題
@@ -219,7 +226,8 @@ npm run dev                         # http://localhost:3000
 **注意事項（デザインリファクタリング後）**
 
 - `word-break: auto-phrase` は Chrome 119+ / Safari 17+ のみ対応。旧ブラウザでは `normal` にフォールバックするが、表示崩れは起きない
-- ToolCard の `hover:border-l-primary` は `border-l-4` が常時 4px 幅を確保するため、ホバー前後でレイアウトシフトは発生しない
+- ToolCard の `hover:border-l-accent` は `border-l-4` が常時 4px 幅を確保するため、ホバー前後でレイアウトシフトは発生しない
+- カラーパレット変更後、一部のツールコンポーネント内でハードコードされた `text-gray-*` 系クラスが残存している可能性あり（ダークモードは globals.css 一括上書きで対応済み）
 
 ---
 
@@ -227,11 +235,19 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
+| 高 | GSCのインデックス未登録31件を手動申請（S2） | デプロイ後に Search Console → URL検査で申請。主要ツールから優先 |
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 中 | B13 ツール追加（morse-code / color-mixer / tax-calculator / reading-time） | 次のラインナップ拡充バッチ |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
+
+### ✅ 完了済み（2026-04-14）
+- [x] カラーパレット全面リデザイン（Light Blue + Blue パレット準拠）: primary=#1D3D5E / accent=#e94d71 / sky=#b6dcef / surface=#f2f5fd / steel=#7B9098 / gold=#9D8C56 — Header・Footer・ToolCard・HomepageClient・globals.css・tailwind.config.ts を一括更新
+- [x] SEO修正（GSCインデックス問題対応）: ルート `/` を `permanentRedirect`（HTTP 308）+ `robots: noindex` に変更 → 「代替ページ（canonical あり）」問題を解消
+- [x] dead code 削除: `alternateLocale` 未使用変数を `[locale]/page.tsx` と `[locale]/[tool-slug]/page.tsx` から削除
+- [x] CLAUDE.md に開発ワークフロー原則を追加（NotebookLM → Claude Code 2段階フロー）
+- [x] Claude Code プラグイン導入: `superpowers@claude-plugins-official`（v5.0.7）・`example-skills@anthropic-agent-skills`（frontend-design 含む）
 
 ### ✅ 完了済み（2026-04-12）
 - [x] デザインリファクタリング完了（D1〜D9: 日本語タイポグラフィ・多層シャドウ・半透明ボーダー・FAQアニメーション・ToolCard左ボーダー・Headerシャドウ・ボタンスケール・tracking-tight・フォーカスリング）

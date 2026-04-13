@@ -98,7 +98,7 @@ export default async function LocaleLayout({
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900 transition-colors duration-200">
+      <body className="min-h-screen flex flex-col bg-surface dark:bg-[#0d1b2a] transition-colors duration-200">
         {/* Google Analytics（NEXT_PUBLIC_GA_ID が設定されている場合のみ読み込む） */}
         {gaId && (
           <>

@@ -39,13 +39,13 @@ function CompactToolCard({ tool, locale }: { tool: LocalizedTool; locale: string
       href={`/${tool.slug}`}
       locale={locale as "en" | "ja"}
       className="flex-shrink-0 flex items-center gap-3 w-48 sm:w-52
-                 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700
-                 rounded-xl px-4 py-3 hover:border-primary dark:hover:border-blue-400
+                 bg-white dark:bg-[#162236] border border-sky-soft dark:border-sky/10
+                 rounded-xl px-4 py-3 hover:border-accent dark:hover:border-accent
                  hover:shadow-md transition-all duration-150 group"
     >
       <span className="text-2xl" aria-hidden="true">{tool.icon}</span>
-      <span className="text-sm font-medium text-gray-800 dark:text-slate-200 truncate
-                       group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+      <span className="text-sm font-medium text-primary dark:text-sky truncate
+                       group-hover:text-accent dark:group-hover:text-accent transition-colors">
         {tool.title}
       </span>
     </Link>
@@ -105,10 +105,10 @@ export default function HomepageClient({
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       {/* ページタイトル */}
       <div className="text-center mb-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100 tracking-tight">
+        <h1 className="text-3xl sm:text-4xl font-bold text-primary dark:text-sky tracking-tight">
           {homeStrings.title}
         </h1>
-        <p className="mt-3 text-gray-500 dark:text-slate-400 text-sm sm:text-base">
+        <p className="mt-3 text-steel dark:text-sky/60 text-sm sm:text-base">
           {homeStrings.subtitle}
         </p>
       </div>
@@ -125,10 +125,13 @@ export default function HomepageClient({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={homeStrings.filterPlaceholder}
-            className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 rounded-lg text-sm
-                       bg-white dark:bg-slate-700 text-gray-900 dark:text-slate-100
-                       placeholder-gray-400 dark:placeholder-slate-400
-                       focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+            className="w-full px-4 py-2.5 rounded-lg text-sm
+                       bg-white dark:bg-[#162236]
+                       text-primary dark:text-sky
+                       placeholder-steel/60 dark:placeholder-sky/30
+                       border border-sky-soft dark:border-sky/15
+                       focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent/50
+                       transition-colors"
           />
         </div>
 
@@ -142,8 +145,8 @@ export default function HomepageClient({
               aria-pressed={activeCategory === cat.key}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === cat.key
-                  ? "bg-primary text-white"
-                  : "bg-white dark:bg-slate-700 text-gray-600 dark:text-slate-300 border border-gray-300 dark:border-slate-600 hover:border-primary hover:text-primary dark:hover:border-blue-400 dark:hover:text-blue-400"
+                  ? "bg-accent text-white shadow-sm"
+                  : "bg-white dark:bg-[#162236] text-steel dark:text-sky/60 border border-sky-soft dark:border-sky/15 hover:border-accent hover:text-accent dark:hover:border-accent dark:hover:text-accent"
               }`}
             >
               {cat.label}
@@ -158,7 +161,8 @@ export default function HomepageClient({
           {/* おすすめツール */}
           {featuredTools.length > 0 && (
             <div>
-              <h2 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-3">
+              <h2 className="text-xs font-semibold text-gold uppercase tracking-widest mb-3 flex items-center gap-2">
+                <span className="inline-block w-3 h-0.5 bg-gold rounded" />
                 {homeStrings.featured}
               </h2>
               <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
@@ -172,7 +176,8 @@ export default function HomepageClient({
           {/* 最近使ったツール */}
           {recentTools.length > 0 && (
             <div>
-              <h2 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-3">
+              <h2 className="text-xs font-semibold text-steel dark:text-sky/50 uppercase tracking-widest mb-3 flex items-center gap-2">
+                <span className="inline-block w-3 h-0.5 bg-steel/40 dark:bg-sky/30 rounded" />
                 {homeStrings.recentTools}
               </h2>
               <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
@@ -193,7 +198,7 @@ export default function HomepageClient({
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 text-gray-400 dark:text-slate-500">
+        <div className="text-center py-16 text-steel dark:text-sky/40">
           <p className="text-4xl mb-3">🔍</p>
           <p className="text-sm">
             {tools.length === 0 ? homeStrings.comingSoon : homeStrings.noTools}
