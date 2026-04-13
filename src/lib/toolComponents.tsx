@@ -62,6 +62,10 @@ const toolComponentMap: Record<string, ComponentType> = {
   RomanNumerals: dynamic(() => import("@/tools/RomanNumerals"), { loading: Loading }),
   HtmlToMarkdown: dynamic(() => import("@/tools/HtmlToMarkdown"), { loading: Loading }),
   ImageCompressor: dynamic(() => import("@/tools/ImageCompressor"), { loading: Loading }),
+  MorseCode: dynamic(() => import("@/tools/MorseCode"), { loading: Loading }),
+  ColorMixer: dynamic(() => import("@/tools/ColorMixer"), { loading: Loading }),
+  TaxCalculator: dynamic(() => import("@/tools/TaxCalculator"), { loading: Loading }),
+  ReadingTime: dynamic(() => import("@/tools/ReadingTime"), { loading: Loading }),
 };
 
 export default toolComponentMap;

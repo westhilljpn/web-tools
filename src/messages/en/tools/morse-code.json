@@ -1,0 +1,64 @@
+{
+  "title": "Morse Code Translator",
+  "description": "Convert text to Morse code and play it as audio. Also supports decoding Morse code back to text. Free online tool.",
+  "keywords": [
+    "morse code translator",
+    "morse code converter",
+    "text to morse code",
+    "SOS morse code",
+    "morse code audio",
+    "morse code alphabet"
+  ],
+  "tabs": { "encode": "Text → Morse", "decode": "Morse → Text" },
+  "textLabel": "Text",
+  "textPlaceholder": "Enter text to convert… (e.g. HELLO)",
+  "morseLabel": "Morse Code",
+  "morsePlaceholder": "e.g. .... . .-.. .-.. ---",
+  "morseHint": "Separate characters with spaces, words with \"/\"",
+  "wpmLabel": "Speed (WPM)",
+  "play": "Play Audio",
+  "playing": "Playing…",
+  "tableTitle": "Morse Code Reference Table",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "howToUse": [
+    {
+      "label": "Select conversion direction",
+      "description": "Use the \"Text → Morse\" tab to encode text, or \"Morse → Text\" to decode Morse code back to text."
+    },
+    {
+      "label": "Enter your text and convert",
+      "description": "Type your text and it instantly converts to Morse code. Supports letters, digits, and common punctuation."
+    },
+    {
+      "label": "Play audio to hear the signal",
+      "description": "Press \"Play Audio\" to hear the Morse code via Web Audio API. Adjust the speed (WPM: Words Per Minute) with the slider."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Use the \"Copy\" button to copy the Morse code or decoded text to your clipboard."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Morse code?",
+      "answer": "Morse code is a communication system that represents letters and numbers as sequences of short signals (dots) and long signals (dashes). Invented by Samuel Morse in 1837, it was the international standard for telegraph and radio communication. Today it is best known for the SOS distress signal (... --- ...)."
+    },
+    {
+      "question": "What is the Morse code for SOS?",
+      "answer": "SOS is represented as \"... --- ...\" — three dots, three dashes, three dots. It is the international distress signal used in radio communication. Note that SOS is sent as a continuous sequence without word breaks."
+    },
+    {
+      "question": "What does WPM mean?",
+      "answer": "WPM stands for Words Per Minute, a measure of transmission speed based on sending the standard word \"PARIS\". Beginners typically operate at 5–10 WPM, while experienced operators can reach 25–30+ WPM."
+    },
+    {
+      "question": "Is Morse code still used today?",
+      "answer": "While commercial use has largely ended, Morse code remains popular among amateur radio operators (hams) worldwide. It is also used in some military, aviation, and maritime contexts. Knowing SOS can still be useful in emergencies."
+    },
+    {
+      "question": "What characters does this tool support?",
+      "answer": "This tool supports the ITU International Morse Code standard: all 26 letters (A–Z), digits (0–9), and common punctuation marks (. , ? ! / @ & : ' \" - + ( )). Japanese kana Morse code is a separate standard and is not supported."
+    }
+  ]
+}

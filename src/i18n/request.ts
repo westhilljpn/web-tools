@@ -61,6 +61,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
     romanNumerals,
     htmlToMarkdown,
     imageCompressor,
+    morseCode,
+    colorMixer,
+    taxCalculator,
+    readingTime,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -113,6 +117,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/roman-numerals.json"),
           import("../messages/ja/tools/html-to-markdown.json"),
           import("../messages/ja/tools/image-compressor.json"),
+          import("../messages/ja/tools/morse-code.json"),
+          import("../messages/ja/tools/color-mixer.json"),
+          import("../messages/ja/tools/tax-calculator.json"),
+          import("../messages/ja/tools/reading-time.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -164,6 +172,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/roman-numerals.json"),
           import("../messages/en/tools/html-to-markdown.json"),
           import("../messages/en/tools/image-compressor.json"),
+          import("../messages/en/tools/morse-code.json"),
+          import("../messages/en/tools/color-mixer.json"),
+          import("../messages/en/tools/tax-calculator.json"),
+          import("../messages/en/tools/reading-time.json"),
         ]);
 
   return {
@@ -218,6 +230,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "roman-numerals": romanNumerals.default,
       "html-to-markdown": htmlToMarkdown.default,
       "image-compressor": imageCompressor.default,
+      "morse-code": morseCode.default,
+      "color-mixer": colorMixer.default,
+      "tax-calculator": taxCalculator.default,
+      "reading-time": readingTime.default,
     },
   };
 });

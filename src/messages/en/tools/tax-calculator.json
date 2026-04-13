@@ -1,0 +1,66 @@
+{
+  "title": "Consumption Tax Calculator",
+  "description": "Calculate tax-inclusive and tax-exclusive prices instantly. Supports Japan's 10% standard rate and 8% reduced rate. Free online tool.",
+  "keywords": [
+    "consumption tax calculator",
+    "tax inclusive calculator",
+    "tax exclusive calculator",
+    "Japan consumption tax",
+    "10 percent tax calculator",
+    "8 percent reduced tax rate"
+  ],
+  "modes": {
+    "toInclude": "Pre-tax → Inc. tax",
+    "toExclude": "Inc. tax → Pre-tax",
+    "reverse": "Inc. tax → Tax amount"
+  },
+  "rateLabel": "Tax Rate",
+  "inputLabel": {
+    "toInclude": "Pre-tax amount",
+    "toExclude": "Tax-inclusive amount",
+    "reverse": "Tax-inclusive amount"
+  },
+  "excl": "Pre-tax Amount",
+  "tax": "Consumption Tax",
+  "incl": "Tax-inclusive Amount",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "formula": {
+    "tax": "Tax",
+    "incl": "Tax-inclusive",
+    "excl": "Pre-tax",
+    "floorNote": "rounded down"
+  },
+  "howToUse": [
+    {
+      "label": "Select a calculation mode",
+      "description": "Choose from Pre-tax → Inclusive, Inclusive → Pre-tax, or Inclusive → Tax amount."
+    },
+    {
+      "label": "Choose the tax rate",
+      "description": "Select 10% (standard rate) or 8% (reduced rate for food and subscriptions)."
+    },
+    {
+      "label": "Enter the amount and read the results",
+      "description": "Results appear instantly as you type. Use the Copy buttons next to each value to copy numbers to your clipboard."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How is the consumption tax calculated?",
+      "answer": "Tax-inclusive = Pre-tax × 1.1 (for 10%) or × 1.08 (for 8%). To reverse from inclusive to exclusive: Pre-tax = Inclusive ÷ 1.1, with the fractional yen rounded down."
+    },
+    {
+      "question": "What items qualify for the 8% reduced tax rate in Japan?",
+      "answer": "The 8% reduced rate applies to food and beverages (excluding alcohol and restaurant dining-in) and subscription newspapers. Restaurant meals and alcohol are taxed at the standard 10%."
+    },
+    {
+      "question": "How are fractions handled in reverse calculation?",
+      "answer": "This tool rounds down (floors) the pre-tax amount when converting from tax-inclusive prices. Under Japanese consumption tax law, businesses may choose floor, ceiling, or round-half-up; floor is most common."
+    },
+    {
+      "question": "Does this support the Invoice System (Invoice Seido)?",
+      "answer": "Japan's Qualified Invoice System (インボイス制度) started in October 2023. This tool performs basic tax calculations but does not generate compliant invoices or handle registration numbers."
+    }
+  ]
+}

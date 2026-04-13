@@ -1,0 +1,65 @@
+{
+  "title": "Reading Time Calculator",
+  "description": "Count characters and words, then estimate reading time and speech time for any text. Supports Japanese and English. Free online tool.",
+  "keywords": [
+    "reading time calculator",
+    "reading time estimator",
+    "words per minute calculator",
+    "speech time calculator",
+    "blog reading time",
+    "text reading speed"
+  ],
+  "lang": { "ja": "Japanese", "en": "English" },
+  "wpmLabel": "Reading speed",
+  "unit": { "ja": "chars/min", "en": "words/min" },
+  "inputLabel": "Text",
+  "placeholder": "Paste your text here…",
+  "readingTime": "Reading Time",
+  "speechTime": "Speech Time",
+  "stats": {
+    "chars": "Characters",
+    "words": "Words",
+    "sentences": "Sentences",
+    "paragraphs": "Paragraphs"
+  },
+  "timeUnit": {
+    "sec": "sec",
+    "min": "min"
+  },
+  "howToUse": [
+    {
+      "label": "Paste your text",
+      "description": "Paste the text you want to analyze into the text area."
+    },
+    {
+      "label": "Select language and reading speed",
+      "description": "Choose Japanese (default 500 chars/min) or English (default 200 words/min). Adjust the speed to match your personal reading pace."
+    },
+    {
+      "label": "Check reading and speech times",
+      "description": "Reading Time is for silent reading; Speech Time is for reading aloud. Useful for adding \"X min read\" metadata to blog posts."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the average reading speed in English?",
+      "answer": "The average adult reads at 200–250 words per minute (wpm). College-level readers often reach 300+ wpm. Speed readers trained in rapid reading techniques can exceed 500 wpm. The default in this tool is 200 wpm for a conservative estimate."
+    },
+    {
+      "question": "How is speech time calculated?",
+      "answer": "Speech time is estimated at 130 words per minute for English, which reflects a comfortable presentation or narration pace. Actual speaking speed varies by person and context."
+    },
+    {
+      "question": "What reading speed should I use for blog articles?",
+      "answer": "Medium and most blogging platforms use 200–265 wpm as the standard. The default 200 wpm in this tool gives a slightly conservative estimate — most users will finish faster."
+    },
+    {
+      "question": "How are sentences and paragraphs counted?",
+      "answer": "Sentences are counted by splitting on terminal punctuation (. ! ? and their Japanese equivalents 。！？). Paragraphs are counted as blocks of text separated by blank lines."
+    },
+    {
+      "question": "Can I change the reading speed?",
+      "answer": "Yes. Edit the reading speed field to match your personal pace. If you know you read at 300 wpm, enter 300. The calculation updates immediately."
+    }
+  ]
+}

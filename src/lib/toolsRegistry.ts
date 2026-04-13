@@ -393,6 +393,34 @@ const tools: Tool[] = [
     component: "ImageCompressor",
     updatedAt: "2026-04-12",
   },
+  {
+    slug: "morse-code",
+    category: "convert",
+    icon: "📡",
+    component: "MorseCode",
+    updatedAt: "2026-04-14",
+  },
+  {
+    slug: "color-mixer",
+    category: "image",
+    icon: "🎨",
+    component: "ColorMixer",
+    updatedAt: "2026-04-14",
+  },
+  {
+    slug: "tax-calculator",
+    category: "calculate",
+    icon: "🧾",
+    component: "TaxCalculator",
+    updatedAt: "2026-04-14",
+  },
+  {
+    slug: "reading-time",
+    category: "text",
+    icon: "📚",
+    component: "ReadingTime",
+    updatedAt: "2026-04-14",
+  },
 ];
 
 export default tools;

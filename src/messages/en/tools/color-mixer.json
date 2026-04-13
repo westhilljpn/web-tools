@@ -1,0 +1,52 @@
+{
+  "title": "Color Mixer",
+  "description": "Mix two colors at any ratio to generate a blended color. Copy the result as HEX or RGB. Free online color blending tool.",
+  "keywords": [
+    "color mixer",
+    "color blender",
+    "mix two colors",
+    "color blend tool",
+    "intermediate color generator",
+    "hex color mix"
+  ],
+  "color1": "Color 1",
+  "color2": "Color 2",
+  "gradient": "5-step gradient preview",
+  "result": "Mixed Color",
+  "copyHex": "Copy HEX",
+  "copyRgb": "Copy RGB",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "howToUse": [
+    {
+      "label": "Choose two colors",
+      "description": "Use the color picker or type a HEX code directly (e.g. #FF0000) for each of the two colors."
+    },
+    {
+      "label": "Adjust the blend ratio",
+      "description": "Drag the slider to change the mix ratio between the two colors. Far left is 100% Color 1; far right is 100% Color 2."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Copy the blended color as HEX or RGB. The 5-step gradient preview shows intermediate steps at 0%, 25%, 50%, 75%, and 100%."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How is the color mixing calculated?",
+      "answer": "For physically accurate results, the tool converts sRGB values to linear RGB (proportional to actual light energy), takes a weighted average, then converts back to sRGB. This gives more natural midpoints than simply averaging raw RGB byte values."
+    },
+    {
+      "question": "Can I type a HEX code directly?",
+      "answer": "Yes. Type a 6-digit HEX code with a # prefix (e.g. #1D3D5E) into the text field. It syncs with the color picker in real time."
+    },
+    {
+      "question": "Can I use this for CSS gradients?",
+      "answer": "The 5-step gradient preview shows blended colors at 0%, 25%, 50%, 75%, and 100%. For full CSS gradient code generation, try the CSS Gradient Generator tool."
+    },
+    {
+      "question": "Does it support alpha / transparency mixing?",
+      "answer": "Currently only opaque RGB colors are supported. Alpha channel (transparency) blending is not available in this tool."
+    }
+  ]
+}
