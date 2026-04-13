@@ -54,7 +54,7 @@ const tools: Tool[] = [
     category: "text",
     icon: "📝",
     component: "TextCounter",
-    updatedAt: "2026-03-24",
+    updatedAt: "2026-04-12",
   },
   {
     slug: "json-formatter",

@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（48件）
+## 登録済みツール（52件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -69,6 +69,10 @@ npm run dev                         # http://localhost:3000
 | 46 | `roman-numerals` | ローマ数字変換ツール | Roman Numeral Converter | convert |
 | 47 | `html-to-markdown` | HTML → Markdown変換ツール | HTML to Markdown Converter | text |
 | 48 | `image-compressor` | 画像圧縮ツール | Image Compressor | image |
+| 49 | `morse-code` | モールス信号変換ツール | Morse Code Translator | convert |
+| 50 | `color-mixer` | カラーミキサー | Color Mixer | image |
+| 51 | `tax-calculator` | 消費税計算ツール | Consumption Tax Calculator | calculate |
+| 52 | `reading-time` | 読了時間計算ツール | Reading Time Calculator | text |
 
 ---
 
@@ -193,12 +197,19 @@ npm run dev                         # http://localhost:3000
 - [x] **D8** 見出しに `tracking-tight` 追加（`h1` text-2xl 以上・`h2` text-xl 以上）
 - [x] **D9** `:focus-visible` グローバル統一（2px primary outline・ダークモードは blue-400）
 
-### バッチ13 — 次回ツール追加候補（優先度順）
+### バッチ13 ✅ 完了（2026-04-14）
 
-- [ ] **B13-1** `morse-code` — モールス信号変換（テキスト↔モールス・音声再生）
-- [ ] **B13-2** `color-mixer` — カラーミキサー（2色の混合・割合スライダー・中間色生成）
-- [ ] **B13-3** `tax-calculator` — 税込・税抜計算ツール（消費税8%/10%対応・逆算）
-- [ ] **B13-4** `reading-time` — 読了時間計算ツール（文字数・単語数・WPM設定）
+- [x] **B13-1** `morse-code` — モールス信号変換（テキスト↔モールス・Web Audio API音声再生・WPMスライダー・一覧表）
+- [x] **B13-2** `color-mixer` — カラーミキサー（線形RGB混合・5段階グラデーションプレビュー・HEX/RGBコピー）
+- [x] **B13-3** `tax-calculator` — 消費税計算ツール（税抜→税込 / 税込→税抜 / 消費税額逆算・10%/8%切替）
+- [x] **B13-4** `reading-time` — 読了時間計算ツール（文字数・単語数・文数・段落数・日英WPMカスタム設定）
+
+### バッチ14 — 次回ツール追加候補（優先度順）
+
+- [ ] **B14-1** `character-counter-jp` — 原稿用紙換算ツール（文字数→400字詰め枚数・X/Twitter文字数・履歴書文字数）
+- [ ] **B14-2** `countdown-timer` — カウントダウンタイマー（日付指定・イベントカウントダウン）
+- [ ] **B14-3** `number-formatter` — 数値フォーマッター（桁区切り・通貨形式・各国形式）
+- [ ] **B14-4** `text-deduplicator` — 重複行削除ツール（ソートなし・大小文字区別設定）
 
 ### マーケティング施策 — 次のアクション
 
