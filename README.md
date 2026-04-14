@@ -2,7 +2,7 @@
 
 SEOで集客する無料Webツール集サイト。Next.js 14 + TypeScript + Tailwind CSS で構築。
 
-**本番 URL**: https://quicker-app.com  
+**本番 URL**: https://www.quicker-app.com  
 **現在のフェーズ**: 成長フェーズ（集客強化中） — ツール追加 / 既存改善 / マーケティングを並行
 
 ---
@@ -218,9 +218,12 @@ npm run dev                         # http://localhost:3000
 - [ ] **M3** X（Twitter）での新ツール告知を習慣化 — ツール追加のたびに1投稿
 - [x] **M4** 既存ツールのFAQ改善 — `text-counter`・`json-formatter` 完了（検索クエリ起点で5問に刷新）
 
-### SEO修正 — 次のアクション（GSCインデックス未登録対応）
+### SEO修正 — 次のアクション
 
-- [ ] **S1** Search Console → サイトマップを再送信（`/sitemap.xml`）
+- [ ] **S0** ⚠️ **Vercel環境変数を修正**（canonical / sitemap / hreflang の www なし問題）  
+  Vercel Dashboard → Settings → Environment Variables → `NEXT_PUBLIC_SITE_URL` を  
+  `https://quicker-app.com` → **`https://www.quicker-app.com`** に変更してリデプロイ
+- [ ] **S1** Search Console → サイトマップを再送信（`/sitemap.xml`）← S0のデプロイ後に実施
 - [ ] **S2** URL検査ツールで主要ツールページのインデックス登録をリクエスト（31件の「検出・インデックス未登録」を解消）
   - 優先: `text-counter`・`json-formatter`・`password-generator`・`qr-generator`・`unit-converter`
 - [ ] **S3** 「クロール済み・インデックス未登録」1件 → 修正デプロイ後に URL検査で再確認
@@ -246,14 +249,19 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| 高 | GSCのインデックス未登録31件を手動申請（S2） | デプロイ後に Search Console → URL検査で申請。主要ツールから優先 |
+| **最高** | **Vercel環境変数 `NEXT_PUBLIC_SITE_URL` を www ありに修正（S0）** | canonical/sitemap/hreflangが全て非wwwを指しているがサイトはwwwで配信中。SEO上の重大な不一致 |
+| 高 | GSCのインデックス未登録31件を手動申請（S2） | S0デプロイ後に Search Console → URL検査で申請。主要ツールから優先 |
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
+| 中 | B14 ツール追加（character-counter-jp / countdown-timer など） | ラインナップ拡充。52件→56件を目標 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
-| 中 | B13 ツール追加（morse-code / color-mixer / tax-calculator / reading-time） | 次のラインナップ拡充バッチ |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
 
-### ✅ 完了済み（2026-04-14）
+### ✅ 完了済み（2026-04-14 — SEO改善セッション）
+
+- [x] **トップページ SSG 修正**（重大 SEO バグ）: `HomepageClient` の `useSearchParams()` + `<Suspense>` の組み合わせによりツール一覧が初期 HTML に含まれなかった問題を修正 → ツールリンク **0件 → 62件** に改善
+- [x] **トップページ title にサイト名追加**: `「無料Webツール集」` → `「Quicker - 無料Webツール集」`（og:title / OGPカード画像も統一）
+- [x] **canonical / sitemap の www 問題を調査**: サイトは `www.quicker-app.com` で配信されているが `NEXT_PUBLIC_SITE_URL` が非 www のため不一致 → Vercel 環境変数の修正が必要（コード側は修正済み・`.env.local.example` に注記追加）
 - [x] カラーパレット全面リデザイン（Light Blue + Blue パレット準拠）: primary=#1D3D5E / accent=#e94d71 / sky=#b6dcef / surface=#f2f5fd / steel=#7B9098 / gold=#9D8C56 — Header・Footer・ToolCard・HomepageClient・globals.css・tailwind.config.ts を一括更新
 - [x] SEO修正（GSCインデックス問題対応）: ルート `/` を `permanentRedirect`（HTTP 308）+ `robots: noindex` に変更 → 「代替ページ（canonical あり）」問題を解消
 - [x] dead code 削除: `alternateLocale` 未使用変数を `[locale]/page.tsx` と `[locale]/[tool-slug]/page.tsx` から削除
