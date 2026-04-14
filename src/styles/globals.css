@@ -1,6 +1,16 @@
+/* Noto Sans JP variable font — self-hosted via @fontsource-variable */
+@import "@fontsource-variable/noto-sans-jp/wght.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* フォント CSS 変数: Tailwind の font-sans が参照する */
+:root {
+  --font-noto-sans-jp: "Noto Sans JP Variable", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "BIZ UDPGothic", "Yu Gothic UI", "Yu Gothic", "Meiryo",
+    sans-serif;
+}
 
 @layer utilities {
   .scrollbar-hide {

@@ -204,6 +204,11 @@ npm run dev                         # http://localhost:3000
 - [x] **B13-3** `tax-calculator` — 消費税計算ツール（税抜→税込 / 税込→税抜 / 消費税額逆算・10%/8%切替）
 - [x] **B13-4** `reading-time` — 読了時間計算ツール（文字数・単語数・文数・段落数・日英WPMカスタム設定）
 
+### サイト基盤改善 ✅ 完了（2026-04-15）
+
+- [x] **favicon 作成・設置** — `src/app/favicon.ico`（16/32/48px・Python stdlib で ICO 生成）+ `icon.tsx`（32px PNG・Next.js App Router 自動配信）+ `apple-icon.tsx`（180px PNG）。ネイビー（#1D3D5E）背景に白 "Q" のブランドデザイン
+- [x] **Google Fonts → セルフホスト移行** — `<link>` タグを完全削除し `@fontsource-variable/noto-sans-jp` を導入。Variable font（wght: 100–900）+ `unicode-range` サブセット分割で 124 ファイルを `.next/static/media/` にセルフホスト。`globals.css` に `@import` + `:root` CSS 変数 `--font-noto-sans-jp` で Tailwind `font-sans` と統合
+
 ### バッチ14 — 次回ツール追加候補（優先度順）
 
 - [ ] **B14-1** `character-counter-jp` — 原稿用紙換算ツール（文字数→400字詰め枚数・X/Twitter文字数・履歴書文字数）

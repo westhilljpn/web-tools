@@ -20,16 +20,8 @@ const config: Config = {
         gold:    "#9D8C56",    // Warm gold — featured marker
       },
       fontFamily: {
-        sans: [
-          '"Noto Sans JP"',
-          '"Hiragino Kaku Gothic ProN"',
-          '"Hiragino Sans"',
-          '"BIZ UDPGothic"',
-          '"Yu Gothic UI"',
-          '"Yu Gothic"',
-          "Meiryo",
-          "sans-serif",
-        ],
+        // フォールバックは globals.css の --font-noto-sans-jp 変数で管理
+        sans: ["var(--font-noto-sans-jp)"],
       },
     },
   },

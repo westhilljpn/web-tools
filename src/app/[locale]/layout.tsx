@@ -93,13 +93,6 @@ export default async function LocaleLayout({
             __html: `(function(){try{var t=localStorage.getItem("theme");var p=window.matchMedia("(prefers-color-scheme: dark)").matches;if(t==="dark"||(t===null&&p)){document.documentElement.classList.add("dark")}}catch(e){}})()`,
           }}
         />
-        {/* Google Fonts: CSSの@importを避けて<link>で読み込む（render-blocking回避） */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
-        />
       </head>
       <body className="min-h-screen flex flex-col bg-surface dark:bg-[#0d1b2a] transition-colors duration-200">
         {/* Google Analytics（NEXT_PUBLIC_GA_ID が設定されている場合のみ読み込む） */}
