@@ -17,13 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = locales.flatMap((locale) => [
     {
       url: `${siteUrl}/${locale}/privacy`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-10-01"),
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
       url: `${siteUrl}/${locale}/terms`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-10-01"),
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
