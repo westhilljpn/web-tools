@@ -14,8 +14,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tSite = await getTranslations({ locale, namespace: "site" });
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
+  const siteName = tSite("name");
+  const pageTitle = `${siteName} - ${tHome("title")}`;
+
   return {
-    title: tHome("title"),
+    title: pageTitle,
     description: tSite("description"),
     alternates: {
       canonical: `${siteUrl}/${locale}`,
@@ -26,13 +29,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       },
     },
     openGraph: {
+      title: pageTitle,
       url: `${siteUrl}/${locale}`,
       images: [
         {
-          url: `/og?title=${encodeURIComponent(tHome("title"))}&icon=%F0%9F%94%A7`,
+          url: `/og?title=${encodeURIComponent(pageTitle)}&icon=%F0%9F%94%A7`,
           width: 1200,
           height: 630,
-          alt: tHome("title"),
+          alt: pageTitle,
         },
       ],
     },
