@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import tools, { getFeaturedTools } from "@/lib/toolsRegistry";
@@ -84,14 +83,12 @@ export default async function HomePage({ params }: PageProps) {
   };
 
   return (
-    <Suspense>
-      <HomepageClient
-        tools={localizedTools}
-        featuredTools={featuredTools}
-        categories={categories}
-        homeStrings={homeStrings}
-        locale={locale}
-      />
-    </Suspense>
+    <HomepageClient
+      tools={localizedTools}
+      featuredTools={featuredTools}
+      categories={categories}
+      homeStrings={homeStrings}
+      locale={locale}
+    />
   );
 }

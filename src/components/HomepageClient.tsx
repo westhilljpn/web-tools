@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
 import ToolCard from "@/components/ToolCard";
 import type { LocalizedTool } from "@/lib/toolsRegistry";
 import { Link } from "@/i18n/routing";
@@ -59,15 +58,16 @@ export default function HomepageClient({
   homeStrings,
   locale,
 }: HomepageClientProps) {
-  const searchParams = useSearchParams();
-  const [query, setQuery] = useState(() => searchParams.get("q") ?? "");
+  const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
   const [recentTools, setRecentTools] = useState<LocalizedTool[]>([]);
 
-  // ヘッダー検索によるURLパラメーター変化を監視してフィルターに反映
+  // URLパラメーター（ヘッダー検索など）から初期クエリを読み込む（クライアントのみ）
   useEffect(() => {
-    setQuery(searchParams.get("q") ?? "");
-  }, [searchParams]);
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q");
+    if (q) setQuery(q);
+  }, []);
 
   // localStorage から最近使ったツールを復元
   useEffect(() => {
