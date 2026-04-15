@@ -134,8 +134,8 @@ export default function HomepageClient({
         />
         {/* 装飾: 左下の円形ブラー */}
         <div
-          className="pointer-events-none absolute -bottom-8 -left-8 w-28 h-28 rounded-full"
-          style={{ background: "rgba(233,77,113,0.08)" }}
+          className="pointer-events-none absolute -bottom-8 -left-8 w-24 h-24 rounded-full"
+          style={{ background: "rgba(233,77,113,0.06)" }}
           aria-hidden="true"
         />
 
@@ -160,7 +160,7 @@ export default function HomepageClient({
         </p>
 
         {/* 検索バー */}
-        <div className="relative z-10 mx-auto w-80 max-w-[90%]">
+        <div className="relative z-10 mx-auto w-72 max-w-full">
           <label htmlFor="tool-filter" className="sr-only">
             {homeStrings.filterLabel}
           </label>
@@ -200,7 +200,7 @@ export default function HomepageClient({
             (label) => (
               <span
                 key={label}
-                className="rounded-full border border-white/25 bg-white/[0.12]
+                className="rounded-full border border-white/[0.22] bg-white/[0.12]
                            px-3 py-0.5 text-[11px] font-medium text-white/[0.88]"
               >
                 {label}
