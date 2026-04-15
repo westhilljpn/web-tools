@@ -225,9 +225,10 @@ npm run dev                         # http://localhost:3000
 
 ### SEO修正 — 次のアクション
 
-- [ ] **S0** ⚠️ **Vercel環境変数を修正**（canonical / sitemap / hreflang の www なし問題）  
+- [ ] **S0** ⚠️ **Vercel環境変数を修正**（canonical / sitemap / hreflang / OG URL の www なし問題）  
   Vercel Dashboard → Settings → Environment Variables → `NEXT_PUBLIC_SITE_URL` を  
-  `https://quicker-app.com` → **`https://www.quicker-app.com`** に変更してリデプロイ
+  `https://quicker-app.com` → **`https://www.quicker-app.com`** に変更してリデプロイ  
+  ※ `public/robots.txt`（ハードコード）は削除済み → `app/robots.ts` が env var を参照する形に統一済み
 - [ ] **S1** Search Console → サイトマップを再送信（`/sitemap.xml`）← S0のデプロイ後に実施
 - [ ] **S2** URL検査ツールで主要ツールページのインデックス登録をリクエスト（31件の「検出・インデックス未登録」を解消）
   - 優先: `text-counter`・`json-formatter`・`password-generator`・`qr-generator`・`unit-converter`
@@ -254,13 +255,20 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| **最高** | **Vercel環境変数 `NEXT_PUBLIC_SITE_URL` を www ありに修正（S0）** | canonical/sitemap/hreflangが全て非wwwを指しているがサイトはwwwで配信中。SEO上の重大な不一致 |
+| **最高** | **Vercel環境変数 `NEXT_PUBLIC_SITE_URL` を www ありに修正（S0）** | canonical/sitemap/hreflang/OGが全て非wwwを指しているがサイトはwwwで配信中。`public/robots.txt` 削除は完了済み。あとはVercel側の変更のみ |
 | 高 | GSCのインデックス未登録31件を手動申請（S2） | S0デプロイ後に Search Console → URL検査で申請。主要ツールから優先 |
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
 | 中 | B14 ツール追加（character-counter-jp / countdown-timer など） | ラインナップ拡充。52件→56件を目標 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
+
+### ✅ 完了済み（2026-04-15 — SEO調査・robots.txt修正）
+
+- [x] **SSR / SSG 調査**: 全52ツールページは SSG（●）で静的生成済み。curl で HTML にツール名・FAQ・JSON-LD が含まれることを確認。「use client 問題」は存在しなかった
+- [x] **www vs 非 www 根本原因特定**: `NEXT_PUBLIC_SITE_URL` が `https://quicker-app.com` (非www) に設定されており、canonical・hreflang・OG・sitemap・robots.txt の URL がすべて誤っていることを確認
+- [x] **`public/robots.txt` 削除**: 静的ファイルが `app/robots.ts`（動的）より優先されるため競合を解消。`robots.ts` が env var を参照する形に統一
+- [x] **sitemap 確認**: 全 110 URL（52ツール×2言語 + 6固定ページ）が含まれていることを確認。URL は env var 修正後のリデプロイで自動修正される
 
 ### ✅ 完了済み（2026-04-14 — SEO改善セッション）
 
