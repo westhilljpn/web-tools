@@ -187,7 +187,7 @@ export default async function ToolPage({ params }: PageProps) {
               {ToolComponent ? (
                 <ToolComponent />
               ) : (
-                <p className="text-sm text-gray-400 dark:text-slate-500 text-center py-8">
+                <p className="text-sm text-steel dark:text-sky/60 text-center py-8">
                   {tPage("comingSoon")}
                 </p>
               )}
