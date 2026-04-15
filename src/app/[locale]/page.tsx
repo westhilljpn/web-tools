@@ -84,6 +84,12 @@ export default async function HomePage({ params }: PageProps) {
     comingSoon: tHome("comingSoon"),
     featured: tHome("featured"),
     recentTools: tHome("recentTools"),
+    heroTitleTop: tHome("heroTitleTop"),
+    heroTitleBottom: tHome("heroTitleBottom"),
+    eyebrow: tHome("eyebrow"),
+    statsTools: tHome("statsTools", { count: localizedTools.length }),
+    statsFree: tHome("statsFree"),
+    statsNoSignup: tHome("statsNoSignup"),
   };
 
   return (
