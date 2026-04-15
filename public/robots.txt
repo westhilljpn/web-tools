@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://quicker-app.com/sitemap.xml
