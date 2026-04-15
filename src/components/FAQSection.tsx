@@ -46,7 +46,7 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
                   {/* SVG シェブロン */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`shrink-0 w-4 h-4 text-steel/60 transition-transform duration-200 ${
+                    className={`shrink-0 w-4 h-4 text-steel/60 dark:text-sky/60 transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                     fill="none"
