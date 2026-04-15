@@ -24,7 +24,9 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
 
   return (
     <section className="mt-12">
-      <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-4 tracking-tight">{title}</h2>
+      <h2 className="text-xl font-bold text-primary dark:text-sky mb-4 tracking-tight">
+        {title}
+      </h2>
       <dl className="space-y-2">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
@@ -37,13 +39,14 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   className="w-full flex justify-between items-center text-left gap-4
-                             font-medium text-gray-900 dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                             font-medium text-primary dark:text-sky
+                             hover:text-accent dark:hover:text-accent transition-colors"
                 >
                   <span>{faq.question}</span>
                   {/* SVG シェブロン */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`shrink-0 w-4 h-4 text-gray-400 dark:text-slate-500 transition-transform duration-200 ${
+                    className={`shrink-0 w-4 h-4 text-steel/60 transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -60,7 +63,7 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
                 className="overflow-hidden transition-all duration-300 ease-in-out"
                 style={{ maxHeight: isOpen ? "1000px" : "0px" }}
               >
-                <p className="mt-3 text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+                <p className="mt-3 text-sm text-steel dark:text-sky/60 leading-relaxed">
                   {faq.answer}
                 </p>
               </dd>

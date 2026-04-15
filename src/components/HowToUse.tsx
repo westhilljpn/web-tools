@@ -14,7 +14,9 @@ export default function HowToUse({ steps, title }: HowToUseProps) {
 
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-4 tracking-tight">{title}</h2>
+      <h2 className="text-xl font-bold text-primary dark:text-sky mb-4 tracking-tight">
+        {title}
+      </h2>
       <ol className="space-y-3">
         {steps.map((step, index) => (
           <li key={index} className="flex gap-4 items-start">
@@ -27,9 +29,9 @@ export default function HowToUse({ steps, title }: HowToUseProps) {
               {index + 1}
             </span>
             <div>
-              <p className="font-medium text-gray-900 dark:text-slate-100">{step.label}</p>
+              <p className="font-medium text-primary dark:text-sky">{step.label}</p>
               {step.description && (
-                <p className="text-sm text-gray-600 dark:text-slate-400 mt-0.5">{step.description}</p>
+                <p className="text-sm text-steel dark:text-sky/60 mt-0.5">{step.description}</p>
               )}
             </div>
           </li>
