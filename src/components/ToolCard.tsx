@@ -33,7 +33,7 @@ const CATEGORY_STYLES: Record<ToolCategory, {
   calculate: {
     gradient: "linear-gradient(90deg,#9D8C56,#c8b87a)",
     iconBg: "bg-gold/10",
-    badgeCls: "bg-gold/10 text-gold",
+    badgeCls: "bg-gold/10 text-gold dark:bg-gold/[0.08] dark:text-[#c8b87a]",
   },
   lifestyle: {
     gradient: "linear-gradient(90deg,#b6dcef,#f2f5fd)",
@@ -43,7 +43,7 @@ const CATEGORY_STYLES: Record<ToolCategory, {
   dev: {
     gradient: "linear-gradient(90deg,#e94d71,rgba(233,77,113,0.3))",
     iconBg: "bg-accent/10",
-    badgeCls: "bg-accent/10 text-accent",
+    badgeCls: "bg-accent/10 text-accent dark:bg-accent/[0.06] dark:text-accent",
   },
 };
 
