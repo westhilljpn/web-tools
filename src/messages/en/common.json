@@ -30,7 +30,13 @@
     "noTools": "No tools found.",
     "comingSoon": "More tools are coming soon. Stay tuned!",
     "featured": "Recommended",
-    "recentTools": "Recently Used"
+    "recentTools": "Recently Used",
+    "heroTitleTop": "Always Ready,",
+    "heroTitleBottom": "Free Online Tools",
+    "eyebrow": "Free Online Tools",
+    "statsTools": "{count} Tools",
+    "statsFree": "100% Free",
+    "statsNoSignup": "No Sign-up"
   },
   "toolPage": {
     "comingSoon": "This tool is currently under development.",

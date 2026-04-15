@@ -30,7 +30,13 @@
     "noTools": "該当するツールが見つかりませんでした。",
     "comingSoon": "ツールは順次追加予定です。しばらくお待ちください。",
     "featured": "おすすめ",
-    "recentTools": "最近使ったツール"
+    "recentTools": "最近使ったツール",
+    "heroTitleTop": "いつでも、すぐ使える",
+    "heroTitleBottom": "無料ツール集",
+    "eyebrow": "Free Online Tools",
+    "statsTools": "{count}のツール",
+    "statsFree": "完全無料",
+    "statsNoSignup": "登録不要"
   },
   "toolPage": {
     "comingSoon": "このツールは現在準備中です。",
