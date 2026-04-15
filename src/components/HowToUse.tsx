@@ -14,8 +14,9 @@ export default function HowToUse({ steps, title }: HowToUseProps) {
 
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-bold text-primary dark:text-sky mb-4 tracking-tight">
+      <h2 className="text-xl font-bold text-primary dark:text-sky mb-4 tracking-tight flex items-center gap-3">
         {title}
+        <span className="flex-1 h-px bg-sky-soft dark:bg-sky/20" aria-hidden="true" />
       </h2>
       <ol className="space-y-3">
         {steps.map((step, index) => (

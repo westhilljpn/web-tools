@@ -24,8 +24,9 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
 
   return (
     <section className="mt-12">
-      <h2 className="text-xl font-bold text-primary dark:text-sky mb-4 tracking-tight">
+      <h2 className="text-xl font-bold text-primary dark:text-sky mb-4 tracking-tight flex items-center gap-3">
         {title}
+        <span className="flex-1 h-px bg-sky-soft dark:bg-sky/20" aria-hidden="true" />
       </h2>
       <dl className="space-y-2">
         {faqs.map((faq, index) => {
