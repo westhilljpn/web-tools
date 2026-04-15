@@ -54,7 +54,7 @@ function CompactToolCard({ tool, locale }: { tool: LocalizedTool; locale: string
       href={`/${tool.slug}`}
       locale={locale as "en" | "ja"}
       className="flex-shrink-0 flex items-center gap-3 w-48 sm:w-52
-                 bg-white dark:bg-[#162236] border border-sky-soft dark:border-sky/10
+                 bg-white border border-sky-soft dark:border-sky/10
                  rounded-xl px-4 py-3 hover:border-accent dark:hover:border-accent
                  hover:shadow-md transition-all duration-150 group"
     >
@@ -226,10 +226,10 @@ export default function HomepageClient({
                   className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === cat.key
                       ? "bg-primary text-white shadow-sm"
-                      : "bg-white dark:bg-[#162236] text-steel dark:text-sky/60 border border-sky-soft dark:border-sky/15 hover:border-primary hover:text-primary dark:hover:border-sky dark:hover:text-sky"
+                      : "bg-white text-steel dark:text-sky/60 border border-sky-soft dark:border-sky/15 hover:border-primary hover:text-primary dark:hover:border-sky dark:hover:text-sky"
                   }`}
                 >
-                  {icon && <span aria-hidden="true">{icon} </span>}
+                  {icon && <span aria-hidden="true">{icon}</span>}{" "}
                   {cat.label}
                 </button>
               );
