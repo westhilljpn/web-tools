@@ -30,6 +30,13 @@ export default function ReadingTime() {
   const t = useTranslations("reading-time");
   const [text, setText] = useState("");
   const [lang, setLang] = useState<Lang>("ja");
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+
+  function handleCopy(key: string, value: number) {
+    navigator.clipboard.writeText(String(value)).catch(() => {});
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), 2000);
+  }
   const [jaWpm, setJaWpm] = useState(500);
   const [enWpm, setEnWpm] = useState(200);
 
@@ -102,14 +109,21 @@ export default function ReadingTime() {
       {/* 統計カード */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {[
-          { label: t("stats.chars"), value: stats.chars.toLocaleString() },
-          { label: t("stats.words"), value: stats.words.toLocaleString() },
-          { label: t("stats.sentences"), value: stats.sentences.toLocaleString() },
-          { label: t("stats.paragraphs"), value: stats.paragraphs.toLocaleString() },
-        ].map(({ label, value }) => (
-          <div key={label} className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-center">
+          { key: "chars",      label: t("stats.chars"),      value: stats.chars.toLocaleString(),      rawValue: stats.chars },
+          { key: "words",      label: t("stats.words"),      value: stats.words.toLocaleString(),      rawValue: stats.words },
+          { key: "sentences",  label: t("stats.sentences"),  value: stats.sentences.toLocaleString(),  rawValue: stats.sentences },
+          { key: "paragraphs", label: t("stats.paragraphs"), value: stats.paragraphs.toLocaleString(), rawValue: stats.paragraphs },
+        ].map(({ key, label, value, rawValue }) => (
+          <div key={key} className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-center">
             <p className="text-2xl font-bold text-primary font-mono">{value}</p>
             <p className="text-xs text-gray-500 mt-1">{label}</p>
+            <button
+              onClick={() => handleCopy(key, rawValue)}
+              aria-label="コピー"
+              className="mt-1.5 px-2 py-0.5 text-xs rounded border border-sky-soft dark:border-sky/30 bg-surface dark:bg-primary/20 text-steel dark:text-sky/80 hover:bg-sky/20 transition-colors"
+            >
+              {copiedKey === key ? "Copied!" : "Copy"}
+            </button>
           </div>
         ))}
       </div>
