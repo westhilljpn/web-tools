@@ -1,7 +1,7 @@
 {
-  "title": "Browser & IP Info",
-  "description": "View your browser, OS, screen, timezone, language, and local IP address at a glance. All information is read directly from your browser — nothing is sent to any server.",
-  "keywords": ["browser info", "my browser", "what is my browser", "local ip address", "system information", "browser details"],
+  "title": "Browser Environment Info",
+  "description": "View your browser, OS, screen resolution, timezone, language, and local IP at a glance. Everything is read directly in your browser — nothing is sent to any server.",
+  "keywords": ["browser info", "my browser", "browser environment", "what browser am i using", "system information", "local ip address"],
   "loading":      "Loading...",
   "checking":     "Checking...",
   "notAvailable": "Not available",

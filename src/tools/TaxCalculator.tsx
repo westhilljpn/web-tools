@@ -49,7 +49,7 @@ export default function TaxCalculator() {
           <button
             key={m}
             type="button"
-            onClick={() => { setMode(m); setInput(""); }}
+            onClick={() => setMode(m)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
               mode === m
                 ? "bg-accent text-white"
