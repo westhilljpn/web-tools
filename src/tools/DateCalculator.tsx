@@ -143,9 +143,9 @@ export default function DateCalculator() {
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="flex-1 px-3 py-2.5 border border-sky-soft rounded-lg text-sm
+              className="flex-1 px-3 py-2.5 border border-sky-soft dark:border-sky/20 rounded-lg text-sm
                          focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary
-                         bg-white text-primary"
+                         bg-white dark:bg-primary/5 text-primary dark:text-sky"
             />
             <button
               type="button"
@@ -173,9 +173,9 @@ export default function DateCalculator() {
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              className="flex-1 px-3 py-2.5 border border-sky-soft rounded-lg text-sm
+              className="flex-1 px-3 py-2.5 border border-sky-soft dark:border-sky/20 rounded-lg text-sm
                          focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary
-                         bg-white text-primary"
+                         bg-white dark:bg-primary/5 text-primary dark:text-sky"
             />
             <button
               type="button"
