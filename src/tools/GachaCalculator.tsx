@@ -30,7 +30,15 @@ export default function GachaCalculator() {
   const [rate, setRate]   = useState(3);
   const [pulls, setPulls] = useState(10);
 
+  const [copied, setCopied] = useState(false);
+
   const currentProb = useMemo(() => cumProb(rate, pulls), [rate, pulls]);
+
+  function handleCopy() {
+    navigator.clipboard.writeText(`${currentProb.toFixed(2)}%`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
 
   const tableRows = useMemo(
     () => TABLE_N.map((n) => ({ n, prob: cumProb(rate, n) })),
@@ -60,7 +68,7 @@ export default function GachaCalculator() {
           </label>
           <div className="flex items-center gap-2">
             <input
-              type="range" min={0.1} max={50} step={0.1} value={rate}
+              type="range" min={0.1} max={99} step={0.1} value={rate}
               onChange={(e) => handleRate(parseFloat(e.target.value))}
               className="flex-1 accent-primary h-2"
             />
@@ -83,7 +91,7 @@ export default function GachaCalculator() {
           </label>
           <div className="flex items-center gap-2">
             <input
-              type="range" min={1} max={500} step={1} value={Math.min(pulls, 500)}
+              type="range" min={1} max={1000} step={1} value={Math.min(pulls, 1000)}
               onChange={(e) => handlePulls(parseInt(e.target.value))}
               className="flex-1 accent-primary h-2"
             />
@@ -101,7 +109,17 @@ export default function GachaCalculator() {
       </div>
 
       {/* メイン結果 */}
-      <div className="bg-gray-50 dark:bg-slate-800 rounded-xl px-6 py-8 text-center">
+      <div className="bg-gray-50 dark:bg-slate-800 rounded-xl px-6 py-8 text-center relative">
+        <button
+          onClick={handleCopy}
+          className="absolute top-3 right-3 px-3 py-1 text-xs font-medium rounded
+                     border border-gray-300 dark:border-slate-600
+                     bg-white dark:bg-slate-700
+                     text-gray-600 dark:text-slate-300
+                     hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors"
+        >
+          {copied ? "Copied!" : "Copy"}
+        </button>
         <p className="text-sm text-gray-500 dark:text-slate-400 mb-2">{t("labels.result")}</p>
         <p className={`text-6xl font-bold tabular-nums ${probColor(currentProb)}`}>
           {currentProb.toFixed(1)}<span className="text-3xl">%</span>
