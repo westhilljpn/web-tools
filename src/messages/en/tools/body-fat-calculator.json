@@ -1,0 +1,85 @@
+{
+  "title": "Body Fat Calculator",
+  "description": "Calculate your body fat percentage, fat mass, and lean body mass using the US Navy method. Enter your height, neck, and waist (and hip for women) to estimate your body composition.",
+  "keywords": ["body fat calculator", "body fat percentage", "US navy body fat", "body composition calculator", "fat mass calculator"],
+  "labels": {
+    "male": "Male",
+    "female": "Female",
+    "height": "Height",
+    "weight": "Weight",
+    "neck": "Neck circumference",
+    "waist": "Waist (at navel)",
+    "hip": "Hip circumference",
+    "hipNote": "Women only",
+    "bodyFat": "Body Fat %",
+    "fatMass": "Fat Mass",
+    "leanMass": "Lean Body Mass",
+    "category": "Category"
+  },
+  "categories": {
+    "essential": "Essential Fat",
+    "athlete": "Athlete",
+    "fitness": "Fitness",
+    "average": "Average",
+    "obese": "Obese"
+  },
+  "categoryRange": {
+    "male": {
+      "essential": "2–5%",
+      "athlete": "6–13%",
+      "fitness": "14–17%",
+      "average": "18–24%",
+      "obese": "25%+"
+    },
+    "female": {
+      "essential": "10–13%",
+      "athlete": "14–20%",
+      "fitness": "21–24%",
+      "average": "25–31%",
+      "obese": "32%+"
+    }
+  },
+  "ui": {
+    "copy": "copy",
+    "copied": "copied!",
+    "hint": "Enter your measurements above to see results",
+    "invalidInput": "Waist must be greater than neck circumference",
+    "disclaimer": "Results are estimates only and not a substitute for medical or nutritional advice."
+  },
+  "howToUse": [
+    {
+      "label": "Select sex and enter height",
+      "description": "Choose your sex and enter your height in centimeters."
+    },
+    {
+      "label": "Measure and enter circumferences",
+      "description": "Enter your neck and waist (at navel level) circumferences. Women should also enter hip circumference at the widest point. Use a flexible tape measure held horizontally."
+    },
+    {
+      "label": "View your results",
+      "description": "Body fat percentage, fat mass, and lean body mass are calculated instantly. A category rating based on ACE (American Council on Exercise) standards is also shown."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the US Navy method?",
+      "answer": "The US Navy body fat formula estimates body fat percentage from height, neck, and waist measurements (plus hip for women). It is widely used because it requires only a tape measure and is more accurate than BMI for most people."
+    },
+    {
+      "question": "Where exactly should I measure my waist?",
+      "answer": "Measure horizontally at navel level while relaxed and exhaling normally. Do not suck in your stomach or measure while breathing in, as this will give an inaccurate reading."
+    },
+    {
+      "question": "What is a healthy body fat percentage?",
+      "answer": "According to ACE standards, fitness range is 14–17% for men and 21–24% for women. Average is 18–24% for men and 25–31% for women. Athletes typically fall below these ranges."
+    },
+    {
+      "question": "How accurate is this compared to professional measurements?",
+      "answer": "The US Navy method is an estimate that may differ by a few percentage points from precise methods like DEXA scans or hydrostatic weighing. Factors like body shape and muscle mass can affect accuracy. Use it as a general guideline."
+    },
+    {
+      "question": "What is lean body mass (LBM)?",
+      "answer": "Lean body mass is your total body weight minus fat mass. It includes muscle, bone, organs, and body fluids. When losing weight, maintaining LBM while reducing fat is considered the healthiest approach."
+    }
+  ]
+}

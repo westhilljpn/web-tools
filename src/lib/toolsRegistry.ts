@@ -435,6 +435,13 @@ const tools: Tool[] = [
     component: "CalorieCalculator",
     updatedAt: "2026-04-17",
   },
+  {
+    slug: "body-fat-calculator",
+    category: "lifestyle",
+    icon: "💪",
+    component: "BodyFatCalculator",
+    updatedAt: "2026-04-17",
+  },
 ];
 
 export default tools;
