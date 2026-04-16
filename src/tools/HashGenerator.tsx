@@ -120,13 +120,13 @@ export default function HashGenerator() {
       ) : (
         <div className="space-y-3">
           {/* MD5 */}
-          <div className="rounded-lg border border-gray-200 overflow-hidden">
-            <div className="flex items-center justify-between px-4 py-2 bg-gray-50 border-b border-gray-200">
+          <div className="rounded-lg border border-sky-soft dark:border-sky/20 overflow-hidden">
+            <div className="flex items-center justify-between px-4 py-2 bg-surface dark:bg-primary/10 border-b border-sky-soft dark:border-sky/20">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold text-gray-500 font-mono tracking-wider">
+                <span className="text-xs font-semibold text-steel dark:text-sky/70 font-mono tracking-wider">
                   MD5
                 </span>
-                <span className="text-[10px] text-gray-400">
+                <span className="text-[10px] text-steel/60 dark:text-sky/40">
                   チェックサム用途のみ / For checksum only
                 </span>
               </div>
@@ -134,13 +134,13 @@ export default function HashGenerator() {
                 type="button"
                 onClick={handleCopyMd5}
                 disabled={!md5Hash}
-                className="text-xs text-primary hover:text-primary/70 font-medium disabled:opacity-30 transition-colors"
+                className="text-xs text-primary hover:text-primary/70 font-medium disabled:opacity-30 transition-colors dark:text-sky dark:hover:text-sky/70"
               >
                 {t("buttons.copy")}
               </button>
             </div>
-            <div className="px-4 py-3 bg-white">
-              <p className="text-xs font-mono break-all leading-relaxed select-all text-gray-800">
+            <div className="px-4 py-3 bg-white dark:bg-primary/5">
+              <p className="text-xs font-mono break-all leading-relaxed select-all text-primary dark:text-sky">
                 {show(md5Hash) || "—"}
               </p>
             </div>
