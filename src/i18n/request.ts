@@ -65,6 +65,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     colorMixer,
     taxCalculator,
     readingTime,
+    dateCalculator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -121,6 +122,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/color-mixer.json"),
           import("../messages/ja/tools/tax-calculator.json"),
           import("../messages/ja/tools/reading-time.json"),
+          import("../messages/ja/tools/date-calculator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -176,6 +178,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/color-mixer.json"),
           import("../messages/en/tools/tax-calculator.json"),
           import("../messages/en/tools/reading-time.json"),
+          import("../messages/en/tools/date-calculator.json"),
         ]);
 
   return {
@@ -234,6 +237,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "color-mixer": colorMixer.default,
       "tax-calculator": taxCalculator.default,
       "reading-time": readingTime.default,
+      "date-calculator": dateCalculator.default,
     },
   };
 });

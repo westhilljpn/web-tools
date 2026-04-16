@@ -421,6 +421,13 @@ const tools: Tool[] = [
     component: "ReadingTime",
     updatedAt: "2026-04-14",
   },
+  {
+    slug: "date-calculator",
+    category: "calculate",
+    icon: "🗓️",
+    component: "DateCalculator",
+    updatedAt: "2026-04-17",
+  },
 ];
 
 export default tools;

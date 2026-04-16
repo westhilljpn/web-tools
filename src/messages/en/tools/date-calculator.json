@@ -1,0 +1,57 @@
+{
+  "title": "Date Difference Calculator",
+  "description": "Calculate the difference between two dates in days, weeks, months, and years. Perfect for project planning, anniversaries, and deadline tracking.",
+  "keywords": ["date calculator", "days between dates", "date difference", "how many days", "date counter"],
+  "labels": {
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "today": "Today",
+    "days": "Days",
+    "weeks": "Weeks",
+    "months": "Months",
+    "years": "Years",
+    "daysUnit": "days",
+    "weeksUnit": "weeks",
+    "monthsUnit": "months",
+    "yearsUnit": "years",
+    "remainder": "{n} days"
+  },
+  "ui": {
+    "copy": "copy",
+    "copied": "copied!",
+    "hintBoth": "Enter start date and end date",
+    "hintOne": "Enter the other date"
+  },
+  "howToUse": [
+    {
+      "label": "Enter start date",
+      "description": "Enter the starting date. Click 'Today' to quickly fill in today's date."
+    },
+    {
+      "label": "Enter end date",
+      "description": "Enter the ending date."
+    },
+    {
+      "label": "View results",
+      "description": "The difference in days, weeks, months, and years is calculated automatically. Use the copy buttons to grab any value."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I find a date X days from now?",
+      "answer": "Set the start date to today using the 'Today' button, then enter your target date as the end date to see the number of days between them."
+    },
+    {
+      "question": "How are months and years calculated?",
+      "answer": "Months and years are calculated on a calendar basis, not by fixed day counts. For example, Jan 1 to Mar 31 is 2 months and 30 days."
+    },
+    {
+      "question": "Can I use dates in the past?",
+      "answer": "Yes. The calculator always returns the absolute difference, so you can enter dates in any order."
+    },
+    {
+      "question": "Is this useful for project management?",
+      "answer": "Absolutely. Use it to calculate sprint lengths, project durations, or deadline countdowns. The week display is especially useful for sprint planning."
+    }
+  ]
+}
