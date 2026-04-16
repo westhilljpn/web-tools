@@ -68,6 +68,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     dateCalculator,
     calorieCalculator,
     bodyFatCalculator,
+    sleepCalculator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -127,6 +128,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/date-calculator.json"),
           import("../messages/ja/tools/calorie-calculator.json"),
           import("../messages/ja/tools/body-fat-calculator.json"),
+          import("../messages/ja/tools/sleep-calculator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -185,6 +187,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/date-calculator.json"),
           import("../messages/en/tools/calorie-calculator.json"),
           import("../messages/en/tools/body-fat-calculator.json"),
+          import("../messages/en/tools/sleep-calculator.json"),
         ]);
 
   return {
@@ -246,6 +249,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "date-calculator": dateCalculator.default,
       "calorie-calculator": calorieCalculator.default,
       "body-fat-calculator": bodyFatCalculator.default,
+      "sleep-calculator": sleepCalculator.default,
     },
   };
 });

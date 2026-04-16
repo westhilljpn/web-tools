@@ -442,6 +442,13 @@ const tools: Tool[] = [
     component: "BodyFatCalculator",
     updatedAt: "2026-04-17",
   },
+  {
+    slug: "sleep-calculator",
+    category: "lifestyle",
+    icon: "😴",
+    component: "SleepCalculator",
+    updatedAt: "2026-04-17",
+  },
 ];
 
 export default tools;

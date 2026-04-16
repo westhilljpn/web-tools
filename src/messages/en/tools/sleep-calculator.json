@@ -1,0 +1,57 @@
+{
+  "title": "Sleep Calculator",
+  "description": "Calculate the best times to go to bed or wake up based on 90-minute sleep cycles. Wake up feeling refreshed by timing your sleep to natural cycle boundaries.",
+  "keywords": ["sleep calculator", "what time should i sleep", "sleep cycle calculator", "best time to wake up", "bedtime calculator"],
+  "modes": {
+    "toBedtime": "Wake-up → Bedtime",
+    "toWakeup": "Bedtime → Wake-up"
+  },
+  "labels": {
+    "wakeupTime": "Wake-up time",
+    "bedtime": "Bedtime",
+    "fallAsleepMins": "Time to fall asleep",
+    "minsUnit": "min",
+    "recommendedBedtimes": "Recommended bedtimes (best first)",
+    "recommendedWakeups": "Recommended wake-up times (best first)",
+    "cycles": "cycles",
+    "totalSleep": "sleep time"
+  },
+  "ui": {
+    "copy": "copy",
+    "copied": "copied!",
+    "cycleNote": "1 cycle = 90 min (light → deep → REM sleep)",
+    "disclaimer": "Individual sleep needs vary. Use this as a general guideline."
+  },
+  "howToUse": [
+    {
+      "label": "Select a mode",
+      "description": "Choose 'Wake-up → Bedtime' to find when to go to sleep, or 'Bedtime → Wake-up' to find the best times to wake up."
+    },
+    {
+      "label": "Enter your time and fall-asleep delay",
+      "description": "Enter your planned wake-up or bedtime. Adjust the 'time to fall asleep' to match how long it typically takes you to drift off after getting into bed."
+    },
+    {
+      "label": "View recommended times",
+      "description": "Times are calculated to align with the end of a 90-minute sleep cycle, when waking up is easiest. More cycles mean more sleep."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is a sleep cycle?",
+      "answer": "A sleep cycle lasts about 90 minutes and consists of light sleep (non-REM), deep sleep, and REM sleep. Waking up near the end of a cycle — during lighter sleep — is generally easier and leaves you feeling more refreshed."
+    },
+    {
+      "question": "How many cycles should I aim for?",
+      "answer": "Most adults do best with 5–6 cycles (about 7.5–9 hours). Some people function well on 4 cycles (6 hours), but chronic sleep deprivation is linked to serious health risks."
+    },
+    {
+      "question": "How long does it take to fall asleep?",
+      "answer": "The average healthy adult falls asleep in 10–20 minutes. Falling asleep in under 5 minutes may indicate sleep debt, while taking more than 30 minutes regularly could suggest insomnia."
+    },
+    {
+      "question": "Why does waking up mid-cycle feel so bad?",
+      "answer": "Waking during deep sleep (non-REM stage 3) causes 'sleep inertia' — intense grogginess and disorientation that can last 30–60 minutes. Timing your alarm to the end of a cycle reduces this effect."
+    }
+  ]
+}
