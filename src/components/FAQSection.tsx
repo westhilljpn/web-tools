@@ -61,12 +61,15 @@ export default function FAQSection({ faqs, title }: FAQSectionProps) {
               </dt>
               <dd
                 id={`faq-answer-${index}`}
-                className="overflow-hidden transition-all duration-300 ease-in-out"
-                style={{ maxHeight: isOpen ? "1000px" : "0px" }}
+                className={`grid transition-all duration-300 ease-in-out ${
+                  isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
               >
-                <p className="mt-3 text-sm text-steel dark:text-sky/60 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <div className="overflow-hidden">
+                  <p className="mt-3 text-sm text-steel dark:text-sky/60 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </dd>
             </div>
           );
