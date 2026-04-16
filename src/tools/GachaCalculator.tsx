@@ -113,10 +113,10 @@ export default function GachaCalculator() {
         <button
           onClick={handleCopy}
           className="absolute top-3 right-3 px-3 py-1 text-xs font-medium rounded
-                     border border-gray-300 dark:border-slate-600
-                     bg-white dark:bg-slate-700
-                     text-gray-600 dark:text-slate-300
-                     hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors"
+                     border border-sky-soft dark:border-sky/30
+                     bg-surface dark:bg-primary/20
+                     text-steel dark:text-sky/80
+                     hover:bg-sky/20 dark:hover:bg-sky/10 transition-colors"
         >
           {copied ? "Copied!" : "Copy"}
         </button>
