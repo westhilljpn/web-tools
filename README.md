@@ -209,12 +209,31 @@ npm run dev                         # http://localhost:3000
 - [x] **favicon 作成・設置** — `src/app/favicon.ico`（16/32/48px・Python stdlib で ICO 生成）+ `icon.tsx`（32px PNG・Next.js App Router 自動配信）+ `apple-icon.tsx`（180px PNG）。ネイビー（#1D3D5E）背景に白 "Q" のブランドデザイン
 - [x] **Google Fonts → セルフホスト移行** — `<link>` タグを完全削除し `@fontsource-variable/noto-sans-jp` を導入。Variable font（wght: 100–900）+ `unicode-range` サブセット分割で 124 ファイルを `.next/static/media/` にセルフホスト。`globals.css` に `@import` + `:root` CSS 変数 `--font-noto-sans-jp` で Tailwind `font-sans` と統合
 
-### バッチ14 — 次回ツール追加候補（優先度順）
+### バッチ15 — ツール追加・既存改善 ✅ 完了（2026-04-17）
 
-- [ ] **B14-1** `character-counter-jp` — 原稿用紙換算ツール（文字数→400字詰め枚数・X/Twitter文字数・履歴書文字数）
-- [ ] **B14-2** `countdown-timer` — カウントダウンタイマー（日付指定・イベントカウントダウン）
-- [ ] **B14-3** `number-formatter` — 数値フォーマッター（桁区切り・通貨形式・各国形式）
-- [ ] **B14-4** `text-deduplicator` — 重複行削除ツール（ソートなし・大小文字区別設定）
+**新規ツール（6件）:**
+- [x] **B15-1** `date-calculator` — 日付差計算機（日数・週数・月数・年数・暦月計算・Todayボタン・コピーボタン）
+- [x] **B15-2** `calorie-calculator` — カロリー計算機（Mifflin-St Jeor式・BMR・TDEE・活動5段階・目標別カロリー）
+- [x] **B15-3** `body-fat-calculator` — 体脂肪率計算機（USネイビー方式・脂肪量・除脂肪量・ACEカテゴリ判定）
+- [x] **B15-4** `sleep-calculator` — 睡眠時間計算機（90分サイクル・起床↔就寝双方向計算・入眠時間設定）
+- [x] **B15-5** `css-box-shadow` — CSSボックスシャドウ生成（スライダーUI・リアルタイムプレビュー・inset対応）
+- [x] **B15-6** `wcag-contrast-checker` — WCAGコントラスト比チェッカー（AA/AAA判定・プレビュー・相対輝度計算）
+
+**既存ツール改善（5件）:**
+- [x] `gacha-calculator` — コピーボタン追加・スライダー上限拡張（確率99%・試行1000回）
+- [x] `reading-time` — 統計カード4枚にコピーボタン追加（copiedKeyパターン）
+- [x] `hash-generator` — MD5追加（純粋TS実装 `src/lib/md5.ts`・チェックサム用途注記）
+- [x] `tax-calculator` — モード切替時に入力値を保持するよう修正（`setInput("")` 削除）
+- [x] `ip-info` — ツール名を「ブラウザ環境情報」に変更・キーワード更新
+
+### バッチ16 — 次回ツール追加候補（優先度順）
+
+- [ ] **B16-1** `character-counter-jp` — 原稿用紙換算ツール（文字数→400字詰め枚数・X/Twitter文字数・履歴書文字数）
+- [ ] **B16-2** `countdown-timer` — カウントダウンタイマー（日付指定・イベントカウントダウン）
+- [ ] **B16-3** `number-formatter` — 数値フォーマッター（桁区切り・通貨形式・各国形式）
+- [ ] **B16-4** `text-deduplicator` — 重複行削除ツール（ソートなし・大小文字区別設定）
+- [ ] **B16-5** `exif-viewer` — 画像EXIFデータ閲覧（カメラ・GPS・撮影設定・ブラウザ完結）
+- [ ] **B16-6** `char-frequency` — 文字頻度分析（文字・単語出現頻度ランキング・棒グラフ）
 
 ### マーケティング施策 — 次のアクション
 
@@ -255,20 +274,27 @@ npm run dev                         # http://localhost:3000
 
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
-| **最高** | **Vercel環境変数 `NEXT_PUBLIC_SITE_URL` を www ありに修正（S0）** | canonical/sitemap/hreflang/OGが全て非wwwを指しているがサイトはwwwで配信中。`public/robots.txt` 削除は完了済み。あとはVercel側の変更のみ |
-| 高 | GSCのインデックス未登録31件を手動申請（S2） | S0デプロイ後に Search Console → URL検査で申請。主要ツールから優先 |
+| 高 | GSCのインデックス未登録を手動申請（S2） | Search Console → URL検査で申請。主要ツールから優先（`text-counter`・`json-formatter`・`password-generator` 等） |
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
-| 中 | B14 ツール追加（character-counter-jp / countdown-timer など） | ラインナップ拡充。52件→56件を目標 |
+| 中 | B16 ツール追加（character-counter-jp / countdown-timer など） | ラインナップ拡充。61件→67件を目標 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
 
+### ✅ 完了済み（2026-04-17 — バッチ15・既存改善）
+
+- [x] **新規ツール6件追加**: `date-calculator`・`calorie-calculator`・`body-fat-calculator`・`sleep-calculator`・`css-box-shadow`・`wcag-contrast-checker`（合計61ツール）
+- [x] **既存改善5件**: GachaCalculatorコピーボタン、ReadingTimeコピーボタン、HashGenerator MD5追加、TaxCalculatorモード切替保持、IpInfoタイトル変更
+- [x] **SEO**: `NEXT_PUBLIC_SITE_URL` を `https://www.quicker-app.com` に修正・リデプロイ完了
+- [x] **SEO**: Vercel リダイレクト 307 → 301（永続）に変更完了
+
 ### ✅ 完了済み（2026-04-15 — SEO調査・robots.txt修正）
 
-- [x] **SSR / SSG 調査**: 全52ツールページは SSG（●）で静的生成済み。curl で HTML にツール名・FAQ・JSON-LD が含まれることを確認。「use client 問題」は存在しなかった
-- [x] **www vs 非 www 根本原因特定**: `NEXT_PUBLIC_SITE_URL` が `https://quicker-app.com` (非www) に設定されており、canonical・hreflang・OG・sitemap・robots.txt の URL がすべて誤っていることを確認
-- [x] **`public/robots.txt` 削除**: 静的ファイルが `app/robots.ts`（動的）より優先されるため競合を解消。`robots.ts` が env var を参照する形に統一
-- [x] **sitemap 確認**: 全 110 URL（52ツール×2言語 + 6固定ページ）が含まれていることを確認。URL は env var 修正後のリデプロイで自動修正される
+- [x] **SSR / SSG 調査**: 全ツールページは SSG（●）で静的生成済み。curl で HTML にツール名・FAQ・JSON-LD が含まれることを確認
+- [x] **www vs 非 www 根本原因特定**: `NEXT_PUBLIC_SITE_URL` が非 www だったため canonical・hreflang・OG・sitemap が誤っていた
+- [x] **`public/robots.txt` 削除**: `app/robots.ts`（動的）との競合を解消
+- [x] **S0 完了**: Vercel 環境変数 `NEXT_PUBLIC_SITE_URL=https://www.quicker-app.com` に修正・リデプロイ済み
+- [x] **S0' 完了**: Vercel リダイレクト 307 → 301（永続リダイレクト）に変更済み
 
 ### ✅ 完了済み（2026-04-14 — SEO改善セッション）
 
