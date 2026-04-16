@@ -70,6 +70,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     bodyFatCalculator,
     sleepCalculator,
     cssBoxShadow,
+    wcagContrastChecker,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -131,6 +132,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/body-fat-calculator.json"),
           import("../messages/ja/tools/sleep-calculator.json"),
           import("../messages/ja/tools/css-box-shadow.json"),
+          import("../messages/ja/tools/wcag-contrast-checker.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -191,6 +193,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/body-fat-calculator.json"),
           import("../messages/en/tools/sleep-calculator.json"),
           import("../messages/en/tools/css-box-shadow.json"),
+          import("../messages/en/tools/wcag-contrast-checker.json"),
         ]);
 
   return {
@@ -254,6 +257,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "body-fat-calculator": bodyFatCalculator.default,
       "sleep-calculator": sleepCalculator.default,
       "css-box-shadow": cssBoxShadow.default,
+      "wcag-contrast-checker": wcagContrastChecker.default,
     },
   };
 });

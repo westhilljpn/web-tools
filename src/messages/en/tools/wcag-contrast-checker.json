@@ -1,0 +1,55 @@
+{
+  "title": "WCAG Contrast Checker",
+  "description": "Check the contrast ratio between text and background colors against WCAG 2.1 AA and AAA standards. Get instant pass/fail results with a live preview.",
+  "keywords": ["wcag contrast checker", "color contrast ratio", "accessibility color checker", "wcag aa compliance", "text background contrast"],
+  "labels": {
+    "textColor": "Text Color",
+    "bgColor": "Background Color",
+    "contrastRatio": "Contrast Ratio",
+    "preview": "Preview",
+    "previewText": "Sample Text サンプルテキスト",
+    "levels": "WCAG 2.1 Results",
+    "normalText": "Normal text (below 18pt / 14pt bold)",
+    "largeText": "Large text (18pt+ / 14pt+ bold)",
+    "uiComponents": "UI Components & Graphics",
+    "pass": "Pass",
+    "fail": "Fail"
+  },
+  "ui": {
+    "swap": "Swap colors",
+    "copy": "copy",
+    "copied": "copied!"
+  },
+  "howToUse": [
+    {
+      "label": "Enter text and background colors",
+      "description": "Use the color picker or type a hex code (#RRGGBB) for both text and background colors. Use the swap button to reverse them instantly."
+    },
+    {
+      "label": "Check the contrast ratio",
+      "description": "The contrast ratio is calculated in real time. 21:1 is the maximum (black on white), and 1:1 is the minimum (same color on same color)."
+    },
+    {
+      "label": "Review the WCAG results",
+      "description": "Pass/fail results for AA and AAA levels are shown for normal text, large text, and UI components. The preview shows how your color combination actually looks."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is WCAG?",
+      "answer": "WCAG (Web Content Accessibility Guidelines) is an international web accessibility standard published by the W3C. It includes contrast ratio requirements to ensure that people with low vision or color blindness can read content on the web."
+    },
+    {
+      "question": "What is the difference between AA and AAA?",
+      "answer": "AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. AAA is stricter: 7:1 for normal text and 4.5:1 for large text. Most web projects aim for AA compliance as a minimum."
+    },
+    {
+      "question": "What counts as 'large text'?",
+      "answer": "WCAG defines large text as 18pt (approximately 24px) or larger for regular weight, or 14pt (approximately 18.67px) or larger for bold text. Large text is easier to read, so a lower contrast ratio is acceptable."
+    },
+    {
+      "question": "What is the standard for UI components?",
+      "answer": "UI elements like button borders, icons, and input field boundaries require a minimum contrast ratio of 3:1 against adjacent colors (WCAG 2.1 AA). This is a lower bar than for text, since these elements convey meaning through shape, not just color."
+    }
+  ]
+}

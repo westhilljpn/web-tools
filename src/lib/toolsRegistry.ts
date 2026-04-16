@@ -456,6 +456,13 @@ const tools: Tool[] = [
     component: "CssBoxShadow",
     updatedAt: "2026-04-17",
   },
+  {
+    slug: "wcag-contrast-checker",
+    category: "dev",
+    icon: "♿",
+    component: "WcagContrastChecker",
+    updatedAt: "2026-04-17",
+  },
 ];
 
 export default tools;
