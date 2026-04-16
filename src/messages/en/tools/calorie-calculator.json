@@ -1,0 +1,70 @@
+{
+  "title": "Calorie Calculator",
+  "description": "Calculate your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) using the Mifflin-St Jeor formula. Find your target calories for weight loss, maintenance, or gain.",
+  "keywords": ["calorie calculator", "BMR calculator", "TDEE calculator", "daily calorie needs", "weight loss calories"],
+  "labels": {
+    "male": "Male",
+    "female": "Female",
+    "age": "Age",
+    "ageUnit": "yrs",
+    "height": "Height",
+    "weight": "Weight",
+    "activityLevel": "Activity Level",
+    "bmr": "Basal Metabolic Rate (BMR)",
+    "tdee": "Daily Calorie Needs (TDEE)",
+    "targetTitle": "Target Calories by Goal"
+  },
+  "activity": {
+    "sedentary": "Sedentary (desk job, no exercise)",
+    "light": "Light exercise (1–3 days/week)",
+    "moderate": "Moderate exercise (3–5 days/week)",
+    "heavy": "Heavy exercise (6–7 days/week)",
+    "extreme": "Very intense exercise / physical labor"
+  },
+  "target": {
+    "loss": "Weight Loss",
+    "maintain": "Maintain",
+    "gain": "Weight Gain"
+  },
+  "ui": {
+    "copy": "copy",
+    "copied": "copied!",
+    "disclaimer": "Results are estimates only and not a substitute for medical or nutritional advice."
+  },
+  "howToUse": [
+    {
+      "label": "Enter your details",
+      "description": "Input your gender, age, height, and weight. Default values are pre-filled — just change the ones that differ."
+    },
+    {
+      "label": "Select your activity level",
+      "description": "Choose the option that best matches your typical weekly activity. When in doubt, start with 'Light exercise' and adjust based on your results."
+    },
+    {
+      "label": "View your results",
+      "description": "Your BMR and daily calorie needs (TDEE) are calculated instantly. Use the target section to see recommended calories for weight loss, maintenance, or gain."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is BMR (Basal Metabolic Rate)?",
+      "answer": "BMR is the number of calories your body burns at complete rest — just to keep you alive. It accounts for breathing, circulation, cell production, and other basic functions, and is determined by your weight, height, age, and sex."
+    },
+    {
+      "question": "What is the Mifflin-St Jeor formula?",
+      "answer": "Developed in 1990, the Mifflin-St Jeor equation is considered the most accurate BMR formula for most people. It calculates: Male: 10×weight + 6.25×height − 5×age + 5; Female: 10×weight + 6.25×height − 5×age − 161."
+    },
+    {
+      "question": "Which activity level should I choose?",
+      "answer": "Choose 'Sedentary' for desk jobs with no exercise, 'Light exercise' for 1–3 days of exercise per week, and 'Moderate exercise' for 3–5 days. Track your actual weight over 1–2 weeks and adjust if needed."
+    },
+    {
+      "question": "How accurate are these results?",
+      "answer": "The results are estimates based on population averages. Individual factors such as body composition, genetics, and health conditions affect actual calorie needs. This tool is not a substitute for medical or nutritional advice."
+    },
+    {
+      "question": "How many calories should I cut to lose weight?",
+      "answer": "A deficit of 500 kcal per day typically leads to about 0.5 kg (1 lb) of weight loss per week, which is generally considered a sustainable rate. Avoid extreme deficits as they can lower your metabolism over time."
+    }
+  ]
+}

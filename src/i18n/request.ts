@@ -66,6 +66,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     taxCalculator,
     readingTime,
     dateCalculator,
+    calorieCalculator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -123,6 +124,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/tax-calculator.json"),
           import("../messages/ja/tools/reading-time.json"),
           import("../messages/ja/tools/date-calculator.json"),
+          import("../messages/ja/tools/calorie-calculator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -179,6 +181,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/tax-calculator.json"),
           import("../messages/en/tools/reading-time.json"),
           import("../messages/en/tools/date-calculator.json"),
+          import("../messages/en/tools/calorie-calculator.json"),
         ]);
 
   return {
@@ -238,6 +241,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "tax-calculator": taxCalculator.default,
       "reading-time": readingTime.default,
       "date-calculator": dateCalculator.default,
+      "calorie-calculator": calorieCalculator.default,
     },
   };
 });

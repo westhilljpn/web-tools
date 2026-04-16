@@ -428,6 +428,13 @@ const tools: Tool[] = [
     component: "DateCalculator",
     updatedAt: "2026-04-17",
   },
+  {
+    slug: "calorie-calculator",
+    category: "lifestyle",
+    icon: "🔥",
+    component: "CalorieCalculator",
+    updatedAt: "2026-04-17",
+  },
 ];
 
 export default tools;
