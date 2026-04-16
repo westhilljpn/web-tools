@@ -1,0 +1,53 @@
+{
+  "title": "CSS Box Shadow Generator",
+  "description": "Visually generate CSS box-shadow code with a live preview. Adjust offset, blur, spread, color, and opacity — then copy the code with one click.",
+  "keywords": ["css box-shadow generator", "box shadow tool", "css shadow generator", "box-shadow code", "css drop shadow"],
+  "labels": {
+    "offsetX": "Horizontal Offset (X)",
+    "offsetY": "Vertical Offset (Y)",
+    "blur": "Blur Radius",
+    "spread": "Spread Radius",
+    "color": "Shadow Color",
+    "opacity": "Opacity",
+    "inset": "Inset (inner shadow)",
+    "preview": "Preview",
+    "cssCode": "CSS Code"
+  },
+  "ui": {
+    "copy": "copy",
+    "copied": "copied!",
+    "pxUnit": "px"
+  },
+  "howToUse": [
+    {
+      "label": "Adjust the parameters",
+      "description": "Use the sliders or input fields to set the X/Y offset, blur, and spread. You can also customize the shadow color and opacity."
+    },
+    {
+      "label": "Check the live preview",
+      "description": "The preview updates in real time as you adjust parameters. Fine-tune until the shadow looks exactly how you want."
+    },
+    {
+      "label": "Copy the CSS code",
+      "description": "Click 'copy' to copy the box-shadow value to your clipboard. Paste it directly into your stylesheet."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What does inset do?",
+      "answer": "Normally, shadows are drawn outside the element. With 'inset', the shadow appears inside the element's border. It's commonly used for pressed-button effects or to add depth to form inputs."
+    },
+    {
+      "question": "What's the difference between blur and spread?",
+      "answer": "Blur radius controls how soft the shadow edge is (0 = sharp). Spread radius expands or shrinks the shadow size (positive = larger, negative = smaller) before blur is applied."
+    },
+    {
+      "question": "Can I layer multiple shadows?",
+      "answer": "Yes — CSS allows multiple shadows separated by commas, e.g. `box-shadow: 2px 2px 4px red, -2px -2px 4px blue`. This tool generates one shadow at a time, but you can combine multiple generated values with a comma."
+    },
+    {
+      "question": "What do the values in the generated code mean?",
+      "answer": "The format is: `[inset] offsetX offsetY blur spread color`. For example: `4px 6px 8px 0px rgba(0,0,0,0.2)` means 4px right, 6px down, 8px blur, no spread, 20% black. Inset comes first if enabled."
+    }
+  ]
+}

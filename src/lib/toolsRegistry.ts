@@ -449,6 +449,13 @@ const tools: Tool[] = [
     component: "SleepCalculator",
     updatedAt: "2026-04-17",
   },
+  {
+    slug: "css-box-shadow",
+    category: "dev",
+    icon: "🎨",
+    component: "CssBoxShadow",
+    updatedAt: "2026-04-17",
+  },
 ];
 
 export default tools;
