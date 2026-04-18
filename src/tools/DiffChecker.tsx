@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 
 type DiffType = "equal" | "added" | "removed";
 interface DiffLine { type: DiffType; text: string; oldNum: number; newNum: number; }
@@ -53,16 +54,13 @@ export default function DiffChecker() {
   const [modified, setModified] = useState("");
   const [diff, setDiff] = useState<DiffLine[] | null>(null);
   const [changesOnly, setChangesOnly] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const debouncedOriginal = useDebounce(original, 300);
+  const debouncedModified = useDebounce(modified, 300);
 
   useEffect(() => {
-    if (timerRef.current) clearTimeout(timerRef.current);
-    if (!original && !modified) { setDiff(null); return; }
-    timerRef.current = setTimeout(() => {
-      setDiff(computeDiff(original, modified));
-    }, 500);
-    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
-  }, [original, modified]);
+    if (!debouncedOriginal && !debouncedModified) { setDiff(null); return; }
+    setDiff(computeDiff(debouncedOriginal, debouncedModified));
+  }, [debouncedOriginal, debouncedModified]);
 
   const handleSwap = () => { setOriginal(modified); setModified(original); };
   const handleClear = () => { setOriginal(""); setModified(""); setDiff(null); };

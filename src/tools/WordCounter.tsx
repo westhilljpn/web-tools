@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 
 function analyze(text: string) {
   if (!text.trim()) return null;
@@ -92,8 +93,9 @@ function StatCard({ label, value, highlight }: StatCardProps) {
 export default function WordCounter() {
   const t = useTranslations("word-counter");
   const [text, setText] = useState("");
+  const debouncedText = useDebounce(text, 300);
 
-  const stats = useMemo(() => analyze(text), [text]);
+  const stats = useMemo(() => analyze(debouncedText), [debouncedText]);
 
   return (
     <div className="space-y-5">

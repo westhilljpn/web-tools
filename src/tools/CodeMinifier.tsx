@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 
 type Lang = "js" | "css" | "html";
 
@@ -90,11 +91,12 @@ export default function CodeMinifier() {
   const [lang, setLang] = useState<Lang>("js");
   const [input, setInput] = useState("");
   const [copied, setCopied] = useState(false);
+  const debouncedInput = useDebounce(input, 300);
 
-  const output = useMemo(() => (input ? MINIFIERS[lang](input) : ""), [input, lang]);
+  const output = useMemo(() => (debouncedInput ? MINIFIERS[lang](debouncedInput) : ""), [debouncedInput, lang]);
 
-  const saved = input.length > 0
-    ? Math.round((1 - output.length / input.length) * 100)
+  const saved = debouncedInput.length > 0
+    ? Math.round((1 - output.length / debouncedInput.length) * 100)
     : 0;
 
   const handleCopy = async () => {

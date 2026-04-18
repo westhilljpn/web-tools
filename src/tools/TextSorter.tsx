@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 
 type SortMode = "az" | "za" | "lengthAsc" | "lengthDesc" | "random";
 
@@ -26,9 +27,10 @@ export default function TextSorter() {
   const [removeDupes, setRemoveDupes] = useState(false);
   const [removeEmpty, setRemoveEmpty] = useState(true);
   const [copied, setCopied] = useState(false);
+  const debouncedInput = useDebounce(input, 300);
 
   const output = useMemo(() => {
-    let lines = input.split("\n");
+    let lines = debouncedInput.split("\n");
     if (removeEmpty) lines = lines.filter(l => l.trim() !== "");
     if (removeDupes) {
       const seen = new Set<string>();
@@ -40,7 +42,7 @@ export default function TextSorter() {
       });
     }
     return sortLines(lines, mode, caseSensitive).join("\n");
-  }, [input, mode, caseSensitive, removeDupes, removeEmpty]);
+  }, [debouncedInput, mode, caseSensitive, removeDupes, removeEmpty]);
 
   async function handleCopy() {
     try {

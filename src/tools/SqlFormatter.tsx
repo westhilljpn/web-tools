@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 
 // ---- SQL フォーマッターロジック ----
 
@@ -208,12 +209,13 @@ export default function SqlFormatter() {
   const [indentSize, setIndentSize] = useState<2 | 4>(2);
   const [upperKw, setUpperKw] = useState(true);
   const [copied, setCopied] = useState(false);
+  const debouncedInput = useDebounce(input, 300);
 
   const output = useMemo(() => {
-    if (!input.trim()) return "";
-    try { return formatSQL(input, indentSize, upperKw); }
-    catch { return input; }
-  }, [input, indentSize, upperKw]);
+    if (!debouncedInput.trim()) return "";
+    try { return formatSQL(debouncedInput, indentSize, upperKw); }
+    catch { return debouncedInput; }
+  }, [debouncedInput, indentSize, upperKw]);
 
   async function handleCopy() {
     if (!output) return;

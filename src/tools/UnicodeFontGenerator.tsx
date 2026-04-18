@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 
 // ---- 変換ロジック ----
 
@@ -76,10 +77,11 @@ export default function UnicodeFontGenerator() {
   const t = useTranslations("unicode-font-generator");
   const [input, setInput] = useState("Hello World 123");
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const debouncedInput = useDebounce(input, 300);
 
   const results = useMemo(
-    () => STYLES.map(({ key, fn }) => ({ key, text: convert(input, fn) })),
-    [input]
+    () => STYLES.map(({ key, fn }) => ({ key, text: convert(debouncedInput, fn) })),
+    [debouncedInput]
   );
 
   const handleCopy = async (text: string, key: string) => {

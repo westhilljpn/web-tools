@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 
 // DOMノードをMarkdownテキストに再帰変換する
 function nodeToMd(node: Node): string {
@@ -91,8 +92,9 @@ export default function HtmlToMarkdown() {
   const t = useTranslations("html-to-markdown");
   const [input, setInput] = useState("");
   const [copied, setCopied] = useState(false);
+  const debouncedInput = useDebounce(input, 300);
 
-  const output = useMemo(() => (input.trim() ? htmlToMarkdown(input) : ""), [input]);
+  const output = useMemo(() => (debouncedInput.trim() ? htmlToMarkdown(debouncedInput) : ""), [debouncedInput]);
 
   async function handleCopy() {
     try {
