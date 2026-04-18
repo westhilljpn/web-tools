@@ -33,9 +33,11 @@ export default function TextDeduplicator() {
   }, [input, caseSensitive, trimWhitespace, removeEmpty]);
 
   async function handleCopy() {
-    await navigator.clipboard.writeText(output);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { }
   }
 
   return (

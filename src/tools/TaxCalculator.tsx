@@ -34,9 +34,11 @@ export default function TaxCalculator() {
   }
 
   const handleCopy = useCallback(async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    setCopied(text);
-    setTimeout(() => setCopied(""), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(text);
+      setTimeout(() => setCopied(""), 2000);
+    } catch { }
   }, []);
 
   const modes: Mode[] = ["toInclude", "toExclude", "reverse"];

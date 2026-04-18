@@ -56,9 +56,11 @@ export default function HtmlEncoder() {
 
   const handleCopy = async () => {
     if (!output) return;
-    await navigator.clipboard.writeText(output);
-    setToast(true);
-    setTimeout(() => setToast(false), 1800);
+    try {
+      await navigator.clipboard.writeText(output);
+      setToast(true);
+      setTimeout(() => setToast(false), 1800);
+    } catch { }
   };
 
   return (

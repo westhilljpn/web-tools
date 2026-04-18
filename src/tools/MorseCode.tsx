@@ -95,9 +95,11 @@ export default function MorseCode() {
   }
 
   const handleCopy = useCallback(async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { }
   }, []);
 
   const activeCode = tab === "encode" ? morseOutput : morseInput.trim();

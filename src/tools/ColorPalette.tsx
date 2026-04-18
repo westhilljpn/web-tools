@@ -134,7 +134,7 @@ export default function ColorPalette() {
   }, [input]);
 
   const handleCopy = (text: string, _label: string) => {
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(text).catch(() => {});
     setToast(text);
     setTimeout(() => setToast(""), 1800);
   };

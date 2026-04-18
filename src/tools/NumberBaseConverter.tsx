@@ -48,8 +48,10 @@ export default function NumberBaseConverter() {
   };
 
   const handleCopy = async (value: string) => {
-    await navigator.clipboard.writeText(value);
-    showToast(t("buttons.copy"));
+    try {
+      await navigator.clipboard.writeText(value);
+      showToast(t("buttons.copy"));
+    } catch { }
   };
 
   return (

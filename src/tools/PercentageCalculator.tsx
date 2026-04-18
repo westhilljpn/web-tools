@@ -70,9 +70,11 @@ export default function PercentageCalculator() {
 
   const copyResult = async () => {
     if (!result) return;
-    await navigator.clipboard.writeText(result.value);
-    setToast(true);
-    setTimeout(() => setToast(false), 1800);
+    try {
+      await navigator.clipboard.writeText(result.value);
+      setToast(true);
+      setTimeout(() => setToast(false), 1800);
+    } catch { }
   };
 
   const handleClear = () => { setA(""); setB(""); };

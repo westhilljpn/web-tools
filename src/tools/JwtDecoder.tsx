@@ -72,8 +72,10 @@ export default function JwtDecoder() {
   };
 
   const copyText = async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    showToast(t("results.copied"));
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast(t("results.copied"));
+    } catch { }
   };
 
   return (

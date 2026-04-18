@@ -77,9 +77,11 @@ export default function CssGradientGenerator() {
   }
 
   async function handleCopy() {
-    await navigator.clipboard.writeText(cssCode);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(cssCode);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch { }
   }
 
   const sortedStops = [...stops].sort((a, b) => a.pos - b.pos);

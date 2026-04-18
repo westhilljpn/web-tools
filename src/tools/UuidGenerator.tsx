@@ -30,14 +30,18 @@ export default function UuidGenerator() {
   };
 
   const handleCopyOne = async (uuid: string) => {
-    await navigator.clipboard.writeText(uuid);
-    showToast(t("results.copied"));
+    try {
+      await navigator.clipboard.writeText(uuid);
+      showToast(t("results.copied"));
+    } catch { }
   };
 
   const handleCopyAll = async () => {
     if (!uuids.length) return;
-    await navigator.clipboard.writeText(uuids.join("\n"));
-    showToast(t("results.copiedAll"));
+    try {
+      await navigator.clipboard.writeText(uuids.join("\n"));
+      showToast(t("results.copiedAll"));
+    } catch { }
   };
 
   const handleClear = () => setUuids([]);

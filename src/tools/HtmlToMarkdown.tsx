@@ -95,9 +95,11 @@ export default function HtmlToMarkdown() {
   const output = useMemo(() => (input.trim() ? htmlToMarkdown(input) : ""), [input]);
 
   async function handleCopy() {
-    await navigator.clipboard.writeText(output);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { }
   }
 
   return (

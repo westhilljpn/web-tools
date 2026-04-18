@@ -34,10 +34,12 @@ export default function GachaCalculator() {
 
   const currentProb = useMemo(() => cumProb(rate, pulls), [rate, pulls]);
 
-  function handleCopy() {
-    navigator.clipboard.writeText(`${currentProb.toFixed(2)}%`);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText(`${currentProb.toFixed(2)}%`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { }
   }
 
   const tableRows = useMemo(

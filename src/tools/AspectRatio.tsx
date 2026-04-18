@@ -73,9 +73,11 @@ export default function AspectRatio() {
   }, [rw, rh, knownSide, knownVal]);
 
   const copy = async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    setToast(text);
-    setTimeout(() => setToast(""), 1800);
+    try {
+      await navigator.clipboard.writeText(text);
+      setToast(text);
+      setTimeout(() => setToast(""), 1800);
+    } catch { }
   };
 
   return (

@@ -50,9 +50,11 @@ export default function TextToSlug() {
 
   const handleCopy = async () => {
     if (!slug) return;
-    await navigator.clipboard.writeText(slug);
-    setToast(true);
-    setTimeout(() => setToast(false), 1800);
+    try {
+      await navigator.clipboard.writeText(slug);
+      setToast(true);
+      setTimeout(() => setToast(false), 1800);
+    } catch { }
   };
 
   return (

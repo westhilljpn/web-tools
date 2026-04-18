@@ -261,9 +261,11 @@ export default function CronParser() {
   }, [expr, locale]);
 
   const handleCopy = async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    setToast(true);
-    setTimeout(() => setToast(false), 1800);
+    try {
+      await navigator.clipboard.writeText(text);
+      setToast(true);
+      setTimeout(() => setToast(false), 1800);
+    } catch { }
   };
 
   const fields = expr.trim().split(/\s+/);

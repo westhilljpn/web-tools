@@ -73,9 +73,11 @@ export default function DateCalculator() {
   }, [startDate, endDate]);
 
   const handleCopy = async (key: string, text: string) => {
-    await navigator.clipboard.writeText(text);
-    setCopiedKey(key);
-    setTimeout(() => setCopiedKey(""), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedKey(key);
+      setTimeout(() => setCopiedKey(""), 2000);
+    } catch { }
   };
 
   // 結果カード定義

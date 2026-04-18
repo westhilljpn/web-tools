@@ -94,9 +94,11 @@ export default function IpInfo() {
       `${t("fields.localIP")}: ${ipStr}`,
       `${t("fields.userAgent")}: ${info.userAgent}`,
     ];
-    await navigator.clipboard.writeText(lines.join("\n"));
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(lines.join("\n"));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch { }
   };
 
   if (!info) {

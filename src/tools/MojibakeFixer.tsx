@@ -71,9 +71,11 @@ export default function MojibakeFixer() {
   }, [input]);
 
   async function handleCopy(text: string, id: string) {
-    await navigator.clipboard.writeText(text);
-    setCopiedId(id);
-    setTimeout(() => setCopiedId(null), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch { }
   }
 
   return (

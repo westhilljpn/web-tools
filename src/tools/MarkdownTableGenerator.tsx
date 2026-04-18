@@ -62,9 +62,11 @@ export default function MarkdownTableGenerator() {
   }, [cells, aligns]);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(markdown);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(markdown);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch { }
   };
 
   return (

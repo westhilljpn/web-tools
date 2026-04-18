@@ -54,9 +54,11 @@ export default function RomanNumerals() {
   const romErr = !!romInput.trim() && isNaN(fromVal);
 
   async function handleCopy(text: string) {
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { }
   }
 
   return (

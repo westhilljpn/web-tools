@@ -69,9 +69,11 @@ export default function ColorMixer() {
   const mixedHex = mixed ? rgbToHex(...mixed) : "";
 
   const handleCopy = useCallback(async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    setCopied(text);
-    setTimeout(() => setCopied(""), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(text);
+      setTimeout(() => setCopied(""), 2000);
+    } catch { }
   }, []);
 
   return (

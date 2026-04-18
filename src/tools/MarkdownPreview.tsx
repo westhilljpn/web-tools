@@ -54,8 +54,10 @@ export default function MarkdownPreview() {
 
   const handleCopy = async () => {
     if (!input) return;
-    await navigator.clipboard.writeText(input);
-    showToast(t("toast.copied"));
+    try {
+      await navigator.clipboard.writeText(input);
+      showToast(t("toast.copied"));
+    } catch { }
   };
 
   const handleSample = () => setInput(SAMPLE);

@@ -55,14 +55,18 @@ export default function HashGenerator() {
   const handleCopy = async (algo: Algorithm) => {
     const h = hashes[algo];
     if (!h) return;
-    await navigator.clipboard.writeText(show(h));
-    showToast(t("toast.copied"));
+    try {
+      await navigator.clipboard.writeText(show(h));
+      showToast(t("toast.copied"));
+    } catch { }
   };
 
   const handleCopyMd5 = async () => {
     if (!md5Hash) return;
-    await navigator.clipboard.writeText(show(md5Hash));
-    showToast(t("toast.copied"));
+    try {
+      await navigator.clipboard.writeText(show(md5Hash));
+      showToast(t("toast.copied"));
+    } catch { }
   };
 
   const hasOutput = Boolean(md5Hash) || ALGORITHMS.some((a) => hashes[a]);

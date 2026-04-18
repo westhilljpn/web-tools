@@ -43,9 +43,11 @@ export default function TextSorter() {
   }, [input, mode, caseSensitive, removeDupes, removeEmpty]);
 
   async function handleCopy() {
-    await navigator.clipboard.writeText(output);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { }
   }
 
   const MODES: { key: SortMode; label: string }[] = [
