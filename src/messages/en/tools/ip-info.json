@@ -1,6 +1,6 @@
 {
   "title": "Browser Environment Info",
-  "description": "View your browser, OS, screen resolution, timezone, language, and local IP — read directly in your browser.",
+  "description": "View your browser, OS, screen resolution, timezone, language, and IP — nothing sent to any server.",
   "keywords": [
     "browser info",
     "my browser",
