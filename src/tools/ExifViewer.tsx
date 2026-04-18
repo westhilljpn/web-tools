@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 // ── EXIF Parser ────────────────────────────────────────────────────────────
@@ -115,7 +115,7 @@ function parseExif(buffer: ArrayBuffer): ExifResult | null {
       if (e === 0x45 && x === 0x78 && i === 0x69 && f === 0x66) {
         const tiffStart = off + 10;
         const tiffLen = segLen - 8;
-        if (tiffStart + tiffLen > view.byteLength) return null;
+        if (tiffLen <= 0 || tiffStart + tiffLen > view.byteLength) return null;
         const tv = new DataView(buffer, tiffStart, tiffLen);
         const bo = tv.getUint16(0);
         const le = bo === 0x4949;
@@ -208,14 +208,15 @@ export default function ExifViewer() {
       if (!result) { setError("noExif"); setExif(null); }
       else { setExif(result); setError(null); }
     };
+    reader.onerror = () => { setError("noExif"); setExif(null); };
     reader.readAsArrayBuffer(file);
   }
 
-  const handleDrop = useCallback((e: React.DragEvent) => {
+  function handleDrop(e: React.DragEvent) {
     e.preventDefault(); setDragging(false);
     const file = e.dataTransfer.files[0];
     if (file) processFile(file);
-  }, []);
+  }
 
   async function copyTag(tag: string, val: string) {
     try {
