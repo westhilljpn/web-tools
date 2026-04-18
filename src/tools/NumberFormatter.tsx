@@ -3,19 +3,33 @@
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 
-function toJapaneseUnit(n: number, dec: number): string {
-  const abs = Math.abs(n);
+function toJapaneseUnit(n: number): string {
+  const abs = Math.floor(Math.abs(n));
   const sign = n < 0 ? "-" : "";
-  if (abs >= 1_0000_0000_0000) {
-    return `${sign}${(abs / 1_0000_0000_0000).toFixed(dec)}兆`;
+
+  const CHOU = 1_000_000_000_000;
+  const OKU = 100_000_000;
+  const MAN = 10_000;
+
+  if (abs >= CHOU) {
+    const chouPart = Math.floor(abs / CHOU);
+    const okuPart = Math.floor((abs % CHOU) / OKU);
+    return okuPart > 0 ? `${sign}${chouPart}兆${okuPart}億` : `${sign}${chouPart}兆`;
   }
-  if (abs >= 1_0000_0000) {
-    return `${sign}${(abs / 1_0000_0000).toFixed(dec)}億`;
+
+  if (abs >= OKU) {
+    const okuPart = Math.floor(abs / OKU);
+    const manPart = Math.floor((abs % OKU) / MAN);
+    return manPart > 0 ? `${sign}${okuPart}億${manPart}万` : `${sign}${okuPart}億`;
   }
-  if (abs >= 1_0000) {
-    return `${sign}${(abs / 1_0000).toFixed(dec)}万`;
+
+  if (abs >= MAN) {
+    const manPart = Math.floor(abs / MAN);
+    const remainder = abs % MAN;
+    return remainder > 0 ? `${sign}${manPart}万${remainder}` : `${sign}${manPart}万`;
   }
-  return `${sign}${abs.toFixed(dec)}`;
+
+  return `${sign}${abs}`;
 }
 
 type FormatItem = { key: string; label: string; value: string };
@@ -80,7 +94,7 @@ export default function NumberFormatter() {
       {
         key: "jpUnit",
         label: t("formats.jpUnit"),
-        value: toJapaneseUnit(n, decimals),
+        value: toJapaneseUnit(n),
       },
     ];
   }, [n, decimals, isValid, t]);
@@ -118,7 +132,7 @@ export default function NumberFormatter() {
             className="px-3 py-2 border border-gray-300 rounded-lg text-sm
                        focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
           >
-            {[0, 1, 2, 3, 4].map((d) => (
+            {[0, 1, 2, 3, 4, 5, 6].map((d) => (
               <option key={d} value={d}>
                 {d}
               </option>
