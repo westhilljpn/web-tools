@@ -1,7 +1,14 @@
 {
   "title": "Text Diff Checker",
-  "description": "Free online text diff tool. Paste two texts and instantly see added, removed, and unchanged lines highlighted side by side. Perfect for comparing code, documents, and configs.",
-  "keywords": ["diff checker", "text compare", "line diff", "code diff", "text difference", "compare text online"],
+  "description": "Compare two texts and see added, removed, and unchanged lines side by side. Perfect for code, documents, and configs.",
+  "keywords": [
+    "diff checker",
+    "text compare",
+    "line diff",
+    "code diff",
+    "text difference",
+    "compare text online"
+  ],
   "label": "",
   "placeholder": {
     "original": "Paste original text here…",
@@ -25,10 +32,22 @@
     "unchanged": "unchanged"
   },
   "howToUse": [
-    { "label": "Paste original text", "description": "Enter the original (before) text in the left field." },
-    { "label": "Paste modified text", "description": "Enter the modified (after) text in the right field." },
-    { "label": "View the diff", "description": "The diff updates automatically. Green lines are additions, red lines are deletions, and white lines are unchanged." },
-    { "label": "Filter results", "description": "Click \"Show changes only\" to hide unchanged lines and focus on what actually changed." }
+    {
+      "label": "Paste original text",
+      "description": "Enter the original (before) text in the left field."
+    },
+    {
+      "label": "Paste modified text",
+      "description": "Enter the modified (after) text in the right field."
+    },
+    {
+      "label": "View the diff",
+      "description": "The diff updates automatically. Green lines are additions, red lines are deletions, and white lines are unchanged."
+    },
+    {
+      "label": "Filter results",
+      "description": "Click \"Show changes only\" to hide unchanged lines and focus on what actually changed."
+    }
   ],
   "faq": [
     {

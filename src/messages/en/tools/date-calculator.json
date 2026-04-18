@@ -1,7 +1,13 @@
 {
   "title": "Date Difference Calculator",
-  "description": "Calculate the difference between two dates in days, weeks, months, and years. Perfect for project planning, anniversaries, and deadline tracking.",
-  "keywords": ["date calculator", "days between dates", "date difference", "how many days", "date counter"],
+  "description": "Calculate the difference between two dates in days, weeks, months, and years. Great for planning and deadline tracking.",
+  "keywords": [
+    "date calculator",
+    "days between dates",
+    "date difference",
+    "how many days",
+    "date counter"
+  ],
   "labels": {
     "startDate": "Start Date",
     "endDate": "End Date",

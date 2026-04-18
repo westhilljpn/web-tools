@@ -1,7 +1,13 @@
 {
   "title": "Calorie Calculator",
-  "description": "Calculate your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) using the Mifflin-St Jeor formula. Find your target calories for weight loss, maintenance, or gain.",
-  "keywords": ["calorie calculator", "BMR calculator", "TDEE calculator", "daily calorie needs", "weight loss calories"],
+  "description": "Calculate BMR and TDEE with the Mifflin-St Jeor formula. Find target calories for weight loss, maintenance, or gain.",
+  "keywords": [
+    "calorie calculator",
+    "BMR calculator",
+    "TDEE calculator",
+    "daily calorie needs",
+    "weight loss calories"
+  ],
   "labels": {
     "male": "Male",
     "female": "Female",

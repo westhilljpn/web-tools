@@ -1,7 +1,14 @@
 {
   "title": "Image Format Converter",
-  "description": "Free online image converter. Convert PNG, JPG, WebP, BMP, and HEIC files to any format. Batch convert with ZIP download. All processing happens in your browser — your files never leave your device.",
-  "keywords": ["image converter", "PNG to JPG", "JPG to WebP", "HEIC converter", "batch image convert", "free image converter"],
+  "description": "Convert PNG, JPG, WebP, BMP, and HEIC to any format. Batch convert with ZIP download — all in your browser.",
+  "keywords": [
+    "image converter",
+    "PNG to JPG",
+    "JPG to WebP",
+    "HEIC converter",
+    "batch image convert",
+    "free image converter"
+  ],
   "label": "",
   "placeholder": "",
   "buttons": {
@@ -37,10 +44,22 @@
     "conversionFailed": "Conversion failed"
   },
   "howToUse": [
-    { "label": "Select output format", "description": "Choose the target format: JPEG, PNG, or WebP." },
-    { "label": "Add images", "description": "Drag and drop images onto the drop zone, or click to browse. Supports PNG, JPG, WebP, BMP, and HEIC." },
-    { "label": "Convert", "description": "Click the Convert button to process all files in your browser." },
-    { "label": "Download", "description": "Download each file individually, or click \"Download ZIP\" to get all converted images in a single archive." }
+    {
+      "label": "Select output format",
+      "description": "Choose the target format: JPEG, PNG, or WebP."
+    },
+    {
+      "label": "Add images",
+      "description": "Drag and drop images onto the drop zone, or click to browse. Supports PNG, JPG, WebP, BMP, and HEIC."
+    },
+    {
+      "label": "Convert",
+      "description": "Click the Convert button to process all files in your browser."
+    },
+    {
+      "label": "Download",
+      "description": "Download each file individually, or click \"Download ZIP\" to get all converted images in a single archive."
+    }
   ],
   "faq": [
     {

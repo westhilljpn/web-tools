@@ -1,11 +1,26 @@
 {
   "title": "HTML Encoder / Decoder",
-  "description": "Free online HTML entity encoder and decoder. Instantly encode special characters to HTML entities (&amp;, &lt;, &gt;, &quot;) or decode them back. Supports named and numeric entities.",
-  "keywords": ["HTML encoder", "HTML decoder", "HTML entities", "HTML escape", "encode HTML", "decode HTML entities", "&amp; &lt; &gt;"],
+  "description": "Encode special characters to HTML entities (&amp;, &lt;, &gt;) or decode them back. Supports named and numeric entities.",
+  "keywords": [
+    "HTML encoder",
+    "HTML decoder",
+    "HTML entities",
+    "HTML escape",
+    "encode HTML",
+    "decode HTML entities",
+    "&amp; &lt; &gt;"
+  ],
   "label": "",
   "placeholder": "",
-  "buttons": { "copy": "Copy", "clear": "Clear", "swap": "Swap ⇅" },
-  "results": { "empty": "Enter text to encode or decode", "copied": "Copied!" },
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear",
+    "swap": "Swap ⇅"
+  },
+  "results": {
+    "empty": "Enter text to encode or decode",
+    "copied": "Copied!"
+  },
   "options": {
     "mode": "Mode",
     "encode": "Encode",
@@ -13,11 +28,23 @@
     "encodeAll": "Encode all characters (numeric)",
     "encodeSpecial": "Encode special characters only"
   },
-  "labels": { "input": "Input", "output": "Output" },
+  "labels": {
+    "input": "Input",
+    "output": "Output"
+  },
   "howToUse": [
-    { "label": "Choose mode", "description": "Select \"Encode\" to convert special characters to HTML entities, or \"Decode\" to convert entities back to plain text." },
-    { "label": "Paste text", "description": "Enter your text in the input field. The result updates automatically." },
-    { "label": "Copy the result", "description": "Click \"Copy\" to copy the output, or \"Swap\" to reverse the input and output." }
+    {
+      "label": "Choose mode",
+      "description": "Select \"Encode\" to convert special characters to HTML entities, or \"Decode\" to convert entities back to plain text."
+    },
+    {
+      "label": "Paste text",
+      "description": "Enter your text in the input field. The result updates automatically."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Click \"Copy\" to copy the output, or \"Swap\" to reverse the input and output."
+    }
   ],
   "faq": [
     {

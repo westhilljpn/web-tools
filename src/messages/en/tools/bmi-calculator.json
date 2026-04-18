@@ -1,6 +1,6 @@
 {
   "title": "BMI Calculator",
-  "description": "Calculate your Body Mass Index (BMI) instantly from your height and weight. Get your weight category (underweight, normal, overweight, obese) and see how far you are from a healthy weight. Supports both metric and imperial units.",
+  "description": "Calculate your BMI from height and weight. Get your weight category and see how far you are from a healthy range.",
   "keywords": [
     "BMI calculator",
     "body mass index",

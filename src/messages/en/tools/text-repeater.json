@@ -1,7 +1,13 @@
 {
   "title": "Text Repeater",
-  "description": "Repeat any text a specified number of times with a custom separator. Perfect for generating test data, dummy content, or repeated patterns.",
-  "keywords": ["text repeater", "repeat text", "duplicate text", "text generator", "string repeat"],
+  "description": "Repeat any text a set number of times with a custom separator. Perfect for test data and repeated patterns. Free tool.",
+  "keywords": [
+    "text repeater",
+    "repeat text",
+    "duplicate text",
+    "text generator",
+    "string repeat"
+  ],
   "placeholder": "Enter text to repeat...",
   "copy": "Copy",
   "copied": "Copied!",
@@ -15,11 +21,11 @@
     "output": "Output"
   },
   "separators": {
-    "none":    "None",
+    "none": "None",
     "newline": "New Line",
-    "space":   "Space",
-    "comma":   "Comma + Space",
-    "custom":  "Custom..."
+    "space": "Space",
+    "comma": "Comma + Space",
+    "custom": "Custom..."
   },
   "howToUse": [
     {

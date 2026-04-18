@@ -1,6 +1,6 @@
 {
   "title": "Reading Time Calculator",
-  "description": "Count characters and words, then estimate reading time and speech time for any text. Supports Japanese and English. Free online tool.",
+  "description": "Count characters and words, then estimate reading and speech time for any text. Supports Japanese and English.",
   "keywords": [
     "reading time calculator",
     "reading time estimator",
@@ -9,9 +9,15 @@
     "blog reading time",
     "text reading speed"
   ],
-  "lang": { "ja": "Japanese", "en": "English" },
+  "lang": {
+    "ja": "Japanese",
+    "en": "English"
+  },
   "wpmLabel": "Reading speed",
-  "unit": { "ja": "chars/min", "en": "words/min" },
+  "unit": {
+    "ja": "chars/min",
+    "en": "words/min"
+  },
   "inputLabel": "Text",
   "placeholder": "Paste your text here…",
   "readingTime": "Reading Time",

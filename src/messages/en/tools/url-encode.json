@@ -1,6 +1,6 @@
 {
   "title": "URL Encoder / Decoder",
-  "description": "Encode text to percent-encoded URL format or decode URL-encoded strings. Handles Unicode and Japanese characters. Free online tool.",
+  "description": "Encode text to percent-encoded URL format or decode URL strings. Handles Unicode and Japanese characters. Free tool.",
   "keywords": [
     "URL encode",
     "URL decode",

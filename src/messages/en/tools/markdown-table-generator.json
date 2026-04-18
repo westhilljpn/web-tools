@@ -1,7 +1,13 @@
 {
   "title": "Markdown Table Generator",
-  "description": "Create Markdown tables visually. Edit cells, add or remove rows and columns, set column alignment, and copy the result instantly.",
-  "keywords": ["markdown table", "markdown table generator", "table generator", "github markdown table", "markdown syntax"],
+  "description": "Create Markdown tables visually. Edit cells, add rows and columns, set alignment, and copy the result instantly.",
+  "keywords": [
+    "markdown table",
+    "markdown table generator",
+    "table generator",
+    "github markdown table",
+    "markdown syntax"
+  ],
   "addRow": "Add Row",
   "removeRow": "Remove Row",
   "addCol": "Add Column",
@@ -10,9 +16,9 @@
   "copy": "Copy",
   "copied": "Copied!",
   "align": {
-    "left":   "Left",
+    "left": "Left",
     "center": "Center",
-    "right":  "Right"
+    "right": "Right"
   },
   "howToUse": [
     {

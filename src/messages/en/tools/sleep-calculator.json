@@ -1,7 +1,13 @@
 {
   "title": "Sleep Calculator",
-  "description": "Calculate the best times to go to bed or wake up based on 90-minute sleep cycles. Wake up feeling refreshed by timing your sleep to natural cycle boundaries.",
-  "keywords": ["sleep calculator", "what time should i sleep", "sleep cycle calculator", "best time to wake up", "bedtime calculator"],
+  "description": "Find the best bedtime or wake-up time based on 90-minute sleep cycles. Wake up refreshed at natural cycle boundaries.",
+  "keywords": [
+    "sleep calculator",
+    "what time should i sleep",
+    "sleep cycle calculator",
+    "best time to wake up",
+    "bedtime calculator"
+  ],
   "modes": {
     "toBedtime": "Wake-up → Bedtime",
     "toWakeup": "Bedtime → Wake-up"

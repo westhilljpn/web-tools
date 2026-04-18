@@ -1,13 +1,31 @@
 {
   "title": "JSON ↔ CSV Converter",
-  "description": "Free online JSON to CSV and CSV to JSON converter. Paste your data, convert instantly in the browser with no upload required. Supports quoted fields and nested values.",
-  "keywords": ["json to csv", "csv to json", "json csv converter", "convert json", "convert csv"],
+  "description": "Convert JSON to CSV or CSV to JSON in your browser. Supports quoted fields and nested values. No upload required.",
+  "keywords": [
+    "json to csv",
+    "csv to json",
+    "json csv converter",
+    "convert json",
+    "convert csv"
+  ],
   "label": "",
   "placeholder": "",
-  "buttons": { "copy": "Copy", "clear": "Clear" },
-  "results": { "empty": "", "copied": "Copied!" },
-  "limitCheck": { "title": "", "unit": "", "over": "" },
-  "toast": { "copied": "Copied!" },
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "results": {
+    "empty": "",
+    "copied": "Copied!"
+  },
+  "limitCheck": {
+    "title": "",
+    "unit": "",
+    "over": ""
+  },
+  "toast": {
+    "copied": "Copied!"
+  },
   "json2csv": "JSON → CSV",
   "csv2json": "CSV → JSON",
   "input": "Input",
@@ -19,9 +37,18 @@
   "placeholderJson": "[\n  { \"id\": 1, \"name\": \"Alice\" },\n  { \"id\": 2, \"name\": \"Bob\" }\n]",
   "placeholderCsv": "id,name\n1,Alice\n2,Bob",
   "howToUse": [
-    { "label": "Select direction", "description": "Choose JSON → CSV to convert a JSON array to CSV, or CSV → JSON to parse a CSV file into a JSON array." },
-    { "label": "Paste your data", "description": "Paste your JSON array or CSV text into the left panel. Conversion happens automatically as you type." },
-    { "label": "Copy the result", "description": "Click the Copy button above the output to copy the result to your clipboard. Use ⇄ Swap to flip the direction using the current output as new input." }
+    {
+      "label": "Select direction",
+      "description": "Choose JSON → CSV to convert a JSON array to CSV, or CSV → JSON to parse a CSV file into a JSON array."
+    },
+    {
+      "label": "Paste your data",
+      "description": "Paste your JSON array or CSV text into the left panel. Conversion happens automatically as you type."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Click the Copy button above the output to copy the result to your clipboard. Use ⇄ Swap to flip the direction using the current output as new input."
+    }
   ],
   "faq": [
     {

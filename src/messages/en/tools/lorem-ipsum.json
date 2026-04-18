@@ -1,7 +1,13 @@
 {
   "title": "Lorem Ipsum Generator",
-  "description": "Free online Lorem Ipsum generator. Generate placeholder text by paragraphs, sentences, or words. Supports both classic Latin Lorem Ipsum and Japanese dummy text.",
-  "keywords": ["lorem ipsum generator", "placeholder text", "dummy text", "filler text", "ダミーテキスト"],
+  "description": "Generate Lorem Ipsum text by paragraphs, sentences, or words. Supports classic Latin and Japanese dummy text. Free tool.",
+  "keywords": [
+    "lorem ipsum generator",
+    "placeholder text",
+    "dummy text",
+    "filler text",
+    "ダミーテキスト"
+  ],
   "label": "",
   "placeholder": "",
   "buttons": {
@@ -25,10 +31,22 @@
     "startWithLorem": "Start with \"Lorem ipsum\""
   },
   "howToUse": [
-    { "label": "Choose unit", "description": "Select whether to generate by paragraphs, sentences, or words." },
-    { "label": "Set count", "description": "Enter how many units to generate." },
-    { "label": "Select language", "description": "Choose between classic Latin Lorem Ipsum or Japanese dummy text." },
-    { "label": "Generate and copy", "description": "Click \"Generate\", then \"Copy\" to paste the text into your project." }
+    {
+      "label": "Choose unit",
+      "description": "Select whether to generate by paragraphs, sentences, or words."
+    },
+    {
+      "label": "Set count",
+      "description": "Enter how many units to generate."
+    },
+    {
+      "label": "Select language",
+      "description": "Choose between classic Latin Lorem Ipsum or Japanese dummy text."
+    },
+    {
+      "label": "Generate and copy",
+      "description": "Click \"Generate\", then \"Copy\" to paste the text into your project."
+    }
   ],
   "faq": [
     {

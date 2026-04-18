@@ -1,11 +1,25 @@
 {
   "title": "Aspect Ratio Calculator",
-  "description": "Free online aspect ratio calculator. Calculate aspect ratios, find missing dimensions, and convert between sizes while maintaining proportions. Perfect for video, photo, and web design.",
-  "keywords": ["aspect ratio calculator", "image ratio", "video resolution", "16:9 calculator", "resize proportionally", "screen ratio"],
+  "description": "Calculate aspect ratios, find missing dimensions, and resize while keeping proportions. Perfect for video and web.",
+  "keywords": [
+    "aspect ratio calculator",
+    "image ratio",
+    "video resolution",
+    "16:9 calculator",
+    "resize proportionally",
+    "screen ratio"
+  ],
   "label": "",
   "placeholder": "",
-  "buttons": { "copy": "Copy", "clear": "Clear", "calculate": "Calculate" },
-  "results": { "empty": "Enter dimensions to calculate the aspect ratio", "copied": "Copied!" },
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear",
+    "calculate": "Calculate"
+  },
+  "results": {
+    "empty": "Enter dimensions to calculate the aspect ratio",
+    "copied": "Copied!"
+  },
   "labels": {
     "width": "Width",
     "height": "Height",
@@ -21,9 +35,18 @@
     "fromRatio": "From ratio + one side"
   },
   "howToUse": [
-    { "label": "Enter dimensions", "description": "Type a width and height in pixels (or any unit). The aspect ratio is calculated instantly." },
-    { "label": "Find a missing dimension", "description": "Switch to the second mode, enter the ratio and one dimension to calculate the other proportionally." },
-    { "label": "Compare to common ratios", "description": "The tool shows the nearest common aspect ratios (16:9, 4:3, 1:1, etc.) for reference." }
+    {
+      "label": "Enter dimensions",
+      "description": "Type a width and height in pixels (or any unit). The aspect ratio is calculated instantly."
+    },
+    {
+      "label": "Find a missing dimension",
+      "description": "Switch to the second mode, enter the ratio and one dimension to calculate the other proportionally."
+    },
+    {
+      "label": "Compare to common ratios",
+      "description": "The tool shows the nearest common aspect ratios (16:9, 4:3, 1:1, etc.) for reference."
+    }
   ],
   "faq": [
     {

@@ -1,11 +1,23 @@
 {
   "title": "Color Palette Generator",
-  "description": "Free online color palette generator. Enter a base color and instantly generate complementary, analogous, triadic, and split-complementary harmonies, plus tints and shades. Copy any color as HEX, RGB, or HSL.",
-  "keywords": ["color palette generator", "color harmony", "complementary colors", "color scheme", "color wheel", "color theory"],
+  "description": "Generate complementary, analogous, triadic harmonies from any base color. Copy any color as HEX, RGB, or HSL.",
+  "keywords": [
+    "color palette generator",
+    "color harmony",
+    "complementary colors",
+    "color scheme",
+    "color wheel",
+    "color theory"
+  ],
   "label": "",
   "placeholder": "#3b82f6",
-  "buttons": { "copy": "Copy", "copied": "Copied!" },
-  "results": { "empty": "Enter a hex color to generate a palette" },
+  "buttons": {
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "results": {
+    "empty": "Enter a hex color to generate a palette"
+  },
   "labels": {
     "baseColor": "Base color",
     "complementary": "Complementary",
@@ -19,9 +31,18 @@
     "copyHsl": "Copy HSL"
   },
   "howToUse": [
-    { "label": "Enter a base color", "description": "Type a HEX color code (e.g. #3b82f6) or click the color picker." },
-    { "label": "Explore harmonies", "description": "The tool generates complementary, analogous, triadic, and split-complementary color schemes automatically." },
-    { "label": "Copy any color", "description": "Click any swatch to copy it as HEX, RGB, or HSL." }
+    {
+      "label": "Enter a base color",
+      "description": "Type a HEX color code (e.g. #3b82f6) or click the color picker."
+    },
+    {
+      "label": "Explore harmonies",
+      "description": "The tool generates complementary, analogous, triadic, and split-complementary color schemes automatically."
+    },
+    {
+      "label": "Copy any color",
+      "description": "Click any swatch to copy it as HEX, RGB, or HSL."
+    }
   ],
   "faq": [
     {

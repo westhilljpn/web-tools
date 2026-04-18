@@ -1,7 +1,14 @@
 {
   "title": "UUID Generator",
-  "description": "Free online UUID v4 generator. Instantly create one or multiple unique identifiers. No libraries required — generated entirely in your browser using the Web Crypto API.",
-  "keywords": ["UUID generator", "UUID v4", "GUID generator", "unique ID", "random UUID", "crypto.randomUUID"],
+  "description": "Generate UUID v4 identifiers in your browser using the Web Crypto API. Create one or many — no libraries required.",
+  "keywords": [
+    "UUID generator",
+    "UUID v4",
+    "GUID generator",
+    "unique ID",
+    "random UUID",
+    "crypto.randomUUID"
+  ],
   "label": "",
   "placeholder": "",
   "buttons": {
@@ -20,10 +27,22 @@
     "hyphens": "Include hyphens"
   },
   "howToUse": [
-    { "label": "Set count", "description": "Choose how many UUIDs to generate (1–100)." },
-    { "label": "Configure format", "description": "Toggle uppercase and hyphen options to match your needs." },
-    { "label": "Generate", "description": "Click \"Generate\" to create fresh UUID v4 values." },
-    { "label": "Copy", "description": "Click any UUID to copy it, or use \"Copy All\" to copy the full list." }
+    {
+      "label": "Set count",
+      "description": "Choose how many UUIDs to generate (1–100)."
+    },
+    {
+      "label": "Configure format",
+      "description": "Toggle uppercase and hyphen options to match your needs."
+    },
+    {
+      "label": "Generate",
+      "description": "Click \"Generate\" to create fresh UUID v4 values."
+    },
+    {
+      "label": "Copy",
+      "description": "Click any UUID to copy it, or use \"Copy All\" to copy the full list."
+    }
   ],
   "faq": [
     {

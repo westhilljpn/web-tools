@@ -1,7 +1,14 @@
 {
   "title": "Word Counter",
-  "description": "Free online word counter. Count words, characters, sentences, and paragraphs instantly. Estimates reading time and speaking time. Perfect for essays, articles, and social media posts.",
-  "keywords": ["word counter", "character counter", "word count tool", "reading time calculator", "text analyzer", "character count"],
+  "description": "Count words, characters, sentences, and paragraphs instantly. Estimates reading and speaking time. Free online tool.",
+  "keywords": [
+    "word counter",
+    "character counter",
+    "word count tool",
+    "reading time calculator",
+    "text analyzer",
+    "character count"
+  ],
   "label": "",
   "placeholder": "Paste or type your text here…",
   "buttons": {
@@ -27,9 +34,18 @@
     "topWords": "Top words"
   },
   "howToUse": [
-    { "label": "Paste your text", "description": "Type or paste any text into the field above." },
-    { "label": "View stats instantly", "description": "Word count, character count, sentences, paragraphs, and reading time update in real time." },
-    { "label": "Check reading time", "description": "Reading time is estimated at 200 words per minute (average adult reading speed). Speaking time is estimated at 130 words per minute." }
+    {
+      "label": "Paste your text",
+      "description": "Type or paste any text into the field above."
+    },
+    {
+      "label": "View stats instantly",
+      "description": "Word count, character count, sentences, paragraphs, and reading time update in real time."
+    },
+    {
+      "label": "Check reading time",
+      "description": "Reading time is estimated at 200 words per minute (average adult reading speed). Speaking time is estimated at 130 words per minute."
+    }
   ],
   "faq": [
     {

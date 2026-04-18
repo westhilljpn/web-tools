@@ -1,6 +1,6 @@
 {
   "title": "Text Deduplicator",
-  "description": "Remove duplicate lines from text while preserving original order. Supports case-insensitive matching and whitespace trimming. Free online tool.",
+  "description": "Remove duplicate lines from text. Preserves order with case-insensitive matching and whitespace trimming. Free tool.",
   "keywords": [
     "remove duplicate lines",
     "deduplicate text online",

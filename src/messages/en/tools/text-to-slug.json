@@ -1,7 +1,14 @@
 {
   "title": "Text to Slug Converter",
-  "description": "Free online text-to-slug converter. Instantly turn any title or phrase into a clean URL slug. Supports hyphen and underscore separators, and handles accented characters.",
-  "keywords": ["text to slug", "slug generator", "URL slug", "kebab case", "URL friendly", "permalink generator"],
+  "description": "Turn any title or phrase into a clean URL slug. Supports hyphen/underscore separators and accented characters.",
+  "keywords": [
+    "text to slug",
+    "slug generator",
+    "URL slug",
+    "kebab case",
+    "URL friendly",
+    "permalink generator"
+  ],
   "label": "",
   "placeholder": "Enter text to convert, e.g. Hello World & Friends!",
   "buttons": {
@@ -24,9 +31,18 @@
     "output": "Slug"
   },
   "howToUse": [
-    { "label": "Enter text", "description": "Type or paste the title, phrase, or heading you want to convert." },
-    { "label": "Choose options", "description": "Select your preferred separator (hyphen or underscore) and other formatting options." },
-    { "label": "Copy the slug", "description": "The slug updates in real time. Click \"Copy\" to copy it to your clipboard." }
+    {
+      "label": "Enter text",
+      "description": "Type or paste the title, phrase, or heading you want to convert."
+    },
+    {
+      "label": "Choose options",
+      "description": "Select your preferred separator (hyphen or underscore) and other formatting options."
+    },
+    {
+      "label": "Copy the slug",
+      "description": "The slug updates in real time. Click \"Copy\" to copy it to your clipboard."
+    }
   ],
   "faq": [
     {

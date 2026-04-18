@@ -1,6 +1,6 @@
 {
   "title": "Mojibake / Encoding Fixer",
-  "description": "Fix garbled Japanese text (mojibake) caused by encoding mismatches. Automatically reverses UTF-8, Shift_JIS, and EUC-JP encoding errors. Free online tool.",
+  "description": "Fix garbled Japanese text (mojibake) from encoding errors. Reverses UTF-8, Shift_JIS, and EUC-JP mismatches. Free tool.",
   "keywords": [
     "mojibake fix",
     "encoding fixer",

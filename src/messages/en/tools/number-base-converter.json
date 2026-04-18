@@ -1,7 +1,14 @@
 {
   "title": "Number Base Converter",
-  "description": "Free online number base converter. Convert between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) instantly. Supports negative numbers and custom bases.",
-  "keywords": ["number base converter", "binary converter", "hex converter", "octal converter", "decimal to binary", "binary to hex"],
+  "description": "Convert between binary, octal, decimal, and hexadecimal instantly. Supports negative numbers and custom bases.",
+  "keywords": [
+    "number base converter",
+    "binary converter",
+    "hex converter",
+    "octal converter",
+    "decimal to binary",
+    "binary to hex"
+  ],
   "label": "",
   "placeholder": "Enter a number...",
   "buttons": {
@@ -27,10 +34,22 @@
     "customBase": "Custom base"
   },
   "howToUse": [
-    { "label": "Enter a number", "description": "Type any integer in the input field. You can enter binary, octal, decimal, or hexadecimal values." },
-    { "label": "Select the input base", "description": "Choose the base of the number you entered (2, 8, 10, or 16)." },
-    { "label": "See all conversions", "description": "The equivalent values in all other bases appear instantly below." },
-    { "label": "Copy a result", "description": "Click the copy button next to any result to copy it to your clipboard." }
+    {
+      "label": "Enter a number",
+      "description": "Type any integer in the input field. You can enter binary, octal, decimal, or hexadecimal values."
+    },
+    {
+      "label": "Select the input base",
+      "description": "Choose the base of the number you entered (2, 8, 10, or 16)."
+    },
+    {
+      "label": "See all conversions",
+      "description": "The equivalent values in all other bases appear instantly below."
+    },
+    {
+      "label": "Copy a result",
+      "description": "Click the copy button next to any result to copy it to your clipboard."
+    }
   ],
   "faq": [
     {

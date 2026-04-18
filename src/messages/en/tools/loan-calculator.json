@@ -1,6 +1,6 @@
 {
   "title": "Loan Repayment Calculator",
-  "description": "Calculate your monthly loan payment, total repayment, and total interest in seconds. Enter the loan amount, annual interest rate, and term to run a simulation. Works for mortgages, car loans, personal loans, and more.",
+  "description": "Calculate monthly payment, total repayment, and interest for any loan. Works for mortgages, car loans, and more.",
   "keywords": [
     "loan calculator",
     "mortgage calculator",

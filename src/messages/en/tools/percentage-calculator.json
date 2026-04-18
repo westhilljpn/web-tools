@@ -1,7 +1,14 @@
 {
   "title": "Percentage Calculator",
-  "description": "Free online percentage calculator. Calculate percentages, find what percent X is of Y, compute percentage increase or decrease, and reverse-calculate the original value. Fast and accurate.",
-  "keywords": ["percentage calculator", "percent calculator", "percentage increase", "percentage decrease", "what percent of", "percentage change"],
+  "description": "Calculate percentages, find what percent X is of Y, compute increase/decrease, and reverse-calculate original values.",
+  "keywords": [
+    "percentage calculator",
+    "percent calculator",
+    "percentage increase",
+    "percentage decrease",
+    "what percent of",
+    "percentage change"
+  ],
   "label": "",
   "placeholder": "",
   "buttons": {
@@ -38,9 +45,18 @@
     "to": "e.g. 100"
   },
   "howToUse": [
-    { "label": "Choose a calculation type", "description": "Select one of the four modes: basic percentage, \"what percent\", percentage change, or reverse percentage." },
-    { "label": "Fill in the values", "description": "Enter the numbers in the provided fields. The result updates automatically." },
-    { "label": "Copy the result", "description": "Click the copy icon next to any result to copy it." }
+    {
+      "label": "Choose a calculation type",
+      "description": "Select one of the four modes: basic percentage, \"what percent\", percentage change, or reverse percentage."
+    },
+    {
+      "label": "Fill in the values",
+      "description": "Enter the numbers in the provided fields. The result updates automatically."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Click the copy icon next to any result to copy it."
+    }
   ],
   "faq": [
     {

@@ -1,6 +1,6 @@
 {
   "title": "Regex Tester",
-  "description": "Test and debug regular expressions online with real-time match highlighting, match count, and group capture details. Free online tool — runs entirely in your browser.",
+  "description": "Test regular expressions with real-time match highlighting, match count, and group captures. Runs in your browser.",
   "keywords": [
     "regex tester",
     "regular expression tester",

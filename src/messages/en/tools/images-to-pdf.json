@@ -1,7 +1,14 @@
 {
   "title": "Images to PDF Converter",
-  "description": "Free online tool to combine images into a PDF. Add multiple photos, drag to reorder pages, choose A4/Letter/original page size, set margins, and generate a PDF — all in your browser.",
-  "keywords": ["images to PDF", "image to PDF", "JPG to PDF", "PNG to PDF", "combine images PDF", "free PDF converter"],
+  "description": "Combine multiple images into a PDF. Reorder pages, choose A4/Letter/original size, set margins — all in your browser.",
+  "keywords": [
+    "images to PDF",
+    "image to PDF",
+    "JPG to PDF",
+    "PNG to PDF",
+    "combine images PDF",
+    "free PDF converter"
+  ],
   "label": "",
   "placeholder": "",
   "buttons": {
@@ -33,10 +40,22 @@
     }
   },
   "howToUse": [
-    { "label": "Add images", "description": "Drag and drop images onto the drop zone, or click to select files from your device." },
-    { "label": "Reorder pages", "description": "Drag the rows in the image list to change the page order in the final PDF." },
-    { "label": "Configure settings", "description": "Choose the page size (A4, Letter, or original image dimensions) and set the margin width." },
-    { "label": "Generate PDF", "description": "Click the Generate PDF button. The file is created entirely in your browser and downloaded automatically." }
+    {
+      "label": "Add images",
+      "description": "Drag and drop images onto the drop zone, or click to select files from your device."
+    },
+    {
+      "label": "Reorder pages",
+      "description": "Drag the rows in the image list to change the page order in the final PDF."
+    },
+    {
+      "label": "Configure settings",
+      "description": "Choose the page size (A4, Letter, or original image dimensions) and set the margin width."
+    },
+    {
+      "label": "Generate PDF",
+      "description": "Click the Generate PDF button. The file is created entirely in your browser and downloaded automatically."
+    }
   ],
   "faq": [
     {

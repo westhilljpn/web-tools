@@ -1,25 +1,33 @@
 {
   "title": "Unicode Font Generator",
-  "description": "Convert text into fancy Unicode styles — bold, italic, script, fraktur, double-struck, monospace, and more. Works on any platform.",
-  "keywords": ["font generator", "fancy text", "unicode font", "bold text generator", "instagram fonts", "text styles", "unicode text"],
+  "description": "Convert text into fancy Unicode styles — bold, italic, script, fraktur, double-struck, monospace, and more.",
+  "keywords": [
+    "font generator",
+    "fancy text",
+    "unicode font",
+    "bold text generator",
+    "instagram fonts",
+    "text styles",
+    "unicode text"
+  ],
   "placeholder": "Type text to convert...",
   "note": "Latin letters (A–Z) and digits (0–9) are converted. Other characters are passed through unchanged.",
   "copy": "Copy",
   "copied": "Copied!",
   "empty": "Type something above to see all font styles.",
   "styles": {
-    "bold":         "Bold",
-    "italic":       "Italic",
-    "bold_italic":  "Bold Italic",
-    "script":       "Script",
-    "fraktur":      "Fraktur / Gothic",
-    "double_struck":"Double-Struck",
-    "sans":         "Sans-Serif",
-    "sans_bold":    "Sans-Serif Bold",
-    "monospace":    "Monospace",
-    "fullwidth":    "Full Width",
-    "small_caps":   "Small Caps",
-    "circled":      "Circled"
+    "bold": "Bold",
+    "italic": "Italic",
+    "bold_italic": "Bold Italic",
+    "script": "Script",
+    "fraktur": "Fraktur / Gothic",
+    "double_struck": "Double-Struck",
+    "sans": "Sans-Serif",
+    "sans_bold": "Sans-Serif Bold",
+    "monospace": "Monospace",
+    "fullwidth": "Full Width",
+    "small_caps": "Small Caps",
+    "circled": "Circled"
   },
   "howToUse": [
     {

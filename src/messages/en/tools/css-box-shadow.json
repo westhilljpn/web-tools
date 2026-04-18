@@ -1,7 +1,13 @@
 {
   "title": "CSS Box Shadow Generator",
-  "description": "Visually generate CSS box-shadow code with a live preview. Adjust offset, blur, spread, color, and opacity — then copy the code with one click.",
-  "keywords": ["css box-shadow generator", "box shadow tool", "css shadow generator", "box-shadow code", "css drop shadow"],
+  "description": "Generate CSS box-shadow code with live preview. Adjust offset, blur, spread, color, and opacity — copy with one click.",
+  "keywords": [
+    "css box-shadow generator",
+    "box shadow tool",
+    "css shadow generator",
+    "box-shadow code",
+    "css drop shadow"
+  ],
   "labels": {
     "offsetX": "Horizontal Offset (X)",
     "offsetY": "Vertical Offset (Y)",

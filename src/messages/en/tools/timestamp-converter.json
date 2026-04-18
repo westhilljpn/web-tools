@@ -1,6 +1,6 @@
 {
   "title": "Unix Timestamp Converter",
-  "description": "Convert Unix timestamps to human-readable dates and vice versa. Supports seconds and milliseconds. Free online tool — runs entirely in your browser.",
+  "description": "Convert Unix timestamps to readable dates and vice versa. Supports seconds and milliseconds. Runs in your browser.",
   "keywords": [
     "unix timestamp",
     "timestamp converter",

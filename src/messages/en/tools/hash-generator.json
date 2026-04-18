@@ -1,7 +1,14 @@
 {
   "title": "Hash Generator",
-  "description": "Free online hash generator. Compute SHA-1, SHA-256, and SHA-512 hashes instantly in your browser. No data is sent to any server.",
-  "keywords": ["hash generator", "SHA-256", "SHA-512", "SHA-1", "checksum", "crypto hash"],
+  "description": "Compute SHA-1, SHA-256, and SHA-512 hashes instantly in your browser. No data is sent to any server. Free tool.",
+  "keywords": [
+    "hash generator",
+    "SHA-256",
+    "SHA-512",
+    "SHA-1",
+    "checksum",
+    "crypto hash"
+  ],
   "label": "Text Input",
   "placeholder": "Enter text to compute its hash…",
   "buttons": {
@@ -17,10 +24,22 @@
     "copied": "Copied!"
   },
   "howToUse": [
-    { "label": "Enter text", "description": "Type or paste the text you want to hash into the input field." },
-    { "label": "View hashes", "description": "SHA-1, SHA-256, and SHA-512 hashes are computed in real time as you type." },
-    { "label": "Switch case", "description": "Toggle between lowercase and UPPERCASE hex output using the buttons below the input." },
-    { "label": "Copy a hash", "description": "Click the Copy button next to any algorithm to copy that hash to your clipboard." }
+    {
+      "label": "Enter text",
+      "description": "Type or paste the text you want to hash into the input field."
+    },
+    {
+      "label": "View hashes",
+      "description": "SHA-1, SHA-256, and SHA-512 hashes are computed in real time as you type."
+    },
+    {
+      "label": "Switch case",
+      "description": "Toggle between lowercase and UPPERCASE hex output using the buttons below the input."
+    },
+    {
+      "label": "Copy a hash",
+      "description": "Click the Copy button next to any algorithm to copy that hash to your clipboard."
+    }
   ],
   "faq": [
     {

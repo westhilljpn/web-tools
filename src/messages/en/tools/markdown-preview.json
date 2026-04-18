@@ -1,7 +1,13 @@
 {
   "title": "Markdown Preview",
-  "description": "Free online Markdown editor and live preview. Write Markdown on the left and see the rendered HTML on the right in real time. Supports headings, lists, code blocks, tables, and more.",
-  "keywords": ["markdown preview", "markdown editor", "live preview", "markdown to HTML", "online markdown"],
+  "description": "Write Markdown and see a live HTML preview side by side. Supports headings, lists, code blocks, and tables. Free tool.",
+  "keywords": [
+    "markdown preview",
+    "markdown editor",
+    "live preview",
+    "markdown to HTML",
+    "online markdown"
+  ],
   "label": "Markdown",
   "placeholder": "# Start writing Markdown here…",
   "labels": {
@@ -21,10 +27,22 @@
     "copied": "Copied!"
   },
   "howToUse": [
-    { "label": "Write Markdown", "description": "Type or paste your Markdown text into the left pane." },
-    { "label": "Live preview", "description": "The rendered output appears in the right pane in real time as you type." },
-    { "label": "Copy your Markdown", "description": "Use the Copy Markdown button to copy the raw source to your clipboard." },
-    { "label": "Load a sample", "description": "Click Load Sample to see an example covering common Markdown syntax." }
+    {
+      "label": "Write Markdown",
+      "description": "Type or paste your Markdown text into the left pane."
+    },
+    {
+      "label": "Live preview",
+      "description": "The rendered output appears in the right pane in real time as you type."
+    },
+    {
+      "label": "Copy your Markdown",
+      "description": "Use the Copy Markdown button to copy the raw source to your clipboard."
+    },
+    {
+      "label": "Load a sample",
+      "description": "Click Load Sample to see an example covering common Markdown syntax."
+    }
   ],
   "faq": [
     {

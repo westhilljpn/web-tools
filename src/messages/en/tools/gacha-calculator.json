@@ -1,6 +1,6 @@
 {
   "title": "Gacha / Loot Box Probability Calculator",
-  "description": "Calculate the probability of getting at least one win given a pull rate and number of attempts. Shows cumulative probabilities and pulls needed to reach 50%, 90%, and 99% targets.",
+  "description": "Calculate gacha pull probabilities for a given rate and attempts. Shows cumulative odds and pulls to reach 50/90/99%.",
   "keywords": [
     "gacha probability",
     "gacha calculator",

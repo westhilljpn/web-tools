@@ -1,7 +1,13 @@
 {
   "title": "WCAG Contrast Checker",
-  "description": "Check the contrast ratio between text and background colors against WCAG 2.1 AA and AAA standards. Get instant pass/fail results with a live preview.",
-  "keywords": ["wcag contrast checker", "color contrast ratio", "accessibility color checker", "wcag aa compliance", "text background contrast"],
+  "description": "Check text/background contrast against WCAG 2.1 AA and AAA standards. Get instant pass/fail results with a live preview.",
+  "keywords": [
+    "wcag contrast checker",
+    "color contrast ratio",
+    "accessibility color checker",
+    "wcag aa compliance",
+    "text background contrast"
+  ],
   "labels": {
     "textColor": "Text Color",
     "bgColor": "Background Color",

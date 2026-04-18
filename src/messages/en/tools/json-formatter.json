@@ -1,6 +1,6 @@
 {
   "title": "JSON Formatter / Validator",
-  "description": "Format, prettify, and validate JSON online. Supports 2-space, 4-space, and tab indentation. Minify JSON to a single line. Free online tool.",
+  "description": "Format, prettify, and validate JSON online. Supports 2-space, 4-space, and tab indent. Minify to one line. Free tool.",
   "keywords": [
     "JSON formatter online",
     "JSON prettify free",

@@ -1,13 +1,31 @@
 {
   "title": "SQL Formatter",
-  "description": "Free online SQL formatter and beautifier. Formats SELECT, INSERT, UPDATE, DELETE, and more. Uppercases keywords, adds proper indentation, and puts each clause on its own line — all in your browser.",
-  "keywords": ["sql formatter", "sql beautifier", "format sql", "sql indentation", "sql pretty print"],
+  "description": "Format SQL online. Uppercases keywords, adds indentation, and splits clauses to separate lines — runs in your browser.",
+  "keywords": [
+    "sql formatter",
+    "sql beautifier",
+    "format sql",
+    "sql indentation",
+    "sql pretty print"
+  ],
   "label": "",
   "placeholder": "SELECT u.id, u.name FROM users u JOIN orders o ON u.id = o.user_id WHERE u.active = 1 AND o.status = 'pending' ORDER BY u.name ASC",
-  "buttons": { "copy": "Copy", "clear": "Clear" },
-  "results": { "empty": "", "copied": "Copied!" },
-  "limitCheck": { "title": "", "unit": "", "over": "" },
-  "toast": { "copied": "Copied!" },
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear"
+  },
+  "results": {
+    "empty": "",
+    "copied": "Copied!"
+  },
+  "limitCheck": {
+    "title": "",
+    "unit": "",
+    "over": ""
+  },
+  "toast": {
+    "copied": "Copied!"
+  },
   "indentSize": "Indent",
   "uppercaseKeywords": "Uppercase keywords",
   "input": "SQL Input",
@@ -16,9 +34,18 @@
   "copied": "Copied!",
   "empty": "Paste SQL above to format it.",
   "howToUse": [
-    { "label": "Paste your SQL", "description": "Paste any raw or minified SQL query into the input box. Formatting is applied automatically as you type." },
-    { "label": "Adjust options", "description": "Set the indent size (2 or 4 spaces) and choose whether to uppercase SQL keywords like SELECT, FROM, WHERE." },
-    { "label": "Copy the result", "description": "Click Copy to copy the formatted SQL. Paste it into your editor, query tool, or documentation." }
+    {
+      "label": "Paste your SQL",
+      "description": "Paste any raw or minified SQL query into the input box. Formatting is applied automatically as you type."
+    },
+    {
+      "label": "Adjust options",
+      "description": "Set the indent size (2 or 4 spaces) and choose whether to uppercase SQL keywords like SELECT, FROM, WHERE."
+    },
+    {
+      "label": "Copy the result",
+      "description": "Click Copy to copy the formatted SQL. Paste it into your editor, query tool, or documentation."
+    }
   ],
   "faq": [
     {

@@ -1,7 +1,14 @@
 {
   "title": "JWT Decoder",
-  "description": "Free online JWT decoder. Paste any JSON Web Token to instantly decode and inspect the header, payload, and claims. Shows expiry status and human-readable timestamps. No data sent to servers.",
-  "keywords": ["JWT decoder", "JSON Web Token", "JWT parser", "decode JWT", "JWT inspector", "JWT claims"],
+  "description": "Decode any JWT to inspect its header, payload, and claims. Shows expiry and human-readable timestamps. No server upload.",
+  "keywords": [
+    "JWT decoder",
+    "JSON Web Token",
+    "JWT parser",
+    "decode JWT",
+    "JWT inspector",
+    "JWT claims"
+  ],
   "label": "",
   "placeholder": "Paste your JWT here…\ne.g. eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "buttons": {
@@ -29,10 +36,22 @@
     "status": "Status"
   },
   "howToUse": [
-    { "label": "Paste your JWT", "description": "Copy your JWT token and paste it into the input field." },
-    { "label": "Inspect the header", "description": "The header shows the algorithm (alg) and token type (typ)." },
-    { "label": "Read the payload", "description": "The payload contains the claims — user data, permissions, and timestamps like iat (issued at) and exp (expiry)." },
-    { "label": "Check expiry", "description": "The status badge instantly shows whether the token is still valid or has expired." }
+    {
+      "label": "Paste your JWT",
+      "description": "Copy your JWT token and paste it into the input field."
+    },
+    {
+      "label": "Inspect the header",
+      "description": "The header shows the algorithm (alg) and token type (typ)."
+    },
+    {
+      "label": "Read the payload",
+      "description": "The payload contains the claims — user data, permissions, and timestamps like iat (issued at) and exp (expiry)."
+    },
+    {
+      "label": "Check expiry",
+      "description": "The status badge instantly shows whether the token is still valid or has expired."
+    }
   ],
   "faq": [
     {

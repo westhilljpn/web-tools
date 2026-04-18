@@ -1,7 +1,15 @@
 {
   "title": "Code Minifier",
-  "description": "Minify JavaScript, CSS, and HTML online for free. Removes comments and collapses whitespace to reduce file size — no external packages, runs entirely in your browser.",
-  "keywords": ["code minifier", "js minifier", "css minifier", "html minifier", "minify javascript", "minify css", "compress code"],
+  "description": "Minify JavaScript, CSS, and HTML online. Removes comments and whitespace to shrink file size — runs in your browser.",
+  "keywords": [
+    "code minifier",
+    "js minifier",
+    "css minifier",
+    "html minifier",
+    "minify javascript",
+    "minify css",
+    "compress code"
+  ],
   "input": "Input",
   "output": "Minified Output",
   "clear": "Clear",
@@ -9,13 +17,13 @@
   "copied": "Copied!",
   "empty": "No output — check if your input is valid.",
   "placeholder": {
-    "js":   "Paste your JavaScript or TypeScript code here...",
-    "css":  "Paste your CSS code here...",
+    "js": "Paste your JavaScript or TypeScript code here...",
+    "css": "Paste your CSS code here...",
     "html": "Paste your HTML code here..."
   },
   "note": {
-    "js":   "Light minification: comments removed, whitespace collapsed. Variable renaming and dead-code elimination are not performed.",
-    "css":  "Comments removed, whitespace collapsed. url() values and custom properties are preserved.",
+    "js": "Light minification: comments removed, whitespace collapsed. Variable renaming and dead-code elimination are not performed.",
+    "css": "Comments removed, whitespace collapsed. url() values and custom properties are preserved.",
     "html": "Comments removed, whitespace between tags collapsed. Content inside <pre>, <script>, and <style> tags is not handled specially."
   },
   "howToUse": [

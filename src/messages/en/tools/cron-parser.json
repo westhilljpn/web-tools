@@ -1,10 +1,20 @@
 {
   "title": "Cron Expression Parser",
-  "description": "Free online cron expression parser. Enter any cron schedule and instantly see a human-readable description and the next 10 execution times. Supports standard 5-field cron syntax.",
-  "keywords": ["cron parser", "cron expression", "cron schedule", "cron syntax", "cron job", "cron next run"],
+  "description": "Parse any cron expression into plain English and see the next 10 execution times. Supports standard 5-field cron syntax.",
+  "keywords": [
+    "cron parser",
+    "cron expression",
+    "cron schedule",
+    "cron syntax",
+    "cron job",
+    "cron next run"
+  ],
   "label": "",
   "placeholder": "e.g. */5 * * * *",
-  "buttons": { "copy": "Copy", "clear": "Clear" },
+  "buttons": {
+    "copy": "Copy",
+    "clear": "Clear"
+  },
   "results": {
     "empty": "Enter a cron expression above",
     "copied": "Copied!",
@@ -32,9 +42,18 @@
     "workdays": "Weekdays at 9am"
   },
   "howToUse": [
-    { "label": "Enter a cron expression", "description": "Type a 5-field cron expression: minute (0–59), hour (0–23), day-of-month (1–31), month (1–12), day-of-week (0–7)." },
-    { "label": "Use wildcards and operators", "description": "Use * for \"any\", */n for \"every n\", ranges (1–5), and lists (1,3,5) in any field." },
-    { "label": "Check the schedule", "description": "The tool shows a human-readable description and the next 10 scheduled run times based on the current time." }
+    {
+      "label": "Enter a cron expression",
+      "description": "Type a 5-field cron expression: minute (0–59), hour (0–23), day-of-month (1–31), month (1–12), day-of-week (0–7)."
+    },
+    {
+      "label": "Use wildcards and operators",
+      "description": "Use * for \"any\", */n for \"every n\", ranges (1–5), and lists (1,3,5) in any field."
+    },
+    {
+      "label": "Check the schedule",
+      "description": "The tool shows a human-readable description and the next 10 scheduled run times based on the current time."
+    }
   ],
   "faq": [
     {

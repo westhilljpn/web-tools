@@ -1,13 +1,31 @@
 {
   "title": "CSS Gradient Generator",
-  "description": "Free online CSS gradient generator. Create beautiful linear, radial, and conic gradients with a live preview. Customize color stops and copy the CSS code instantly.",
-  "keywords": ["css gradient", "gradient generator", "linear gradient", "radial gradient", "css background"],
+  "description": "Create linear, radial, and conic CSS gradients with live preview. Customize color stops and copy the CSS instantly.",
+  "keywords": [
+    "css gradient",
+    "gradient generator",
+    "linear gradient",
+    "radial gradient",
+    "css background"
+  ],
   "label": "",
   "placeholder": "",
-  "buttons": { "copy": "Copy CSS", "clear": "" },
-  "results": { "empty": "", "copied": "Copied!" },
-  "limitCheck": { "title": "", "unit": "", "over": "" },
-  "toast": { "copied": "Copied!" },
+  "buttons": {
+    "copy": "Copy CSS",
+    "clear": ""
+  },
+  "results": {
+    "empty": "",
+    "copied": "Copied!"
+  },
+  "limitCheck": {
+    "title": "",
+    "unit": "",
+    "over": ""
+  },
+  "toast": {
+    "copied": "Copied!"
+  },
   "type": "Gradient Type",
   "linear": "Linear",
   "radial": "Radial",
@@ -27,9 +45,18 @@
   "p_sky": "Sky",
   "p_neon": "Neon",
   "howToUse": [
-    { "label": "Choose a gradient type", "description": "Select Linear, Radial, or Conic. For linear and conic gradients, adjust the angle with the slider." },
-    { "label": "Customize color stops", "description": "Pick colors with the color picker or enter HEX codes. Drag the sliders to set each stop's position (0–100%)." },
-    { "label": "Copy the CSS", "description": "Click the Copy button to copy the generated CSS background property and paste it directly into your stylesheet." }
+    {
+      "label": "Choose a gradient type",
+      "description": "Select Linear, Radial, or Conic. For linear and conic gradients, adjust the angle with the slider."
+    },
+    {
+      "label": "Customize color stops",
+      "description": "Pick colors with the color picker or enter HEX codes. Drag the sliders to set each stop's position (0–100%)."
+    },
+    {
+      "label": "Copy the CSS",
+      "description": "Click the Copy button to copy the generated CSS background property and paste it directly into your stylesheet."
+    }
   ],
   "faq": [
     {
