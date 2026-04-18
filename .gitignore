@@ -12,6 +12,7 @@ node_modules/
 
 # TypeScript ビルド出力
 next-env.d.ts
+tsconfig.tsbuildinfo
 
 # OS
 .DS_Store
