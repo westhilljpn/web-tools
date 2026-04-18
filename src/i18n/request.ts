@@ -72,6 +72,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     cssBoxShadow,
     wcagContrastChecker,
     textDeduplicator,
+    characterCounterJp,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -135,6 +136,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/css-box-shadow.json"),
           import("../messages/ja/tools/wcag-contrast-checker.json"),
           import("../messages/ja/tools/text-deduplicator.json"),
+          import("../messages/ja/tools/character-counter-jp.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -197,6 +199,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/css-box-shadow.json"),
           import("../messages/en/tools/wcag-contrast-checker.json"),
           import("../messages/en/tools/text-deduplicator.json"),
+          import("../messages/en/tools/character-counter-jp.json"),
         ]);
 
   return {
@@ -262,6 +265,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "css-box-shadow": cssBoxShadow.default,
       "wcag-contrast-checker": wcagContrastChecker.default,
       "text-deduplicator": textDeduplicator.default,
+      "character-counter-jp": characterCounterJp.default,
     },
   };
 });

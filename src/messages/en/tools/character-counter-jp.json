@@ -1,0 +1,72 @@
+{
+  "title": "Japanese Character Counter & Manuscript Converter",
+  "description": "Count Japanese text characters with genkou yoshi (400-char manuscript paper) conversion, X/Twitter weighted count, and resume length guide. Free online tool.",
+  "keywords": [
+    "japanese character counter",
+    "genkou yoshi converter",
+    "manuscript paper calculator",
+    "twitter character count japanese",
+    "full-width half-width counter",
+    "resume character limit"
+  ],
+  "placeholder": "Type or paste your text here...",
+  "stats": {
+    "total": "Total chars",
+    "withoutNewlines": "No newlines",
+    "halfWidth": "Half-width",
+    "fullWidth": "Full-width"
+  },
+  "sections": {
+    "genkou": "📄 Genkou Yoshi (400 chars/page)",
+    "twitter": "🐦 X / Twitter Character Count",
+    "resume": "📋 Resume / Cover Letter Guide"
+  },
+  "genkouUnit": "pages",
+  "genkouNote": "Equivalent number of 400-character manuscript paper pages.",
+  "over": "over the limit",
+  "remaining": "remaining",
+  "twitterNote": "Full-width/CJK characters count as 2, half-width characters count as 1 (X/Twitter weighted count).",
+  "resume": {
+    "motivation": "Motivation letter",
+    "selfPr": "Self-PR",
+    "activities": "Extra-curricular activities"
+  },
+  "chars": " chars",
+  "resumeNote": "Approximate character count guidelines. Newlines are excluded. For reference only.",
+  "howToUse": [
+    {
+      "label": "Enter your text",
+      "description": "Type or paste text into the textarea. All counts update in real time."
+    },
+    {
+      "label": "Check manuscript pages and Twitter count",
+      "description": "See the equivalent number of 400-char manuscript pages and the X/Twitter weighted character count (full-width=2, half-width=1) with progress bars."
+    },
+    {
+      "label": "Compare with resume guidelines",
+      "description": "Recommended character ranges for common resume sections are shown as color bars. Green = within range, red = over the limit."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How is the manuscript page count calculated?",
+      "answer": "The total character count (including newlines) is divided by 400. For example, 1200 characters = 3.0 pages of 400-character manuscript paper."
+    },
+    {
+      "question": "How does the Twitter/X character count work?",
+      "answer": "X/Twitter counts CJK (Japanese, Chinese, Korean) and full-width characters as 2 units each. The 280-unit limit is equivalent to 140 full-width Japanese characters."
+    },
+    {
+      "question": "What is the difference between half-width and full-width characters?",
+      "answer": "Half-width characters include ASCII (letters, numbers, symbols) and half-width katakana. Full-width characters include hiragana, katakana, kanji, and full-width alphanumerics."
+    },
+    {
+      "question": "How many characters should a cover letter be?",
+      "answer": "In Japanese job applications, motivation letters and self-PR sections are typically 100–300 characters. Check the job posting for specific requirements. The guidelines shown are for reference only."
+    },
+    {
+      "question": "How is this different from the regular character counter?",
+      "answer": "The regular character counter shows total character count. This tool specializes in Japan-specific use cases: manuscript paper conversion, Twitter weighted count, and resume guidelines."
+    }
+  ]
+}

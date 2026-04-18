@@ -470,6 +470,13 @@ const tools: Tool[] = [
     component: "TextDeduplicator",
     updatedAt: "2026-04-18",
   },
+  {
+    slug: "character-counter-jp",
+    category: "text",
+    icon: "📃",
+    component: "CharacterCounterJp",
+    updatedAt: "2026-04-18",
+  },
 ];
 
 export default tools;
