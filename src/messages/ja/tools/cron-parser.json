@@ -53,5 +53,24 @@
       "question": "日（月）と曜日の両方を指定するとどうなりますか？",
       "answer": "両方のフィールドが * でない場合、どちらかの条件を満たした時に実行されます（OR 条件）。一方だけ * でない場合はその条件のみで絞り込まれます。"
     }
-  ]
+  ],
+  "describe": {
+    "everyNMin": "{n}分ごと",
+    "everyNHr": "{n}時間ごと",
+    "everyNDay": "{n}日ごと",
+    "everyNMon": "{n}ヶ月ごと",
+    "everyNDow": "{n}曜日ごと",
+    "months": "1|2|3|4|5|6|7|8|9|10|11|12",
+    "days": "日|月|火|水|木|金|土",
+    "monthFmt": "{name}月",
+    "dayFmt": "{name}曜日",
+    "listSep": "・",
+    "everyMin": "毎分",
+    "atMin1": "{n}分",
+    "atMinN": "{list}分",
+    "atHr1": "{n}時",
+    "atHrN": "{list}時",
+    "onDay": "毎月{d}日",
+    "segSep": "、"
+  }
 }

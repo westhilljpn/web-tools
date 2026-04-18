@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 // ---- cron パーサーロジック ----
 
@@ -140,95 +140,98 @@ function getNextRuns(parsed: ParsedCron, count: number): Date[] {
 
 // ---- 人間が読める説明生成 ----
 
-function describeField(field: string, type: "min" | "hr" | "dom" | "mon" | "dow", locale: string): string {
-  if (field === "*") return "";
+type TFunc = (key: string, values?: Record<string, string | number>) => string;
 
-  const isJa = locale === "ja";
+function describeField(
+  field: string,
+  type: "min" | "hr" | "dom" | "mon" | "dow",
+  t: TFunc
+): string {
+  if (field === "*") return "";
 
   if (field.startsWith("*/")) {
     const n = field.slice(2);
-    if (type === "min") return isJa ? `${n}分ごと` : `every ${n} minutes`;
-    if (type === "hr")  return isJa ? `${n}時間ごと` : `every ${n} hours`;
-    if (type === "dom") return isJa ? `${n}日ごと` : `every ${n} days`;
-    if (type === "mon") return isJa ? `${n}ヶ月ごと` : `every ${n} months`;
-    if (type === "dow") return isJa ? `${n}曜日ごと` : `every ${n} weekdays`;
+    if (type === "min") return t("describe.everyNMin", { n });
+    if (type === "hr")  return t("describe.everyNHr",  { n });
+    if (type === "dom") return t("describe.everyNDay", { n });
+    if (type === "mon") return t("describe.everyNMon", { n });
+    if (type === "dow") return t("describe.everyNDow", { n });
   }
 
-  const months_ja = ["1","2","3","4","5","6","7","8","9","10","11","12"];
-  const months_en = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  const days_ja   = ["日","月","火","水","木","金","土"];
-  const days_en   = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  const monthNames = t("describe.months").split("|");
+  const dayNames   = t("describe.days").split("|");
+  const listSep    = t("describe.listSep");
 
   if (type === "mon") {
-    const nums = field.split(",").map(Number);
-    const names = nums.map((n) => isJa ? `${months_ja[n-1]}月` : months_en[n-1]);
-    return isJa ? names.join("・") : names.join(", ");
+    const nums  = field.split(",").map(Number);
+    const names = nums.map((n) => t("describe.monthFmt", { name: monthNames[n - 1] ?? String(n) }));
+    return names.join(listSep);
   }
   if (type === "dow") {
     const normField = normalizeDow(field);
-    const nums = normField.split(",").map(Number);
-    const names = nums.map((n) => isJa ? `${days_ja[n]}曜日` : days_en[n]);
-    return isJa ? names.join("・") : names.join(", ");
+    const nums  = normField.split(",").map(Number);
+    const names = nums.map((n) => t("describe.dayFmt", { name: dayNames[n] ?? String(n) }));
+    return names.join(listSep);
   }
 
   return field;
 }
 
-function buildDescription(expr: string, locale: string): string {
-  const isJa = locale === "ja";
+function buildDescription(expr: string, t: TFunc): string {
   const parts = expr.trim().split(/\s+/);
   if (parts.length !== 5) return "";
   const [minF, hrF, domF, monF, dowF] = parts;
 
   const segments: string[] = [];
+  const listSep = t("describe.listSep");
 
   // 分
   if (minF === "*") {
-    segments.push(isJa ? "毎分" : "every minute");
+    segments.push(t("describe.everyMin"));
   } else if (minF.startsWith("*/")) {
-    segments.push(describeField(minF, "min", locale));
+    segments.push(describeField(minF, "min", t));
   } else {
     const mins = expandField(minF, 0, 59);
     if (mins && mins.length === 1) {
-      segments.push(isJa ? `${mins[0]}分` : `at minute ${mins[0]}`);
+      segments.push(t("describe.atMin1", { n: mins[0] }));
     } else if (mins) {
-      segments.push(isJa ? `${mins.join("・")}分` : `at minutes ${mins.join(", ")}`);
+      segments.push(t("describe.atMinN", { list: mins.join(listSep) }));
     }
   }
 
   // 時
   if (hrF !== "*") {
     if (hrF.startsWith("*/")) {
-      segments.push(describeField(hrF, "hr", locale));
+      segments.push(describeField(hrF, "hr", t));
     } else {
       const hrs = expandField(hrF, 0, 23);
       if (hrs && hrs.length === 1) {
-        segments.push(isJa ? `${hrs[0]}時` : `at ${hrs[0]}:00`);
+        segments.push(t("describe.atHr1", { n: hrs[0] }));
       } else if (hrs) {
-        segments.push(isJa ? `${hrs.join("・")}時` : `at hours ${hrs.join(", ")}`);
+        segments.push(t("describe.atHrN", { list: hrs.join(listSep) }));
       }
     }
   }
 
   // 曜日
   if (dowF !== "*") {
-    const d = describeField(normalizeDow(dowF), "dow", locale);
+    const d = describeField(normalizeDow(dowF), "dow", t);
     if (d) segments.push(d);
   }
 
   // 日
   if (domF !== "*") {
-    const d = describeField(domF, "dom", locale);
-    if (d) segments.push(isJa ? `毎月${d}日` : `on day ${d}`);
+    const d = describeField(domF, "dom", t);
+    if (d) segments.push(t("describe.onDay", { d }));
   }
 
   // 月
   if (monF !== "*") {
-    const d = describeField(normalizeMonth(monF), "mon", locale);
+    const d = describeField(normalizeMonth(monF), "mon", t);
     if (d) segments.push(d);
   }
 
-  return isJa ? segments.join("、") : segments.join(", ");
+  return segments.join(t("describe.segSep"));
 }
 
 // ---- プリセット ----
@@ -247,7 +250,6 @@ const PRESETS = [
 
 export default function CronParser() {
   const t = useTranslations("cron-parser");
-  const locale = useLocale();
   const [expr, setExpr] = useState("*/5 * * * *");
   const [toast, setToast] = useState(false);
 
@@ -256,9 +258,9 @@ export default function CronParser() {
     if (!parsed) return null;
     return {
       nextRuns: getNextRuns(parsed, 10),
-      description: buildDescription(expr, locale),
+      description: buildDescription(expr, t as TFunc),
     };
-  }, [expr, locale]);
+  }, [expr, t]);
 
   const handleCopy = async (text: string) => {
     try {

@@ -72,5 +72,24 @@
       "question": "How are day-of-month and day-of-week combined?",
       "answer": "When both day-of-month and day-of-week are non-wildcard, the job runs when either condition is met (OR logic). When only one is non-wildcard, it restricts the schedule."
     }
-  ]
+  ],
+  "describe": {
+    "everyNMin": "every {n} minutes",
+    "everyNHr": "every {n} hours",
+    "everyNDay": "every {n} days",
+    "everyNMon": "every {n} months",
+    "everyNDow": "every {n} weekdays",
+    "months": "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec",
+    "days": "Sun|Mon|Tue|Wed|Thu|Fri|Sat",
+    "monthFmt": "{name}",
+    "dayFmt": "{name}",
+    "listSep": ", ",
+    "everyMin": "every minute",
+    "atMin1": "at minute {n}",
+    "atMinN": "at minutes {list}",
+    "atHr1": "at {n}:00",
+    "atHrN": "at hours {list}",
+    "onDay": "on day {d}",
+    "segSep": ", "
+  }
 }
