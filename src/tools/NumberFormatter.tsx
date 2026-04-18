@@ -61,7 +61,7 @@ export default function NumberFormatter() {
       {
         key: "space",
         label: t("formats.space"),
-        value: new Intl.NumberFormat("fr-FR", opt).format(n),
+        value: new Intl.NumberFormat("fr-FR", opt).format(n).replace(/\u202F/g, " "),
       },
       {
         key: "jpy",
@@ -100,9 +100,13 @@ export default function NumberFormatter() {
   }, [n, decimals, isValid, t]);
 
   async function handleCopy(value: string, key: string) {
-    await navigator.clipboard.writeText(value);
-    setCopied(key);
-    setTimeout(() => setCopied(null), 2000);
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(key);
+      setTimeout(() => setCopied(null), 2000);
+    } catch {
+      // clipboard access denied
+    }
   }
 
   return (
