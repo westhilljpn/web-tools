@@ -66,6 +66,12 @@ const toolComponentMap: Record<string, ComponentType> = {
   ColorMixer: dynamic(() => import("@/tools/ColorMixer"), { loading: Loading }),
   TaxCalculator: dynamic(() => import("@/tools/TaxCalculator"), { loading: Loading }),
   ReadingTime: dynamic(() => import("@/tools/ReadingTime"), { loading: Loading }),
+  DateCalculator: dynamic(() => import("@/tools/DateCalculator"), { loading: Loading }),
+  CalorieCalculator: dynamic(() => import("@/tools/CalorieCalculator"), { loading: Loading }),
+  BodyFatCalculator: dynamic(() => import("@/tools/BodyFatCalculator"), { loading: Loading }),
+  SleepCalculator: dynamic(() => import("@/tools/SleepCalculator"), { loading: Loading }),
+  CssBoxShadow: dynamic(() => import("@/tools/CssBoxShadow"), { loading: Loading }),
+  WcagContrastChecker: dynamic(() => import("@/tools/WcagContrastChecker"), { loading: Loading }),
 };
 
 export default toolComponentMap;
