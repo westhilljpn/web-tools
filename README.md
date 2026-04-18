@@ -294,11 +294,18 @@ npm run dev                         # http://localhost:3000
 | 優先度 | タスク | 理由・背景 |
 |--------|--------|-----------|
 | 高 | GSCのインデックス未登録を手動申請（S2） | Search Console → URL検査で申請。主要ツールから優先（`text-counter`・`json-formatter`・`password-generator` 等） |
-| 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
+| 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。EN meta description は ≤120文字に統一済み。表示回数↑クリック↓ページを洗い出しキャッチコピー改善 |
 | 中 | B17 ツール追加（currency-converter / todo-list / stopwatch など） | ラインナップ拡充。64件→68件を目標 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
+
+### ✅ 完了済み（2026-04-19 — 既存ツール品質改善）
+
+- [x] **ENメタディスクリプション一括修正**: 全63ツールのEN `description` を ≤120文字に統一（SEOルール準拠）
+- [x] **clipboard try/catch一括追加**: 全ツールの `navigator.clipboard.writeText()` 呼び出し（30ファイル修正・7ファイル既対応）をtry/catchで保護
+- [x] **CronParser i18n修正**: `describeField()` / `buildDescription()` の英語・日本語ハードコード文字列を翻訳ファイル（`describe.*` キー）に移行
+- [x] **debounce一括追加**: WordCounter・DiffChecker・SqlFormatter・HtmlToMarkdown・CodeMinifier・UnicodeFontGenerator・TextSorterに300ms debounce追加（MarkdownPreviewは既対応）
 
 ### ✅ 完了済み（2026-04-18 — バッチ16）
 
