@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（52件）
+## 登録済みツール（64件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -73,6 +73,18 @@ npm run dev                         # http://localhost:3000
 | 50 | `color-mixer` | カラーミキサー | Color Mixer | image |
 | 51 | `tax-calculator` | 消費税計算ツール | Consumption Tax Calculator | calculate |
 | 52 | `reading-time` | 読了時間計算ツール | Reading Time Calculator | text |
+| 53 | `date-calculator` | 日付差計算機 | Date Difference Calculator | calculate |
+| 54 | `calorie-calculator` | カロリー計算機 | Calorie Calculator | lifestyle |
+| 55 | `body-fat-calculator` | 体脂肪率計算機 | Body Fat Calculator | lifestyle |
+| 56 | `sleep-calculator` | 睡眠時間計算機 | Sleep Calculator | lifestyle |
+| 57 | `css-box-shadow` | CSSボックスシャドウ生成 | CSS Box Shadow Generator | dev |
+| 58 | `wcag-contrast-checker` | WCAGコントラスト比チェッカー | WCAG Contrast Checker | dev |
+| 59 | `text-deduplicator` | 重複行削除ツール | Text Deduplicator | text |
+| 60 | `character-counter-jp` | 原稿用紙換算・文字数カウンター | Japanese Character Counter | text |
+| 61 | `number-formatter` | 数値フォーマッター | Number Formatter | convert |
+| 62 | `char-frequency` | 文字頻度分析ツール | Character Frequency Analyzer | text |
+| 63 | `countdown-timer` | カウントダウンタイマー | Countdown Timer | lifestyle |
+| 64 | `exif-viewer` | 画像EXIFデータ閲覧 | EXIF Data Viewer | image |
 
 ---
 
@@ -226,14 +238,21 @@ npm run dev                         # http://localhost:3000
 - [x] `tax-calculator` — モード切替時に入力値を保持するよう修正（`setInput("")` 削除）
 - [x] `ip-info` — ツール名を「ブラウザ環境情報」に変更・キーワード更新
 
-### バッチ16 — 次回ツール追加候補（優先度順）
+### バッチ16 — ツール追加 ✅ 完了
 
-- [ ] **B16-1** `character-counter-jp` — 原稿用紙換算ツール（文字数→400字詰め枚数・X/Twitter文字数・履歴書文字数）
-- [ ] **B16-2** `countdown-timer` — カウントダウンタイマー（日付指定・イベントカウントダウン）
-- [ ] **B16-3** `number-formatter` — 数値フォーマッター（桁区切り・通貨形式・各国形式）
-- [ ] **B16-4** `text-deduplicator` — 重複行削除ツール（ソートなし・大小文字区別設定）
-- [ ] **B16-5** `exif-viewer` — 画像EXIFデータ閲覧（カメラ・GPS・撮影設定・ブラウザ完結）
-- [ ] **B16-6** `char-frequency` — 文字頻度分析（文字・単語出現頻度ランキング・棒グラフ）
+- [x] **B16-1** `character-counter-jp` — 原稿用紙換算ツール（文字数→400字詰め枚数・X/Twitter文字数・履歴書文字数）
+- [x] **B16-2** `countdown-timer` — カウントダウンタイマー（日付指定・イベントカウントダウン）
+- [x] **B16-3** `number-formatter` — 数値フォーマッター（桁区切り・通貨形式・各国形式）
+- [x] **B16-4** `text-deduplicator` — 重複行削除ツール（ソートなし・大小文字区別設定）
+- [x] **B16-5** `exif-viewer` — 画像EXIFデータ閲覧（カメラ・GPS・撮影設定・ブラウザ完結）
+- [x] **B16-6** `char-frequency` — 文字頻度分析（文字・単語出現頻度ランキング・棒グラフ）
+
+### バッチ17候補（次回）
+
+- [ ] **B17-1** `currency-converter` — 通貨換算ツール（主要通貨・クライアントサイド固定レート）
+- [ ] **B17-2** `todo-list` — シンプルToDoリスト（localStorage保存・チェック・削除）
+- [ ] **B17-3** `stopwatch` — ストップウォッチ（ラップタイム・コピー・高精度タイマー）
+- [ ] **B17-4** `word-cloud` — ワードクラウド生成（頻度ベース・Canvas描画・ブラウザ完結）
 
 ### マーケティング施策 — 次のアクション
 
@@ -276,14 +295,18 @@ npm run dev                         # http://localhost:3000
 |--------|--------|-----------|
 | 高 | GSCのインデックス未登録を手動申請（S2） | Search Console → URL検査で申請。主要ツールから優先（`text-counter`・`json-formatter`・`password-generator` 等） |
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。表示回数↑クリック↓のページが最優先 |
-| 中 | B16 ツール追加（character-counter-jp / countdown-timer など） | ラインナップ拡充。61件→67件を目標 |
+| 中 | B17 ツール追加（currency-converter / todo-list / stopwatch など） | ラインナップ拡充。64件→68件を目標 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
 
+### ✅ 完了済み（2026-04-18 — バッチ16）
+
+- [x] **新規ツール6件追加**: `text-deduplicator`・`character-counter-jp`・`number-formatter`・`char-frequency`・`countdown-timer`・`exif-viewer`（合計64ツール）
+
 ### ✅ 完了済み（2026-04-17 — バッチ15・既存改善）
 
-- [x] **新規ツール6件追加**: `date-calculator`・`calorie-calculator`・`body-fat-calculator`・`sleep-calculator`・`css-box-shadow`・`wcag-contrast-checker`（合計61ツール）
+- [x] **新規ツール6件追加**: `date-calculator`・`calorie-calculator`・`body-fat-calculator`・`sleep-calculator`・`css-box-shadow`・`wcag-contrast-checker`（合計58ツール）
 - [x] **既存改善5件**: GachaCalculatorコピーボタン、ReadingTimeコピーボタン、HashGenerator MD5追加、TaxCalculatorモード切替保持、IpInfoタイトル変更
 - [x] **SEO**: `NEXT_PUBLIC_SITE_URL` を `https://www.quicker-app.com` に修正・リデプロイ完了
 - [x] **SEO**: Vercel リダイレクト 307 → 301（永続）に変更完了
