@@ -15,7 +15,7 @@ function countTwitterWeight(text: string): number {
   let count = 0;
   Array.from(text).forEach((ch) => {
     const cp = ch.codePointAt(0) ?? 0;
-    count += cp >= 0x1100 && cp <= 0xffef ? 2 : 1;
+    count += (cp >= 0x00 && cp <= 0x7f) ? 1 : 2;
   });
   return count;
 }
@@ -131,6 +131,7 @@ export default function CharacterCounterJp() {
             const inRange =
               stats.withoutNewlines >= min && stats.withoutNewlines <= max;
             const over = stats.withoutNewlines > max;
+            const below = stats.withoutNewlines > 0 && stats.withoutNewlines < min;
             return (
               <div key={key}>
                 <div className="flex justify-between text-xs text-gray-500 mb-1">
@@ -146,6 +147,8 @@ export default function CharacterCounterJp() {
                         ? "bg-green-400"
                         : over
                         ? "bg-red-400"
+                        : below
+                        ? "bg-yellow-400"
                         : "bg-primary/60"
                     }`}
                     style={{ width: `${pct}%` }}
