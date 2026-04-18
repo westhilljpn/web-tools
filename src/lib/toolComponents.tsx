@@ -75,6 +75,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   TextDeduplicator: dynamic(() => import("@/tools/TextDeduplicator"), { loading: Loading }),
   CharacterCounterJp: dynamic(() => import("@/tools/CharacterCounterJp"), { loading: Loading }),
   NumberFormatter: dynamic(() => import("@/tools/NumberFormatter"), { loading: Loading }),
+  CharFrequency: dynamic(() => import("@/tools/CharFrequency"), { loading: Loading }),
 };
 
 export default toolComponentMap;

@@ -74,6 +74,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     textDeduplicator,
     characterCounterJp,
     numberFormatter,
+    charFrequency,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -139,6 +140,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/text-deduplicator.json"),
           import("../messages/ja/tools/character-counter-jp.json"),
           import("../messages/ja/tools/number-formatter.json"),
+          import("../messages/ja/tools/char-frequency.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -203,6 +205,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/text-deduplicator.json"),
           import("../messages/en/tools/character-counter-jp.json"),
           import("../messages/en/tools/number-formatter.json"),
+          import("../messages/en/tools/char-frequency.json"),
         ]);
 
   return {
@@ -270,6 +273,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "text-deduplicator": textDeduplicator.default,
       "character-counter-jp": characterCounterJp.default,
       "number-formatter": numberFormatter.default,
+      "char-frequency": charFrequency.default,
     },
   };
 });

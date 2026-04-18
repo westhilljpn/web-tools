@@ -484,6 +484,13 @@ const tools: Tool[] = [
     component: "NumberFormatter",
     updatedAt: "2026-04-18",
   },
+  {
+    slug: "char-frequency",
+    category: "text",
+    icon: "📊",
+    component: "CharFrequency",
+    updatedAt: "2026-04-18",
+  },
 ];
 
 export default tools;

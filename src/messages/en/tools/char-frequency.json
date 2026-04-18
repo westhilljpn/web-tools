@@ -1,0 +1,67 @@
+{
+  "title": "Character & Word Frequency Analyzer",
+  "description": "Analyze character and word frequency in text with ranked bar charts. Switch between character and word frequency. Free online tool.",
+  "keywords": [
+    "character frequency analyzer",
+    "word frequency counter online",
+    "text frequency analysis",
+    "letter frequency tool free",
+    "word count ranking"
+  ],
+  "placeholder": "Type or paste text to analyze...",
+  "tabs": {
+    "char": "Character Frequency",
+    "word": "Word Frequency"
+  },
+  "stats": {
+    "totalChars": "Total chars:",
+    "uniqueChars": "Unique chars:",
+    "uniqueWords": "Unique words:"
+  },
+  "options": {
+    "excludeSpaces": "Exclude spaces",
+    "excludePunct": "Exclude punctuation"
+  },
+  "columnKey": "Char / Word",
+  "columnCount": "Count",
+  "space": "(space)",
+  "showAll": "Show {count} more",
+  "showLess": "Show less",
+  "noData": "No data found. Try adjusting the filter options.",
+  "howToUse": [
+    {
+      "label": "Enter your text",
+      "description": "Type or paste the text you want to analyze. The frequency ranking updates instantly."
+    },
+    {
+      "label": "Switch between character and word frequency",
+      "description": "Character frequency shows how often each character appears. Word frequency counts occurrences of each word."
+    },
+    {
+      "label": "Filter and explore the ranking",
+      "description": "Use the options to exclude spaces or punctuation. Top 20 are shown by default; click 'Show more' to see all."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I find the most common words in my text?",
+      "answer": "Switch to the 'Word Frequency' tab. Words are counted in a case-insensitive way and ranked from most to least frequent."
+    },
+    {
+      "question": "How accurate is word frequency for Japanese text?",
+      "answer": "Word splitting uses Unicode character classes (\\p{L}) without morphological analysis. English splits accurately on spaces; Japanese results are approximate since word boundaries are ambiguous without a tokenizer."
+    },
+    {
+      "question": "How do I exclude spaces and punctuation from the results?",
+      "answer": "Check 'Exclude spaces' to remove whitespace characters, and 'Exclude punctuation' to remove symbols and punctuation marks. Both can be enabled simultaneously."
+    },
+    {
+      "question": "What can I use this tool for?",
+      "answer": "Common uses: checking if you overuse certain words in English writing, finding frequent kanji in Japanese text, and analyzing text patterns for linguistic research."
+    },
+    {
+      "question": "Is my text sent to a server?",
+      "answer": "No. All analysis runs entirely in your browser. Your text is never sent to any external server."
+    }
+  ]
+}
