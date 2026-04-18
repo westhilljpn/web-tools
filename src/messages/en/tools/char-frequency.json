@@ -1,6 +1,6 @@
 {
   "title": "Character & Word Frequency Analyzer",
-  "description": "Analyze character and word frequency in text with ranked bar charts. Switch between character and word frequency. Free online tool.",
+  "description": "Analyze character and word frequency in text. Ranked bar charts, tab switching, filter options. Free online tool.",
   "keywords": [
     "character frequency analyzer",
     "word frequency counter online",
@@ -49,7 +49,7 @@
     },
     {
       "question": "How accurate is word frequency for Japanese text?",
-      "answer": "Word splitting uses Unicode character classes (\\p{L}) without morphological analysis. English splits accurately on spaces; Japanese results are approximate since word boundaries are ambiguous without a tokenizer."
+      "answer": "Word splitting recognizes hiragana, katakana, common kanji, and ASCII letters as word characters. English splits accurately on spaces; Japanese results are approximate since word boundaries are ambiguous without a tokenizer."
     },
     {
       "question": "How do I exclude spaces and punctuation from the results?",
