@@ -73,6 +73,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     wcagContrastChecker,
     textDeduplicator,
     characterCounterJp,
+    numberFormatter,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -137,6 +138,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/wcag-contrast-checker.json"),
           import("../messages/ja/tools/text-deduplicator.json"),
           import("../messages/ja/tools/character-counter-jp.json"),
+          import("../messages/ja/tools/number-formatter.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -200,6 +202,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/wcag-contrast-checker.json"),
           import("../messages/en/tools/text-deduplicator.json"),
           import("../messages/en/tools/character-counter-jp.json"),
+          import("../messages/en/tools/number-formatter.json"),
         ]);
 
   return {
@@ -266,6 +269,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "wcag-contrast-checker": wcagContrastChecker.default,
       "text-deduplicator": textDeduplicator.default,
       "character-counter-jp": characterCounterJp.default,
+      "number-formatter": numberFormatter.default,
     },
   };
 });

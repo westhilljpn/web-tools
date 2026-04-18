@@ -1,0 +1,63 @@
+{
+  "title": "Number Formatter",
+  "description": "Format numbers in US, EU, Japanese unit (万/億/兆), and currency formats all at once. Free online number formatting tool.",
+  "keywords": [
+    "number formatter online",
+    "thousand separator converter",
+    "number format converter free",
+    "currency format tool",
+    "japanese number units",
+    "comma separated number"
+  ],
+  "inputLabel": "Number to format",
+  "placeholder": "e.g. 1234567.89",
+  "decimals": "Decimal places",
+  "invalid": "Please enter a valid number",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "formats": {
+    "us": "US (comma separated)",
+    "eu": "EU (dot separated)",
+    "space": "Space separated",
+    "jpy": "Yen (JPY)",
+    "usd": "Dollar (USD)",
+    "eur": "Euro (EUR)",
+    "jpUnit": "Japanese units (万/億/兆)"
+  },
+  "howToUse": [
+    {
+      "label": "Enter a number",
+      "description": "Type the number you want to format. Commas and spaces in the input are automatically stripped."
+    },
+    {
+      "label": "Choose decimal places",
+      "description": "Select 0–4 decimal places. Currency formats (JPY/USD/EUR) use their standard decimal settings."
+    },
+    {
+      "label": "Copy the format you need",
+      "description": "Seven formats are displayed at once. Click the Copy button next to the format you want."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I add comma separators to a number?",
+      "answer": "Enter your number and the 'US (comma separated)' row shows it as 1,234,567. Click Copy to grab it instantly."
+    },
+    {
+      "question": "What are the Japanese unit formats (万/億/兆)?",
+      "answer": "Japanese text commonly expresses large numbers in units of 万 (10,000), 億 (100,000,000), and 兆 (1,000,000,000,000). For example 123456789 becomes 1億2345.7万."
+    },
+    {
+      "question": "What is the EU number format?",
+      "answer": "In many European countries, periods (.) are used as thousands separators and commas (,) as decimal separators. For example: 1.234.567,89."
+    },
+    {
+      "question": "Can I format numbers as currency?",
+      "answer": "Yes. Japanese Yen (¥), US Dollar ($), and Euro (€) are supported with the correct symbol placement and standard decimal handling via the Intl.NumberFormat API."
+    },
+    {
+      "question": "Is my data sent to a server?",
+      "answer": "No. All formatting is done in your browser using the built-in Intl.NumberFormat API. No data is sent anywhere."
+    }
+  ]
+}

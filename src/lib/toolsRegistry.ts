@@ -477,6 +477,13 @@ const tools: Tool[] = [
     component: "CharacterCounterJp",
     updatedAt: "2026-04-18",
   },
+  {
+    slug: "number-formatter",
+    category: "convert",
+    icon: "🔢",
+    component: "NumberFormatter",
+    updatedAt: "2026-04-18",
+  },
 ];
 
 export default tools;

@@ -74,6 +74,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   WcagContrastChecker: dynamic(() => import("@/tools/WcagContrastChecker"), { loading: Loading }),
   TextDeduplicator: dynamic(() => import("@/tools/TextDeduplicator"), { loading: Loading }),
   CharacterCounterJp: dynamic(() => import("@/tools/CharacterCounterJp"), { loading: Loading }),
+  NumberFormatter: dynamic(() => import("@/tools/NumberFormatter"), { loading: Loading }),
 };
 
 export default toolComponentMap;
