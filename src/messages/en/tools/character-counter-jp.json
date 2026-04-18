@@ -44,7 +44,7 @@
     },
     {
       "label": "Compare with resume guidelines",
-      "description": "Recommended character ranges for common resume sections are shown as color bars. Green = within range, red = over the limit."
+      "description": "Recommended character ranges for common resume sections are shown as color bars. Green = within range, yellow = below minimum, red = over."
     }
   ],
   "faq": [

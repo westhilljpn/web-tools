@@ -6,6 +6,12 @@ import { useTranslations } from "next-intl";
 const GENKOU_SIZE = 400;
 const TWITTER_LIMIT = 280;
 
+const RESUME_SECTIONS = [
+  { key: "motivation", min: 100, max: 300 },
+  { key: "selfPr", min: 100, max: 300 },
+  { key: "activities", min: 100, max: 200 },
+] as const;
+
 function isHalfWidth(ch: string): boolean {
   const cp = ch.codePointAt(0) ?? 0;
   return (cp >= 0x00 && cp <= 0x7f) || (cp >= 0xff61 && cp <= 0xff9f);
@@ -39,12 +45,6 @@ export default function CharacterCounterJp() {
   const twitterRemaining = TWITTER_LIMIT - stats.twitterWeight;
   const twitterBarPct = Math.min((stats.twitterWeight / TWITTER_LIMIT) * 100, 100);
   const twitterOver = twitterRemaining < 0;
-
-  const RESUME_SECTIONS = [
-    { key: "motivation", min: 100, max: 300 },
-    { key: "selfPr", min: 100, max: 300 },
-    { key: "activities", min: 100, max: 200 },
-  ] as const;
 
   return (
     <div className="space-y-6">
@@ -116,7 +116,7 @@ export default function CharacterCounterJp() {
             className={`h-full rounded-full transition-all duration-300 ${
               twitterOver ? "bg-red-400" : "bg-primary/60"
             }`}
-            style={{ width: `${Math.min(twitterBarPct, 100)}%` }}
+            style={{ width: `${twitterBarPct}%` }}
           />
         </div>
         <p className="text-xs text-gray-400 mt-2">{t("twitterNote")}</p>
