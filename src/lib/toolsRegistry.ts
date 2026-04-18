@@ -491,6 +491,13 @@ const tools: Tool[] = [
     component: "CharFrequency",
     updatedAt: "2026-04-18",
   },
+  {
+    slug: "countdown-timer",
+    category: "lifestyle",
+    icon: "⏳",
+    component: "CountdownTimer",
+    updatedAt: "2026-04-18",
+  },
 ];
 
 export default tools;

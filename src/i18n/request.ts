@@ -75,6 +75,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     characterCounterJp,
     numberFormatter,
     charFrequency,
+    countdownTimer,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -141,6 +142,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/character-counter-jp.json"),
           import("../messages/ja/tools/number-formatter.json"),
           import("../messages/ja/tools/char-frequency.json"),
+          import("../messages/ja/tools/countdown-timer.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -206,6 +208,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/character-counter-jp.json"),
           import("../messages/en/tools/number-formatter.json"),
           import("../messages/en/tools/char-frequency.json"),
+          import("../messages/en/tools/countdown-timer.json"),
         ]);
 
   return {
@@ -274,6 +277,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "character-counter-jp": characterCounterJp.default,
       "number-formatter": numberFormatter.default,
       "char-frequency": charFrequency.default,
+      "countdown-timer": countdownTimer.default,
     },
   };
 });

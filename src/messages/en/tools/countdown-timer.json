@@ -1,0 +1,58 @@
+{
+  "title": "Countdown Timer",
+  "description": "Countdown to multiple events in real time. Save up to 10 events in your browser. Free online countdown timer tool.",
+  "keywords": [
+    "countdown timer online",
+    "event countdown free",
+    "days until date calculator",
+    "deadline countdown",
+    "birthday countdown timer"
+  ],
+  "addEvent": "Add Event",
+  "namePlaceholder": "Event name (e.g. Project deadline)",
+  "add": "Add",
+  "delete": "Delete",
+  "noEvents": "No events yet. Add one using the form above.",
+  "maxReached": "Maximum of 10 events reached.",
+  "elapsed": "{days} days elapsed",
+  "days": "Days",
+  "hours": "Hrs",
+  "minutes": "Min",
+  "seconds": "Sec",
+  "howToUse": [
+    {
+      "label": "Add an event",
+      "description": "Enter an event name and target date/time, then click Add. Up to 10 events can be saved."
+    },
+    {
+      "label": "Watch the real-time countdown",
+      "description": "Days, hours, minutes, and seconds update every second. Events within 7 days are highlighted in accent color."
+    },
+    {
+      "label": "Delete completed events",
+      "description": "Click the ✕ button on any card to remove it. Events are saved in your browser's localStorage and persist across page refreshes."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Are my events saved when I close the page?",
+      "answer": "Yes. Events are saved to your browser's localStorage. They persist across page refreshes, but will be lost if you clear your browser data."
+    },
+    {
+      "question": "How many events can I save?",
+      "answer": "Up to 10 events. Once the limit is reached, the Add button is disabled. Delete an existing event to make room for a new one."
+    },
+    {
+      "question": "What happens when the deadline passes?",
+      "answer": "After the target time, the countdown switches to an elapsed time display (e.g. '3 days elapsed'). Events are not automatically removed."
+    },
+    {
+      "question": "Why do events within 7 days change color?",
+      "answer": "Events within 7 days are highlighted with an accent color on the card border and countdown numbers, giving a visual urgency indicator."
+    },
+    {
+      "question": "Can I sync events across devices?",
+      "answer": "No. Events are stored in your browser's localStorage, so they're only available on the same browser and device. Cross-device sync is not supported."
+    }
+  ]
+}
