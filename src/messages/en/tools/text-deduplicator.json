@@ -1,0 +1,63 @@
+{
+  "title": "Text Deduplicator",
+  "description": "Remove duplicate lines from text while preserving original order. Supports case-insensitive matching and whitespace trimming. Free online tool.",
+  "keywords": [
+    "remove duplicate lines",
+    "deduplicate text online",
+    "unique lines tool",
+    "text deduplication free",
+    "remove repeated lines"
+  ],
+  "inputLabel": "Input Text",
+  "outputLabel": "Deduplicated Output",
+  "placeholder": "Paste text with duplicate lines here...",
+  "clear": "Clear",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "options": {
+    "caseSensitive": "Case sensitive",
+    "trimWhitespace": "Trim whitespace",
+    "removeEmpty": "Remove empty lines"
+  },
+  "stats": {
+    "input": "Input:",
+    "output": "Output:",
+    "removed": "Removed:"
+  },
+  "howToUse": [
+    {
+      "label": "Paste your text",
+      "description": "Paste the text with duplicate lines into the left area. Works great for lists, URLs, log entries, and more."
+    },
+    {
+      "label": "Configure options",
+      "description": "Choose whether to use case-sensitive matching, trim whitespace, or remove empty lines."
+    },
+    {
+      "label": "Copy the result",
+      "description": "The deduplicated text appears on the right, preserving the original order. Click Copy to copy to clipboard."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does this preserve the original line order?",
+      "answer": "Yes. This tool keeps lines in their original order, retaining the first occurrence of each duplicate and removing subsequent ones. Use text-sorter if you also need to sort."
+    },
+    {
+      "question": "Can I treat uppercase and lowercase as the same?",
+      "answer": "Yes. Uncheck 'Case sensitive' to treat 'Apple', 'apple', and 'APPLE' as duplicates. The default is case-insensitive."
+    },
+    {
+      "question": "What does 'Trim whitespace' do?",
+      "answer": "When enabled, leading and trailing spaces are removed from each line before comparison, so '  apple  ' and 'apple' are treated as duplicates."
+    },
+    {
+      "question": "How is this different from the Text Sorter?",
+      "answer": "Text Sorter sorts lines and optionally removes duplicates. This tool removes duplicates without sorting, preserving the original order."
+    },
+    {
+      "question": "How many lines can it handle?",
+      "answer": "The tool runs entirely in your browser and can handle tens of thousands of lines without any issues. No data is sent to a server."
+    }
+  ]
+}

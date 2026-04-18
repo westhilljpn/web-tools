@@ -72,6 +72,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   SleepCalculator: dynamic(() => import("@/tools/SleepCalculator"), { loading: Loading }),
   CssBoxShadow: dynamic(() => import("@/tools/CssBoxShadow"), { loading: Loading }),
   WcagContrastChecker: dynamic(() => import("@/tools/WcagContrastChecker"), { loading: Loading }),
+  TextDeduplicator: dynamic(() => import("@/tools/TextDeduplicator"), { loading: Loading }),
 };
 
 export default toolComponentMap;

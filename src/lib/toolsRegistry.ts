@@ -463,6 +463,13 @@ const tools: Tool[] = [
     component: "WcagContrastChecker",
     updatedAt: "2026-04-17",
   },
+  {
+    slug: "text-deduplicator",
+    category: "text",
+    icon: "🧹",
+    component: "TextDeduplicator",
+    updatedAt: "2026-04-18",
+  },
 ];
 
 export default tools;

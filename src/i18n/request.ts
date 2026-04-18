@@ -71,6 +71,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     sleepCalculator,
     cssBoxShadow,
     wcagContrastChecker,
+    textDeduplicator,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -133,6 +134,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/sleep-calculator.json"),
           import("../messages/ja/tools/css-box-shadow.json"),
           import("../messages/ja/tools/wcag-contrast-checker.json"),
+          import("../messages/ja/tools/text-deduplicator.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -194,6 +196,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/sleep-calculator.json"),
           import("../messages/en/tools/css-box-shadow.json"),
           import("../messages/en/tools/wcag-contrast-checker.json"),
+          import("../messages/en/tools/text-deduplicator.json"),
         ]);
 
   return {
@@ -258,6 +261,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "sleep-calculator": sleepCalculator.default,
       "css-box-shadow": cssBoxShadow.default,
       "wcag-contrast-checker": wcagContrastChecker.default,
+      "text-deduplicator": textDeduplicator.default,
     },
   };
 });
