@@ -1,0 +1,63 @@
+{
+  "title": "EXIF Data Viewer",
+  "description": "View EXIF metadata from JPEG images — camera model, date taken, GPS location, and exposure settings — directly in your browser. Free, no upload.",
+  "keywords": [
+    "exif viewer online",
+    "jpeg metadata reader",
+    "photo exif data free",
+    "image metadata viewer",
+    "exif gps location",
+    "camera info from photo"
+  ],
+  "dropLabel": "Drop a JPEG file here",
+  "browseLabel": "or click to browse",
+  "noExif": "This image does not contain EXIF data, or the EXIF segment could not be parsed.",
+  "notSupported": "Only JPEG (.jpg / .jpeg) files are supported.",
+  "copyAll": "Copy all as JSON",
+  "copy": "Copy",
+  "copied": "✓",
+  "mapsLink": "View location on Google Maps",
+  "groups": {
+    "camera": "Camera",
+    "datetime": "Date & Time",
+    "image": "Image Info",
+    "exposure": "Exposure",
+    "gps": "GPS"
+  },
+  "howToUse": [
+    {
+      "label": "Drop a JPEG image",
+      "description": "Drag and drop a JPEG image onto the drop zone, or click to select a file."
+    },
+    {
+      "label": "Review the EXIF data",
+      "description": "Metadata is shown in five groups: Camera, Date & Time, Image Info, Exposure, and GPS. A Google Maps link is generated if GPS coordinates are present."
+    },
+    {
+      "label": "Copy the data",
+      "description": "Click Copy next to any tag to copy its value, or use 'Copy all as JSON' to copy all EXIF data at once."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What file formats are supported?",
+      "answer": "Only JPEG (.jpg / .jpeg) files are supported. PNG, WebP, and HEIC files use different metadata structures and are not supported."
+    },
+    {
+      "question": "Why is the date taken not showing?",
+      "answer": "Some smartphones and social media platforms strip EXIF data when sharing images. Screenshots and non-camera images also typically lack EXIF data."
+    },
+    {
+      "question": "When does GPS data appear?",
+      "answer": "GPS data is embedded when a photo is taken with location services enabled on a smartphone. Most dedicated cameras lack GPS. When GPS data is present, a Google Maps link is generated automatically."
+    },
+    {
+      "question": "Is my image uploaded to a server?",
+      "answer": "No. All processing happens in your browser using the FileReader and DataView APIs. Your image is never sent to any server."
+    },
+    {
+      "question": "Can I remove EXIF data with this tool?",
+      "answer": "This tool is for viewing EXIF data only. To strip EXIF before sharing, use the Image Compressor tool (Canvas output removes EXIF) or a dedicated metadata-stripping tool."
+    }
+  ]
+}

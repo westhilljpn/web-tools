@@ -498,6 +498,13 @@ const tools: Tool[] = [
     component: "CountdownTimer",
     updatedAt: "2026-04-18",
   },
+  {
+    slug: "exif-viewer",
+    category: "image",
+    icon: "🔬",
+    component: "ExifViewer",
+    updatedAt: "2026-04-18",
+  },
 ];
 
 export default tools;

@@ -76,6 +76,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     numberFormatter,
     charFrequency,
     countdownTimer,
+    exifViewer,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -143,6 +144,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/number-formatter.json"),
           import("../messages/ja/tools/char-frequency.json"),
           import("../messages/ja/tools/countdown-timer.json"),
+          import("../messages/ja/tools/exif-viewer.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -209,6 +211,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/number-formatter.json"),
           import("../messages/en/tools/char-frequency.json"),
           import("../messages/en/tools/countdown-timer.json"),
+          import("../messages/en/tools/exif-viewer.json"),
         ]);
 
   return {
@@ -278,6 +281,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "number-formatter": numberFormatter.default,
       "char-frequency": charFrequency.default,
       "countdown-timer": countdownTimer.default,
+      "exif-viewer": exifViewer.default,
     },
   };
 });

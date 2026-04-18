@@ -77,6 +77,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   NumberFormatter: dynamic(() => import("@/tools/NumberFormatter"), { loading: Loading }),
   CharFrequency: dynamic(() => import("@/tools/CharFrequency"), { loading: Loading }),
   CountdownTimer: dynamic(() => import("@/tools/CountdownTimer"), { loading: Loading }),
+  ExifViewer: dynamic(() => import("@/tools/ExifViewer"), { loading: Loading }),
 };
 
 export default toolComponentMap;
