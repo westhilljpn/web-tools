@@ -6,11 +6,28 @@ export type Difficulty = "easy" | "medium" | "hard" | "expert";
 
 export const TUBE_CAP = 4;
 
-export const PALETTE = [
-  "#EF4444", "#3B82F6", "#22C55E", "#EAB308",
-  "#A855F7", "#F97316", "#EC4899", "#06B6D4",
-  "#A3763D", "#F0F0F0",
-];
+export const TUBE_HEIGHT = 144; // px — ColorSort.tsx が参照
+export const LAYER_HEIGHT = TUBE_HEIGHT / TUBE_CAP; // 36px
+
+export const PALETTE_DATA = [
+  { base: "#ef4444", glow: "rgba(239,68,68,0.7)",   light: "#fca5a5" },
+  { base: "#3b82f6", glow: "rgba(59,130,246,0.7)",  light: "#93c5fd" },
+  { base: "#22c55e", glow: "rgba(34,197,94,0.7)",   light: "#86efac" },
+  { base: "#eab308", glow: "rgba(234,179,8,0.7)",   light: "#fde68a" },
+  { base: "#a855f7", glow: "rgba(168,85,247,0.7)",  light: "#d8b4fe" },
+  { base: "#f97316", glow: "rgba(249,115,22,0.7)",  light: "#fed7aa" },
+  { base: "#ec4899", glow: "rgba(236,72,153,0.7)",  light: "#f9a8d4" },
+  { base: "#06b6d4", glow: "rgba(6,182,212,0.7)",   light: "#a5f3fc" },
+  { base: "#84cc16", glow: "rgba(132,204,22,0.7)",  light: "#d9f99d" },
+  { base: "#f43f5e", glow: "rgba(244,63,94,0.7)",   light: "#fda4af" },
+] as const;
+
+// 後方互換: Confetti コンポーネントが PALETTE を参照するためそのまま残す
+export const PALETTE = PALETTE_DATA.map((p) => p.base);
+
+export function getColorData(hex: string) {
+  return PALETTE_DATA.find((p) => p.base === hex) ?? PALETTE_DATA[0];
+}
 
 export const DIFF_CONFIG = {
   easy:   { colors: 4,  tubes: 6  },
