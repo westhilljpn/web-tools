@@ -80,6 +80,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     game2048,
     minesweeper,
     idleTapper,
+    reactionTime,
+    snakeGame,
+    memoryCards,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -151,6 +154,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/game-2048.json"),
           import("../messages/ja/tools/minesweeper.json"),
           import("../messages/ja/tools/idle-tapper.json"),
+          import("../messages/ja/tools/reaction-time.json"),
+          import("../messages/ja/tools/snake-game.json"),
+          import("../messages/ja/tools/memory-cards.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -221,6 +227,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/game-2048.json"),
           import("../messages/en/tools/minesweeper.json"),
           import("../messages/en/tools/idle-tapper.json"),
+          import("../messages/en/tools/reaction-time.json"),
+          import("../messages/en/tools/snake-game.json"),
+          import("../messages/en/tools/memory-cards.json"),
         ]);
 
   return {
@@ -294,6 +303,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "game-2048": game2048.default,
       "minesweeper": minesweeper.default,
       "idle-tapper": idleTapper.default,
+      "reaction-time": reactionTime.default,
+      "snake-game": snakeGame.default,
+      "memory-cards": memoryCards.default,
     },
   };
 });
