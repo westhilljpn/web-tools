@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（64件）
+## 登録済みツール（67件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -85,6 +85,9 @@ npm run dev                         # http://localhost:3000
 | 62 | `char-frequency` | 文字頻度分析ツール | Character Frequency Analyzer | text |
 | 63 | `countdown-timer` | カウントダウンタイマー | Countdown Timer | lifestyle |
 | 64 | `exif-viewer` | 画像EXIFデータ閲覧 | EXIF Data Viewer | image |
+| 65 | `game-2048` | 2048 | 2048 | game |
+| 66 | `minesweeper` | マインスイーパー | Minesweeper | game |
+| 67 | `idle-tapper` | アイドルタッパー | Idle Tapper | game |
 
 ---
 
@@ -247,12 +250,20 @@ npm run dev                         # http://localhost:3000
 - [x] **B16-5** `exif-viewer` — 画像EXIFデータ閲覧（カメラ・GPS・撮影設定・ブラウザ完結）
 - [x] **B16-6** `char-frequency` — 文字頻度分析（文字・単語出現頻度ランキング・棒グラフ）
 
-### バッチ17候補（次回）
+### バッチ17 — ミニゲーム追加 ✅ 完了（2026-04-19）
 
-- [ ] **B17-1** `currency-converter` — 通貨換算ツール（主要通貨・クライアントサイド固定レート）
-- [ ] **B17-2** `todo-list` — シンプルToDoリスト（localStorage保存・チェック・削除）
-- [ ] **B17-3** `stopwatch` — ストップウォッチ（ラップタイム・コピー・高精度タイマー）
-- [ ] **B17-4** `word-cloud` — ワードクラウド生成（頻度ベース・Canvas描画・ブラウザ完結）
+- [x] **G1** `game-2048` — 2048パズルゲーム（useReducer・矢印キー/スワイプ操作・ベストスコアlocalStorage保存）
+- [x] **G2** `minesweeper` — マインスイーパー（初手保証・イテレータ式フラッドフィル・難易度3段階・ベストタイムlocalStorage）
+- [x] **G3** `idle-tapper` — アイドルタッパー⭐（スター収集・5段階アップグレード・毎秒自動生産・localStorage永続化）
+- [x] **G4** `/[locale]/games` — ゲームハブページ（gameカテゴリ一覧・hreflang/SEO対応）
+- [x] `useLocalStorage<T>` 汎用フック追加（`src/hooks/useLocalStorage.ts`・関数型更新対応）
+
+### バッチ18候補（次回）
+
+- [ ] **B18-1** `currency-converter` — 通貨換算ツール（主要通貨・クライアントサイド固定レート）
+- [ ] **B18-2** `todo-list` — シンプルToDoリスト（localStorage保存・チェック・削除）
+- [ ] **B18-3** `stopwatch` — ストップウォッチ（ラップタイム・コピー・高精度タイマー）
+- [ ] **B18-4** `word-cloud` — ワードクラウド生成（頻度ベース・Canvas描画・ブラウザ完結）
 
 ### マーケティング施策 — 次のアクション
 
@@ -295,10 +306,17 @@ npm run dev                         # http://localhost:3000
 |--------|--------|-----------|
 | 高 | GSCのインデックス未登録を手動申請（S2） | Search Console → URL検査で申請。主要ツールから優先（`text-counter`・`json-formatter`・`password-generator` 等） |
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。EN meta description は ≤120文字に統一済み。表示回数↑クリック↓ページを洗い出しキャッチコピー改善 |
-| 中 | B17 ツール追加（currency-converter / todo-list / stopwatch など） | ラインナップ拡充。64件→68件を目標 |
+| 中 | B18 ツール追加（currency-converter / todo-list / stopwatch など） | ラインナップ拡充。67件→72件を目標 |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
+
+### ✅ 完了済み（2026-04-19 — ミニゲーム追加・その他）
+
+- [x] **ミニゲーム3本追加**: `game-2048`・`minesweeper`・`idle-tapper`（計67ツール）
+- [x] **ゲームハブページ**: `/[locale]/games`・gameカテゴリ・ToolCard amber スタイル
+- [x] **useLocalStorage汎用フック**: `src/hooks/useLocalStorage.ts`（関数型更新対応）
+- [x] **プライバシーポリシー・利用規約**: 制定日を 2026年4月9日 に更新
 
 ### ✅ 完了済み（2026-04-19 — 既存ツール品質改善）
 
