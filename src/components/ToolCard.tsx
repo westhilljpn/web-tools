@@ -45,6 +45,11 @@ const CATEGORY_STYLES: Record<ToolCategory, {
     iconBg: "bg-accent/10",
     badgeCls: "bg-accent/10 text-accent dark:bg-accent/[0.06] dark:text-accent",
   },
+  game: {
+    gradient: "linear-gradient(90deg,#f59e0b,#fcd34d)",
+    iconBg: "bg-amber-400/20",
+    badgeCls: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300",
+  },
 };
 
 export default function ToolCard({ tool, locale }: ToolCardProps) {
