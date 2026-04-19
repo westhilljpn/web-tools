@@ -1,0 +1,26 @@
+{
+  "title": "Memory Cards",
+  "description": "Play the Memory Card matching game free online. Flip cards to find matching pairs. Track your moves and beat your best score. No install needed.",
+  "keywords": ["memory game", "memory cards", "card matching game", "concentration game", "free browser game"],
+  "label": "", "placeholder": "", "buttons": {}, "results": {},
+  "limitCheck": { "title": "", "unit": "", "over": "" }, "toast": {},
+  "moves": "Moves",
+  "pairs": "Pairs",
+  "time": "Time",
+  "best": "Best",
+  "won": "You Win! 🎉",
+  "newGame": "New Game",
+  "howToUse": [
+    { "label": "Flip a card", "description": "Click any face-down card to reveal its emoji." },
+    { "label": "Find the match", "description": "Click a second card. If both cards show the same emoji, they stay face-up as a matched pair." },
+    { "label": "No match", "description": "If the two cards don't match, they flip back face-down after a short delay. Remember where they were!" },
+    { "label": "Win", "description": "Match all 8 pairs to complete the game. Try to do it in as few moves as possible." }
+  ],
+  "faq": [
+    { "question": "How many pairs are there?", "answer": "The board has 16 cards (4×4 grid) forming 8 pairs. Find all 8 pairs to win." },
+    { "question": "Is my best score saved?", "answer": "Yes. Your best result (fewest moves) is saved in your browser's local storage." },
+    { "question": "Can I flip more than two cards at once?", "answer": "No. While two cards are visible waiting to be checked, new flips are blocked until the result is resolved." },
+    { "question": "Does the card order change on each game?", "answer": "Yes. Cards are shuffled randomly at the start of every new game." },
+    { "question": "Does this game work offline?", "answer": "Yes. Everything runs entirely in your browser with no server communication." }
+  ]
+}

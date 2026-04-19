@@ -1,0 +1,29 @@
+{
+  "title": "Snake Game",
+  "description": "Play the classic Snake game online for free. Guide the snake to eat food and grow without hitting walls or yourself. Runs in your browser.",
+  "keywords": ["snake game", "snake online", "classic snake", "snake browser game", "free game"],
+  "label": "", "placeholder": "", "buttons": {}, "results": {},
+  "limitCheck": { "title": "", "unit": "", "over": "" }, "toast": {},
+  "score": "Score",
+  "best": "Best",
+  "start": "Start",
+  "pause": "Pause",
+  "resume": "Resume",
+  "gameOver": "Game Over",
+  "tryAgain": "Try Again",
+  "idle": "Press Start to play",
+  "hint": "Arrow keys or WASD · Swipe on mobile",
+  "howToUse": [
+    { "label": "Start", "description": "Click Start or press any arrow key to begin. The snake moves automatically." },
+    { "label": "Control", "description": "Use arrow keys (↑↓←→) or WASD on desktop, or swipe on mobile to change direction." },
+    { "label": "Eat food", "description": "Guide the snake to the red food dot. Each piece eaten grows the snake and increases your score." },
+    { "label": "Avoid collisions", "description": "Don't hit the walls or the snake's own body. The game ends immediately on collision." }
+  ],
+  "faq": [
+    { "question": "How do I control the snake?", "answer": "Use arrow keys or WASD on a keyboard. On mobile, swipe in the direction you want the snake to turn." },
+    { "question": "Is my best score saved?", "answer": "Yes. Your best score is saved in your browser's local storage and persists between sessions." },
+    { "question": "Does the snake speed up?", "answer": "The speed stays constant at the current difficulty. Focus on precision rather than speed." },
+    { "question": "What happens when I hit a wall?", "answer": "The game ends immediately. Click 'Try Again' to start a new game with a fresh board." },
+    { "question": "Can I pause the game?", "answer": "Yes. Click the Pause button or press the spacebar to pause and resume." }
+  ]
+}

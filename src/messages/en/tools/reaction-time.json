@@ -1,0 +1,30 @@
+{
+  "title": "Reaction Time Test",
+  "description": "Test your reaction speed online for free. Click when the screen turns green. Compare your average with world rankings. No install needed.",
+  "keywords": ["reaction time", "reaction time test", "reaction speed", "reflex test", "free game"],
+  "label": "", "placeholder": "", "buttons": {}, "results": {},
+  "limitCheck": { "title": "", "unit": "", "over": "" }, "toast": {},
+  "idle": "Click to Start",
+  "waiting": "Wait...",
+  "ready": "CLICK!",
+  "result": "ms",
+  "early": "Too Early! 😅",
+  "best": "Best",
+  "average": "Avg (last 5)",
+  "history": "History",
+  "tryAgain": "Try Again",
+  "attempts": "attempts",
+  "howToUse": [
+    { "label": "Start", "description": "Click the colored area to begin. The screen will show 'Wait...' in blue." },
+    { "label": "Wait", "description": "Wait for the screen to turn green. The delay is random (1.5–5 seconds) to prevent cheating." },
+    { "label": "Click!", "description": "As soon as the screen turns green, click it as fast as you can." },
+    { "label": "Check your result", "description": "Your reaction time in milliseconds is shown. Under 200ms is excellent. Average human reaction time is around 250ms." }
+  ],
+  "faq": [
+    { "question": "What is a good reaction time?", "answer": "The average human reaction time is around 200–250ms. Under 200ms is excellent; under 150ms is exceptional. Top gamers typically average 150–180ms." },
+    { "question": "Why do I sometimes get very fast results?", "answer": "Clicking before the green screen appears registers as 'Too Early'. This test detects and rejects early clicks to ensure accurate measurement." },
+    { "question": "Is my best result saved?", "answer": "Yes. Your best reaction time is saved in your browser's local storage and persists between sessions." },
+    { "question": "What affects reaction time?", "answer": "Factors include caffeine intake, fatigue, age, and practice. Reaction times tend to be fastest when alert and worsen with fatigue." },
+    { "question": "How many attempts should I take?", "answer": "Take at least 5 attempts and use the average for a reliable measurement. A single result can vary significantly due to random factors." }
+  ]
+}
