@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（71件）
+## 登録済みツール（72件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -92,6 +92,7 @@ npm run dev                         # http://localhost:3000
 | 69 | `snake-game` | スネークゲーム | Snake Game | game |
 | 70 | `memory-cards` | 神経衰弱 | Memory Cards | game |
 | 71 | `color-sort` | カラーソートパズル | Color Sort Puzzle | game |
+| 72 | `block-puzzle` | ブロックパズル | Block Puzzle | game |
 
 ---
 
@@ -267,6 +268,8 @@ npm run dev                         # http://localhost:3000
 - [x] **G5** `reaction-time` — 反応速度テスト（フライング検出・ベスト/平均記録・localStorage永続化）
 - [x] **G6** `snake-game` — スネークゲーム（useReducer+setInterval・矢印/WASD/スワイプ操作・一時停止・ベストスコア保存）
 - [x] **G7** `memory-cards` — 神経衰弱（8ペア16枚・Fisher-Yatesシャッフル・700msフリップバック・最少手数記録）
+- [x] **G8** `color-sort` — カラーソートパズル（4難易度・LCGシード決定論的生成・Undo・CSS紙吹雪）
+- [x] **G9** `block-puzzle` — ブロックパズル（10×10グリッド・20種ピース・ポインターイベントD&D・コンボボーナス）
 
 ### バッチ18候補（次回）
 

@@ -558,6 +558,13 @@ const tools: Tool[] = [
     component: "ColorSort",
     updatedAt: "2026-04-19",
   },
+  {
+    slug: "block-puzzle",
+    category: "game",
+    icon: "🧩",
+    component: "BlockPuzzle",
+    updatedAt: "2026-04-19",
+  },
 ];
 
 export default tools;

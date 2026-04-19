@@ -1,0 +1,24 @@
+{
+  "title": "Block Puzzle",
+  "description": "Drop Tetris-like blocks to fill rows and columns. Clear lines to score points and chain combos. Free online puzzle game, no install needed.",
+  "keywords": ["block puzzle", "puzzle game", "tetris", "line clear", "free game", "online puzzle"],
+  "label": "", "placeholder": "", "buttons": {}, "results": {},
+  "limitCheck": { "title": "", "unit": "", "over": "" }, "toast": {},
+  "score": "Score",
+  "best": "Best",
+  "gameOver": "Game Over",
+  "playAgain": "Play Again",
+  "reset": "Restart",
+  "howToUse": [
+    { "label": "Drag a piece", "description": "Drag one of the 3 pieces from the tray onto the grid. On mobile, the piece appears above your finger so you can see where you're placing it." },
+    { "label": "Fill rows and columns", "description": "Place pieces to fill entire rows or columns. Completed lines clear automatically and earn points." },
+    { "label": "Chain combos", "description": "Clear multiple lines in a single placement to trigger a combo bonus. The more lines you chain, the higher the bonus." },
+    { "label": "Keep the board clear", "description": "The game ends when none of the 3 pieces can fit anywhere on the board. Think ahead to keep the board open." }
+  ],
+  "faq": [
+    { "question": "Can I rotate pieces?", "answer": "No, pieces cannot be rotated. Plan your placements using the pieces in their fixed orientations." },
+    { "question": "How is the score calculated?", "answer": "Each placed cell earns 5 points. Each cleared line earns 100 points. Combo bonuses multiply with consecutive line clears." },
+    { "question": "When do I get a new set of pieces?", "answer": "A new set of 3 pieces appears automatically once all 3 pieces in the current tray have been placed." },
+    { "question": "What causes game over?", "answer": "The game ends when none of the remaining pieces in the tray can be placed anywhere on the board." }
+  ]
+}
