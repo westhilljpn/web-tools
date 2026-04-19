@@ -215,23 +215,13 @@ export default function ColorSort() {
         <button
           onClick={undo}
           disabled={!hist.length}
-          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-40"
-          style={{
-            background: "#1e293b",
-            border: "1px solid rgba(255,255,255,0.12)",
-            color: "#94a3b8",
-          }}
+          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-40 bg-[#1e293b] border border-white/10 text-slate-400"
         >
           {t("undo")}
         </button>
         <button
           onClick={restart}
-          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
-          style={{
-            background: "#1e293b",
-            border: "1px solid rgba(255,255,255,0.12)",
-            color: "#94a3b8",
-          }}
+          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors bg-[#1e293b] border border-white/10 text-slate-400"
         >
           {t("restart")}
         </button>
