@@ -26,7 +26,8 @@ export const PALETTE_DATA = [
 export const PALETTE = PALETTE_DATA.map((p) => p.base);
 
 export function getColorData(hex: string) {
-  return PALETTE_DATA.find((p) => p.base === hex) ?? PALETTE_DATA[0];
+  const lower = hex.toLowerCase();
+  return PALETTE_DATA.find((p) => p.base === lower) ?? PALETTE_DATA[0];
 }
 
 export const DIFF_CONFIG = {
