@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（67件）
+## 登録済みツール（70件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -88,6 +88,9 @@ npm run dev                         # http://localhost:3000
 | 65 | `game-2048` | 2048 | 2048 | game |
 | 66 | `minesweeper` | マインスイーパー | Minesweeper | game |
 | 67 | `idle-tapper` | アイドルタッパー | Idle Tapper | game |
+| 68 | `reaction-time` | 反応速度テスト | Reaction Time Test | game |
+| 69 | `snake-game` | スネークゲーム | Snake Game | game |
+| 70 | `memory-cards` | 神経衰弱 | Memory Cards | game |
 
 ---
 
@@ -258,6 +261,12 @@ npm run dev                         # http://localhost:3000
 - [x] **G4** `/[locale]/games` — ゲームハブページ（gameカテゴリ一覧・hreflang/SEO対応）
 - [x] `useLocalStorage<T>` 汎用フック追加（`src/hooks/useLocalStorage.ts`・関数型更新対応）
 
+### バッチ17-Phase2 — ミニゲーム追加 ✅ 完了（2026-04-19）
+
+- [x] **G5** `reaction-time` — 反応速度テスト（フライング検出・ベスト/平均記録・localStorage永続化）
+- [x] **G6** `snake-game` — スネークゲーム（useReducer+setInterval・矢印/WASD/スワイプ操作・一時停止・ベストスコア保存）
+- [x] **G7** `memory-cards` — 神経衰弱（8ペア16枚・Fisher-Yatesシャッフル・700msフリップバック・最少手数記録）
+
 ### バッチ18候補（次回）
 
 - [ ] **B18-1** `currency-converter` — 通貨換算ツール（主要通貨・クライアントサイド固定レート）
@@ -271,16 +280,16 @@ npm run dev                         # http://localhost:3000
 
 | 優先 | slug | ゲーム名 | 実装量 | 滞在時間 | 備考 |
 |------|------|----------|--------|----------|------|
-| ★★★ | `reaction-time` | 反応速度テスト | 極小 | 低〜中 | SNS拡散性◎・「反応速度 テスト」検索需要あり |
-| ★★★ | `snake-game` | スネーク | 小 | 中〜高 | Canvas + setInterval。クラシックで普遍的 |
-| ★★★ | `memory-cards` | 神経衰弱 | 小 | 中 | カードめくり・ペアマッチ。言語依存ゼロ |
+| ✅ 完了 | `reaction-time` | 反応速度テスト | 極小 | 低〜中 | SNS拡散性◎・「反応速度 テスト」検索需要あり |
+| ✅ 完了 | `snake-game` | スネーク | 小 | 中〜高 | Canvas + setInterval。クラシックで普遍的 |
+| ✅ 完了 | `memory-cards` | 神経衰弱 | 小 | 中 | カードめくり・ペアマッチ。言語依存ゼロ |
 | ★★☆ | `sliding-puzzle` | 15パズル | 小〜中 | 中 | グリッドシャッフル・クリックで移動 |
 | ★★☆ | `sudoku` | 数独 | 中 | 非常に高 | パズル生成が必要（バックトラック）だが滞在時間最長級 |
 | ★★☆ | `breakout` | ブロック崩し | 中 | 中〜高 | Canvas + requestAnimationFrame。当初候補に挙がっていたゲーム |
 | ★☆☆ | `simon-says` | サイモンゲーム | 小 | 低〜中 | 色ボタンの順番記憶。Web Audio API で音付き |
 | ★☆☆ | `tictactoe` | 三目並べ（AI対戦） | 小 | 低 | ミニマックスAI実装。すぐ終わるため滞在時間は低め |
 
-> **次に実装するなら**: `reaction-time`（30分以内で完成・拡散性高）→ `snake-game`（Canvas系の中で最シンプル）→ `memory-cards` の順を推奨。
+> **次に実装するなら**: `sliding-puzzle`（15パズル）→ `sudoku`（数独・滞在時間最長級）の順を推奨。
 
 ### マーケティング施策 — 次のアクション
 
