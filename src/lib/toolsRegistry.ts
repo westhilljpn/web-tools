@@ -9,7 +9,8 @@ export type ToolCategory =
   | "image"
   | "calculate"
   | "lifestyle"
-  | "dev";
+  | "dev"
+  | "game";
 
 /** ツールの非ローカライズ情報（toolsRegistry 管理分） */
 export interface Tool {
@@ -504,6 +505,30 @@ const tools: Tool[] = [
     icon: "🔬",
     component: "ExifViewer",
     updatedAt: "2026-04-18",
+  },
+  {
+    slug: "game-2048",
+    category: "game",
+    icon: "🔢",
+    component: "Game2048",
+    updatedAt: "2026-04-19",
+    featured: true,
+  },
+  {
+    slug: "minesweeper",
+    category: "game",
+    icon: "💣",
+    component: "Minesweeper",
+    updatedAt: "2026-04-19",
+    featured: true,
+  },
+  {
+    slug: "idle-tapper",
+    category: "game",
+    icon: "⭐",
+    component: "IdleTapper",
+    updatedAt: "2026-04-19",
+    featured: true,
   },
 ];
 

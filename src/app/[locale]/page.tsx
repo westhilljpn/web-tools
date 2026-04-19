@@ -65,7 +65,7 @@ export default async function HomePage({ params }: PageProps) {
   );
 
   // カテゴリ一覧（"all" + 登録カテゴリ）
-  const categoryKeys = ["all", "text", "convert", "image", "calculate", "lifestyle", "dev"] as const;
+  const categoryKeys = ["all", "text", "convert", "image", "calculate", "lifestyle", "dev", "game"] as const;
   const categories = categoryKeys.map((key) => ({
     key,
     label: tCat(key),

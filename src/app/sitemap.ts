@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 固定ページ（全ロケール）
   const staticPages: MetadataRoute.Sitemap = locales.flatMap((locale) => [
     {
+      url: `${siteUrl}/${locale}/games`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
       url: `${siteUrl}/${locale}/privacy`,
       lastModified: new Date("2025-10-01"),
       changeFrequency: "yearly" as const,

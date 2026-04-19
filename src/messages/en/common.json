@@ -20,7 +20,12 @@
     "image": "Image",
     "calculate": "Calculate",
     "lifestyle": "Lifestyle",
-    "dev": "Dev"
+    "dev": "Dev",
+    "game": "Game"
+  },
+  "gamesHub": {
+    "title": "Free Online Games",
+    "description": "Play free browser games. No download, no login. Everything runs in your browser."
   },
   "home": {
     "title": "Free Online Tools",

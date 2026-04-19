@@ -20,7 +20,12 @@
     "image": "画像",
     "calculate": "計算",
     "lifestyle": "生活",
-    "dev": "開発"
+    "dev": "開発",
+    "game": "ゲーム"
+  },
+  "gamesHub": {
+    "title": "無料ブラウザゲーム",
+    "description": "無料でブラウザゲームが遊べます。ダウンロード不要・ログイン不要。"
   },
   "home": {
     "title": "無料Webツール集",

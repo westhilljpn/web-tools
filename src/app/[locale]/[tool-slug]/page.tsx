@@ -111,7 +111,7 @@ export default async function ToolPage({ params }: PageProps) {
     name: tm.title,
     description: tm.description,
     url: `${siteUrl}/${locale}/${slug}`,
-    applicationCategory: "UtilityApplication",
+    applicationCategory: tool.category === "game" ? "GameApplication" : "UtilityApplication",
     operatingSystem: "Any",
     offers: {
       "@type": "Offer",

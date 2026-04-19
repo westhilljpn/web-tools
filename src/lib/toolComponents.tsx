@@ -78,6 +78,9 @@ const toolComponentMap: Record<string, ComponentType> = {
   CharFrequency: dynamic(() => import("@/tools/CharFrequency"), { loading: Loading }),
   CountdownTimer: dynamic(() => import("@/tools/CountdownTimer"), { loading: Loading }),
   ExifViewer: dynamic(() => import("@/tools/ExifViewer"), { loading: Loading }),
+  Game2048: dynamic(() => import("@/tools/Game2048"), { loading: Loading }),
+  Minesweeper: dynamic(() => import("@/tools/Minesweeper"), { loading: Loading }),
+  IdleTapper: dynamic(() => import("@/tools/IdleTapper"), { loading: Loading }),
 };
 
 export default toolComponentMap;
