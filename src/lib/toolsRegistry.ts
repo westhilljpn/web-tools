@@ -530,6 +530,27 @@ const tools: Tool[] = [
     updatedAt: "2026-04-19",
     featured: true,
   },
+  {
+    slug: "reaction-time",
+    category: "game",
+    icon: "⚡",
+    component: "ReactionTime",
+    updatedAt: "2026-04-19",
+  },
+  {
+    slug: "snake-game",
+    category: "game",
+    icon: "🐍",
+    component: "SnakeGame",
+    updatedAt: "2026-04-19",
+  },
+  {
+    slug: "memory-cards",
+    category: "game",
+    icon: "🃏",
+    component: "MemoryCards",
+    updatedAt: "2026-04-19",
+  },
 ];
 
 export default tools;

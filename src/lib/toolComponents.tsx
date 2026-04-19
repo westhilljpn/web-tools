@@ -81,6 +81,9 @@ const toolComponentMap: Record<string, ComponentType> = {
   Game2048: dynamic(() => import("@/tools/Game2048"), { loading: Loading }),
   Minesweeper: dynamic(() => import("@/tools/Minesweeper"), { loading: Loading }),
   IdleTapper: dynamic(() => import("@/tools/IdleTapper"), { loading: Loading }),
+  ReactionTime: dynamic(() => import("@/tools/ReactionTime"), { loading: Loading }),
+  SnakeGame: dynamic(() => import("@/tools/SnakeGame"), { loading: Loading }),
+  MemoryCards: dynamic(() => import("@/tools/MemoryCards"), { loading: Loading }),
 };
 
 export default toolComponentMap;
