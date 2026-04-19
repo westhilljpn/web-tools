@@ -17,7 +17,7 @@ npm run dev                         # http://localhost:3000
 
 ---
 
-## 登録済みツール（70件）
+## 登録済みツール（71件）
 
 | # | slug | タイトル（ja） | タイトル（en） | カテゴリ |
 |---|------|----------------|----------------|----------|
@@ -91,6 +91,7 @@ npm run dev                         # http://localhost:3000
 | 68 | `reaction-time` | 反応速度テスト | Reaction Time Test | game |
 | 69 | `snake-game` | スネークゲーム | Snake Game | game |
 | 70 | `memory-cards` | 神経衰弱 | Memory Cards | game |
+| 71 | `color-sort` | カラーソートパズル | Color Sort Puzzle | game |
 
 ---
 
