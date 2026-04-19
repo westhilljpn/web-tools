@@ -58,31 +58,50 @@ function lcg(seed: number) {
   };
 }
 
+const SHUFFLE_ITERS: Record<Difficulty, [number, number]> = {
+  easy:   [300, 200],
+  medium: [400, 200],
+  hard:   [500, 200],
+  expert: [600, 300],
+};
+
 export function generatePuzzle(level: number, diff: Difficulty): string[][] {
   const { colors, tubes } = DIFF_CONFIG[diff];
+  const [base, extra] = SHUFFLE_ITERS[diff];
   const rng = lcg(level * 31 + DIFF_KEYS.indexOf(diff) * 9973 + 1);
+  const iters = base + Math.floor(rng() * extra);
+
   const state: string[][] = [
     ...Array.from({ length: colors }, (_, i) => Array<string>(TUBE_CAP).fill(PALETTE[i])),
     ...Array.from({ length: tubes - colors }, () => [] as string[]),
   ];
-  const iters = 150 + Math.floor(rng() * 150);
+
+  let lastFromIdx = -1;
+
   for (let k = 0; k < iters; k++) {
-    const valid: [number, number][] = [];
+    const valid: [number, number, number][] = [];
     for (let f = 0; f < state.length; f++) {
       if (!state[f].length) continue;
-      const top = state[f][state[f].length - 1];
+      const topColor = state[f][state[f].length - 1];
+      let stackCount = 0;
+      for (let i = state[f].length - 1; i >= 0 && state[f][i] === topColor; i--) stackCount++;
+
       for (let t = 0; t < state.length; t++) {
-        if (
-          f !== t &&
-          state[t].length < TUBE_CAP &&
-          (!state[t].length || state[t][state[t].length - 1] === top)
-        ) valid.push([f, t]);
+        if (f === t) continue;
+        if (t === lastFromIdx) continue;
+        const space = TUBE_CAP - state[t].length;
+        const toTop = state[t].length ? state[t][state[t].length - 1] : null;
+        if (space >= stackCount && (toTop === null || toTop === topColor)) {
+          valid.push([f, t, stackCount]);
+        }
       }
     }
     if (!valid.length) break;
-    const [f, t] = valid[Math.floor(rng() * valid.length)];
-    state[t].push(state[f].pop()!);
+    const [f, t, cnt] = valid[Math.floor(rng() * valid.length)];
+    for (let i = 0; i < cnt; i++) state[t].push(state[f].pop()!);
+    lastFromIdx = f;
   }
+
   return state;
 }
 
