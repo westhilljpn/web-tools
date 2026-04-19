@@ -76,30 +76,32 @@ export function generatePuzzle(level: number, diff: Difficulty): string[][] {
     ...Array.from({ length: tubes - colors }, () => [] as string[]),
   ];
 
-  let lastFromIdx = -1;
+  let lastFrom = -1;
+  let lastTo = -1;
 
   for (let k = 0; k < iters; k++) {
-    const valid: [number, number, number][] = [];
+    // Single-ball valid moves: [fromIdx, toIdx]
+    const valid: [number, number][] = [];
     for (let f = 0; f < state.length; f++) {
       if (!state[f].length) continue;
-      const topColor = state[f][state[f].length - 1];
-      let stackCount = 0;
-      for (let i = state[f].length - 1; i >= 0 && state[f][i] === topColor; i--) stackCount++;
-
+      const top = state[f][state[f].length - 1];
       for (let t = 0; t < state.length; t++) {
         if (f === t) continue;
-        if (t === lastFromIdx) continue;
-        const space = TUBE_CAP - state[t].length;
-        const toTop = state[t].length ? state[t][state[t].length - 1] : null;
-        if (space >= stackCount && (toTop === null || toTop === topColor)) {
-          valid.push([f, t, stackCount]);
+        // Anti-reversal: skip only the exact reverse of last move
+        if (f === lastTo && t === lastFrom) continue;
+        if (
+          state[t].length < TUBE_CAP &&
+          (!state[t].length || state[t][state[t].length - 1] === top)
+        ) {
+          valid.push([f, t]);
         }
       }
     }
     if (!valid.length) break;
-    const [f, t, cnt] = valid[Math.floor(rng() * valid.length)];
-    for (let i = 0; i < cnt; i++) state[t].push(state[f].pop()!);
-    lastFromIdx = f;
+    const [f, t] = valid[Math.floor(rng() * valid.length)];
+    state[t].push(state[f].pop()!);
+    lastFrom = f;
+    lastTo = t;
   }
 
   return state;
