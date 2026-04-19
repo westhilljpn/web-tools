@@ -164,19 +164,50 @@ export default function ColorSort() {
         )}
       </div>
 
-      {/* Tube grid (dark panel) */}
+      {/* Tube grid (Deep Space Glass panel) */}
       <div
-        className="grid gap-2 p-5 bg-gradient-to-b from-slate-800 to-slate-900 rounded-2xl shadow-xl"
-        style={{ gridTemplateColumns: `repeat(${COLS[diff]}, minmax(0, 1fr))` }}
+        className="relative overflow-hidden rounded-2xl p-5 shadow-2xl"
+        style={{
+          background: "linear-gradient(160deg, #0a0e1a 0%, #0d1a2e 60%, #0a1020 100%)",
+        }}
       >
-        {tubes.map((balls, i) => (
-          <Tube
-            key={i}
-            balls={balls}
-            isSelected={sel === i}
-            onClick={() => clickTube(i)}
-          />
-        ))}
+        {/* 背景グロー光源 */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            width: 140,
+            height: 140,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(56,189,248,0.09) 0%, transparent 70%)",
+            top: -30,
+            left: 10,
+          }}
+        />
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            width: 100,
+            height: 100,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(168,85,247,0.07) 0%, transparent 70%)",
+            bottom: 10,
+            right: 10,
+          }}
+        />
+
+        <div
+          className="relative grid gap-2.5"
+          style={{ gridTemplateColumns: `repeat(${COLS[diff]}, minmax(0, 1fr))` }}
+        >
+          {tubes.map((balls, i) => (
+            <Tube
+              key={i}
+              balls={balls}
+              isSelected={sel === i}
+              onClick={() => clickTube(i)}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Action buttons */}
@@ -184,13 +215,23 @@ export default function ColorSort() {
         <button
           onClick={undo}
           disabled={!hist.length}
-          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors disabled:opacity-40"
+          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-40"
+          style={{
+            background: "#1e293b",
+            border: "1px solid rgba(255,255,255,0.12)",
+            color: "#94a3b8",
+          }}
         >
           {t("undo")}
         </button>
         <button
           onClick={restart}
-          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+          style={{
+            background: "#1e293b",
+            border: "1px solid rgba(255,255,255,0.12)",
+            color: "#94a3b8",
+          }}
         >
           {t("restart")}
         </button>
