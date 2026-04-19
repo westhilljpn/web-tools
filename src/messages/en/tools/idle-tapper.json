@@ -1,0 +1,34 @@
+{
+  "title": "Idle Tapper",
+  "description": "A free idle clicker game. Tap to collect stars, buy upgrades, and watch your star count grow automatically. No login needed — runs in your browser.",
+  "keywords": ["idle game", "clicker game", "idle tapper", "tap game", "free idle game", "browser game", "incremental game"],
+  "label": "",
+  "placeholder": "",
+  "buttons": {},
+  "results": {},
+  "limitCheck": { "title": "", "unit": "", "over": "" },
+  "toast": {},
+  "stars": "Stars",
+  "perSecond": "/sec",
+  "totalClicks": "Total Taps",
+  "tap": "Tap!",
+  "upgrades": "Upgrades",
+  "purchased": "Purchased",
+  "clickPower": "Tap Power",
+  "autoLabel": "Auto",
+  "resetButton": "Reset",
+  "resetConfirm": "Reset all progress? This cannot be undone.",
+  "howToUse": [
+    { "label": "Tap the star", "description": "Click or tap the large ⭐ button to earn stars. Each tap earns stars based on your current tap power." },
+    { "label": "Buy upgrades", "description": "Spend stars on upgrades to multiply your tap power or unlock automatic star production." },
+    { "label": "Go idle", "description": "Auto-production upgrades generate stars every second — even when you are not clicking." },
+    { "label": "Progress is saved", "description": "Your stars and upgrades are saved automatically. Return anytime to pick up where you left off." }
+  ],
+  "faq": [
+    { "question": "Is my progress saved?", "answer": "Yes. Your stars and purchased upgrades are automatically saved in your browser's local storage. Close the tab and come back later — your progress will be there." },
+    { "question": "What are auto-production upgrades?", "answer": "Some upgrades (Star Drone, Star Factory, Galactic Engine) generate stars every second without clicking. Stack them to grow your count faster." },
+    { "question": "How do I reset my progress?", "answer": "Click the Reset button at the bottom. You will be asked to confirm before all progress is cleared." },
+    { "question": "Does this game send data anywhere?", "answer": "No. All data is stored locally in your browser using localStorage. Nothing is sent to any server." },
+    { "question": "What is the maximum tap power?", "answer": "Buying both tap upgrades (Star Burst and Stellar Touch) multiplies your tap power to ×4 per click." }
+  ]
+}
