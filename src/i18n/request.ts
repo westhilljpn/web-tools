@@ -77,6 +77,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     charFrequency,
     countdownTimer,
     exifViewer,
+    game2048,
+    minesweeper,
+    idleTapper,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -145,6 +148,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/char-frequency.json"),
           import("../messages/ja/tools/countdown-timer.json"),
           import("../messages/ja/tools/exif-viewer.json"),
+          import("../messages/ja/tools/game-2048.json"),
+          import("../messages/ja/tools/minesweeper.json"),
+          import("../messages/ja/tools/idle-tapper.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -212,6 +218,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/char-frequency.json"),
           import("../messages/en/tools/countdown-timer.json"),
           import("../messages/en/tools/exif-viewer.json"),
+          import("../messages/en/tools/game-2048.json"),
+          import("../messages/en/tools/minesweeper.json"),
+          import("../messages/en/tools/idle-tapper.json"),
         ]);
 
   return {
@@ -282,6 +291,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "char-frequency": charFrequency.default,
       "countdown-timer": countdownTimer.default,
       "exif-viewer": exifViewer.default,
+      "game-2048": game2048.default,
+      "minesweeper": minesweeper.default,
+      "idle-tapper": idleTapper.default,
     },
   };
 });
