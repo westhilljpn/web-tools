@@ -107,6 +107,14 @@ export function generatePuzzle(level: number, diff: Difficulty): string[][] {
   return state;
 }
 
+function getTopStack(tube: string[]): { color: string; count: number } | null {
+  if (!tube.length) return null;
+  const color = tube[tube.length - 1];
+  let count = 0;
+  for (let i = tube.length - 1; i >= 0 && tube[i] === color; i--) count++;
+  return { color, count };
+}
+
 function isSolved(tubes: string[][]): boolean {
   return tubes.every(
     (t) => !t.length || (t.length === TUBE_CAP && t.every((c) => c === t[0]))
@@ -132,19 +140,22 @@ export function useColorSort() {
     }
     if (sel === idx) { setSel(null); return; }
 
-    const fromBalls = tubes[sel];
+    const fromStack = getTopStack(tubes[sel]);
+    if (!fromStack) { setSel(null); return; }
+
+    const { color, count } = fromStack;
     const toBalls = tubes[idx];
-    const top = fromBalls[fromBalls.length - 1];
-    if (!top) { setSel(null); return; }
+    const space = TUBE_CAP - toBalls.length;
+    const toTop = toBalls.length ? toBalls[toBalls.length - 1] : null;
+    const canMove = space >= count && (toTop === null || toTop === color);
 
-    const canMove =
-      toBalls.length === 0 ||
-      (toBalls[toBalls.length - 1] === top && toBalls.length < TUBE_CAP);
-
-    if (!canMove) { setSel(toBalls.length ? idx : null); return; }
+    if (!canMove) {
+      setSel(toBalls.length ? idx : null);
+      return;
+    }
 
     const next = tubes.map((t) => [...t]);
-    next[idx].push(next[sel].pop()!);
+    for (let i = 0; i < count; i++) next[idx].push(next[sel].pop()!);
     const m = moves + 1;
     setHist((h) => [...h, tubes.map((t) => [...t])]);
     setTubes(next);
