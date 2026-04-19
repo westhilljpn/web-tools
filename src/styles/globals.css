@@ -203,3 +203,16 @@
 .dark .markdown-body table th,
 .dark .markdown-body table td   { border-color: rgba(182, 220, 239, 0.12); }
 .dark .markdown-body th         { background-color: #1e3048; }
+
+/* ========================================
+   Color Sort: 紙吹雪アニメーション
+   ======================================== */
+@keyframes cs-confetti {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+.cs-confetti {
+  animation: cs-confetti linear forwards;
+}

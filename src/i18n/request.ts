@@ -83,6 +83,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     reactionTime,
     snakeGame,
     memoryCards,
+    colorSort,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -157,6 +158,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/reaction-time.json"),
           import("../messages/ja/tools/snake-game.json"),
           import("../messages/ja/tools/memory-cards.json"),
+          import("../messages/ja/tools/color-sort.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -230,6 +232,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/reaction-time.json"),
           import("../messages/en/tools/snake-game.json"),
           import("../messages/en/tools/memory-cards.json"),
+          import("../messages/en/tools/color-sort.json"),
         ]);
 
   return {
@@ -306,6 +309,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "reaction-time": reactionTime.default,
       "snake-game": snakeGame.default,
       "memory-cards": memoryCards.default,
+      "color-sort": colorSort.default,
     },
   };
 });

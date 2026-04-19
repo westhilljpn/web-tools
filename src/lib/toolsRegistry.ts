@@ -551,6 +551,13 @@ const tools: Tool[] = [
     component: "MemoryCards",
     updatedAt: "2026-04-19",
   },
+  {
+    slug: "color-sort",
+    category: "game",
+    icon: "🎨",
+    component: "ColorSort",
+    updatedAt: "2026-04-19",
+  },
 ];
 
 export default tools;

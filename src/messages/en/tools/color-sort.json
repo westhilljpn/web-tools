@@ -1,0 +1,26 @@
+{
+  "title": "Color Sort Puzzle",
+  "description": "Sort the colored balls into tubes so each tube contains only one color. A relaxing yet challenging brain puzzle game. Free, no download needed.",
+  "keywords": ["color sort", "ball sort puzzle", "sorting game", "brain puzzle", "free puzzle game", "tube sort"],
+  "label": "", "placeholder": "", "buttons": {}, "results": {},
+  "limitCheck": { "title": "", "unit": "", "over": "" }, "toast": {},
+  "easy": "Easy",
+  "medium": "Medium",
+  "hard": "Hard",
+  "expert": "Expert",
+  "level": "Level",
+  "moves": "Moves",
+  "best": "Best",
+  "cleared": "Puzzle Cleared!",
+  "nextLevel": "Next Level",
+  "restart": "Restart",
+  "undo": "Undo",
+  "share": "Share",
+  "howToUse": [
+    { "label": "Select a tube", "description": "Tap any tube to select it. The selected tube lifts up slightly to show it is active." },
+    { "label": "Move a ball", "description": "Tap another tube to move the top ball there. You can only move onto an empty tube, or onto one whose top ball matches and has space." },
+    { "label": "Sort all colors", "description": "Keep moving balls until each tube contains only one color or is empty. Use Undo anytime to backtrack." },
+    { "label": "Clear the puzzle", "description": "All tubes sorted? The puzzle is complete! Tap Next Level for a fresh challenge with more colors." }
+  ],
+  "faq": []
+}
