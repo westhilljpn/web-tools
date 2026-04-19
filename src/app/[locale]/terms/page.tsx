@@ -118,7 +118,7 @@ function JaTermsContent({ siteName }: { siteName: string }) {
             </a>
           </p>
         </section>
-        <p className="text-xs text-gray-400 pt-4 border-t border-gray-100">制定日：2024年1月1日</p>
+        <p className="text-xs text-gray-400 pt-4 border-t border-gray-100">制定日：2026年4月9日</p>
       </div>
     </div>
   );
