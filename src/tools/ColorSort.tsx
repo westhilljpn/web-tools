@@ -1,7 +1,15 @@
 "use client";
 import { useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { useColorSort, TUBE_CAP, PALETTE, type Difficulty } from "@/hooks/useColorSort";
+import {
+  useColorSort,
+  TUBE_CAP,
+  TUBE_HEIGHT,
+  LAYER_HEIGHT,
+  PALETTE,
+  getColorData,
+  type Difficulty,
+} from "@/hooks/useColorSort";
 
 const COLS: Record<Difficulty, number> = { easy: 3, medium: 4, hard: 5, expert: 6 };
 const DIFFS: Difficulty[] = ["easy", "medium", "hard", "expert"];
@@ -11,36 +19,86 @@ function Tube({ balls, isSelected, onClick }: {
   isSelected: boolean;
   onClick: () => void;
 }) {
+  const completed = balls.length === TUBE_CAP && balls.every((b) => b === balls[0]);
+  const topData = balls.length ? getColorData(balls[balls.length - 1]) : null;
+
+  const borderStyle = completed && topData
+    ? {
+        border: `2px solid ${topData.glow.replace("0.7", "0.9")}`,
+        boxShadow: `0 0 22px ${topData.glow}, 0 4px 20px rgba(0,0,0,0.6)`,
+      }
+    : isSelected && topData
+    ? {
+        border: `2px solid ${topData.glow.replace("0.7", "0.85")}`,
+        boxShadow: `0 0 20px ${topData.glow}, 0 6px 24px rgba(0,0,0,0.7)`,
+      }
+    : {
+        border: "1.5px solid rgba(255,255,255,0.2)",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.6)",
+      };
+
   return (
     <button
       onClick={onClick}
       aria-label="tube"
-      className={`relative flex flex-col-reverse items-center rounded-xl border-2 p-1 gap-0.5 w-12 h-44 transition-transform duration-150 cursor-pointer
-        ${isSelected
-          ? "-translate-y-2 border-yellow-400 shadow-yellow-300/40 shadow-lg"
-          : "border-white/30 hover:border-white/50 hover:-translate-y-0.5"
-        }
-        bg-white/10 backdrop-blur-sm`}
+      className={`relative flex flex-col-reverse overflow-hidden cursor-pointer transition-transform duration-150
+        ${isSelected ? "-translate-y-2.5" : "hover:-translate-y-0.5"}
+      `}
+      style={{
+        width: 44,
+        height: TUBE_HEIGHT,
+        borderRadius: "6px 6px 22px 22px",
+        background: "rgba(255,255,255,0.05)",
+        ...borderStyle,
+      }}
     >
-      {Array.from({ length: TUBE_CAP }, (_, i) => {
-        const color = balls[i];
+      {/* Liquid layers bottom-to-top: key by position+color triggers pour-in on new layers */}
+      {balls.map((color, i) => {
+        const cd = getColorData(color);
         return (
-          <div key={i} className="w-10 h-10 flex items-center justify-center shrink-0">
-            {color ? (
-              <div
-                className="w-9 h-9 rounded-full"
-                style={{
-                  backgroundColor: color,
-                  backgroundImage:
-                    "radial-gradient(circle at 33% 33%, rgba(255,255,255,0.55) 0%, transparent 55%)",
-                  boxShadow:
-                    "inset -2px -3px 5px rgba(0,0,0,0.22), 0 1px 3px rgba(0,0,0,0.2)",
-                }}
-              />
-            ) : null}
+          <div
+            key={`${i}-${color}`}
+            className="liquid-pour-in shrink-0 relative w-full"
+            style={{
+              height: LAYER_HEIGHT,
+              background: `linear-gradient(180deg, ${cd.light}F0 0%, ${cd.base} 100%)`,
+              boxShadow: `inset 0 0 12px ${cd.glow}`,
+              borderTop: "1px solid rgba(255,255,255,0.18)",
+            }}
+          >
+            <div
+              className="absolute"
+              style={{
+                top: 4,
+                left: 5,
+                right: 5,
+                height: 3,
+                background: "rgba(255,255,255,0.30)",
+                borderRadius: 2,
+              }}
+            />
           </div>
         );
       })}
+
+      {completed && topData && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+          <span style={{ fontSize: 22, filter: `drop-shadow(0 0 6px ${topData.base})` }}>
+            ✓
+          </span>
+        </div>
+      )}
+
+      <div
+        className="absolute pointer-events-none rounded"
+        style={{
+          top: 0,
+          left: 6,
+          width: 8,
+          height: "60%",
+          background: "linear-gradient(180deg, rgba(255,255,255,0.28) 0%, transparent 100%)",
+        }}
+      />
     </button>
   );
 }
@@ -106,19 +164,50 @@ export default function ColorSort() {
         )}
       </div>
 
-      {/* Tube grid (dark panel) */}
+      {/* Tube grid (Deep Space Glass panel) */}
       <div
-        className="grid gap-2 p-5 bg-gradient-to-b from-slate-800 to-slate-900 rounded-2xl shadow-xl"
-        style={{ gridTemplateColumns: `repeat(${COLS[diff]}, minmax(0, 1fr))` }}
+        className="relative overflow-hidden rounded-2xl p-5 shadow-2xl"
+        style={{
+          background: "linear-gradient(160deg, #0a0e1a 0%, #0d1a2e 60%, #0a1020 100%)",
+        }}
       >
-        {tubes.map((balls, i) => (
-          <Tube
-            key={i}
-            balls={balls}
-            isSelected={sel === i}
-            onClick={() => clickTube(i)}
-          />
-        ))}
+        {/* 背景グロー光源 */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            width: 140,
+            height: 140,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(56,189,248,0.09) 0%, transparent 70%)",
+            top: -30,
+            left: 10,
+          }}
+        />
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            width: 100,
+            height: 100,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(168,85,247,0.07) 0%, transparent 70%)",
+            bottom: 10,
+            right: 10,
+          }}
+        />
+
+        <div
+          className="relative grid gap-2.5"
+          style={{ gridTemplateColumns: `repeat(${COLS[diff]}, minmax(0, 1fr))` }}
+        >
+          {tubes.map((balls, i) => (
+            <Tube
+              key={i}
+              balls={balls}
+              isSelected={sel === i}
+              onClick={() => clickTube(i)}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Action buttons */}
@@ -126,13 +215,13 @@ export default function ColorSort() {
         <button
           onClick={undo}
           disabled={!hist.length}
-          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors disabled:opacity-40"
+          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-40 bg-[#1e293b] border border-white/10 text-slate-400"
         >
           {t("undo")}
         </button>
         <button
           onClick={restart}
-          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+          className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors bg-[#1e293b] border border-white/10 text-slate-400"
         >
           {t("restart")}
         </button>

@@ -6,11 +6,29 @@ export type Difficulty = "easy" | "medium" | "hard" | "expert";
 
 export const TUBE_CAP = 4;
 
-export const PALETTE = [
-  "#EF4444", "#3B82F6", "#22C55E", "#EAB308",
-  "#A855F7", "#F97316", "#EC4899", "#06B6D4",
-  "#A3763D", "#F0F0F0",
-];
+export const TUBE_HEIGHT = 144; // px — ColorSort.tsx が参照
+export const LAYER_HEIGHT = TUBE_HEIGHT / TUBE_CAP; // 36px
+
+export const PALETTE_DATA = [
+  { base: "#ef4444", glow: "rgba(239,68,68,0.7)",   light: "#fca5a5" },
+  { base: "#3b82f6", glow: "rgba(59,130,246,0.7)",  light: "#93c5fd" },
+  { base: "#22c55e", glow: "rgba(34,197,94,0.7)",   light: "#86efac" },
+  { base: "#eab308", glow: "rgba(234,179,8,0.7)",   light: "#fde68a" },
+  { base: "#a855f7", glow: "rgba(168,85,247,0.7)",  light: "#d8b4fe" },
+  { base: "#f97316", glow: "rgba(249,115,22,0.7)",  light: "#fed7aa" },
+  { base: "#ec4899", glow: "rgba(236,72,153,0.7)",  light: "#f9a8d4" },
+  { base: "#06b6d4", glow: "rgba(6,182,212,0.7)",   light: "#a5f3fc" },
+  { base: "#84cc16", glow: "rgba(132,204,22,0.7)",  light: "#d9f99d" },
+  { base: "#f43f5e", glow: "rgba(244,63,94,0.7)",   light: "#fda4af" },
+] as const;
+
+// 後方互換: Confetti コンポーネントが PALETTE を参照するためそのまま残す
+export const PALETTE = PALETTE_DATA.map((p) => p.base);
+
+export function getColorData(hex: string) {
+  const lower = hex.toLowerCase();
+  return PALETTE_DATA.find((p) => p.base === lower) ?? PALETTE_DATA[0];
+}
 
 export const DIFF_CONFIG = {
   easy:   { colors: 4,  tubes: 6  },
@@ -41,32 +59,61 @@ function lcg(seed: number) {
   };
 }
 
+const SHUFFLE_ITERS: Record<Difficulty, [number, number]> = {
+  easy:   [300, 200],
+  medium: [400, 200],
+  hard:   [500, 200],
+  expert: [600, 300],
+};
+
 export function generatePuzzle(level: number, diff: Difficulty): string[][] {
   const { colors, tubes } = DIFF_CONFIG[diff];
+  const [base, extra] = SHUFFLE_ITERS[diff];
   const rng = lcg(level * 31 + DIFF_KEYS.indexOf(diff) * 9973 + 1);
+  const iters = base + Math.floor(rng() * extra);
+
   const state: string[][] = [
     ...Array.from({ length: colors }, (_, i) => Array<string>(TUBE_CAP).fill(PALETTE[i])),
     ...Array.from({ length: tubes - colors }, () => [] as string[]),
   ];
-  const iters = 150 + Math.floor(rng() * 150);
+
+  let lastFrom = -1;
+  let lastTo = -1;
+
   for (let k = 0; k < iters; k++) {
+    // Single-ball valid moves: [fromIdx, toIdx]
     const valid: [number, number][] = [];
     for (let f = 0; f < state.length; f++) {
       if (!state[f].length) continue;
       const top = state[f][state[f].length - 1];
       for (let t = 0; t < state.length; t++) {
+        if (f === t) continue;
+        // Anti-reversal: skip only the exact reverse of last move
+        if (f === lastTo && t === lastFrom) continue;
         if (
-          f !== t &&
           state[t].length < TUBE_CAP &&
           (!state[t].length || state[t][state[t].length - 1] === top)
-        ) valid.push([f, t]);
+        ) {
+          valid.push([f, t]);
+        }
       }
     }
     if (!valid.length) break;
     const [f, t] = valid[Math.floor(rng() * valid.length)];
     state[t].push(state[f].pop()!);
+    lastFrom = f;
+    lastTo = t;
   }
+
   return state;
+}
+
+function getTopStack(tube: string[]): { color: string; count: number } | null {
+  if (!tube.length) return null;
+  const color = tube[tube.length - 1];
+  let count = 0;
+  for (let i = tube.length - 1; i >= 0 && tube[i] === color; i--) count++;
+  return { color, count };
 }
 
 function isSolved(tubes: string[][]): boolean {
@@ -94,19 +141,22 @@ export function useColorSort() {
     }
     if (sel === idx) { setSel(null); return; }
 
-    const fromBalls = tubes[sel];
+    const fromStack = getTopStack(tubes[sel]);
+    if (!fromStack) { setSel(null); return; }
+
+    const { color, count } = fromStack;
     const toBalls = tubes[idx];
-    const top = fromBalls[fromBalls.length - 1];
-    if (!top) { setSel(null); return; }
+    const space = TUBE_CAP - toBalls.length;
+    const toTop = toBalls.length ? toBalls[toBalls.length - 1] : null;
+    const canMove = space >= count && (toTop === null || toTop === color);
 
-    const canMove =
-      toBalls.length === 0 ||
-      (toBalls[toBalls.length - 1] === top && toBalls.length < TUBE_CAP);
-
-    if (!canMove) { setSel(toBalls.length ? idx : null); return; }
+    if (!canMove) {
+      setSel(toBalls.length ? idx : null);
+      return;
+    }
 
     const next = tubes.map((t) => [...t]);
-    next[idx].push(next[sel].pop()!);
+    for (let i = 0; i < count; i++) next[idx].push(next[sel].pop()!);
     const m = moves + 1;
     setHist((h) => [...h, tubes.map((t) => [...t])]);
     setTubes(next);
