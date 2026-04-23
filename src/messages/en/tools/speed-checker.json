@@ -1,0 +1,64 @@
+{
+  "title": "Internet Speed Checker",
+  "description": "Check your download speed instantly with a fluid stream animation that visually shows how fast your connection is. 5-round median measurement. No signup, no ads.",
+  "keywords": [
+    "internet speed test",
+    "connection speed checker",
+    "download speed test",
+    "Mbps checker",
+    "Wi-Fi speed test",
+    "network speed",
+    "broadband speed test",
+    "online speed test free"
+  ],
+  "label": "", "placeholder": "", "buttons": {}, "results": {},
+  "limitCheck": { "title": "", "unit": "", "over": "" }, "toast": {},
+  "ui": {
+    "title": "Connection Speed Checker",
+    "subtitle": "Press the button to start measuring",
+    "start": "Start Test",
+    "retry": "Try Again",
+    "share": "Share",
+    "roundLabel": "Round {round} / 5",
+    "dataNote": "No ads · No account required\nAll data stays in your browser"
+  },
+  "tiers": {
+    "slow":     "Slow",
+    "standard": "Standard",
+    "fast":     "Fast",
+    "ultra":    "Ultra Fast"
+  },
+  "hints": {
+    "slow":     "OK for email, light browsing, and SD video",
+    "standard": "Suitable for HD video and video calls",
+    "fast":     "Great for 4K video and large downloads",
+    "ultra":    "Handles 4K, gaming, and multiple devices easily"
+  },
+  "howToUse": [
+    { "label": "Press Start", "description": "Tap the 'Start Test' button. The measurement begins immediately — no waiting." },
+    { "label": "Wait for 5 rounds", "description": "The tool fetches 500 KB of data 5 times and measures each transfer. This takes about 5–15 seconds depending on your speed." },
+    { "label": "Read your result", "description": "The median of 5 rounds is displayed as your final speed. The colour and animation reflect your connection speed — green/cyan is fast, red is slow." }
+  ],
+  "faq": [
+    {
+      "question": "How accurate is this speed test?",
+      "answer": "The tool uses the median of 5 measurement rounds, which reduces the effect of temporary network spikes. Results are a useful guide but may vary with server load and time of day."
+    },
+    {
+      "question": "How much data does one test use?",
+      "answer": "Each test downloads approximately 2.5 MB (500 KB × 5 rounds). Be mindful if you are on a limited mobile data plan."
+    },
+    {
+      "question": "Why is my result different from other speed test sites?",
+      "answer": "Results vary by server location, measurement method, and the number of simultaneous connections. Use this tool as a quick reference rather than a precise benchmark."
+    },
+    {
+      "question": "What is a typical home Wi-Fi speed?",
+      "answer": "Fibre broadband typically delivers 100–600 Mbps, while public Wi-Fi ranges from 5–50 Mbps. Mobile 4G averages around 20–50 Mbps."
+    },
+    {
+      "question": "Is upload speed measured?",
+      "answer": "Only download speed is measured. Upload measurement requires sending data to the server, which this tool does not do."
+    }
+  ]
+}
