@@ -86,6 +86,7 @@ const toolComponentMap: Record<string, ComponentType> = {
   MemoryCards: dynamic(() => import("@/tools/MemoryCards"), { loading: Loading }),
   ColorSort: dynamic(() => import("@/tools/ColorSort"), { loading: Loading }),
   BlockPuzzle: dynamic(() => import("@/tools/BlockPuzzle"), { loading: Loading }),
+  SpeedChecker: dynamic(() => import("@/tools/SpeedChecker"), { loading: Loading }),
 };
 
 export default toolComponentMap;

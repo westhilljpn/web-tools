@@ -565,6 +565,13 @@ const tools: Tool[] = [
     component: "BlockPuzzle",
     updatedAt: "2026-04-19",
   },
+  {
+    slug: "speed-checker",
+    category: "dev",
+    icon: "📡",
+    component: "SpeedChecker",
+    updatedAt: "2026-04-20",
+  },
 ];
 
 export default tools;
