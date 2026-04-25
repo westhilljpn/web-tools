@@ -552,13 +552,6 @@ const tools: Tool[] = [
     updatedAt: "2026-04-19",
   },
   {
-    slug: "color-sort",
-    category: "game",
-    icon: "🎨",
-    component: "ColorSort",
-    updatedAt: "2026-04-19",
-  },
-  {
     slug: "block-puzzle",
     category: "game",
     icon: "🧩",
