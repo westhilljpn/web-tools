@@ -20,7 +20,8 @@
     "retry": "Try Again",
     "share": "Share",
     "roundLabel": "Round {round} / 5",
-    "dataNote": "No ads · No account required\nAll data stays in your browser"
+    "dataNote": "No ads · No account required\nAll data stays in your browser",
+    "shareText": "Download speed: {mbps} Mbps ({tier})\nMeasured by: Web Tools Speed Checker"
   },
   "tiers": {
     "slow":     "Slow",
@@ -33,6 +34,10 @@
     "standard": "Suitable for HD video and video calls",
     "fast":     "Great for 4K video and large downloads",
     "ultra":    "Handles 4K, gaming, and multiple devices easily"
+  },
+  "errors": {
+    "timeout": "Measurement timed out. Your connection may be very slow.",
+    "network_error": "Measurement failed. Please try again."
   },
   "howToUse": [
     { "label": "Press Start", "description": "Tap the 'Start Test' button. The measurement begins immediately — no waiting." },

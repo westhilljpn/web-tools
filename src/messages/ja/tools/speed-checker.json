@@ -20,7 +20,8 @@
     "retry": "もう一度",
     "share": "シェア",
     "roundLabel": "ラウンド {round} / 5",
-    "dataNote": "広告なし・アカウント不要\nデータは端末内で完結"
+    "dataNote": "広告なし・アカウント不要\nデータは端末内で完結",
+    "shareText": "回線速度: {mbps} Mbps（{tier}）\n計測: Web Tools Speed Checker"
   },
   "tiers": {
     "slow":     "低速",
@@ -33,6 +34,10 @@
     "standard": "HD動画・ビデオ通話が快適",
     "fast":     "4K動画・大容量ダウンロードも快適",
     "ultra":    "4K動画・ゲーム・複数端末同時利用も余裕"
+  },
+  "errors": {
+    "timeout": "計測がタイムアウトしました。回線が混んでいる可能性があります。",
+    "network_error": "計測に失敗しました。もう一度お試しください。"
   },
   "howToUse": [
     { "label": "計測開始", "description": "「計測開始」ボタンを押すと即座に計測が始まります。アカウント登録や設定は不要です。" },

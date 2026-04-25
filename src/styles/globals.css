@@ -253,3 +253,11 @@
   position: absolute;
   animation: sc-drip var(--sc-duration, 3s) ease-in-out infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-stream,
+  .sc-drip {
+    animation: none;
+    opacity: 0.5;
+  }
+}

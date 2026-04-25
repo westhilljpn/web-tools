@@ -1,8 +1,8 @@
-"use client";
 import { useState, useCallback, useRef } from "react";
 
 export type TestPhase = "idle" | "measuring" | "done";
 export type SpeedTier = "slow" | "standard" | "fast" | "ultra";
+export type SpeedError = "network_error" | "timeout" | null;
 
 export interface SpeedTestState {
   phase: TestPhase;
@@ -10,7 +10,7 @@ export interface SpeedTestState {
   finalMbps: number | null;
   round: number;
   tier: SpeedTier | null;
-  error: string | null;
+  error: SpeedError;
 }
 
 const PAYLOAD_BYTES = 512 * 1024;
@@ -59,13 +59,11 @@ export function useSpeedTest() {
     const results: number[] = [];
     try {
       for (let i = 0; i < ROUNDS; i++) {
-        const timer = setTimeout(() => ac.abort(), TIMEOUT_MS);
+        // combine user-abort signal with per-round timeout
+        const signal = AbortSignal.any([ac.signal, AbortSignal.timeout(TIMEOUT_MS)]);
         const t0 = performance.now();
-        const res = await fetch(`/api/speedtest?r=${Math.random()}`, {
-          signal: ac.signal,
-        });
+        const res = await fetch(`/api/speedtest?r=${Math.random()}`, { signal });
         await res.arrayBuffer();
-        clearTimeout(timer);
         const elapsed = performance.now() - t0;
         const mbps = toMbps(PAYLOAD_BYTES, elapsed);
         results.push(mbps);
@@ -79,12 +77,12 @@ export function useSpeedTest() {
         tier: getTier(finalMbps),
       }));
     } catch (err) {
-      if ((err as Error).name !== "AbortError") {
-        setState({
-          ...INITIAL_STATE,
-          error: "計測に失敗しました。もう一度お試しください。",
-        });
-      }
+      const name = (err as Error).name;
+      if (name === "AbortError") return; // user triggered reset — exit silently
+      setState({
+        ...INITIAL_STATE,
+        error: name === "TimeoutError" ? "timeout" : "network_error",
+      });
     }
   }, []);
 

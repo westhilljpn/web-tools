@@ -2,7 +2,7 @@
 import type { CSSProperties } from "react";
 import { useTranslations } from "next-intl";
 import { useSpeedTest } from "@/hooks/useSpeedTest";
-import type { SpeedTier } from "@/hooks/useSpeedTest";
+import type { SpeedTier, SpeedError } from "@/hooks/useSpeedTest";
 
 const ROUNDS = 5;
 
@@ -87,7 +87,7 @@ export default function SpeedChecker() {
 
   async function handleShare() {
     if (finalMbps === null || tier === null) return;
-    const text = `回線速度: ${finalMbps.toFixed(1)} Mbps（${t(`tiers.${tier}`)}）\n計測: Web Tools Speed Checker`;
+    const text = t("ui.shareText", { mbps: finalMbps.toFixed(1), tier: t(`tiers.${tier}`) });
     if (navigator.share) {
       await navigator.share({ title: "Speed Checker", text });
     } else {
@@ -132,7 +132,7 @@ export default function SpeedChecker() {
           >
             {t("ui.start")}
           </button>
-          {error && <p className="text-xs text-red-400 text-center">{error}</p>}
+          {error && <p className="text-xs text-red-400 text-center">{t(`errors.${error}`)}</p>}
           <p className="text-xs text-slate-600 text-center whitespace-pre-line">
             {t("ui.dataNote")}
           </p>
