@@ -91,8 +91,8 @@ npm run dev                         # http://localhost:3000
 | 68 | `reaction-time` | 反応速度テスト | Reaction Time Test | game |
 | 69 | `snake-game` | スネークゲーム | Snake Game | game |
 | 70 | `memory-cards` | 神経衰弱 | Memory Cards | game |
-| 71 | `color-sort` | カラーソートパズル | Color Sort Puzzle | game |
-| 72 | `block-puzzle` | ブロックパズル | Block Puzzle | game |
+| 71 | `block-puzzle` | ブロックパズル | Block Puzzle | game |
+| 72 | `speed-checker` | 回線速度チェッカー | Internet Speed Checker | dev |
 
 ---
 
@@ -268,15 +268,20 @@ npm run dev                         # http://localhost:3000
 - [x] **G5** `reaction-time` — 反応速度テスト（フライング検出・ベスト/平均記録・localStorage永続化）
 - [x] **G6** `snake-game` — スネークゲーム（useReducer+setInterval・矢印/WASD/スワイプ操作・一時停止・ベストスコア保存）
 - [x] **G7** `memory-cards` — 神経衰弱（8ペア16枚・Fisher-Yatesシャッフル・700msフリップバック・最少手数記録）
-- [x] **G8** `color-sort` — カラーソートパズル（4難易度・LCGシード決定論的生成・Undo・CSS紙吹雪）
+- [x] **G8** `color-sort` — カラーソートパズル（4難易度・LCGシード決定論的生成・Undo・CSS紙吹雪）⚠️ **一時非公開中**（UX改善後に再公開予定）
 - [x] **G9** `block-puzzle` — ブロックパズル（10×10グリッド・20種ピース・ポインターイベントD&D・コンボボーナス）
 
-### バッチ18候補（次回）
+### バッチ18 ✅ 完了（2026-04-20）
 
-- [ ] **B18-1** `currency-converter` — 通貨換算ツール（主要通貨・クライアントサイド固定レート）
-- [ ] **B18-2** `todo-list` — シンプルToDoリスト（localStorage保存・チェック・削除）
-- [ ] **B18-3** `stopwatch` — ストップウォッチ（ラップタイム・コピー・高精度タイマー）
-- [ ] **B18-4** `word-cloud` — ワードクラウド生成（頻度ベース・Canvas描画・ブラウザ完結）
+- [x] **B18-1** `speed-checker` — 回線速度チェッカー（5ラウンド中央値・流体ストリームアニメーション・速度帯判定・シェア機能、`/api/speedtest` Route Handler）
+
+### バッチ19候補（次回）
+
+- [ ] **優先** `color-sort` 再設計 — UI/UXを根本から見直して再公開（G8・一時非公開中）
+- [ ] **B19-1** `currency-converter` — 通貨換算ツール（主要通貨・クライアントサイド固定レート）
+- [ ] **B19-2** `todo-list` — シンプルToDoリスト（localStorage保存・チェック・削除）
+- [ ] **B19-3** `stopwatch` — ストップウォッチ（ラップタイム・コピー・高精度タイマー）
+- [ ] **B19-4** `word-cloud` — ワードクラウド生成（頻度ベース・Canvas描画・ブラウザ完結）
 
 ### ミニゲーム追加候補（優先順位順）
 
@@ -336,10 +341,16 @@ npm run dev                         # http://localhost:3000
 |--------|--------|-----------|
 | 高 | GSCのインデックス未登録を手動申請（S2） | Search Console → URL検査で申請。主要ツールから優先（`text-counter`・`json-formatter`・`password-generator` 等） |
 | 高 | GSCでCTR低ページのtitle/description改善 | 月1サイクルで実施。EN meta description は ≤120文字に統一済み。表示回数↑クリック↓ページを洗い出しキャッチコピー改善 |
-| 中 | B18 ツール追加（currency-converter / todo-list / stopwatch など） | ラインナップ拡充。67件→72件を目標 |
+| 中 | `color-sort` 再設計・再公開 | G8 一時非公開中。UX改善後に再登録予定 |
+| 中 | B19 ツール追加（currency-converter / todo-list / stopwatch など） | ラインナップ拡充。72件維持・次は73件へ |
 | 中 | おすすめツールの選定見直し | 現状は暫定8件。GSCデータが蓄積されたら人気ツールに差し替える |
 | 低 | サイトマップの `lastmod` 動的更新 | 現状は `toolsRegistry.ts` の `updatedAt` 固定値。ツール更新時に手動更新が必要 |
 | 低 | 各ツールの FAQ を検索クエリ起点で書き直し | `text-counter`・`json-formatter` 完了済み。他の人気ツールにも順次適用 |
+
+### ✅ 完了済み（2026-04-20 — バッチ18）
+
+- [x] **`speed-checker` 追加**: 回線速度チェッカー（5ラウンド中央値・流体ストリームアニメーション・速度帯判定・シェア機能）（計72ツール）
+- [x] **`color-sort` 一時非公開**: UX品質が基準を満たさないため `toolsRegistry.ts` から除外（直URLは404）
 
 ### ✅ 完了済み（2026-04-19 — ミニゲーム追加・その他）
 
