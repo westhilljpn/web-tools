@@ -85,6 +85,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     memoryCards,
     colorSort,
     blockPuzzle,
+    speedChecker,
   ] =
     typedLocale === "ja"
       ? await Promise.all([
@@ -161,6 +162,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/ja/tools/memory-cards.json"),
           import("../messages/ja/tools/color-sort.json"),
           import("../messages/ja/tools/block-puzzle.json"),
+          import("../messages/ja/tools/speed-checker.json"),
         ])
       : await Promise.all([
           import("../messages/en/common.json"),
@@ -236,6 +238,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
           import("../messages/en/tools/memory-cards.json"),
           import("../messages/en/tools/color-sort.json"),
           import("../messages/en/tools/block-puzzle.json"),
+          import("../messages/en/tools/speed-checker.json"),
         ]);
 
   return {
@@ -314,6 +317,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       "memory-cards": memoryCards.default,
       "color-sort": colorSort.default,
       "block-puzzle": blockPuzzle.default,
+      "speed-checker": speedChecker.default,
     },
   };
 });
